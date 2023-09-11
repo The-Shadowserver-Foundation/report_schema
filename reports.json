@@ -18,7 +18,25 @@
          "tag"
       ],
       "name" : "Blocklist",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/blocklist-report/"
+   },
+   "compromised_account" : {
+      "fields" : [
+         "timestamp",
+         "email",
+         "infection",
+         "source_url",
+         "public_source",
+         "status",
+         "tag",
+         "severity",
+         "service",
+         "username",
+         "detail"
+      ],
+      "name" : "Compromised-Account",
+      "removed" : []
    },
    "compromised_website" : {
       "classification.taxonomy" : "intrusions",
@@ -52,6 +70,7 @@
          "public_source"
       ],
       "name" : "Compromised-Website",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/compromised-website-report/"
    },
    "device_id" : {
@@ -77,6 +96,7 @@
          "device_version"
       ],
       "name" : "Device-Identification IPv4",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/device-identification-report/"
    },
    "device_id6" : {
@@ -149,6 +169,7 @@
          "http_agent"
       ],
       "name" : "DDoS-Participant",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ddos-participant-report/"
    },
    "event4_honeypot_brute_force" : {
@@ -195,6 +216,7 @@
          "payload_md5"
       ],
       "name" : "Honeypot-Brute-Force-Events",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-brute-force-events-report/"
    },
    "event4_honeypot_darknet" : {
@@ -234,6 +256,7 @@
          "count"
       ],
       "name" : "Honeypot-Darknet",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-darknet-events-report/"
    },
    "event4_honeypot_ddos" : {
@@ -302,6 +325,7 @@
          "http_agent"
       ],
       "name" : "Honeypot-DDoS",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-ddos-events/"
    },
    "event4_honeypot_ddos_amp" : {
@@ -347,6 +371,7 @@
          "max_pps"
       ],
       "name" : "Honeypot-Amplification-DDoS-Events",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-amplification-ddos-events-report/"
    },
    "event4_honeypot_ddos_target" : {
@@ -414,6 +439,7 @@
          "packet_randomized"
       ],
       "name" : "Honeypot-DDoS-Target",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-ddos-target-events-report/"
    },
    "event4_honeypot_http_scan" : {
@@ -474,6 +500,7 @@
          "body_raw"
       ],
       "name" : "Honeypot-HTTP-Scan",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-http-scanner-events/"
    },
    "event4_honeypot_ics_scan" : {
@@ -518,6 +545,7 @@
          "response"
       ],
       "name" : "Honeypot-ICS-Scanner",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-ics-scanner-events-report/"
    },
    "event4_honeypot_rdp_scan" : {
@@ -570,6 +598,7 @@
          "session_tags"
       ],
       "name" : "Honeypot-RDP-Scanner",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-rdp-scanner-events-report/"
    },
    "event4_honeypot_smb_scan" : {
@@ -624,6 +653,7 @@
          "session_tags"
       ],
       "name" : "Honeypot-SMB-Scanner",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-smb-scanner-events-report/"
    },
    "event4_ip_spoofer" : {
@@ -666,6 +696,7 @@
          "nat"
       ],
       "name" : "IP-Spoofer-Events",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ip-spoofer-events-report/"
    },
    "event4_microsoft_sinkhole" : {
@@ -714,6 +745,7 @@
          "ssl_servername"
       ],
       "name" : "Sinkhole-Events IPv4",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-events-report/"
    },
    "event4_sinkhole_dns" : {
@@ -742,6 +774,7 @@
          "count"
       ],
       "name" : "Sinkhole-DNS",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-dns-events-report/"
    },
    "event4_sinkhole_http" : {
@@ -787,6 +820,7 @@
          "ssl_servername"
       ],
       "name" : "Sinkhole-Events-HTTP IPv4",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-http-events-report/"
    },
    "event4_sinkhole_http_referer" : {
@@ -826,6 +860,7 @@
          "ssl_servername"
       ],
       "name" : "Sinkhole-Events-HTTP-Referer IPv4",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-http-referer-events-report/"
    },
    "event6_sinkhole" : {
@@ -860,6 +895,7 @@
          "application"
       ],
       "name" : "Malware-URL",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/malware-url-report/"
    },
    "phish_url" : {
@@ -878,7 +914,8 @@
          "sector",
          "source"
       ],
-      "name" : "Phish-URL"
+      "name" : "Phish-URL",
+      "removed" : []
    },
    "population6_bgp" : {
       "alias" : "population_bgp",
@@ -923,6 +960,7 @@
          "minor_error_code_int"
       ],
       "name" : "Accessible-BGP",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-bgp-service-report/"
    },
    "population_http_proxy" : {
@@ -954,6 +992,7 @@
          "http_date"
       ],
       "name" : "Accessible-HTTP-Proxy",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-http-proxy-report/"
    },
    "population_msmq" : {
@@ -975,6 +1014,7 @@
          "response_size"
       ],
       "name" : "Accessible-MSMQ",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-msmq-service-report/"
    },
    "sandbox_conn" : {
@@ -993,7 +1033,8 @@
          "bytes_out"
       ],
       "name" : "Sandbox-Connections",
-      "url" : "http://www.shadowserver.org/wiki/pmwiki.php/Services/Sandbox-Connection"
+      "removed" : [],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sandbox-connection-report/"
    },
    "sandbox_dns" : {
       "classification.taxonomy" : "other",
@@ -1008,7 +1049,8 @@
          "tag",
          "source"
       ],
-      "name" : "Sandbox-DNS"
+      "name" : "Sandbox-DNS",
+      "removed" : []
    },
    "sandbox_url" : {
       "classification.taxonomy" : "malicious-code",
@@ -1025,6 +1067,7 @@
          "method"
       ],
       "name" : "Sandbox-URL",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sandbox-url-report/"
    },
    "scan6_bgp" : {
@@ -1178,6 +1221,7 @@
          "device_sector"
       ],
       "name" : "Accessible-ADB",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-adb-report/"
    },
    "scan_afp" : {
@@ -1207,6 +1251,7 @@
          "network_address"
       ],
       "name" : "Accessible-AFP",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-afp-report/"
    },
    "scan_amqp" : {
@@ -1241,6 +1286,7 @@
          "sector"
       ],
       "name" : "Accessible-AMQP",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-amqp-report/"
    },
    "scan_ard" : {
@@ -1264,6 +1310,7 @@
          "amplification"
       ],
       "name" : "Accessible-ARD",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-apple-remote-desktop-ard-report/"
    },
    "scan_bgp" : {
@@ -1297,6 +1344,7 @@
          "minor_error_code_int"
       ],
       "name" : "Open-BGP",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-bgp-service-report/"
    },
    "scan_chargen" : {
@@ -1321,6 +1369,7 @@
          "amplification"
       ],
       "name" : "Open-Chargen",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-chargen-report/"
    },
    "scan_cisco_smart_install" : {
@@ -1341,6 +1390,7 @@
          "sic"
       ],
       "name" : "Accessible-Cisco-Smart-Install",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-cisco-smart-install-report/"
    },
    "scan_coap" : {
@@ -1365,6 +1415,7 @@
          "amplification"
       ],
       "name" : "Accessible-CoAP",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-coap-report/"
    },
    "scan_couchdb" : {
@@ -1395,6 +1446,7 @@
          "error_reason"
       ],
       "name" : "Accessible-CouchDB",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-couchdb-report/"
    },
    "scan_cwmp" : {
@@ -1427,6 +1479,7 @@
          "sector"
       ],
       "name" : "Accessible-CWMP",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-cwmp-report/"
    },
    "scan_db2" : {
@@ -1451,6 +1504,7 @@
          "amplification"
       ],
       "name" : "Open-DB2-Discovery-Service",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-db2-discovery-service-report/"
    },
    "scan_ddos_middlebox" : {
@@ -1476,6 +1530,7 @@
          "method"
       ],
       "name" : "Vulnerable-DDoS-Middlebox",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-ddos-middlebox-report/"
    },
    "scan_dns" : {
@@ -1499,6 +1554,7 @@
          "sector"
       ],
       "name" : "DNS-Open-Resolvers",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/dns-open-resolvers-report/"
    },
    "scan_docker" : {
@@ -1537,6 +1593,7 @@
          "pkg_version"
       ],
       "name" : "Accessible-Docker",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-docker-service-report/"
    },
    "scan_dvr_dhcpdiscover" : {
@@ -1585,6 +1642,7 @@
          "amplification"
       ],
       "name" : "Accessible-DVR-DHCPDiscover",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-dvr-dhcpdiscover-report/"
    },
    "scan_elasticsearch" : {
@@ -1616,6 +1674,7 @@
          "sector"
       ],
       "name" : "Open-Elasticsearch",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-elasticsearch-report/"
    },
    "scan_epmd" : {
@@ -1638,6 +1697,7 @@
          "nodes"
       ],
       "name" : "Accessible-Erlang-Port-Mapper-Daemon",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-erlang-port-mapper-report-daemon/"
    },
    "scan_exchange" : {
@@ -1660,6 +1720,7 @@
          "url"
       ],
       "name" : "Vulnerable-Exchange-Server",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-exchange-server-report/"
    },
    "scan_ftp" : {
@@ -1734,6 +1795,7 @@
          "device_sector"
       ],
       "name" : "Accessible-FTP",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ftp-report/"
    },
    "scan_hadoop" : {
@@ -1762,6 +1824,7 @@
          "volumeinfo"
       ],
       "name" : "Accessible-Hadoop",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-hadoop-report/"
    },
    "scan_http" : {
@@ -1793,6 +1856,7 @@
          "http_date"
       ],
       "name" : "Accessible-HTTP",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-http-report/"
    },
    "scan_http_proxy" : {
@@ -1824,6 +1888,7 @@
          "http_date"
       ],
       "name" : "Open-HTTP-Proxy",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-http-proxy-report/"
    },
    "scan_http_vulnerable" : {
@@ -1859,6 +1924,7 @@
          "build_branch"
       ],
       "name" : "Vulnerable-HTTP",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-http-report/"
    },
    "scan_ics" : {
@@ -1887,6 +1953,7 @@
          "raw_response"
       ],
       "name" : "Accessible-ICS",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ics-report/"
    },
    "scan_ipmi" : {
@@ -1929,6 +1996,7 @@
          "sector"
       ],
       "name" : "Open-IPMI",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ipmi-report/"
    },
    "scan_ipp" : {
@@ -1968,6 +2036,7 @@
          "device_sector"
       ],
       "name" : "Open-IPP",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ipp-report/"
    },
    "scan_isakmp" : {
@@ -1999,6 +2068,7 @@
          "notify_message_type"
       ],
       "name" : "Vulnerable-ISAKMP",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-isakmp-report/"
    },
    "scan_kubernetes" : {
@@ -2083,6 +2153,7 @@
          "raw_cert_chain"
       ],
       "name" : "Accessible-Kubernetes-API",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-kubernetes-api-server-report/"
    },
    "scan_ldap_tcp" : {
@@ -2127,6 +2198,7 @@
          "amplification"
       ],
       "name" : "Open-LDAP-TCP",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ldap-tcp-report/"
    },
    "scan_ldap_udp" : {
@@ -2171,6 +2243,7 @@
          "amplification"
       ],
       "name" : "Open-LDAP",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ldap-report/"
    },
    "scan_mdns" : {
@@ -2210,6 +2283,7 @@
          "opc_ua_discovery"
       ],
       "name" : "Open-mDNS",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-mdns-report/"
    },
    "scan_memcached" : {
@@ -2240,6 +2314,7 @@
          "amplification"
       ],
       "name" : "Open-Memcached",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-memcached-report/"
    },
    "scan_mongodb" : {
@@ -2271,6 +2346,7 @@
          "sector"
       ],
       "name" : "Open-MongoDB",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-mongodb-report/"
    },
    "scan_mqtt" : {
@@ -2333,6 +2409,7 @@
          "issuer_serialNumber"
       ],
       "name" : "Open-MQTT",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-mqtt-report/"
    },
    "scan_mqtt_anon" : {
@@ -2394,6 +2471,7 @@
          "issuer_serialNumber"
       ],
       "name" : "Open-Anonymous-MQTT",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-mqtt-report/"
    },
    "scan_mssql" : {
@@ -2422,7 +2500,8 @@
          "sector"
       ],
       "name" : "Open-MSSQL",
-      "url" : "https://www.shadowserver.org/wiki/pmwiki.php/Services/Open-MSSQL"
+      "removed" : [],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ms-sql-server-resolution-service-report/"
    },
    "scan_mysql" : {
       "classification.taxonomy" : "other",
@@ -2521,6 +2600,7 @@
          "raw_cert_chain"
       ],
       "name" : "Accessible-MySQL",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-mysql-server-report/"
    },
    "scan_nat_pmp" : {
@@ -2548,7 +2628,8 @@
          "amplification"
       ],
       "name" : "Open-NATPMP",
-      "url" : "https://www.shadowserver.org/wiki/pmwiki.php/Services/Open-NATPMP"
+      "removed" : [],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-nat-pmp-report/"
    },
    "scan_netbios" : {
       "classification.taxonomy" : "vulnerable",
@@ -2575,6 +2656,7 @@
          "amplification"
       ],
       "name" : "Open-NetBIOS-Nameservice",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-netbios-report/"
    },
    "scan_netis_router" : {
@@ -2599,6 +2681,7 @@
          "amplification"
       ],
       "name" : "Open-Netis",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/netcore-netis-router-vulnerability-scan-report/"
    },
    "scan_ntp" : {
@@ -2647,6 +2730,7 @@
          "amplification"
       ],
       "name" : "NTP-Version",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ntp-version-report/"
    },
    "scan_ntpmonitor" : {
@@ -2670,6 +2754,7 @@
          "amplification"
       ],
       "name" : "NTP-Monitor",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ntp-monitor-report/"
    },
    "scan_portmapper" : {
@@ -2696,7 +2781,8 @@
          "amplification"
       ],
       "name" : "Open-Portmapper",
-      "url" : "https://www.shadowserver.org/wiki/pmwiki.php/Services/Open-Portmapper"
+      "removed" : [],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-portmapper-report/"
    },
    "scan_postgres" : {
       "classification.taxonomy" : "other",
@@ -2781,6 +2867,7 @@
          "raw_cert_chain"
       ],
       "name" : "Accessible-PostgreSQL",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-postgresql-server-report/"
    },
    "scan_qotd" : {
@@ -2805,7 +2892,8 @@
          "amplification"
       ],
       "name" : "Open-QOTD",
-      "url" : "https://www.shadowserver.org/wiki/pmwiki.php/Services/Open-QOTD"
+      "removed" : [],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-qotd-report/"
    },
    "scan_quic" : {
       "classification.taxonomy" : "other",
@@ -2829,6 +2917,7 @@
          "version_field_4"
       ],
       "name" : "Accessible-QUIC",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-quic-report/"
    },
    "scan_radmin" : {
@@ -2850,6 +2939,7 @@
          "sic"
       ],
       "name" : "Accessible-Radmin",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-radmin-report/"
    },
    "scan_rdp" : {
@@ -2891,6 +2981,7 @@
          "jarm"
       ],
       "name" : "Accessible-RDP",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-rdp-report/"
    },
    "scan_rdpeudp" : {
@@ -2914,6 +3005,7 @@
          "amplification"
       ],
       "name" : "Accessible-MS-RDPEUDP",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ms-rdpeudp/"
    },
    "scan_redis" : {
@@ -2948,7 +3040,8 @@
          "sector"
       ],
       "name" : "Open-Redis",
-      "url" : "https://www.shadowserver.org/wiki/pmwiki.php/Services/Open-Redis"
+      "removed" : [],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-redis-report/"
    },
    "scan_rsync" : {
       "classification.taxonomy" : "vulnerable",
@@ -2971,6 +3064,7 @@
          "has_password"
       ],
       "name" : "Accessible-Rsync",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-rsync-report/"
    },
    "scan_sip" : {
@@ -3005,6 +3099,7 @@
          "response_size"
       ],
       "name" : "Accessible-SIP",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-sip-report/"
    },
    "scan_slp" : {
@@ -3038,6 +3133,7 @@
          "raw_response"
       ],
       "name" : "Accessible-SLP",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-slp-service-report/"
    },
    "scan_smb" : {
@@ -3066,6 +3162,7 @@
          "smb_version_string"
       ],
       "name" : "Accessible-SMB",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-smb-report/"
    },
    "scan_smtp" : {
@@ -3084,9 +3181,63 @@
          "city",
          "naics",
          "sic",
-         "banner"
+         "banner",
+         "auth_ssl_response",
+         "auth_tls_response",
+         "cert_expiration_date",
+         "cert_expired",
+         "cert_issue_date",
+         "cert_length",
+         "cert_serial_number",
+         "cert_valid",
+         "cipher_suite",
+         "freak_cipher_suite",
+         "freak_vulnerable",
+         "handshake",
+         "issuer_business_category",
+         "issuer_common_name",
+         "issuer_country",
+         "issuer_email_address",
+         "issuer_given_name",
+         "issuer_locality_name",
+         "issuer_organization_name",
+         "issuer_organization_unit_name",
+         "issuer_postal_code",
+         "issuer_serial_number",
+         "issuer_state_or_province_name",
+         "issuer_street_address",
+         "issuer_surname",
+         "jarm",
+         "key_algorithm",
+         "md5_fingerprint",
+         "raw_cert",
+         "raw_cert_chain",
+         "self_signed",
+         "sha1_fingerprint",
+         "sha256_fingerprint",
+         "sha512_fingerprint",
+         "signature_algorithm",
+         "ssl_version",
+         "sslv3_supported",
+         "subject_business_category",
+         "subject_common_name",
+         "subject_country",
+         "subject_email_address",
+         "subject_given_name",
+         "subject_locality_name",
+         "subject_organization_name",
+         "subject_organization_unit_name",
+         "subject_postal_code",
+         "subject_serial_number",
+         "subject_state_or_province_name",
+         "subject_street_address",
+         "subject_surname",
+         "tlsv13_cipher",
+         "tlsv13_support",
+         "validation_level"
       ],
       "name" : "Accessible-SMTP",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-smtp-report/"
    },
    "scan_smtp_vulnerable" : {
@@ -3105,9 +3256,63 @@
          "city",
          "naics",
          "sic",
-         "banner"
+         "banner",
+         "auth_ssl_response",
+         "auth_tls_response",
+         "cert_expiration_date",
+         "cert_expired",
+         "cert_issue_date",
+         "cert_length",
+         "cert_serial_number",
+         "cert_valid",
+         "cipher_suite",
+         "freak_cipher_suite",
+         "freak_vulnerable",
+         "handshake",
+         "issuer_business_category",
+         "issuer_common_name",
+         "issuer_country",
+         "issuer_email_address",
+         "issuer_given_name",
+         "issuer_locality_name",
+         "issuer_organization_name",
+         "issuer_organization_unit_name",
+         "issuer_postal_code",
+         "issuer_serial_number",
+         "issuer_state_or_province_name",
+         "issuer_street_address",
+         "issuer_surname",
+         "jarm",
+         "key_algorithm",
+         "md5_fingerprint",
+         "raw_cert",
+         "raw_cert_chain",
+         "self_signed",
+         "sha1_fingerprint",
+         "sha256_fingerprint",
+         "sha512_fingerprint",
+         "signature_algorithm",
+         "ssl_version",
+         "sslv3_supported",
+         "subject_business_category",
+         "subject_common_name",
+         "subject_country",
+         "subject_email_address",
+         "subject_given_name",
+         "subject_locality_name",
+         "subject_organization_name",
+         "subject_organization_unit_name",
+         "subject_postal_code",
+         "subject_serial_number",
+         "subject_state_or_province_name",
+         "subject_street_address",
+         "subject_surname",
+         "tlsv13_cipher",
+         "tlsv13_support",
+         "validation_level"
       ],
       "name" : "Vulnerable-SMTP",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-smtp-report/"
    },
    "scan_snmp" : {
@@ -3144,6 +3349,7 @@
          "vendor"
       ],
       "name" : "Open-SNMP",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-snmp-report/"
    },
    "scan_socks" : {
@@ -3165,6 +3371,7 @@
          "sector"
       ],
       "name" : "Accessible-SOCKS4/5-Proxy",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-socks4-5-proxy-report/"
    },
    "scan_ssdp" : {
@@ -3204,7 +3411,8 @@
          "response_size"
       ],
       "name" : "Open-SSDP",
-      "url" : "https://www.shadowserver.org/wiki/pmwiki.php/Services/Open-SSDP"
+      "removed" : [],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ssdp-report/"
    },
    "scan_ssh" : {
       "classification.taxonomy" : "other",
@@ -3296,6 +3504,7 @@
          "device_sector"
       ],
       "name" : "Accessible-SSH",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ssh-report/"
    },
    "scan_ssl" : {
@@ -3379,6 +3588,7 @@
          "jarm"
       ],
       "name" : "Accessible-SSL",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ssl-report/"
    },
    "scan_ssl_freak" : {
@@ -3467,7 +3677,8 @@
          "page_sha256fp"
       ],
       "name" : "SSL-FREAK-Vulnerable-Servers",
-      "url" : "https://www.shadowserver.org/wiki/pmwiki.php/Services/Ssl-Freak-Scan"
+      "removed" : [],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ssl-freak-report/"
    },
    "scan_ssl_poodle" : {
       "classification.taxonomy" : "vulnerable",
@@ -3555,7 +3766,8 @@
          "page_sha256fp"
       ],
       "name" : "SSL-POODLE-Vulnerable-Servers IPv4",
-      "url" : "https://www.shadowserver.org/wiki/pmwiki.php/Services/Ssl-Scan"
+      "removed" : [],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ssl-poodle-report/"
    },
    "scan_stun" : {
       "classification.taxonomy" : "other",
@@ -3590,6 +3802,7 @@
          "response_size"
       ],
       "name" : "Accessible-Session-Traversal-Utilities-for-NAT",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-stun-service-report/"
    },
    "scan_synfulknock" : {
@@ -3617,6 +3830,7 @@
          "sector"
       ],
       "name" : "SYNful-Knock",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/synful-scan-report/"
    },
    "scan_telnet" : {
@@ -3638,6 +3852,7 @@
          "banner"
       ],
       "name" : "Accessible-Telnet",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-telnet-report/"
    },
    "scan_tftp" : {
@@ -3664,7 +3879,8 @@
          "amplification"
       ],
       "name" : "Open-TFTP",
-      "url" : "https://www.shadowserver.org/wiki/pmwiki.php/Services/Open-TFTP"
+      "removed" : [],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-accessible-tftp-report/"
    },
    "scan_ubiquiti" : {
       "classification.taxonomy" : "vulnerable",
@@ -3692,6 +3908,7 @@
          "amplification"
       ],
       "name" : "Accessible-Ubiquiti-Discovery-Service",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ubiquiti-report/"
    },
    "scan_vnc" : {
@@ -3714,6 +3931,7 @@
          "sector"
       ],
       "name" : "Accessible-VNC",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-vnc-report/"
    },
    "scan_ws_discovery" : {
@@ -3739,6 +3957,7 @@
          "raw_response"
       ],
       "name" : "Accessible-WS-Discovery-Service",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ws-discovery-service-report/"
    },
    "scan_xdmcp" : {
@@ -3764,6 +3983,7 @@
          "amplification"
       ],
       "name" : "Open-XDMCP",
+      "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-xdmcp-service-report/"
    },
    "spam_url" : {
@@ -3793,7 +4013,8 @@
          "md5"
       ],
       "name" : "Spam-URL",
-      "url" : "http://www.shadowserver.org/wiki/pmwiki.php/Services/Spam-URL"
+      "removed" : [],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/spam-url-report/"
    },
    "special" : {
       "classification.taxonomy" : "vulnerable",
@@ -3814,10 +4035,10 @@
          "public_source",
          "status",
          "detail",
-         "method",
-         "device_vendor"
+         "account"
       ],
-      "name" : "Special"
+      "name" : "Special",
+      "removed" : []
    }
 }
 

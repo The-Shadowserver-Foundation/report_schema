@@ -1,10 +1,9 @@
 {
    "_meta" : {
       "change_log" : [
-         "Added ssl_cipher and ssl_servername to the event_sinkhole, event6_sinkhole, and event4_microsoft_sinkhole reports.",
-         "Added ssl_servername to the event_sinkhole_http, event6_sinkhole_http, event4_microsoft_sinkhole_http, event_sinkhole_http_referer, and event6_sinkhole_http_referer reports."
+         "Added TLS fields to scan_smtp, scan_smtp_vulnerable, scan6_smtp and scan6_smtp_vulnerable."
       ],
-      "date_created" : "2023-08-18T15:38:10Z"
+      "date_created" : "2023-09-11T14:16:45Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -85,6 +84,68 @@
          ]
       ],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/blocklist-report/"
+   },
+   "compromised_account" : {
+      "feed_name" : "Compromised-Account",
+      "file_name" : "compromised_account",
+      "optional_fields" : [
+         [
+            "extra.",
+            "tag",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "email",
+            "validate_to_none"
+         ],
+         [
+            "malware.name",
+            "infection"
+         ],
+         [
+            "extra.",
+            "source_url",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "public_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "status",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "service",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "username",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "detail",
+            "validate_to_none"
+         ]
+      ],
+      "required_fields" : [
+         [
+            "time.source",
+            "timestamp",
+            "add_UTC_to_timestamp"
+         ]
+      ]
    },
    "compromised_website" : {
       "constant_fields" : {
@@ -5366,7 +5427,7 @@
             "convert_int"
          ]
       ],
-      "url" : "http://www.shadowserver.org/wiki/pmwiki.php/Services/Sandbox-Connection"
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sandbox-connection-report/"
    },
    "sandbox_dns" : {
       "constant_fields" : {
@@ -9419,6 +9480,271 @@
             "extra.",
             "banner",
             "validate_to_none"
+         ],
+         [
+            "extra.",
+            "auth_ssl_response",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "auth_tls_response",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "cert_expiration_date",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "cert_expired",
+            "convert_bool"
+         ],
+         [
+            "extra.",
+            "cert_issue_date",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "cert_length",
+            "convert_int"
+         ],
+         [
+            "extra.",
+            "cert_serial_number",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "cert_valid",
+            "convert_bool"
+         ],
+         [
+            "extra.",
+            "cipher_suite",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "freak_cipher_suite",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "freak_vulnerable",
+            "convert_bool"
+         ],
+         [
+            "extra.",
+            "handshake",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_business_category",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_common_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_country",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_email_address",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_given_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_locality_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_organization_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_organization_unit_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_postal_code",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_serial_number",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_state_or_province_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_street_address",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_surname",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "jarm",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "key_algorithm",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "md5_fingerprint",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "raw_cert",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "raw_cert_chain",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "self_signed",
+            "convert_bool"
+         ],
+         [
+            "extra.",
+            "sha1_fingerprint",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sha256_fingerprint",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sha512_fingerprint",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "signature_algorithm",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "ssl_version",
+            "convert_int"
+         ],
+         [
+            "extra.",
+            "sslv3_supported",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_business_category",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_common_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_country",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_email_address",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_given_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_locality_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_organization_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_organization_unit_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_postal_code",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_serial_number",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_state_or_province_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_street_address",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_surname",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "tlsv13_cipher",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "tlsv13_support",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "validation_level",
+            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -9491,6 +9817,271 @@
          [
             "extra.",
             "banner",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "auth_ssl_response",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "auth_tls_response",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "cert_expiration_date",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "cert_expired",
+            "convert_bool"
+         ],
+         [
+            "extra.",
+            "cert_issue_date",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "cert_length",
+            "convert_int"
+         ],
+         [
+            "extra.",
+            "cert_serial_number",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "cert_valid",
+            "convert_bool"
+         ],
+         [
+            "extra.",
+            "cipher_suite",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "freak_cipher_suite",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "freak_vulnerable",
+            "convert_bool"
+         ],
+         [
+            "extra.",
+            "handshake",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_business_category",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_common_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_country",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_email_address",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_given_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_locality_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_organization_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_organization_unit_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_postal_code",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_serial_number",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_state_or_province_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_street_address",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_surname",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "jarm",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "key_algorithm",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "md5_fingerprint",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "raw_cert",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "raw_cert_chain",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "self_signed",
+            "convert_bool"
+         ],
+         [
+            "extra.",
+            "sha1_fingerprint",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sha256_fingerprint",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sha512_fingerprint",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "signature_algorithm",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "ssl_version",
+            "convert_int"
+         ],
+         [
+            "extra.",
+            "sslv3_supported",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_business_category",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_common_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_country",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_email_address",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_given_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_locality_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_organization_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_organization_unit_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_postal_code",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_serial_number",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_state_or_province_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_street_address",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_surname",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "tlsv13_cipher",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "tlsv13_support",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "validation_level",
             "validate_to_none"
          ]
       ],
@@ -16887,7 +17478,7 @@
             "convert_int"
          ]
       ],
-      "url" : "https://www.shadowserver.org/wiki/pmwiki.php/Services/Open-MSSQL"
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ms-sql-server-resolution-service-report/"
    },
    "scan_mysql" : {
       "constant_fields" : {
@@ -17457,7 +18048,7 @@
             "convert_int"
          ]
       ],
-      "url" : "https://www.shadowserver.org/wiki/pmwiki.php/Services/Open-NATPMP"
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-nat-pmp-report/"
    },
    "scan_netbios" : {
       "constant_fields" : {
@@ -18046,7 +18637,7 @@
             "convert_int"
          ]
       ],
-      "url" : "https://www.shadowserver.org/wiki/pmwiki.php/Services/Open-Portmapper"
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-portmapper-report/"
    },
    "scan_postgres" : {
       "constant_fields" : {
@@ -18531,7 +19122,7 @@
             "convert_int"
          ]
       ],
-      "url" : "https://www.shadowserver.org/wiki/pmwiki.php/Services/Open-QOTD"
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-qotd-report/"
    },
    "scan_quic" : {
       "constant_fields" : {
@@ -19094,7 +19685,7 @@
             "convert_int"
          ]
       ],
-      "url" : "https://www.shadowserver.org/wiki/pmwiki.php/Services/Open-Redis"
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-redis-report/"
    },
    "scan_rsync" : {
       "constant_fields" : {
@@ -19621,6 +20212,271 @@
             "extra.",
             "banner",
             "validate_to_none"
+         ],
+         [
+            "extra.",
+            "auth_ssl_response",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "auth_tls_response",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "cert_expiration_date",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "cert_expired",
+            "convert_bool"
+         ],
+         [
+            "extra.",
+            "cert_issue_date",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "cert_length",
+            "convert_int"
+         ],
+         [
+            "extra.",
+            "cert_serial_number",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "cert_valid",
+            "convert_bool"
+         ],
+         [
+            "extra.",
+            "cipher_suite",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "freak_cipher_suite",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "freak_vulnerable",
+            "convert_bool"
+         ],
+         [
+            "extra.",
+            "handshake",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_business_category",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_common_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_country",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_email_address",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_given_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_locality_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_organization_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_organization_unit_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_postal_code",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_serial_number",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_state_or_province_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_street_address",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_surname",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "jarm",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "key_algorithm",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "md5_fingerprint",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "raw_cert",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "raw_cert_chain",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "self_signed",
+            "convert_bool"
+         ],
+         [
+            "extra.",
+            "sha1_fingerprint",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sha256_fingerprint",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sha512_fingerprint",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "signature_algorithm",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "ssl_version",
+            "convert_int"
+         ],
+         [
+            "extra.",
+            "sslv3_supported",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_business_category",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_common_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_country",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_email_address",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_given_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_locality_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_organization_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_organization_unit_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_postal_code",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_serial_number",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_state_or_province_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_street_address",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_surname",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "tlsv13_cipher",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "tlsv13_support",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "validation_level",
+            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -19695,6 +20551,271 @@
          [
             "extra.",
             "banner",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "auth_ssl_response",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "auth_tls_response",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "cert_expiration_date",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "cert_expired",
+            "convert_bool"
+         ],
+         [
+            "extra.",
+            "cert_issue_date",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "cert_length",
+            "convert_int"
+         ],
+         [
+            "extra.",
+            "cert_serial_number",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "cert_valid",
+            "convert_bool"
+         ],
+         [
+            "extra.",
+            "cipher_suite",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "freak_cipher_suite",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "freak_vulnerable",
+            "convert_bool"
+         ],
+         [
+            "extra.",
+            "handshake",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_business_category",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_common_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_country",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_email_address",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_given_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_locality_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_organization_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_organization_unit_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_postal_code",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_serial_number",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_state_or_province_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_street_address",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_surname",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "jarm",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "key_algorithm",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "md5_fingerprint",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "raw_cert",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "raw_cert_chain",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "self_signed",
+            "convert_bool"
+         ],
+         [
+            "extra.",
+            "sha1_fingerprint",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sha256_fingerprint",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sha512_fingerprint",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "signature_algorithm",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "ssl_version",
+            "convert_int"
+         ],
+         [
+            "extra.",
+            "sslv3_supported",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_business_category",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_common_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_country",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_email_address",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_given_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_locality_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_organization_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_organization_unit_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_postal_code",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_serial_number",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_state_or_province_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_street_address",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_surname",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "tlsv13_cipher",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "tlsv13_support",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "validation_level",
             "validate_to_none"
          ]
       ],
@@ -20103,7 +21224,7 @@
             "convert_int"
          ]
       ],
-      "url" : "https://www.shadowserver.org/wiki/pmwiki.php/Services/Open-SSDP"
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ssdp-report/"
    },
    "scan_ssh" : {
       "constant_fields" : {
@@ -21328,7 +22449,7 @@
             "convert_int"
          ]
       ],
-      "url" : "https://www.shadowserver.org/wiki/pmwiki.php/Services/Ssl-Freak-Scan"
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ssl-freak-report/"
    },
    "scan_ssl_poodle" : {
       "constant_fields" : {
@@ -21739,7 +22860,7 @@
             "convert_int"
          ]
       ],
-      "url" : "https://www.shadowserver.org/wiki/pmwiki.php/Services/Ssl-Scan"
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ssl-poodle-report/"
    },
    "scan_stun" : {
       "constant_fields" : {
@@ -22163,7 +23284,7 @@
             "convert_int"
          ]
       ],
-      "url" : "https://www.shadowserver.org/wiki/pmwiki.php/Services/Open-TFTP"
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-accessible-tftp-report/"
    },
    "scan_ubiquiti" : {
       "constant_fields" : {
@@ -22660,7 +23781,7 @@
             "validate_ip"
          ]
       ],
-      "url" : "http://www.shadowserver.org/wiki/pmwiki.php/Services/Spam-URL"
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/spam-url-report/"
    },
    "special" : {
       "constant_fields" : {
@@ -22727,12 +23848,7 @@
          ],
          [
             "extra.",
-            "method",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_vendor",
+            "account",
             "validate_to_none"
          ]
       ],
