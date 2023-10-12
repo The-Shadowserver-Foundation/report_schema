@@ -1,6 +1,6 @@
 ## Upcoming changes
 
-The following schema changes are planned for November 7 2023:
+The following schema changes are planned for November 2023:
 
 | report | change |
 | --- | --- |
@@ -22,7 +22,7 @@ The following schema changes are planned for November 7 2023:
 |url_malware| remove: host; add: hostname
 |url_spam| remove: host, md5; add: hostname, port
 
-The following schema changes are planned for November 15 2023:
+The following schema changes are planned for November 2023:
 
 * The `severity` field will be added to all reports.
 
