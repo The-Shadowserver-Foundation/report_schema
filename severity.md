@@ -2,11 +2,11 @@
 
 | Level | Description |
 | -- | --- |
-| critical | Highly critical vulnerabilities that are being actively exploited, where failure to remediate poses an very high likelyhood of compromise.
-| high | End of life systems, internal systems that you can log into with authentication that are meant to be internal (SMB, RDP), some data can be leaked. Drone/sinkhole events end up in this category.
-| medium | Risk of participating in DDoS, unencrypted services requiring login, vulnerabilities requiring MITM to exploit, attacker will need to know internal systems/infrastructure in order to exploit it.
+| critical | Highly critical vulnerabilities that are being actively exploited, where failure to remediate poses a very high likelihood of compromise. For example, a pre-auth RCE or modification or leakage sensitive data.
+| high | End of life systems, systems that you can log into with authentication that are meant to be internal (SMB, RDP), some data can be leaked. Sinkhole events end up in this category.
+| medium | Risk that does not pose an immediate threat to the system but can over time escalate to a higher severity. For example, risk of participating in DDoS, unencrypted services requiring login, vulnerabilities requiring MITM to exploit, attacker will need to know internal systems/infrastructure in order to exploit it.
 | low | Deviation from best practice - little to no practical way to exploit, but setup is not ideal.
-| info | Informational only. However, this category includes the Device Identification report, which may include information on device types that should not be accessible on the public Internet. Review in accordance with your security policy.
+| info | Informational only. Typically no concerns. However, this category includes the Device Identification report, which may include information on device types that should not be accessible on the public Internet, in which case the individual events in the report may be assigned higher severity levels. Review in accordance with your security policy.
         
 ## Default Severity Level by Report Type
 
