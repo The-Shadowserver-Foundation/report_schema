@@ -1,9 +1,9 @@
 {
    "_meta" : {
       "change_log" : [
-         "Added TLS fields to scan_ldap_tcp and scan6_ldap_tcp."
+         "Added compromised_website6 report."
       ],
-      "date_created" : "2023-10-04T15:11:04Z"
+      "date_created" : "2023-10-24T21:48:04Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -234,6 +234,146 @@
          ],
          [
             "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "cc_url",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "family",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "status",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "account",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "detail",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "public_source",
+            "validate_to_none"
+         ]
+      ],
+      "required_fields" : [
+         [
+            "time.source",
+            "timestamp",
+            "add_UTC_to_timestamp"
+         ],
+         [
+            "source.ip",
+            "ip",
+            "validate_ip"
+         ],
+         [
+            "source.port",
+            "port",
+            "convert_int"
+         ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/compromised-website-report/"
+   },
+   "compromised_website6" : {
+      "constant_fields" : {
+         "classification.identifier" : "compromised-website6",
+         "classification.taxonomy" : "intrusions",
+         "classification.type" : "system-compromise"
+      },
+      "feed_name" : "IPv6-Compromised-Website",
+      "file_name" : "compromised_website6",
+      "optional_fields" : [
+         [
+            "protocol.application",
+            "application",
+            "validate_to_none"
+         ],
+         [
+            "source.url",
+            "url",
+            "convert_http_host_and_url",
+            true
+         ],
+         [
+            "source.fqdn",
+            "http_host",
+            "validate_fqdn"
+         ],
+         [
+            "source.reverse_dns",
+            "hostname"
+         ],
+         [
+            "malware.name",
+            "tag"
+         ],
+         [
+            "source.asn",
+            "asn",
+            "invalidate_zero"
+         ],
+         [
+            "source.geolocation.cc",
+            "geo"
+         ],
+         [
+            "source.geolocation.region",
+            "region"
+         ],
+         [
+            "source.geolocation.city",
+            "city"
+         ],
+         [
+            "event_description.text",
+            "category",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "system",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "detected_since",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "server",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "redirect_target",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.naics",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.source.sic",
+            "sic",
+            "invalidate_zero"
+         ],
+         [
+            "extra.source.sector",
             "sector",
             "validate_to_none"
          ],
