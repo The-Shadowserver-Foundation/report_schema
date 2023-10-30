@@ -1105,6 +1105,10 @@
       "removed" : [],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sandbox-url-report/"
    },
+   "scan6_activemq" : {
+      "alias" : "scan_activemq",
+      "name" : "IPv6-Accessible-ActiveMQ"
+   },
    "scan6_bgp" : {
       "alias" : "scan_bgp",
       "name" : "IPv6-Open-BGP"
@@ -1228,6 +1232,30 @@
    "scan6_vnc" : {
       "alias" : "scan_vnc",
       "name" : "IPv6-Accessible-VNC"
+   },
+   "scan_activemq" : {
+      "classification.taxonomy" : "vulnerable",
+      "classification.type" : "vulnerable-system",
+      "fields" : [
+         "timestamp",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "sector",
+         "command",
+         "vendor",
+         "version"
+      ],
+      "name" : "Accessible-ActiveMQ",
+      "removed" : [],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-activemq-service-report/"
    },
    "scan_adb" : {
       "classification.taxonomy" : "vulnerable",

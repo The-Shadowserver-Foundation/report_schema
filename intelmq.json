@@ -1,9 +1,9 @@
 {
    "_meta" : {
       "change_log" : [
-         "Added compromised_website6 report."
+         "Added scan_activemq and scan6_activemq reports."
       ],
-      "date_created" : "2023-10-24T21:48:04Z"
+      "date_created" : "2023-10-30T23:03:44Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -5680,6 +5680,89 @@
          ]
       ],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sandbox-url-report/"
+   },
+   "scan6_activemq" : {
+      "constant_fields" : {
+         "classification.identifier" : "scan6-activemq",
+         "classification.taxonomy" : "vulnerable",
+         "classification.type" : "vulnerable-system",
+         "protocol.application" : "activemq"
+      },
+      "feed_name" : "IPv6-Accessible-ActiveMQ",
+      "file_name" : "scan6_activemq",
+      "optional_fields" : [
+         [
+            "protocol.transport",
+            "protocol"
+         ],
+         [
+            "source.reverse_dns",
+            "hostname"
+         ],
+         [
+            "malware.name",
+            "tag"
+         ],
+         [
+            "source.asn",
+            "asn",
+            "invalidate_zero"
+         ],
+         [
+            "source.geolocation.cc",
+            "geo"
+         ],
+         [
+            "source.geolocation.region",
+            "region"
+         ],
+         [
+            "source.geolocation.city",
+            "city"
+         ],
+         [
+            "extra.source.naics",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "command",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "vendor",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ]
+      ],
+      "required_fields" : [
+         [
+            "time.source",
+            "timestamp",
+            "add_UTC_to_timestamp"
+         ],
+         [
+            "source.ip",
+            "ip",
+            "validate_ip"
+         ],
+         [
+            "source.port",
+            "port",
+            "convert_int"
+         ]
+      ]
    },
    "scan6_bgp" : {
       "constant_fields" : {
@@ -12584,6 +12667,91 @@
             "convert_int"
          ]
       ]
+   },
+   "scan_activemq" : {
+      "constant_fields" : {
+         "classification.identifier" : "open-activemq",
+         "classification.taxonomy" : "vulnerable",
+         "classification.type" : "vulnerable-system",
+         "protocol.application" : "activemq"
+      },
+      "feed_name" : "Accessible-ActiveMQ",
+      "file_name" : "scan_activemq",
+      "optional_fields" : [
+         [
+            "protocol.transport",
+            "protocol"
+         ],
+         [
+            "source.reverse_dns",
+            "hostname"
+         ],
+         [
+            "extra.",
+            "tag",
+            "validate_to_none"
+         ],
+         [
+            "source.asn",
+            "asn",
+            "invalidate_zero"
+         ],
+         [
+            "source.geolocation.cc",
+            "geo"
+         ],
+         [
+            "source.geolocation.region",
+            "region"
+         ],
+         [
+            "source.geolocation.city",
+            "city"
+         ],
+         [
+            "extra.source.naics",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "command",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "vendor",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ]
+      ],
+      "required_fields" : [
+         [
+            "time.source",
+            "timestamp",
+            "add_UTC_to_timestamp"
+         ],
+         [
+            "source.ip",
+            "ip",
+            "validate_ip"
+         ],
+         [
+            "source.port",
+            "port",
+            "convert_int"
+         ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-activemq-service-report/"
    },
    "scan_adb" : {
       "constant_fields" : {
