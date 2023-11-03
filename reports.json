@@ -36,7 +36,8 @@
          "detail"
       ],
       "name" : "Compromised-Account",
-      "removed" : []
+      "removed" : [],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/compromised-account-report/"
    },
    "compromised_website" : {
       "classification.taxonomy" : "intrusions",

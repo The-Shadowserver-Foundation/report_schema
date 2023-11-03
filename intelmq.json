@@ -1,9 +1,10 @@
 {
    "_meta" : {
       "change_log" : [
-         "Added scan_activemq and scan6_activemq reports."
+         "Revised field mapping for compromised_website, compromised_account, and special.",
+         "Revised mapping of tag from malware.name to extra.tag."
       ],
-      "date_created" : "2023-10-30T23:03:44Z"
+      "date_created" : "2023-10-31T21:39:54Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -90,6 +91,16 @@
       "file_name" : "compromised_account",
       "optional_fields" : [
          [
+            "source.account",
+            "username",
+            "validate_to_none"
+         ],
+         [
+            "event_description.text",
+            "detail",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "tag",
             "validate_to_none"
@@ -114,9 +125,8 @@
             "validate_to_none"
          ],
          [
-            "extra.",
             "status",
-            "validate_to_none"
+            "status"
          ],
          [
             "extra.",
@@ -127,16 +137,6 @@
             "extra.",
             "service",
             "validate_to_none"
-         ],
-         [
-            "extra.",
-            "username",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "detail",
-            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -145,7 +145,8 @@
             "timestamp",
             "add_UTC_to_timestamp"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/compromised-account-report/"
    },
    "compromised_website" : {
       "constant_fields" : {
@@ -173,11 +174,27 @@
             "validate_fqdn"
          ],
          [
+            "event_description.text",
+            "category",
+            "category_or_detail",
+            true
+         ],
+         [
+            "malware.name",
+            "family",
+            "validate_to_none"
+         ],
+         [
+            "source.account",
+            "account",
+            "validate_to_none"
+         ],
+         [
             "source.reverse_dns",
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -196,11 +213,6 @@
          [
             "source.geolocation.city",
             "city"
-         ],
-         [
-            "event_description.text",
-            "category",
-            "validate_to_none"
          ],
          [
             "extra.",
@@ -243,19 +255,8 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "family",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
             "status",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "account",
-            "validate_to_none"
+            "status"
          ],
          [
             "extra.",
@@ -313,11 +314,27 @@
             "validate_fqdn"
          ],
          [
+            "event_description.text",
+            "category",
+            "category_or_detail",
+            true
+         ],
+         [
+            "malware.name",
+            "family",
+            "validate_to_none"
+         ],
+         [
+            "source.account",
+            "account",
+            "validate_to_none"
+         ],
+         [
             "source.reverse_dns",
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -336,11 +353,6 @@
          [
             "source.geolocation.city",
             "city"
-         ],
-         [
-            "event_description.text",
-            "category",
-            "validate_to_none"
          ],
          [
             "extra.",
@@ -383,19 +395,8 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "family",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
             "status",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "account",
-            "validate_to_none"
+            "status"
          ],
          [
             "extra.",
@@ -1557,8 +1558,18 @@
             "convert_bool"
          ],
          [
+            "malware.name",
+            "infection",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "tag",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "family",
             "validate_to_none"
          ],
          [
@@ -1661,15 +1672,6 @@
          [
             "extra.",
             "public_source",
-            "validate_to_none"
-         ],
-         [
-            "malware.name",
-            "infection"
-         ],
-         [
-            "extra.",
-            "family",
             "validate_to_none"
          ],
          [
@@ -1830,8 +1832,18 @@
             "validate_to_none"
          ],
          [
+            "malware.name",
+            "infection",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "tag",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "family",
             "validate_to_none"
          ],
          [
@@ -1929,15 +1941,6 @@
          [
             "extra.",
             "public_source",
-            "validate_to_none"
-         ],
-         [
-            "malware.name",
-            "infection"
-         ],
-         [
-            "extra.",
-            "family",
             "validate_to_none"
          ],
          [
@@ -2024,8 +2027,18 @@
             "validate_to_none"
          ],
          [
+            "malware.name",
+            "infection",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "tag",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "family",
             "validate_to_none"
          ],
          [
@@ -2123,15 +2136,6 @@
          [
             "extra.",
             "public_source",
-            "validate_to_none"
-         ],
-         [
-            "malware.name",
-            "infection"
-         ],
-         [
-            "extra.",
-            "family",
             "validate_to_none"
          ],
          [
@@ -2224,8 +2228,18 @@
             "convert_bool"
          ],
          [
+            "malware.name",
+            "infection",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "tag",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "family",
             "validate_to_none"
          ],
          [
@@ -2328,15 +2342,6 @@
          [
             "extra.",
             "public_source",
-            "validate_to_none"
-         ],
-         [
-            "malware.name",
-            "infection"
-         ],
-         [
-            "extra.",
-            "family",
             "validate_to_none"
          ],
          [
@@ -2499,8 +2504,18 @@
             "convert_float"
          ],
          [
+            "malware.name",
+            "infection",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "tag",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "family",
             "validate_to_none"
          ],
          [
@@ -2598,15 +2613,6 @@
          [
             "extra.",
             "public_source",
-            "validate_to_none"
-         ],
-         [
-            "malware.name",
-            "infection"
-         ],
-         [
-            "extra.",
-            "family",
             "validate_to_none"
          ],
          [
@@ -2714,8 +2720,18 @@
             "convert_bool"
          ],
          [
+            "malware.name",
+            "infection",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "tag",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "family",
             "validate_to_none"
          ],
          [
@@ -2818,15 +2834,6 @@
          [
             "extra.",
             "public_source",
-            "validate_to_none"
-         ],
-         [
-            "malware.name",
-            "infection"
-         ],
-         [
-            "extra.",
-            "family",
             "validate_to_none"
          ],
          [
@@ -2990,8 +2997,18 @@
             "validate_to_none"
          ],
          [
+            "malware.name",
+            "infection",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "tag",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "family",
             "validate_to_none"
          ],
          [
@@ -3089,15 +3106,6 @@
          [
             "extra.",
             "public_source",
-            "validate_to_none"
-         ],
-         [
-            "malware.name",
-            "infection"
-         ],
-         [
-            "extra.",
-            "family",
             "validate_to_none"
          ],
          [
@@ -3246,8 +3254,18 @@
       "file_name" : "event4_honeypot_ics_scan",
       "optional_fields" : [
          [
+            "malware.name",
+            "infection",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "tag",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "family",
             "validate_to_none"
          ],
          [
@@ -3345,15 +3363,6 @@
          [
             "extra.",
             "public_source",
-            "validate_to_none"
-         ],
-         [
-            "malware.name",
-            "infection"
-         ],
-         [
-            "extra.",
-            "family",
             "validate_to_none"
          ],
          [
@@ -3432,8 +3441,18 @@
       "file_name" : "event4_honeypot_rdp_scan",
       "optional_fields" : [
          [
+            "malware.name",
+            "infection",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "tag",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "family",
             "validate_to_none"
          ],
          [
@@ -3531,15 +3550,6 @@
          [
             "extra.",
             "public_source",
-            "validate_to_none"
-         ],
-         [
-            "malware.name",
-            "infection"
-         ],
-         [
-            "extra.",
-            "family",
             "validate_to_none"
          ],
          [
@@ -3658,8 +3668,18 @@
       "file_name" : "event4_honeypot_smb_scan",
       "optional_fields" : [
          [
+            "malware.name",
+            "infection",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "tag",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "family",
             "validate_to_none"
          ],
          [
@@ -3757,15 +3777,6 @@
          [
             "extra.",
             "public_source",
-            "validate_to_none"
-         ],
-         [
-            "malware.name",
-            "infection"
-         ],
-         [
-            "extra.",
-            "family",
             "validate_to_none"
          ],
          [
@@ -3903,8 +3914,18 @@
             "validate_network"
          ],
          [
+            "malware.name",
+            "infection",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "tag",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "family",
             "validate_to_none"
          ],
          [
@@ -4002,11 +4023,6 @@
          [
             "extra.",
             "public_source",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "family",
             "validate_to_none"
          ],
          [
@@ -4747,7 +4763,7 @@
             "validate_to_none"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -4885,7 +4901,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -4998,7 +5014,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -5121,7 +5137,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -5214,7 +5230,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -5328,7 +5344,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -5452,7 +5468,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -5600,12 +5616,11 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "family",
-            "validate_to_none"
+            "malware.name",
+            "family"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -5700,7 +5715,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -5803,7 +5818,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -5916,7 +5931,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -6049,7 +6064,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -6132,7 +6147,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -6264,7 +6279,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -6353,7 +6368,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -6691,7 +6706,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -6814,7 +6829,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -6937,7 +6952,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -7080,7 +7095,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -7248,7 +7263,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -7401,7 +7416,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -7829,7 +7844,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -8102,7 +8117,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -8500,7 +8515,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -8898,7 +8913,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -9140,7 +9155,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -9534,7 +9549,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -9697,7 +9712,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -9836,7 +9851,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -9939,7 +9954,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -10277,7 +10292,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -10687,7 +10702,7 @@
             "validate_to_none"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -10762,7 +10777,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -11190,7 +11205,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -11569,7 +11584,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -11978,7 +11993,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -12401,7 +12416,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -12534,7 +12549,7 @@
             "hostname"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -24430,6 +24445,10 @@
       "file_name" : "scan_xdmcp",
       "optional_fields" : [
          [
+            "extra.",
+            "status"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -24477,11 +24496,6 @@
          [
             "extra.",
             "reported_hostname",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "status",
             "validate_to_none"
          ],
          [
@@ -24641,6 +24655,10 @@
       "file_name" : "special",
       "optional_fields" : [
          [
+            "event_description.text",
+            "detail"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -24676,7 +24694,7 @@
             "validate_to_none"
          ],
          [
-            "malware.name",
+            "extra.",
             "tag"
          ],
          [
@@ -24685,17 +24703,11 @@
             "validate_to_none"
          ],
          [
-            "extra.",
             "status",
-            "validate_to_none"
+            "status"
          ],
          [
-            "extra.",
-            "detail",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
+            "source.account",
             "account",
             "validate_to_none"
          ]
