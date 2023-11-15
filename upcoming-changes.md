@@ -4,7 +4,9 @@
   * *The CSV field order is not static.  Please utilize the CSV header for field order.*
   * *For example, the sic field position will be reused for the severity field.*
 
-The following schema changes are planned for November 18 2023:
+---
+
+### The following schema changes are planned for November 18 2023:
 
 | report | change |
 | --- | --- |
@@ -25,7 +27,9 @@ The following schema changes are planned for November 18 2023:
 |url_malware| remove: host; add: hostname
 |url_spam| remove: host, md5; add: hostname, port
 
-The following schema changes are planned for November 25 2023:
+---
+
+### The following schema changes are planned for November 25 2023:
 
 * The `severity` field will be added to all reports.
 
