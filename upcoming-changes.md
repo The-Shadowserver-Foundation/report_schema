@@ -1,5 +1,9 @@
 ## Upcoming changes
 
+**NOTE** 
+  * *The CSV field order is not static.  Please utilize the CSV header for field order.*
+  * *For example, the sic field position will be reused for the severity field.*
+
 The following schema changes are planned for November 18 2023:
 
 | report | change |
