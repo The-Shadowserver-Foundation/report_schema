@@ -11,7 +11,7 @@ The following schema changes are planned for November 18 2023:
 | * all * |remove: sic
 |sandbox_connection|remove: host; add: city, hostname, naics, sector, region, sha1, sha256
 |sandbox_dns| remove: md5hash, type; add: md5, request_type, sha1, sha256
-|sandbox_url| remove: host; add: city, hostname, naics, port, region, sector, /'ssha1, sha256
+|sandbox_url| remove: host; add: city, hostname, naics, port, region, sector, ssha1, sha256
 |scan_chargen| remove: size (already has response_size)
 |scan_db2| remove: size; add: response_size
 |scan_ldap| remove: size; add: response_size
