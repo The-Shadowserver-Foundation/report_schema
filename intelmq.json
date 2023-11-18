@@ -1,10 +1,24 @@
 {
    "_meta" : {
       "change_log" : [
-         "Revised field mapping for compromised_website, compromised_account, and special.",
-         "Revised mapping of tag from malware.name to extra.tag."
+         "Report all | remove:sic",
+         "Report sandbox_connection | remove: host; add: city, hostname, naics, sector, region, sha1, sha256",
+         "Report sandbox_dns | remove: md5hash, type; add: md5, request_type, sha1, sha256",
+         "Report sandbox_url | remove: host; add: city, hostname, naics, port, region, sector, ssha1, sha256",
+         "Report scan_chargen | remove: size (already has response_size)",
+         "Report scan_db2 | remove: size; add: response_size",
+         "Report scan_ldap | remove: size; add: response_size",
+         "Report scan_ntpmonitor | remove: size; add: response_size",
+         "Report scan_rdp | remove: bluekeep_vulnerable, cve20190708_vulnerable (replaced with tag)",
+         "Report scan_sip | add: naics, sector",
+         "Report scan_smb | remove: smb_implant, smbv1_support (replaced with tag)",
+         "Report scan_tftp | remove: size; add: response_size",
+         "Report scan_ubiquiti | remove: size; add: response_size",
+         "Report scan_xdmcp | remove: size; add: response_size",
+         "Report url_malware | remove: host; add: hostname",
+         "Report url_spam | remove: host, md5; add: hostname, port"
       ],
-      "date_created" : "2023-10-31T21:39:54Z"
+      "date_created" : "2023-11-16T17:31:58Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -63,11 +77,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "sector",
             "validate_to_none"
          ]
@@ -87,6 +96,11 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/blocklist-report/"
    },
    "compromised_account" : {
+      "constant_fields" : {
+         "classification.identifier" : "compromised-account",
+         "classification.taxonomy" : "information-content-security",
+         "classification.type" : "data-leak"
+      },
       "feed_name" : "Compromised-Account",
       "file_name" : "compromised_account",
       "optional_fields" : [
@@ -127,11 +141,6 @@
          [
             "status",
             "status"
-         ],
-         [
-            "extra.",
-            "severity",
-            "validate_to_none"
          ],
          [
             "extra.",
@@ -190,6 +199,10 @@
             "validate_to_none"
          ],
          [
+            "protocol.transport",
+            "protocol"
+         ],
+         [
             "source.reverse_dns",
             "hostname"
          ],
@@ -237,11 +250,6 @@
          [
             "extra.",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -330,6 +338,10 @@
             "validate_to_none"
          ],
          [
+            "protocol.transport",
+            "protocol"
+         ],
+         [
             "source.reverse_dns",
             "hostname"
          ],
@@ -377,11 +389,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -474,11 +481,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "sector",
             "validate_to_none"
          ],
@@ -564,11 +566,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -4732,7 +4729,7 @@
          ],
          [
             "source.fqdn",
-            "host",
+            "hostname",
             "validate_fqdn"
          ],
          [
@@ -4792,6 +4789,11 @@
             "source.ip",
             "ip",
             "validate_ip"
+         ],
+         [
+            "source.port",
+            "port",
+            "convert_int"
          ]
       ],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/malware-url-report/"
@@ -4813,7 +4815,7 @@
          ],
          [
             "source.fqdn",
-            "host",
+            "hostname",
             "validate_fqdn"
          ],
          [
@@ -4845,6 +4847,10 @@
          ],
          [
             "extra.",
+            "tag"
+         ],
+         [
+            "extra.",
             "source",
             "validate_to_none"
          ]
@@ -4859,6 +4865,11 @@
             "source.ip",
             "ip",
             "validate_ip"
+         ],
+         [
+            "source.port",
+            "port",
+            "convert_int"
          ]
       ]
    },
@@ -5018,6 +5029,11 @@
             "tag"
          ],
          [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -5037,11 +5053,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -5348,6 +5359,11 @@
             "tag"
          ],
          [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -5367,11 +5383,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -5534,7 +5545,7 @@
       "optional_fields" : [
          [
             "destination.fqdn",
-            "host",
+            "hostname",
             "validate_fqdn"
          ],
          [
@@ -5563,6 +5574,34 @@
          [
             "extra.",
             "bytes_out",
+            "validate_to_none"
+         ],
+         [
+            "source.geolocation.region",
+            "region"
+         ],
+         [
+            "source.geolocation.city",
+            "city"
+         ],
+         [
+            "extra.source.naics",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "malware.hash.sha1",
+            "sha1",
+            "validate_to_none"
+         ],
+         [
+            "malware.hash.sha256",
+            "sha256",
             "validate_to_none"
          ]
       ],
@@ -5597,12 +5636,12 @@
       "optional_fields" : [
          [
             "extra.dns_query_type",
-            "type",
+            "request_type",
             "validate_to_none"
          ],
          [
             "malware.hash.md5",
-            "md5hash",
+            "md5",
             "validate_to_none"
          ],
          [
@@ -5627,6 +5666,16 @@
             "extra.",
             "source",
             "validate_to_none"
+         ],
+         [
+            "malware.hash.sha1",
+            "sha1",
+            "validate_to_none"
+         ],
+         [
+            "malware.hash.sha256",
+            "sha256",
+            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -5648,7 +5697,7 @@
       "optional_fields" : [
          [
             "destination.fqdn",
-            "host",
+            "hostname",
             "validate_fqdn"
          ],
          [
@@ -5680,6 +5729,34 @@
             "user_agent",
             "user_agent",
             "validate_to_none"
+         ],
+         [
+            "extra.source.naics",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "source.geolocation.region",
+            "region"
+         ],
+         [
+            "source.geolocation.city",
+            "city"
+         ],
+         [
+            "malware.hash.sha1",
+            "sha1",
+            "validate_to_none"
+         ],
+         [
+            "malware.hash.sha256",
+            "sha256",
+            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -5692,6 +5769,11 @@
             "source.ip",
             "ip",
             "validate_ip"
+         ],
+         [
+            "source.port",
+            "port",
+            "convert_int"
          ]
       ],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sandbox-url-report/"
@@ -5957,11 +6039,6 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.",
             "http",
             "validate_to_none"
@@ -6095,11 +6172,6 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.source.sector",
             "sector",
             "validate_to_none"
@@ -6178,11 +6250,6 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.",
             "ok",
             "convert_bool"
@@ -6247,6 +6314,9 @@
       ]
    },
    "scan6_exchange" : {
+      "constant_fields" : {
+         "protocol.application" : "exchange"
+      },
       "feed_name" : "IPv6-Vulnerable-Exchange",
       "file_name" : "scan6_exchange",
       "optional_fields" : [
@@ -6302,11 +6372,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -6391,11 +6456,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -6710,6 +6770,11 @@
             "tag"
          ],
          [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -6729,11 +6794,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -6833,6 +6893,11 @@
             "tag"
          ],
          [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -6852,11 +6917,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -6956,6 +7016,11 @@
             "tag"
          ],
          [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -6975,11 +7040,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -7121,11 +7181,6 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.",
             "ipp_version",
             "validate_to_none"
@@ -7219,6 +7274,11 @@
             "extra.",
             "device_sector",
             "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -7289,11 +7349,6 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.",
             "initiator_spi",
             "validate_to_none"
@@ -7341,6 +7396,11 @@
          [
             "extra.",
             "notify_message_type",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
             "validate_to_none"
          ]
       ],
@@ -7442,13 +7502,8 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.",
-            "size",
+            "response_size",
             "convert_int"
          ],
          [
@@ -7870,11 +7925,6 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.",
             "raw_response",
             "validate_to_none"
@@ -8076,7 +8126,12 @@
          ],
          [
             "extra.",
-            "issuer_serialNumber",
+            "issuer_serial_number",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
             "validate_to_none"
          ]
       ],
@@ -8143,11 +8198,6 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.",
             "raw_response",
             "validate_to_none"
@@ -8349,7 +8399,12 @@
          ],
          [
             "extra.",
-            "issuer_serialNumber",
+            "issuer_serial_number",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
             "validate_to_none"
          ]
       ],
@@ -8543,11 +8598,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -9004,11 +9054,6 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.source.sector",
             "sector",
             "validate_to_none"
@@ -9067,7 +9112,7 @@
          ],
          [
             "extra.",
-            "size",
+            "response_size",
             "convert_int"
          ],
          [
@@ -9090,11 +9135,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -9183,11 +9223,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -9531,16 +9566,6 @@
       "file_name" : "scan6_rdp",
       "optional_fields" : [
          [
-            "extra.",
-            "cve20190708_vulnerable",
-            "convert_bool"
-         ],
-         [
-            "extra.",
-            "bluekeep_vulnerable",
-            "convert_bool"
-         ],
-         [
             "protocol.transport",
             "protocol"
          ],
@@ -9650,11 +9675,6 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.source.sector",
             "sector",
             "validate_to_none"
@@ -9735,11 +9755,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -9838,11 +9853,6 @@
       "file_name" : "scan6_smb",
       "optional_fields" : [
          [
-            "extra.",
-            "smb_implant",
-            "convert_bool"
-         ],
-         [
             "protocol.transport",
             "protocol"
          ],
@@ -9877,11 +9887,6 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.",
             "arch",
             "validate_to_none"
@@ -9889,11 +9894,6 @@
          [
             "extra.",
             "key",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "smbv1_support",
             "validate_to_none"
          ],
          [
@@ -9914,6 +9914,11 @@
          [
             "extra.",
             "smb_version_string",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
             "validate_to_none"
          ]
       ],
@@ -9980,13 +9985,13 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.",
             "banner",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
             "validate_to_none"
          ],
          [
@@ -10318,13 +10323,13 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.",
             "banner",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
             "validate_to_none"
          ],
          [
@@ -10667,11 +10672,6 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.source.sector",
             "sector",
             "validate_to_none"
@@ -10800,11 +10800,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -11166,6 +11161,11 @@
             "extra.",
             "device_sector",
             "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -11416,11 +11416,6 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.",
             "freak_vulnerable",
             "convert_bool"
@@ -11579,6 +11574,10 @@
       "feed_name" : "SSL-FREAK-Vulnerable-Servers IPv6",
       "file_name" : "scan6_ssl_freak",
       "optional_fields" : [
+         [
+            "protocol.transport",
+            "protocol"
+         ],
          [
             "source.reverse_dns",
             "hostname"
@@ -11785,11 +11784,6 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.",
             "freak_vulnerable",
             "convert_bool"
@@ -11988,6 +11982,10 @@
       "feed_name" : "SSL-POODLE-Vulnerable-Servers IPv6",
       "file_name" : "scan6_ssl_poodle",
       "optional_fields" : [
+         [
+            "protocol.transport",
+            "protocol"
+         ],
          [
             "source.reverse_dns",
             "hostname"
@@ -12201,11 +12199,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -12442,11 +12435,6 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.source.sector",
             "sector",
             "validate_to_none"
@@ -12575,13 +12563,13 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.",
             "banner",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
             "validate_to_none"
          ]
       ],
@@ -12642,11 +12630,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -12815,11 +12798,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "name",
             "validate_to_none"
          ],
@@ -12861,6 +12839,11 @@
          [
             "extra.",
             "device_sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sector",
             "validate_to_none"
          ]
       ],
@@ -12930,11 +12913,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "machine_type",
             "validate_to_none"
          ],
@@ -12976,6 +12954,11 @@
          [
             "extra.",
             "network_address",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sector",
             "validate_to_none"
          ]
       ],
@@ -13041,11 +13024,6 @@
          [
             "extra.",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -13184,11 +13162,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "machine_name",
             "validate_to_none"
          ],
@@ -13201,6 +13174,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "extra.",
+            "sector",
+            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -13368,11 +13346,6 @@
       "file_name" : "scan_chargen",
       "optional_fields" : [
          [
-            "extra.response_size",
-            "size",
-            "convert_int"
-         ],
-         [
             "protocol.transport",
             "protocol"
          ],
@@ -13405,11 +13378,6 @@
          [
             "extra.",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -13494,8 +13462,8 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
+            "sector",
+            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -13569,11 +13537,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "response",
             "validate_to_none"
          ],
@@ -13586,6 +13549,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "extra.",
+            "sector",
+            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -13650,11 +13618,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -13774,11 +13737,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "http",
             "validate_to_none"
          ],
@@ -13868,11 +13826,6 @@
       "file_name" : "scan_db2",
       "optional_fields" : [
          [
-            "extra.",
-            "size",
-            "convert_int"
-         ],
-         [
             "protocol.transport",
             "protocol"
          ],
@@ -13909,11 +13862,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "db2_hostname",
             "validate_to_none"
          ],
@@ -13924,8 +13872,18 @@
          ],
          [
             "extra.",
+            "response_size",
+            "convert_int"
+         ],
+         [
+            "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "extra.",
+            "sector",
+            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -13988,11 +13946,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -14097,11 +14050,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "sector",
             "validate_to_none"
          ]
@@ -14173,11 +14121,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -14364,11 +14307,6 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.source.sector",
             "sector",
             "validate_to_none"
@@ -14550,11 +14488,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "ok",
             "convert_bool"
          ],
@@ -14664,11 +14597,6 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.source.sector",
             "sector",
             "validate_to_none"
@@ -14699,6 +14627,9 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-erlang-port-mapper-report-daemon/"
    },
    "scan_exchange" : {
+      "constant_fields" : {
+         "protocol.application" : "exchange"
+      },
       "feed_name" : "Vulnerable-Exchange-Server",
       "file_name" : "scan_exchange",
       "optional_fields" : [
@@ -14755,11 +14686,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -14846,11 +14772,6 @@
          [
             "extra.",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -15206,11 +15127,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "server_type",
             "validate_to_none"
          ],
@@ -15232,6 +15148,11 @@
          [
             "extra.",
             "volumeinfo",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sector",
             "validate_to_none"
          ]
       ],
@@ -15278,6 +15199,11 @@
             "validate_to_none"
          ],
          [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -15297,11 +15223,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -15403,6 +15324,11 @@
             "validate_to_none"
          ],
          [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -15422,11 +15348,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -15528,6 +15449,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -15547,11 +15473,6 @@
          [
             "extra.",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -15690,11 +15611,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -15909,11 +15825,6 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.source.sector",
             "sector",
             "validate_to_none"
@@ -15981,11 +15892,6 @@
          [
             "extra.",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -16082,6 +15988,11 @@
             "extra.",
             "device_sector",
             "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sector",
+            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -16155,11 +16066,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "initiator_spi",
             "validate_to_none"
          ],
@@ -16206,6 +16112,11 @@
          [
             "extra.",
             "notify_message_type",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sector",
             "validate_to_none"
          ]
       ],
@@ -16276,11 +16187,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -16700,12 +16606,7 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "size",
+            "response_size",
             "convert_int"
          ],
          [
@@ -17159,13 +17060,8 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.",
-            "size",
+            "response_size",
             "convert_int"
          ],
          [
@@ -17247,6 +17143,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -17311,11 +17212,6 @@
          [
             "extra.",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -17411,6 +17307,11 @@
          [
             "extra.",
             "opc_ua_discovery",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sector",
             "validate_to_none"
          ]
       ],
@@ -17510,11 +17411,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "time",
             "validate_to_none"
          ],
@@ -17601,11 +17497,6 @@
          [
             "extra.",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -17730,11 +17621,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "raw_response",
             "validate_to_none"
          ],
@@ -17935,7 +17821,12 @@
          ],
          [
             "extra.",
-            "issuer_serialNumber",
+            "issuer_serial_number",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sector",
             "validate_to_none"
          ]
       ],
@@ -18004,11 +17895,6 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.",
             "raw_response",
             "validate_to_none"
@@ -18210,7 +18096,12 @@
          ],
          [
             "extra.",
-            "issuer_serialNumber",
+            "issuer_serial_number",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
             "validate_to_none"
          ]
       ],
@@ -18291,11 +18182,6 @@
          [
             "extra.",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -18516,11 +18402,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -18860,11 +18741,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "opcode",
             "validate_to_none"
          ],
@@ -18979,11 +18855,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "sector",
             "validate_to_none"
          ],
@@ -19065,11 +18936,6 @@
          [
             "extra.",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -19279,11 +19145,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "sector",
             "validate_to_none"
          ],
@@ -19342,7 +19203,7 @@
          ],
          [
             "extra.",
-            "size",
+            "response_size",
             "convert_int"
          ],
          [
@@ -19365,11 +19226,6 @@
          [
             "extra.",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -19445,11 +19301,6 @@
          [
             "extra.",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -19560,11 +19411,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -19949,11 +19795,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "sector",
             "validate_to_none"
          ],
@@ -20032,11 +19873,6 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.",
             "version_field_1",
             "validate_to_none"
@@ -20054,6 +19890,11 @@
          [
             "extra.",
             "version_field_4",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
             "validate_to_none"
          ]
       ],
@@ -20127,8 +19968,8 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
+            "sector",
+            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -20161,16 +20002,6 @@
       "feed_name" : "Accessible-RDP",
       "file_name" : "scan_rdp",
       "optional_fields" : [
-         [
-            "extra.",
-            "cve20190708_vulnerable",
-            "convert_bool"
-         ],
-         [
-            "extra.",
-            "bluekeep_vulnerable",
-            "convert_bool"
-         ],
          [
             "protocol.transport",
             "protocol"
@@ -20283,11 +20114,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "sector",
             "validate_to_none"
          ],
@@ -20372,11 +20198,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "sessionid",
             "validate_to_none"
          ],
@@ -20389,6 +20210,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "extra.",
+            "sector",
+            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -20458,11 +20284,6 @@
          [
             "extra.",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -20597,11 +20418,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "module",
             "validate_to_none"
          ],
@@ -20613,6 +20429,11 @@
          [
             "extra.",
             "has_password",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sector",
             "validate_to_none"
          ]
       ],
@@ -20754,6 +20575,16 @@
             "extra.",
             "response_size",
             "convert_int"
+         ],
+         [
+            "extra.source.naics",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -20818,11 +20649,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -20922,11 +20748,6 @@
       "file_name" : "scan_smb",
       "optional_fields" : [
          [
-            "extra.",
-            "smb_implant",
-            "convert_bool"
-         ],
-         [
             "protocol.transport",
             "protocol"
          ],
@@ -20963,22 +20784,12 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "arch",
             "validate_to_none"
          ],
          [
             "extra.",
             "key",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "smbv1_support",
             "validate_to_none"
          ],
          [
@@ -20999,6 +20810,11 @@
          [
             "extra.",
             "smb_version_string",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sector",
             "validate_to_none"
          ]
       ],
@@ -21067,13 +20883,13 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.",
             "banner",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
             "validate_to_none"
          ],
          [
@@ -21408,12 +21224,12 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
+            "banner",
+            "validate_to_none"
          ],
          [
             "extra.",
-            "banner",
+            "sector",
             "validate_to_none"
          ],
          [
@@ -21758,11 +21574,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "sector",
             "validate_to_none"
          ],
@@ -21895,11 +21706,6 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.source.sector",
             "sector",
             "validate_to_none"
@@ -22026,11 +21832,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "sector",
             "validate_to_none"
          ],
@@ -22131,11 +21932,6 @@
          [
             "extra.source.naics",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sic",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -22497,6 +22293,11 @@
             "extra.",
             "device_sector",
             "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -22749,11 +22550,6 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.",
             "freak_vulnerable",
             "convert_bool"
@@ -22913,6 +22709,10 @@
       "feed_name" : "SSL-FREAK-Vulnerable-Servers",
       "file_name" : "scan_ssl_freak",
       "optional_fields" : [
+         [
+            "protocol.transport",
+            "protocol"
+         ],
          [
             "source.reverse_dns",
             "hostname"
@@ -23121,11 +22921,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "freak_vulnerable",
             "convert_bool"
          ],
@@ -23324,6 +23119,10 @@
       "feed_name" : "SSL-POODLE-Vulnerable-Servers IPv4",
       "file_name" : "scan_ssl_poodle",
       "optional_fields" : [
+         [
+            "protocol.transport",
+            "protocol"
+         ],
          [
             "source.reverse_dns",
             "hostname"
@@ -23538,11 +23337,6 @@
          [
             "extra.",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -23781,11 +23575,6 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.source.sector",
             "sector",
             "validate_to_none"
@@ -23925,11 +23714,6 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.",
             "sequence_number",
             "validate_to_none"
@@ -24021,12 +23805,12 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
+            "banner",
+            "validate_to_none"
          ],
          [
             "extra.",
-            "banner",
+            "sector",
             "validate_to_none"
          ]
       ],
@@ -24096,11 +23880,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "opcode",
             "validate_to_none"
          ],
@@ -24121,13 +23900,18 @@
          ],
          [
             "extra.",
-            "size",
+            "response_size",
             "convert_int"
          ],
          [
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "extra.",
+            "sector",
+            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -24184,11 +23968,6 @@
             "validate_to_none"
          ],
          [
-            "extra.response_size",
-            "size",
-            "convert_int"
-         ],
-         [
             "protocol.transport",
             "protocol"
          ],
@@ -24225,18 +24004,23 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "essid",
             "validate_to_none"
          ],
          [
             "extra.",
+            "response_size",
+            "convert_int"
+         ],
+         [
+            "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "extra.",
+            "sector",
+            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -24297,11 +24081,6 @@
          [
             "extra.",
             "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "sic",
             "invalidate_zero"
          ],
          [
@@ -24385,11 +24164,6 @@
             "invalidate_zero"
          ],
          [
-            "extra.source.sic",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
             "extra.source.sector",
             "sector",
             "validate_to_none"
@@ -24445,10 +24219,6 @@
       "file_name" : "scan_xdmcp",
       "optional_fields" : [
          [
-            "extra.",
-            "status"
-         ],
-         [
             "protocol.transport",
             "protocol"
          ],
@@ -24485,11 +24255,6 @@
          ],
          [
             "extra.",
-            "sic",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
             "opcode",
             "validate_to_none"
          ],
@@ -24499,14 +24264,23 @@
             "validate_to_none"
          ],
          [
+            "status",
+            "status"
+         ],
+         [
             "extra.",
-            "size",
+            "response_size",
             "convert_int"
          ],
          [
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "extra.",
+            "sector",
+            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -24545,7 +24319,7 @@
          ],
          [
             "source.fqdn",
-            "host",
+            "hostname",
             "validate_fqdn"
          ],
          [
@@ -24612,6 +24386,10 @@
          ],
          [
             "extra.",
+            "tag"
+         ],
+         [
+            "extra.",
             "source",
             "validate_to_none"
          ],
@@ -24623,11 +24401,6 @@
          [
             "extra.",
             "subject",
-            "validate_to_none"
-         ],
-         [
-            "malware.hash.md5",
-            "md5",
             "validate_to_none"
          ]
       ],
@@ -24641,6 +24414,11 @@
             "source.ip",
             "ip",
             "validate_ip"
+         ],
+         [
+            "source.port",
+            "port",
+            "convert_int"
          ]
       ],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/spam-url-report/"
@@ -24707,8 +24485,13 @@
             "status"
          ],
          [
-            "source.account",
-            "account",
+            "extra.",
+            "method",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_vendor",
             "validate_to_none"
          ]
       ],
