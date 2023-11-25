@@ -1,24 +1,10 @@
 {
    "_meta" : {
       "change_log" : [
-         "Report all | remove:sic",
-         "Report sandbox_connection | remove: host; add: city, hostname, naics, sector, region, sha1, sha256",
-         "Report sandbox_dns | remove: md5hash, type; add: md5, request_type, sha1, sha256",
-         "Report sandbox_url | remove: host; add: city, hostname, naics, port, region, sector, ssha1, sha256",
-         "Report scan_chargen | remove: size (already has response_size)",
-         "Report scan_db2 | remove: size; add: response_size",
-         "Report scan_ldap | remove: size; add: response_size",
-         "Report scan_ntpmonitor | remove: size; add: response_size",
-         "Report scan_rdp | remove: bluekeep_vulnerable, cve20190708_vulnerable (replaced with tag)",
-         "Report scan_sip | add: naics, sector",
-         "Report scan_smb | remove: smb_implant, smbv1_support (replaced with tag)",
-         "Report scan_tftp | remove: size; add: response_size",
-         "Report scan_ubiquiti | remove: size; add: response_size",
-         "Report scan_xdmcp | remove: size; add: response_size",
-         "Report url_malware | remove: host; add: hostname",
-         "Report url_spam | remove: host, md5; add: hostname, port"
+         "Report all | add: severity.",
+         "Report all scan and population | add: hostname_source."
       ],
-      "date_created" : "2023-11-16T17:31:58Z"
+      "date_created" : "2023-11-22T00:13:50Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -37,6 +23,11 @@
          [
             "extra.",
             "tag",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "severity",
             "validate_to_none"
          ],
          [
@@ -144,6 +135,11 @@
          ],
          [
             "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "service",
             "validate_to_none"
          ]
@@ -199,6 +195,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -251,6 +252,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -338,6 +344,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -390,6 +401,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -445,6 +461,11 @@
       "file_name" : "device_id",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -478,6 +499,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -534,6 +560,11 @@
       "file_name" : "device_id6",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -567,6 +598,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -688,6 +724,11 @@
          [
             "extra.",
             "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "severity",
             "validate_to_none"
          ],
          [
@@ -857,6 +898,11 @@
          [
             "extra.",
             "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "severity",
             "validate_to_none"
          ],
          [
@@ -1055,6 +1101,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "destination.ip",
             "dst_ip",
             "validate_ip"
@@ -1221,6 +1272,11 @@
          [
             "extra.",
             "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "severity",
             "validate_to_none"
          ],
          [
@@ -1411,6 +1467,11 @@
          [
             "extra.",
             "http_referer_sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "severity",
             "validate_to_none"
          ],
          [
@@ -1617,6 +1678,11 @@
          [
             "extra.",
             "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "severity",
             "validate_to_none"
          ],
          [
@@ -1894,6 +1960,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "destination.ip",
             "dst_ip",
             "validate_ip"
@@ -2086,6 +2157,11 @@
          [
             "extra.",
             "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "severity",
             "validate_to_none"
          ],
          [
@@ -2287,6 +2363,11 @@
          [
             "extra.",
             "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "severity",
             "validate_to_none"
          ],
          [
@@ -2566,6 +2647,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "destination.ip",
             "dst_ip",
             "validate_ip"
@@ -2790,6 +2876,11 @@
          [
             "extra.",
             "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "severity",
             "validate_to_none"
          ],
          [
@@ -3059,6 +3150,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "destination.ip",
             "dst_ip",
             "validate_ip"
@@ -3316,6 +3412,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "destination.ip",
             "dst_ip",
             "validate_ip"
@@ -3500,6 +3601,11 @@
          [
             "extra.",
             "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "severity",
             "validate_to_none"
          ],
          [
@@ -3727,6 +3833,11 @@
          [
             "extra.",
             "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "severity",
             "validate_to_none"
          ],
          [
@@ -3976,6 +4087,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "destination.ip",
             "dst_ip",
             "validate_ip"
@@ -4148,6 +4264,11 @@
          [
             "extra.",
             "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "severity",
             "validate_to_none"
          ],
          [
@@ -4327,6 +4448,11 @@
          ],
          [
             "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "count",
             "convert_int"
          ]
@@ -4426,6 +4552,11 @@
          [
             "extra.",
             "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "severity",
             "validate_to_none"
          ],
          [
@@ -4620,6 +4751,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "destination.ip",
             "dst_ip",
             "validate_ip"
@@ -4761,6 +4897,11 @@
          ],
          [
             "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "tag"
          ],
          [
@@ -4847,6 +4988,11 @@
          ],
          [
             "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "tag"
          ],
          [
@@ -4904,6 +5050,11 @@
             "convert_int"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -4936,6 +5087,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -5017,6 +5173,11 @@
       "file_name" : "population6_http_proxy",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -5054,6 +5215,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -5140,6 +5306,11 @@
       "file_name" : "population6_msmq",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -5172,6 +5343,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -5233,6 +5409,11 @@
             "convert_int"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -5265,6 +5446,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -5347,6 +5533,11 @@
       "file_name" : "population_http_proxy",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -5384,6 +5575,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -5471,6 +5667,11 @@
       "file_name" : "population_msmq",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -5503,6 +5704,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -5547,6 +5753,11 @@
             "destination.fqdn",
             "hostname",
             "validate_fqdn"
+         ],
+         [
+            "extra.",
+            "severity",
+            "validate_to_none"
          ],
          [
             "source.asn",
@@ -5668,6 +5879,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "malware.hash.sha1",
             "sha1",
             "validate_to_none"
@@ -5703,6 +5919,11 @@
          [
             "extra.http_request_method",
             "method",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "severity",
             "validate_to_none"
          ],
          [
@@ -5789,6 +6010,11 @@
       "file_name" : "scan6_activemq",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -5821,6 +6047,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -5892,6 +6123,11 @@
             "convert_int"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -5924,6 +6160,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -6005,6 +6246,11 @@
       "file_name" : "scan6_cwmp",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -6037,6 +6283,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -6133,6 +6384,11 @@
             "convert_float"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -6170,6 +6426,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -6211,6 +6472,11 @@
             "convert_bool"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -6248,6 +6514,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -6341,6 +6612,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -6373,6 +6649,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -6425,6 +6706,11 @@
       "file_name" : "scan6_ftp",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -6457,6 +6743,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -6758,6 +7049,11 @@
       "file_name" : "scan6_http",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -6795,6 +7091,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -6881,6 +7182,11 @@
       "file_name" : "scan6_http_proxy",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -6918,6 +7224,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -7004,6 +7315,11 @@
       "file_name" : "scan6_http_vulnerable",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -7041,6 +7357,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -7147,6 +7468,11 @@
       "file_name" : "scan6_ipp",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -7179,6 +7505,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -7315,6 +7646,11 @@
             "convert_int"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -7347,6 +7683,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -7468,6 +7809,11 @@
             "convert_bool"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -7500,6 +7846,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -7891,6 +8242,11 @@
             "convert_bool"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -7923,6 +8279,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -8164,6 +8525,11 @@
       "file_name" : "scan6_mqtt_anon",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -8196,6 +8562,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -8562,6 +8933,11 @@
             "convert_bool"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -8599,6 +8975,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -8955,6 +9336,11 @@
             "convert_int"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -9054,6 +9440,11 @@
             "invalidate_zero"
          ],
          [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
             "extra.source.sector",
             "sector",
             "validate_to_none"
@@ -9098,6 +9489,11 @@
       "file_name" : "scan6_ntpmonitor",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -9136,6 +9532,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -9187,6 +9588,11 @@
             "convert_bool"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -9224,6 +9630,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -9566,6 +9977,11 @@
       "file_name" : "scan6_rdp",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -9675,6 +10091,11 @@
             "invalidate_zero"
          ],
          [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
             "extra.source.sector",
             "sector",
             "validate_to_none"
@@ -9724,6 +10145,11 @@
       "file_name" : "scan6_slp",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -9756,6 +10182,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -9853,6 +10284,11 @@
       "file_name" : "scan6_smb",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -9885,6 +10321,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -9951,6 +10392,11 @@
       "file_name" : "scan6_smtp",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -9983,6 +10429,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -10289,6 +10740,11 @@
       "file_name" : "scan6_smtp_vulnerable",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -10321,6 +10777,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -10627,6 +11088,11 @@
       "file_name" : "scan6_snmp",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -10670,6 +11136,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -10769,6 +11240,11 @@
       "file_name" : "scan6_ssh",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -10801,6 +11277,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -11197,6 +11678,11 @@
       "file_name" : "scan6_ssl",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -11417,6 +11903,11 @@
          ],
          [
             "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "freak_vulnerable",
             "convert_bool"
          ],
@@ -11574,6 +12065,11 @@
       "feed_name" : "SSL-FREAK-Vulnerable-Servers IPv6",
       "file_name" : "scan6_ssl_freak",
       "optional_fields" : [
+         [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
          [
             "protocol.transport",
             "protocol"
@@ -11782,6 +12278,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -11983,6 +12484,11 @@
       "file_name" : "scan6_ssl_poodle",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -12202,6 +12708,11 @@
             "invalidate_zero"
          ],
          [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
             "extra.source.sector",
             "sector",
             "validate_to_none"
@@ -12401,6 +12912,11 @@
             "convert_int"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -12433,6 +12949,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -12529,6 +13050,11 @@
       "file_name" : "scan6_telnet",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -12561,6 +13087,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -12603,6 +13134,11 @@
       "file_name" : "scan6_vnc",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -12631,6 +13167,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -12677,6 +13218,11 @@
       "file_name" : "scan_activemq",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -12710,6 +13256,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -12762,6 +13313,11 @@
       "file_name" : "scan_adb",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -12795,6 +13351,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -12877,6 +13438,11 @@
       "file_name" : "scan_afp",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -12910,6 +13476,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -12992,6 +13563,11 @@
       "file_name" : "scan_amqp",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -13025,6 +13601,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -13126,6 +13707,11 @@
       "file_name" : "scan_ard",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -13159,6 +13745,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -13231,6 +13822,11 @@
             "convert_int"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -13264,6 +13860,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -13346,6 +13947,11 @@
       "file_name" : "scan_chargen",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -13379,6 +13985,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -13426,6 +14037,11 @@
       "file_name" : "scan_cisco_smart_install",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -13462,6 +14078,11 @@
          ],
          [
             "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "sector",
             "validate_to_none"
          ]
@@ -13495,6 +14116,11 @@
       "feed_name" : "Accessible-CoAP",
       "file_name" : "scan_coap",
       "optional_fields" : [
+         [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
          [
             "protocol.transport",
             "protocol"
@@ -13534,6 +14160,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -13586,6 +14217,11 @@
       "file_name" : "scan_couchdb",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -13619,6 +14255,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -13701,6 +14342,11 @@
       "file_name" : "scan_cwmp",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -13734,6 +14380,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -13826,6 +14477,11 @@
       "file_name" : "scan_db2",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -13859,6 +14515,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -13919,6 +14580,11 @@
             "tag"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -13947,6 +14613,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -14009,6 +14680,11 @@
             "convert_float"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -14050,6 +14726,11 @@
          ],
          [
             "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "sector",
             "validate_to_none"
          ]
@@ -14083,6 +14764,11 @@
       "feed_name" : "Accessible-Docker",
       "file_name" : "scan_docker",
       "optional_fields" : [
+         [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
          [
             "protocol.transport",
             "protocol"
@@ -14122,6 +14808,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -14277,6 +14968,11 @@
             "convert_bool"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -14305,6 +15001,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -14447,6 +15148,11 @@
             "convert_bool"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -14485,6 +15191,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -14562,6 +15273,11 @@
       "file_name" : "scan_epmd",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -14595,6 +15311,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -14654,6 +15375,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -14687,6 +15413,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -14740,6 +15471,11 @@
       "file_name" : "scan_ftp",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -14773,6 +15509,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -15091,6 +15832,11 @@
             "convert_int"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -15124,6 +15870,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -15186,6 +15937,11 @@
       "file_name" : "scan_http",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -15224,6 +15980,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -15311,6 +16072,11 @@
       "file_name" : "scan_http_proxy",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -15349,6 +16115,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -15436,6 +16207,11 @@
       "file_name" : "scan_http_vulnerable",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -15474,6 +16250,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -15584,6 +16365,11 @@
             "tag"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -15612,6 +16398,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -15735,6 +16526,11 @@
             "convert_bool"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -15825,6 +16621,11 @@
             "invalidate_zero"
          ],
          [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
             "extra.source.sector",
             "sector",
             "validate_to_none"
@@ -15860,6 +16661,11 @@
       "file_name" : "scan_ipp",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -15893,6 +16699,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -16030,6 +16841,11 @@
             "convert_int"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -16063,6 +16879,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -16150,6 +16971,11 @@
       "file_name" : "scan_kubernetes",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -16188,6 +17014,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -16570,6 +17401,11 @@
             "convert_bool"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -16603,6 +17439,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -17025,6 +17866,11 @@
             "convert_bool"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -17058,6 +17904,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -17180,6 +18031,11 @@
       "file_name" : "scan_mdns",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -17213,6 +18069,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -17370,6 +18231,11 @@
             "convert_int"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -17408,6 +18274,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -17460,6 +18331,11 @@
       "file_name" : "scan_mongodb",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -17498,6 +18374,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -17585,6 +18466,11 @@
             "convert_bool"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -17618,6 +18504,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -17860,6 +18751,11 @@
       "file_name" : "scan_mqtt_anon",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -17893,6 +18789,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -18145,6 +19046,11 @@
             "convert_int"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -18183,6 +19089,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -18365,6 +19276,11 @@
             "convert_bool"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -18403,6 +19319,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -18700,6 +19621,11 @@
       "file_name" : "scan_nat_pmp",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -18738,6 +19664,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -18804,6 +19735,11 @@
             "username"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -18855,6 +19791,11 @@
          ],
          [
             "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "sector",
             "validate_to_none"
          ],
@@ -18899,6 +19840,11 @@
       "file_name" : "scan_netis_router",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -18937,6 +19883,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -19044,6 +19995,11 @@
             "convert_int"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -19145,6 +20101,11 @@
          ],
          [
             "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "sector",
             "validate_to_none"
          ],
@@ -19189,6 +20150,11 @@
       "file_name" : "scan_ntpmonitor",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -19227,6 +20193,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -19269,6 +20240,11 @@
       "file_name" : "scan_portmapper",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -19302,6 +20278,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -19374,6 +20355,11 @@
             "convert_bool"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -19412,6 +20398,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -19754,6 +20745,11 @@
       "file_name" : "scan_qotd",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -19792,6 +20788,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -19838,6 +20839,11 @@
       "file_name" : "scan_quic",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -19871,6 +20877,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -19927,6 +20938,11 @@
       "file_name" : "scan_radmin",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -19968,6 +20984,11 @@
          ],
          [
             "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "sector",
             "validate_to_none"
          ]
@@ -20002,6 +21023,11 @@
       "feed_name" : "Accessible-RDP",
       "file_name" : "scan_rdp",
       "optional_fields" : [
+         [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
          [
             "protocol.transport",
             "protocol"
@@ -20114,6 +21140,11 @@
          ],
          [
             "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "sector",
             "validate_to_none"
          ],
@@ -20162,6 +21193,11 @@
       "file_name" : "scan_rdpeudp",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -20195,6 +21231,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -20247,6 +21288,11 @@
       "file_name" : "scan_redis",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -20285,6 +21331,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -20382,6 +21433,11 @@
       "file_name" : "scan_rsync",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -20415,6 +21471,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -20489,6 +21550,11 @@
          [
             "extra.sip_allow",
             "allow",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "severity",
             "validate_to_none"
          ],
          [
@@ -20577,6 +21643,11 @@
             "convert_int"
          ],
          [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
             "extra.source.naics",
             "naics",
             "invalidate_zero"
@@ -20617,6 +21688,11 @@
       "file_name" : "scan_slp",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -20650,6 +21726,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -20748,6 +21829,11 @@
       "file_name" : "scan_smb",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -20781,6 +21867,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -20848,6 +21939,11 @@
       "file_name" : "scan_smtp",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -20881,6 +21977,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -21188,6 +22289,11 @@
       "file_name" : "scan_smtp_vulnerable",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -21221,6 +22327,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -21528,6 +22639,11 @@
       "file_name" : "scan_snmp",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -21571,6 +22687,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -21676,6 +22797,11 @@
             "tag"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -21704,6 +22830,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -21740,6 +22871,11 @@
       "feed_name" : "Open-SSDP",
       "file_name" : "scan_ssdp",
       "optional_fields" : [
+         [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
          [
             "protocol.transport",
             "protocol"
@@ -21832,6 +22968,11 @@
          ],
          [
             "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "sector",
             "validate_to_none"
          ],
@@ -21900,6 +23041,11 @@
       "file_name" : "scan_ssh",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -21933,6 +23079,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -22330,6 +23481,11 @@
       "file_name" : "scan_ssl",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -22551,6 +23707,11 @@
          ],
          [
             "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "freak_vulnerable",
             "convert_bool"
          ],
@@ -22709,6 +23870,11 @@
       "feed_name" : "SSL-FREAK-Vulnerable-Servers",
       "file_name" : "scan_ssl_freak",
       "optional_fields" : [
+         [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
          [
             "protocol.transport",
             "protocol"
@@ -22918,6 +24084,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -23120,6 +24291,11 @@
       "file_name" : "scan_ssl_poodle",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -23341,6 +24517,11 @@
          ],
          [
             "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "sector",
             "validate_to_none"
          ],
@@ -23540,6 +24721,11 @@
             "convert_int"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -23573,6 +24759,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -23679,6 +24870,11 @@
             "convert_int"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -23712,6 +24908,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -23769,6 +24970,11 @@
       "file_name" : "scan_telnet",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -23802,6 +25008,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -23844,6 +25055,11 @@
       "file_name" : "scan_tftp",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -23877,6 +25093,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -23968,6 +25189,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -24001,6 +25227,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -24054,6 +25285,11 @@
       "file_name" : "scan_vnc",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -24082,6 +25318,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -24129,6 +25370,11 @@
       "file_name" : "scan_ws_discovery",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -24162,6 +25408,11 @@
             "extra.source.naics",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.source.sector",
@@ -24219,6 +25470,11 @@
       "file_name" : "scan_xdmcp",
       "optional_fields" : [
          [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
             "protocol.transport",
             "protocol"
          ],
@@ -24252,6 +25508,11 @@
             "extra.",
             "naics",
             "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -24386,6 +25647,11 @@
          ],
          [
             "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "tag"
          ],
          [
@@ -24492,6 +25758,11 @@
          [
             "extra.",
             "device_vendor",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "severity",
             "validate_to_none"
          ]
       ],
