@@ -1,0 +1,1889 @@
+{
+   "blocklist" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "reason" : "cs4",
+         "source" : "cs3",
+         "tag" : "cs2"
+      }
+   },
+   "compromised_account" : {
+      "map" : {
+         "detail" : "cs4",
+         "status" : "cs2",
+         "tag" : "cs1",
+         "username" : "cs3"
+      }
+   },
+   "compromised_website" : {
+      "map" : {
+         "asn" : "cn1",
+         "detail" : "cs5",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "status" : "cs4",
+         "tag" : "cs2",
+         "url" : "cs3"
+      }
+   },
+   "compromised_website6" : {
+      "map" : {
+         "asn" : "cn1",
+         "detail" : "cs5",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "status" : "cs4",
+         "tag" : "cs2",
+         "url" : "cs3"
+      }
+   },
+   "device_id" : {
+      "map" : {
+         "asn" : "cn1",
+         "device_model" : "cs5",
+         "device_type" : "cs4",
+         "device_vendor" : "cs3",
+         "device_version" : "cs6",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "device_id6" : {
+      "map" : {
+         "asn" : "cn1",
+         "device_model" : "cs5",
+         "device_type" : "cs4",
+         "device_vendor" : "cs3",
+         "device_version" : "cs6",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "event4_ddos_participant" : {
+      "map" : {
+         "dhost" : "dst_hostname",
+         "dst_asn" : "cn2",
+         "dst_geo" : "cs2",
+         "dst_ip" : "dst",
+         "dst_network" : "cs6",
+         "dst_port" : "dpt",
+         "family" : "cs5",
+         "infection" : "cs4",
+         "src_asn" : "cn1",
+         "src_geo" : "cs1",
+         "src_hostname" : "shost",
+         "src_ip" : "src",
+         "src_port" : "spt",
+         "tag" : "cs3"
+      }
+   },
+   "event4_honeypot_brute_force" : {
+      "map" : {
+         "application" : "cs6",
+         "dhost" : "dst_hostname",
+         "dst_asn" : "cn2",
+         "dst_geo" : "cs2",
+         "dst_ip" : "dst",
+         "dst_port" : "dpt",
+         "family" : "cs5",
+         "infection" : "cs4",
+         "src_asn" : "cn1",
+         "src_geo" : "cs1",
+         "src_hostname" : "shost",
+         "src_ip" : "src",
+         "src_port" : "spt",
+         "tag" : "cs3"
+      }
+   },
+   "event4_honeypot_darknet" : {
+      "map" : {
+         "dhost" : "dst_hostname",
+         "dst_asn" : "cn2",
+         "dst_geo" : "cs2",
+         "dst_ip" : "dst",
+         "dst_port" : "dpt",
+         "family" : "cs5",
+         "infection" : "cs4",
+         "src_asn" : "cn1",
+         "src_geo" : "cs1",
+         "src_hostname" : "shost",
+         "src_ip" : "src",
+         "src_port" : "spt",
+         "tag" : "cs3"
+      }
+   },
+   "event4_honeypot_ddos" : {
+      "map" : {
+         "dhost" : "dst_hostname",
+         "dst_asn" : "cn2",
+         "dst_geo" : "cs2",
+         "dst_ip" : "dst",
+         "dst_network" : "cs6",
+         "dst_port" : "dpt",
+         "family" : "cs5",
+         "infection" : "cs4",
+         "src_asn" : "cn1",
+         "src_geo" : "cs1",
+         "src_hostname" : "shost",
+         "src_ip" : "src",
+         "src_port" : "spt",
+         "tag" : "cs3"
+      }
+   },
+   "event4_honeypot_ddos_amp" : {
+      "map" : {
+         "dhost" : "dst_hostname",
+         "dst_asn" : "cn2",
+         "dst_geo" : "cs2",
+         "dst_ip" : "dst",
+         "dst_port" : "dpt",
+         "duration" : "cn3",
+         "family" : "cs5",
+         "infection" : "cs4",
+         "request" : "cs6",
+         "src_asn" : "cn1",
+         "src_geo" : "cs1",
+         "src_hostname" : "shost",
+         "src_ip" : "src",
+         "src_port" : "spt",
+         "tag" : "cs3"
+      }
+   },
+   "event4_honeypot_ddos_target" : {
+      "map" : {
+         "attack" : "cs6",
+         "dst_asn" : "cn1",
+         "dst_geo" : "cs1",
+         "dst_hostname" : "shost",
+         "dst_ip" : "src",
+         "dst_port" : "spt",
+         "duration" : "dn3",
+         "family" : "cs5",
+         "infection" : "cs4",
+         "src_asn" : "cn2",
+         "src_geo" : "cs2",
+         "src_hostname" : "dhost",
+         "src_ip" : "dst",
+         "src_port" : "dpt",
+         "tag" : "cs3"
+      }
+   },
+   "event4_honeypot_http_scan" : {
+      "map" : {
+         "dhost" : "dst_hostname",
+         "dst_asn" : "cn2",
+         "dst_geo" : "cs2",
+         "dst_ip" : "dst",
+         "dst_port" : "dpt",
+         "family" : "cs5",
+         "http_url" : "cs6",
+         "infection" : "cs4",
+         "src_asn" : "cn1",
+         "src_geo" : "cs1",
+         "src_hostname" : "shost",
+         "src_ip" : "src",
+         "src_port" : "spt",
+         "tag" : "cs3"
+      }
+   },
+   "event4_honeypot_ics_scan" : {
+      "map" : {
+         "dhost" : "dst_hostname",
+         "dst_asn" : "cn2",
+         "dst_geo" : "cs2",
+         "dst_ip" : "dst",
+         "dst_port" : "dpt",
+         "family" : "cs5",
+         "infection" : "cs4",
+         "request" : "cs6",
+         "src_asn" : "cn1",
+         "src_geo" : "cs1",
+         "src_hostname" : "shost",
+         "src_ip" : "src",
+         "src_port" : "spt",
+         "tag" : "cs3"
+      }
+   },
+   "event4_honeypot_rdp_scan" : {
+      "map" : {
+         "dhost" : "dst_hostname",
+         "dst_asn" : "cn2",
+         "dst_geo" : "cs2",
+         "dst_ip" : "dst",
+         "dst_port" : "dpt",
+         "family" : "cs5",
+         "infection" : "cs4",
+         "src_asn" : "cn1",
+         "src_geo" : "cs1",
+         "src_hostname" : "shost",
+         "src_ip" : "src",
+         "src_port" : "spt",
+         "tag" : "cs3",
+         "vulnerability_id" : "cs6",
+         "vulnerability_score" : "cfp1"
+      }
+   },
+   "event4_honeypot_smb_scan" : {
+      "map" : {
+         "dhost" : "dst_hostname",
+         "dst_asn" : "cn2",
+         "dst_geo" : "cs2",
+         "dst_ip" : "dst",
+         "dst_port" : "dpt",
+         "family" : "cs5",
+         "infection" : "cs4",
+         "src_asn" : "cn1",
+         "src_geo" : "cs1",
+         "src_hostname" : "shost",
+         "src_ip" : "src",
+         "src_port" : "spt",
+         "tag" : "cs3",
+         "vulnerability_id" : "cs6",
+         "vulnerability_score" : "cfp1"
+      }
+   },
+   "event4_ip_spoofer" : {
+      "map" : {
+         "dhost" : "dst_hostname",
+         "dst_asn" : "cn2",
+         "dst_geo" : "cs2",
+         "dst_ip" : "dst",
+         "dst_port" : "dpt",
+         "family" : "cs5",
+         "infection" : "cs4",
+         "network" : "cs6",
+         "src_asn" : "cn1",
+         "src_geo" : "cs1",
+         "src_hostname" : "shost",
+         "src_ip" : "src",
+         "src_port" : "spt",
+         "tag" : "cs3"
+      }
+   },
+   "event4_microsoft_sinkhole" : {
+      "map" : {
+         "dhost" : "dst_hostname",
+         "dst_asn" : "cn2",
+         "dst_geo" : "cs2",
+         "dst_ip" : "dst",
+         "dst_port" : "dpt",
+         "family" : "cs5",
+         "infection" : "cs4",
+         "src_asn" : "cn1",
+         "src_geo" : "cs1",
+         "src_hostname" : "shost",
+         "src_ip" : "src",
+         "src_port" : "spt",
+         "tag" : "cs3"
+      }
+   },
+   "event4_microsoft_sinkhole_http" : {
+      "map" : {
+         "dhost" : "dst_hostname",
+         "dst_asn" : "cn2",
+         "dst_geo" : "cs2",
+         "dst_ip" : "dst",
+         "dst_port" : "dpt",
+         "family" : "cs5",
+         "http_url" : "cs6",
+         "infection" : "cs4",
+         "src_asn" : "cn1",
+         "src_geo" : "cs1",
+         "src_hostname" : "shost",
+         "src_ip" : "src",
+         "src_port" : "spt",
+         "tag" : "cs3"
+      }
+   },
+   "event4_sinkhole" : {
+      "map" : {
+         "dhost" : "dst_hostname",
+         "dst_asn" : "cn2",
+         "dst_geo" : "cs2",
+         "dst_ip" : "dst",
+         "dst_port" : "dpt",
+         "family" : "cs5",
+         "infection" : "cs4",
+         "src_asn" : "cn1",
+         "src_geo" : "cs1",
+         "src_hostname" : "shost",
+         "src_ip" : "src",
+         "src_port" : "spt",
+         "tag" : "cs3"
+      }
+   },
+   "event4_sinkhole_dns" : {
+      "map" : {
+         "family" : "cs4",
+         "infection" : "cs3",
+         "query" : "cs5",
+         "query_type" : "cs6",
+         "src_asn" : "cn1",
+         "src_geo" : "cs1",
+         "src_hostname" : "shost",
+         "src_ip" : "src",
+         "src_port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "event4_sinkhole_http" : {
+      "map" : {
+         "dhost" : "dst_hostname",
+         "dst_asn" : "cn2",
+         "dst_geo" : "cs2",
+         "dst_ip" : "dst",
+         "dst_port" : "dpt",
+         "family" : "cs5",
+         "http_url" : "cs6",
+         "infection" : "cs4",
+         "src_asn" : "cn1",
+         "src_geo" : "cs1",
+         "src_hostname" : "shost",
+         "src_ip" : "src",
+         "src_port" : "spt",
+         "tag" : "cs3"
+      }
+   },
+   "event4_sinkhole_http_referer" : {
+      "map" : {
+         "dhost" : "dst_hostname",
+         "dst_asn" : "cn2",
+         "dst_geo" : "cs2",
+         "dst_ip" : "dst",
+         "dst_port" : "dpt",
+         "family" : "cs5",
+         "http_referer_asn" : "cn1",
+         "http_referer_geo" : "cs1",
+         "http_referer_hostname" : "shost",
+         "http_referer_ip" : "src",
+         "http_referer_port" : "spt",
+         "http_url" : "cs6",
+         "infection" : "cs4",
+         "tag" : "cs3"
+      }
+   },
+   "event6_sinkhole" : {
+      "map" : {
+         "dhost" : "dst_hostname",
+         "dst_asn" : "cn2",
+         "dst_geo" : "cs2",
+         "dst_ip" : "dst",
+         "dst_port" : "dpt",
+         "family" : "cs5",
+         "infection" : "cs4",
+         "src_asn" : "cn1",
+         "src_geo" : "cs1",
+         "src_hostname" : "shost",
+         "src_ip" : "src",
+         "src_port" : "spt",
+         "tag" : "cs3"
+      }
+   },
+   "event6_sinkhole_http" : {
+      "map" : {
+         "dhost" : "dst_hostname",
+         "dst_asn" : "cn2",
+         "dst_geo" : "cs2",
+         "dst_ip" : "dst",
+         "dst_port" : "dpt",
+         "family" : "cs5",
+         "http_url" : "cs6",
+         "infection" : "cs4",
+         "src_asn" : "cn1",
+         "src_geo" : "cs1",
+         "src_hostname" : "shost",
+         "src_ip" : "src",
+         "src_port" : "spt",
+         "tag" : "cs3"
+      }
+   },
+   "event6_sinkhole_http_referer" : {
+      "map" : {
+         "dhost" : "dst_hostname",
+         "dst_asn" : "cn2",
+         "dst_geo" : "cs2",
+         "dst_ip" : "dst",
+         "dst_port" : "dpt",
+         "family" : "cs5",
+         "http_referer_asn" : "cn1",
+         "http_referer_geo" : "cs1",
+         "http_referer_hostname" : "shost",
+         "http_referer_ip" : "src",
+         "http_referer_port" : "spt",
+         "http_url" : "cs6",
+         "infection" : "cs4",
+         "tag" : "cs3"
+      }
+   },
+   "malware_url" : {
+      "map" : {
+         "application" : "cs5",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "sha256" : "cs4",
+         "tag" : "cs2",
+         "url" : "cs3"
+      }
+   },
+   "phish_url" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2",
+         "url" : "cs3"
+      }
+   },
+   "population6_bgp" : {
+      "map" : {
+         "asn" : "cn1",
+         "bgp_identifier" : "cs3",
+         "bgp_version" : "cn2",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "message2_type" : "cs5",
+         "message_type" : "cs4",
+         "port" : "spt",
+         "sender_asn" : "cn3",
+         "tag" : "cs2"
+      }
+   },
+   "population6_http_proxy" : {
+      "map" : {
+         "asn" : "cn1",
+         "connection" : "cs6",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "proxy_authenticate" : "cs5",
+         "server" : "cs3",
+         "tag" : "cs2",
+         "via" : "cs4"
+      }
+   },
+   "population6_msmq" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "tag" : "cs2"
+      }
+   },
+   "population_bgp" : {
+      "map" : {
+         "asn" : "cn1",
+         "bgp_identifier" : "cs3",
+         "bgp_version" : "cn2",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "message2_type" : "cs5",
+         "message_type" : "cs4",
+         "port" : "spt",
+         "sender_asn" : "cn3",
+         "tag" : "cs2"
+      }
+   },
+   "population_http_proxy" : {
+      "map" : {
+         "asn" : "cn1",
+         "connection" : "cs6",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "proxy_authenticate" : "cs5",
+         "server" : "cs3",
+         "tag" : "cs2",
+         "via" : "cs4"
+      }
+   },
+   "population_msmq" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "tag" : "cs2"
+      }
+   },
+   "sandbox_conn" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "md5" : "cs2",
+         "port" : "spt",
+         "sha1" : "cs3",
+         "sha256" : "cs4"
+      }
+   },
+   "sandbox_dns" : {
+      "map" : {
+         "family" : "cs2",
+         "request" : "cs4",
+         "request_type" : "cs3",
+         "sha256" : "cs5",
+         "tag" : "cs1"
+      }
+   },
+   "sandbox_url" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "method" : "cs4",
+         "port" : "spt",
+         "sha256" : "cs5",
+         "url" : "cs2",
+         "user_agent" : "cs3"
+      }
+   },
+   "scan6_activemq" : {
+      "map" : {
+         "asn" : "cn1",
+         "command" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2",
+         "vendor" : "cs4",
+         "version" : "cs5"
+      }
+   },
+   "scan6_bgp" : {
+      "map" : {
+         "asn" : "cn1",
+         "bgp_identifier" : "cs3",
+         "bgp_version" : "cn2",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "message2_type" : "cs5",
+         "message_type" : "cs4",
+         "port" : "spt",
+         "sender_asn" : "cn3",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_cwmp" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "server" : "cs3",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_dns" : {
+      "map" : {
+         "asn" : "cn1",
+         "dns_version" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "min_amplification" : "cfp1",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_elasticsearch" : {
+      "map" : {
+         "asn" : "cn1",
+         "cluster_name" : "cs4",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "lucene_version" : "cs5",
+         "name" : "cs3",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_exchange" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "servername" : "cs4",
+         "tag" : "cs2",
+         "url" : "cs5",
+         "version" : "cs3"
+      }
+   },
+   "scan6_ftp" : {
+      "map" : {
+         "asn" : "cn1",
+         "banner" : "cs3",
+         "geo" : "cs1",
+         "handshake" : "cs4",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_http" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "http" : "cs4",
+         "http_code" : "cn2",
+         "http_reason" : "cs5",
+         "ip" : "src",
+         "port" : "spt",
+         "server" : "cs3",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_http_proxy" : {
+      "map" : {
+         "asn" : "cn1",
+         "connection" : "cs6",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "proxy_authenticate" : "cs5",
+         "server" : "cs3",
+         "tag" : "cs2",
+         "via" : "cs4"
+      }
+   },
+   "scan6_http_vulnerable" : {
+      "map" : {
+         "asn" : "cn1",
+         "build_date" : "cs5",
+         "detail" : "cs6",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "server" : "cs3",
+         "tag" : "cs2",
+         "version" : "cs4"
+      }
+   },
+   "scan6_ipp" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "printer_firmware_string_version" : "cs6",
+         "printer_info" : "cs4",
+         "printer_make_and_model" : "cs5",
+         "printer_name" : "cs3",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_isakmp" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "initiator_spi" : "cs3",
+         "ip" : "src",
+         "port" : "spt",
+         "responder_spi" : "cs4",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_ldap_tcp" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "configuration_naming_context" : "cs3",
+         "dns_host_name" : "cs4",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_mqtt" : {
+      "map" : {
+         "anonymous_access" : "cs3",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_mqtt_anon" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_mysql" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "server_version" : "cs3",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_ntp" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "refid" : "cs3",
+         "response_size" : "cn2",
+         "system" : "cs4",
+         "tag" : "cs2",
+         "version" : "cn3"
+      }
+   },
+   "scan6_ntpmonitor" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2"
+      }
+   },
+   "scan6_postgres" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "supported_protocols" : "cs3",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_rdp" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "rdp_protocol" : "cs3",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_slp" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "tag" : "cs2",
+         "version" : "cn3"
+      }
+   },
+   "scan6_smb" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "smb_version_string" : "cs3",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_smtp" : {
+      "map" : {
+         "asn" : "cn1",
+         "banner" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_smtp_vulnerable" : {
+      "map" : {
+         "asn" : "cn1",
+         "banner" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_snmp" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "community" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "tag" : "cs2",
+         "vendor" : "cs4"
+      }
+   },
+   "scan6_ssh" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "server_host_key" : "cs5",
+         "serverid_raw" : "cs3",
+         "serverid_software" : "cs4",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_ssl" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "handshake" : "cs3",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_ssl_freak" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "handshake" : "cs3",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_ssl_poodle" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "handshake" : "cs3",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_stun" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "software" : "cs3",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_telnet" : {
+      "map" : {
+         "asn" : "cn1",
+         "banner" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_vnc" : {
+      "map" : {
+         "asn" : "cn1",
+         "banner" : "cs4",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "product" : "cs3",
+         "tag" : "cs2"
+      }
+   },
+   "scan_activemq" : {
+      "map" : {
+         "asn" : "cn1",
+         "command" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2",
+         "vendor" : "cs4",
+         "version" : "cs5"
+      }
+   },
+   "scan_adb" : {
+      "map" : {
+         "asn" : "cn1",
+         "device" : "cs5",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "model" : "cs4",
+         "name" : "cs3",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan_afp" : {
+      "map" : {
+         "afp_versions" : "cs4",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "machine_type" : "cs3",
+         "port" : "spt",
+         "server_name" : "cs5",
+         "signature" : "cs6",
+         "tag" : "cs2"
+      }
+   },
+   "scan_amqp" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "platform" : "cs3",
+         "port" : "spt",
+         "product" : "cs4",
+         "product_version" : "cs5",
+         "tag" : "cs2"
+      }
+   },
+   "scan_ard" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "machine_name" : "cs3",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "tag" : "cs2"
+      }
+   },
+   "scan_bgp" : {
+      "map" : {
+         "asn" : "cn1",
+         "bgp_identifier" : "cs3",
+         "bgp_version" : "cn2",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "message2_type" : "cs5",
+         "message_type" : "cs4",
+         "port" : "spt",
+         "sender_asn" : "cn3",
+         "tag" : "cs2"
+      }
+   },
+   "scan_chargen" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "tag" : "cs2"
+      }
+   },
+   "scan_cisco_smart_install" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan_coap" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "tag" : "cs2",
+         "version" : "cs3"
+      }
+   },
+   "scan_couchdb" : {
+      "map" : {
+         "asn" : "cn1",
+         "couchdb_version" : "cs4",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "server_version" : "cs3",
+         "tag" : "cs2"
+      }
+   },
+   "scan_cwmp" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "server" : "cs3",
+         "tag" : "cs2"
+      }
+   },
+   "scan_db2" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "db2_hostname" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "servername" : "cs4",
+         "tag" : "cs2"
+      }
+   },
+   "scan_ddos_middlebox" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "method" : "cs3",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan_dns" : {
+      "map" : {
+         "asn" : "cn1",
+         "dns_version" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "min_amplification" : "cfp1",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan_docker" : {
+      "map" : {
+         "arch" : "cs4",
+         "asn" : "cn1",
+         "build_time" : "cs5",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "server" : "cs3",
+         "tag" : "cs2"
+      }
+   },
+   "scan_dvr_dhcpdiscover" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "device_model" : "cs4",
+         "device_vendor" : "cs3",
+         "device_version" : "cs5",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "tag" : "cs2"
+      }
+   },
+   "scan_elasticsearch" : {
+      "map" : {
+         "asn" : "cn1",
+         "cluster_name" : "cs4",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "lucene_version" : "cs5",
+         "name" : "cs3",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan_epmd" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan_exchange" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "servername" : "cs4",
+         "tag" : "cs2",
+         "url" : "cs5",
+         "version" : "cs3"
+      }
+   },
+   "scan_ftp" : {
+      "map" : {
+         "asn" : "cn1",
+         "banner" : "cs3",
+         "geo" : "cs1",
+         "handshake" : "cs4",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan_hadoop" : {
+      "map" : {
+         "asn" : "cn1",
+         "clusterid" : "cs5",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "server_type" : "cs4",
+         "tag" : "cs2",
+         "version" : "cs3"
+      }
+   },
+   "scan_http" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "http" : "cs4",
+         "http_code" : "cn2",
+         "http_reason" : "cs5",
+         "ip" : "src",
+         "port" : "spt",
+         "server" : "cs3",
+         "tag" : "cs2"
+      }
+   },
+   "scan_http_proxy" : {
+      "map" : {
+         "asn" : "cn1",
+         "connection" : "cs6",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "proxy_authenticate" : "cs5",
+         "server" : "cs3",
+         "tag" : "cs2",
+         "via" : "cs4"
+      }
+   },
+   "scan_http_vulnerable" : {
+      "map" : {
+         "asn" : "cn1",
+         "build_date" : "cs5",
+         "detail" : "cs6",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "server" : "cs3",
+         "tag" : "cs2",
+         "version" : "cs4"
+      }
+   },
+   "scan_ics" : {
+      "map" : {
+         "asn" : "cn1",
+         "device_model" : "cs4",
+         "device_vendor" : "cs3",
+         "device_version" : "cs5",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan_ipmi" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "manufacturername" : "cs3",
+         "port" : "spt",
+         "productname" : "cs4",
+         "tag" : "cs2"
+      }
+   },
+   "scan_ipp" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "printer_firmware_string_version" : "cs6",
+         "printer_info" : "cs4",
+         "printer_make_and_model" : "cs5",
+         "printer_name" : "cs3",
+         "tag" : "cs2"
+      }
+   },
+   "scan_isakmp" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "initiator_spi" : "cs3",
+         "ip" : "src",
+         "port" : "spt",
+         "responder_spi" : "cs4",
+         "tag" : "cs2"
+      }
+   },
+   "scan_kubernetes" : {
+      "map" : {
+         "asn" : "cn1",
+         "build_date" : "cs5",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "platform" : "cs4",
+         "port" : "spt",
+         "server" : "cs3",
+         "tag" : "cs2"
+      }
+   },
+   "scan_ldap_tcp" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "configuration_naming_context" : "cs3",
+         "dns_host_name" : "cs4",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "tag" : "cs2"
+      }
+   },
+   "scan_ldap_udp" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "configuration_naming_context" : "cs3",
+         "dns_host_name" : "cs4",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "tag" : "cs2"
+      }
+   },
+   "scan_mdns" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "services" : "cs3",
+         "tag" : "cs2",
+         "workstation_info" : "cs5",
+         "workstation_name" : "cs4"
+      }
+   },
+   "scan_memcached" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "tag" : "cs2"
+      }
+   },
+   "scan_mongodb" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "sysinfo" : "cs4",
+         "tag" : "cs2",
+         "version" : "cs3",
+         "visible_databases" : "cs5"
+      }
+   },
+   "scan_mqtt" : {
+      "map" : {
+         "anonymous_access" : "cs3",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan_mqtt_anon" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan_mssql" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "instance_name" : "cs4",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "server_name" : "cs3",
+         "tag" : "cs2"
+      }
+   },
+   "scan_mysql" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "server_version" : "cs3",
+         "tag" : "cs2"
+      }
+   },
+   "scan_nat_pmp" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "external_ip" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "tag" : "cs2"
+      }
+   },
+   "scan_netbios" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "machine_name" : "cs4",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "tag" : "cs2",
+         "workgroup" : "cs3"
+      }
+   },
+   "scan_netis_router" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "tag" : "cs2"
+      }
+   },
+   "scan_ntp" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "refid" : "cs3",
+         "response_size" : "cn2",
+         "system" : "cs4",
+         "tag" : "cs2",
+         "version" : "cn3"
+      }
+   },
+   "scan_ntpmonitor" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2"
+      }
+   },
+   "scan_portmapper" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "exports" : "cs4",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "programs" : "cs3",
+         "response_size" : "cn2",
+         "tag" : "cs2"
+      }
+   },
+   "scan_postgres" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "supported_protocols" : "cs3",
+         "tag" : "cs2"
+      }
+   },
+   "scan_qotd" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "tag" : "cs2"
+      }
+   },
+   "scan_quic" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2",
+         "version_field_1" : "cs3",
+         "version_field_2" : "cs4",
+         "version_field_3" : "cs5",
+         "version_field_4" : "cs6"
+      }
+   },
+   "scan_radmin" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2",
+         "version" : "cs3"
+      }
+   },
+   "scan_rdp" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "rdp_protocol" : "cs3",
+         "tag" : "cs2"
+      }
+   },
+   "scan_rdpeudp" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "tag" : "cs2"
+      }
+   },
+   "scan_redis" : {
+      "map" : {
+         "asn" : "cn1",
+         "build_id" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "mode" : "cs5",
+         "os" : "cs4",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan_rsync" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "module" : "cs3",
+         "motd" : "cs4",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan_sip" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "sip" : "cs3",
+         "sip_code" : "cn2",
+         "sip_reason" : "cs4",
+         "tag" : "cs2"
+      }
+   },
+   "scan_slp" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "tag" : "cs2",
+         "version" : "cn3"
+      }
+   },
+   "scan_smb" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "smb_version_string" : "cs3",
+         "tag" : "cs2"
+      }
+   },
+   "scan_smtp" : {
+      "map" : {
+         "asn" : "cn1",
+         "banner" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan_smtp_vulnerable" : {
+      "map" : {
+         "asn" : "cn1",
+         "banner" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan_snmp" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "community" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "tag" : "cs2",
+         "vendor" : "cs4"
+      }
+   },
+   "scan_socks" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan_ssdp" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "instance" : "cs4",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "server" : "cs3",
+         "tag" : "cs2",
+         "version" : "cs5"
+      }
+   },
+   "scan_ssh" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "server_host_key" : "cs5",
+         "serverid_raw" : "cs3",
+         "serverid_software" : "cs4",
+         "tag" : "cs2"
+      }
+   },
+   "scan_ssl" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "handshake" : "cs3",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan_ssl_freak" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "handshake" : "cs3",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan_ssl_poodle" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "handshake" : "cs3",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan_stun" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "software" : "cs3",
+         "tag" : "cs2"
+      }
+   },
+   "scan_synfulknock" : {
+      "map" : {
+         "ack_number" : "cn3",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "sequence_number" : "cn2",
+         "tag" : "cs2"
+      }
+   },
+   "scan_telnet" : {
+      "map" : {
+         "asn" : "cn1",
+         "banner" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan_tftp" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "tag" : "cs2"
+      }
+   },
+   "scan_ubiquiti" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "firmware" : "cs5",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "mac" : "cs3",
+         "modelfull" : "cs4",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "tag" : "cs2"
+      }
+   },
+   "scan_vnc" : {
+      "map" : {
+         "asn" : "cn1",
+         "banner" : "cs4",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "product" : "cs3",
+         "tag" : "cs2"
+      }
+   },
+   "scan_ws_discovery" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "tag" : "cs2"
+      }
+   },
+   "scan_xdmcp" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response_size" : "cn2",
+         "tag" : "cs2"
+      }
+   },
+   "spam_url" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "sender" : "cs4",
+         "subject" : "cs5",
+         "tag" : "cs2",
+         "url" : "cs3"
+      }
+   },
+   "special" : {
+      "map" : {
+         "asn" : "cn1",
+         "detail" : "cs4",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "method" : "cs5",
+         "port" : "spt",
+         "status" : "cs3",
+         "tag" : "cs2"
+      }
+   }
+}
+

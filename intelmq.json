@@ -1,10 +1,10 @@
 {
    "_meta" : {
       "change_log" : [
-         "Report all | add: severity.",
-         "Report all scan and population | add: hostname_source."
+         "Corrected 'source.fqdn' from 'destination.fqdn' in sandbox_conn and sandbox_url reports.",
+         "Added 'tag' to scan_vnc and scan_hadoop reports."
       ],
-      "date_created" : "2023-11-22T00:13:50Z"
+      "date_created" : "2023-12-12T16:26:32Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -5750,7 +5750,7 @@
       "file_name" : "sandbox_conn",
       "optional_fields" : [
          [
-            "destination.fqdn",
+            "source.fqdn",
             "hostname",
             "validate_fqdn"
          ],
@@ -5912,7 +5912,7 @@
       "file_name" : "sandbox_url",
       "optional_fields" : [
          [
-            "destination.fqdn",
+            "source.fqdn",
             "hostname",
             "validate_fqdn"
          ],
@@ -11102,8 +11102,7 @@
          ],
          [
             "extra.",
-            "sysdesc",
-            "validate_to_none"
+            "tag"
          ],
          [
             "extra.",
@@ -11174,7 +11173,8 @@
          ],
          [
             "extra.",
-            "tag"
+            "sysdesc",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -13145,6 +13145,10 @@
          [
             "source.reverse_dns",
             "hostname"
+         ],
+         [
+            "extra.",
+            "tag"
          ],
          [
             "source.asn",
@@ -15843,6 +15847,11 @@
          [
             "source.reverse_dns",
             "hostname"
+         ],
+         [
+            "extra.",
+            "tag",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -22653,7 +22662,7 @@
          ],
          [
             "extra.",
-            "sysdesc",
+            "tag",
             "validate_to_none"
          ],
          [
@@ -22725,7 +22734,7 @@
          ],
          [
             "extra.",
-            "tag",
+            "sysdesc",
             "validate_to_none"
          ],
          [
@@ -25296,6 +25305,11 @@
          [
             "source.reverse_dns",
             "hostname"
+         ],
+         [
+            "extra.",
+            "tag",
+            "validate_to_none"
          ],
          [
             "source.asn",

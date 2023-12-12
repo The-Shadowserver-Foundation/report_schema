@@ -1,5 +1,14 @@
 {
    "blocklist" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "source",
+            "cs4" : "reason"
+         }
+      },
       "classification.taxonomy" : "other",
       "classification.type" : "blocklist",
       "fields" : [
@@ -21,6 +30,14 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/blocklist-report/"
    },
    "compromised_account" : {
+      "cef" : {
+         "map" : {
+            "cs1" : "tag",
+            "cs2" : "status",
+            "cs3" : "username",
+            "cs4" : "detail"
+         }
+      },
       "classification.taxonomy" : "information-content-security",
       "classification.type" : "data-leak",
       "fields" : [
@@ -40,6 +57,16 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/compromised-account-report/"
    },
    "compromised_website" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "url",
+            "cs4" : "status",
+            "cs5" : "detail"
+         }
+      },
       "classification.taxonomy" : "intrusions",
       "classification.type" : "system-compromise",
       "fields" : [
@@ -76,6 +103,16 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/compromised-website-report/"
    },
    "compromised_website6" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "url",
+            "cs4" : "status",
+            "cs5" : "detail"
+         }
+      },
       "classification.taxonomy" : "intrusions",
       "classification.type" : "system-compromise",
       "fields" : [
@@ -112,6 +149,17 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/compromised-website-report/"
    },
    "device_id" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "device_vendor",
+            "cs4" : "device_type",
+            "cs5" : "device_model",
+            "cs6" : "device_version"
+         }
+      },
       "classification.taxonomy" : "other",
       "classification.type" : "undetermined",
       "fields" : [
@@ -142,6 +190,18 @@
       "name" : "Device-Identification IPv6"
    },
    "event4_ddos_participant" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "src_asn",
+            "cn2" : "dst_asn",
+            "cs1" : "src_geo",
+            "cs2" : "dst_geo",
+            "cs3" : "tag",
+            "cs4" : "infection",
+            "cs5" : "family",
+            "cs6" : "dst_network"
+         }
+      },
       "classification.taxonomy" : "availability",
       "classification.type" : "ddos",
       "fields" : [
@@ -211,6 +271,18 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ddos-participant-report/"
    },
    "event4_honeypot_brute_force" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "src_asn",
+            "cn2" : "dst_asn",
+            "cs1" : "src_geo",
+            "cs2" : "dst_geo",
+            "cs3" : "tag",
+            "cs4" : "infection",
+            "cs5" : "family",
+            "cs6" : "application"
+         }
+      },
       "classification.taxonomy" : "intrusion-attempts",
       "classification.type" : "brute-force",
       "fields" : [
@@ -258,6 +330,17 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-brute-force-events-report/"
    },
    "event4_honeypot_darknet" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "src_asn",
+            "cn2" : "dst_asn",
+            "cs1" : "src_geo",
+            "cs2" : "dst_geo",
+            "cs3" : "tag",
+            "cs4" : "infection",
+            "cs5" : "family"
+         }
+      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -298,6 +381,18 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-darknet-events-report/"
    },
    "event4_honeypot_ddos" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "src_asn",
+            "cn2" : "dst_asn",
+            "cs1" : "src_geo",
+            "cs2" : "dst_geo",
+            "cs3" : "tag",
+            "cs4" : "infection",
+            "cs5" : "family",
+            "cs6" : "dst_network"
+         }
+      },
       "classification.taxonomy" : "availability",
       "classification.type" : "ddos",
       "fields" : [
@@ -367,6 +462,19 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-ddos-events/"
    },
    "event4_honeypot_ddos_amp" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "src_asn",
+            "cn2" : "dst_asn",
+            "cn3" : "duration",
+            "cs1" : "src_geo",
+            "cs2" : "dst_geo",
+            "cs3" : "tag",
+            "cs4" : "infection",
+            "cs5" : "family",
+            "cs6" : "request"
+         }
+      },
       "classification.taxonomy" : "availability",
       "classification.type" : "ddos",
       "fields" : [
@@ -413,6 +521,25 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-amplification-ddos-events-report/"
    },
    "event4_honeypot_ddos_target" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "dst_asn",
+            "cn2" : "src_asn",
+            "cs1" : "dst_geo",
+            "cs2" : "src_geo",
+            "cs3" : "tag",
+            "cs4" : "infection",
+            "cs5" : "family",
+            "cs6" : "attack",
+            "dhost" : "src_hostname",
+            "dn3" : "duration",
+            "dpt" : "src_port",
+            "dst" : "src_ip",
+            "shost" : "dst_hostname",
+            "spt" : "dst_port",
+            "src" : "dst_ip"
+         }
+      },
       "classification.taxonomy" : "availability",
       "classification.type" : "ddos",
       "fields" : [
@@ -481,6 +608,18 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-ddos-target-events-report/"
    },
    "event4_honeypot_http_scan" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "src_asn",
+            "cn2" : "dst_asn",
+            "cs1" : "src_geo",
+            "cs2" : "dst_geo",
+            "cs3" : "tag",
+            "cs4" : "infection",
+            "cs5" : "family",
+            "cs6" : "http_url"
+         }
+      },
       "classification.taxonomy" : "information-gathering",
       "classification.type" : "scanner",
       "fields" : [
@@ -542,6 +681,18 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-http-scanner-events/"
    },
    "event4_honeypot_ics_scan" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "src_asn",
+            "cn2" : "dst_asn",
+            "cs1" : "src_geo",
+            "cs2" : "dst_geo",
+            "cs3" : "tag",
+            "cs4" : "infection",
+            "cs5" : "family",
+            "cs6" : "request"
+         }
+      },
       "classification.taxonomy" : "information-gathering",
       "classification.type" : "scanner",
       "fields" : [
@@ -587,6 +738,19 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-ics-scanner-events-report/"
    },
    "event4_honeypot_rdp_scan" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "vulnerability_score",
+            "cn1" : "src_asn",
+            "cn2" : "dst_asn",
+            "cs1" : "src_geo",
+            "cs2" : "dst_geo",
+            "cs3" : "tag",
+            "cs4" : "infection",
+            "cs5" : "family",
+            "cs6" : "vulnerability_id"
+         }
+      },
       "classification.taxonomy" : "information-gathering",
       "classification.type" : "scanner",
       "fields" : [
@@ -640,6 +804,19 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-rdp-scanner-events-report/"
    },
    "event4_honeypot_smb_scan" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "vulnerability_score",
+            "cn1" : "src_asn",
+            "cn2" : "dst_asn",
+            "cs1" : "src_geo",
+            "cs2" : "dst_geo",
+            "cs3" : "tag",
+            "cs4" : "infection",
+            "cs5" : "family",
+            "cs6" : "vulnerability_id"
+         }
+      },
       "classification.taxonomy" : "information-gathering",
       "classification.type" : "scanner",
       "fields" : [
@@ -695,6 +872,18 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-smb-scanner-events-report/"
    },
    "event4_ip_spoofer" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "src_asn",
+            "cn2" : "dst_asn",
+            "cs1" : "src_geo",
+            "cs2" : "dst_geo",
+            "cs3" : "tag",
+            "cs4" : "infection",
+            "cs5" : "family",
+            "cs6" : "network"
+         }
+      },
       "classification.taxonomy" : "fraud",
       "classification.type" : "masquerade",
       "fields" : [
@@ -746,6 +935,17 @@
       "name" : "Microsoft-Sinkhole-Events-HTTP IPv4"
    },
    "event4_sinkhole" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "src_asn",
+            "cn2" : "dst_asn",
+            "cs1" : "src_geo",
+            "cs2" : "dst_geo",
+            "cs3" : "tag",
+            "cs4" : "infection",
+            "cs5" : "family"
+         }
+      },
       "classification.taxonomy" : "malicious-code",
       "classification.type" : "infected-system",
       "fields" : [
@@ -787,6 +987,17 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-events-report/"
    },
    "event4_sinkhole_dns" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "src_asn",
+            "cs1" : "src_geo",
+            "cs2" : "tag",
+            "cs3" : "infection",
+            "cs4" : "family",
+            "cs5" : "query",
+            "cs6" : "query_type"
+         }
+      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -816,6 +1027,18 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-dns-events-report/"
    },
    "event4_sinkhole_http" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "src_asn",
+            "cn2" : "dst_asn",
+            "cs1" : "src_geo",
+            "cs2" : "dst_geo",
+            "cs3" : "tag",
+            "cs4" : "infection",
+            "cs5" : "family",
+            "cs6" : "http_url"
+         }
+      },
       "classification.taxonomy" : "malicious-code",
       "classification.type" : "infected-system",
       "fields" : [
@@ -862,6 +1085,21 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-http-events-report/"
    },
    "event4_sinkhole_http_referer" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "http_referer_asn",
+            "cn2" : "dst_asn",
+            "cs1" : "http_referer_geo",
+            "cs2" : "dst_geo",
+            "cs3" : "tag",
+            "cs4" : "infection",
+            "cs5" : "family",
+            "cs6" : "http_url",
+            "shost" : "http_referer_hostname",
+            "spt" : "http_referer_port",
+            "src" : "http_referer_ip"
+         }
+      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -914,6 +1152,16 @@
       "name" : "Sinkhole-Events-HTTP-Referer IPv6"
    },
    "malware_url" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "url",
+            "cs4" : "sha256",
+            "cs5" : "application"
+         }
+      },
       "classification.taxonomy" : "malicious-code",
       "classification.type" : "malware-distribution",
       "fields" : [
@@ -938,6 +1186,14 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/malware-url-report/"
    },
    "phish_url" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "url"
+         }
+      },
       "classification.taxonomy" : "fraud",
       "classification.type" : "phishing",
       "fields" : [
@@ -971,6 +1227,18 @@
       "name" : "IPv6-Accessible-MSMQ"
    },
    "population_bgp" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cn2" : "bgp_version",
+            "cn3" : "sender_asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "bgp_identifier",
+            "cs4" : "message_type",
+            "cs5" : "message2_type"
+         }
+      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -1006,6 +1274,17 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-bgp-service-report/"
    },
    "population_http_proxy" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "server",
+            "cs4" : "via",
+            "cs5" : "proxy_authenticate",
+            "cs6" : "connection"
+         }
+      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -1039,6 +1318,14 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-http-proxy-report/"
    },
    "population_msmq" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cs1" : "geo",
+            "cs2" : "tag"
+         }
+      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -1062,6 +1349,15 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-msmq-service-report/"
    },
    "sandbox_conn" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "md5",
+            "cs3" : "sha1",
+            "cs4" : "sha256"
+         }
+      },
       "classification.taxonomy" : "malicious-code",
       "classification.type" : "malware-distribution",
       "fields" : [
@@ -1087,6 +1383,15 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sandbox-connection-report/"
    },
    "sandbox_dns" : {
+      "cef" : {
+         "map" : {
+            "cs1" : "tag",
+            "cs2" : "family",
+            "cs3" : "request_type",
+            "cs4" : "request",
+            "cs5" : "sha256"
+         }
+      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -1105,6 +1410,16 @@
       "name" : "Sandbox-DNS"
    },
    "sandbox_url" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "url",
+            "cs3" : "user_agent",
+            "cs4" : "method",
+            "cs5" : "sha256"
+         }
+      },
       "classification.taxonomy" : "malicious-code",
       "classification.type" : "malware-distribution",
       "fields" : [
@@ -1258,6 +1573,16 @@
       "name" : "IPv6-Accessible-VNC"
    },
    "scan_activemq" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "command",
+            "cs4" : "vendor",
+            "cs5" : "version"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1283,6 +1608,16 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-activemq-service-report/"
    },
    "scan_adb" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "name",
+            "cs4" : "model",
+            "cs5" : "device"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1314,6 +1649,17 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-adb-report/"
    },
    "scan_afp" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "machine_type",
+            "cs4" : "afp_versions",
+            "cs5" : "server_name",
+            "cs6" : "signature"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1345,6 +1691,16 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-afp-report/"
    },
    "scan_amqp" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "platform",
+            "cs4" : "product",
+            "cs5" : "product_version"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1380,6 +1736,16 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-amqp-report/"
    },
    "scan_ard" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "amplification",
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "machine_name"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1405,6 +1771,18 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-apple-remote-desktop-ard-report/"
    },
    "scan_bgp" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cn2" : "bgp_version",
+            "cn3" : "sender_asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "bgp_identifier",
+            "cs4" : "message_type",
+            "cs5" : "message2_type"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1440,6 +1818,15 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-bgp-service-report/"
    },
    "scan_chargen" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "amplification",
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cs1" : "geo",
+            "cs2" : "tag"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1464,6 +1851,13 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-chargen-report/"
    },
    "scan_cisco_smart_install" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1486,6 +1880,16 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-cisco-smart-install-report/"
    },
    "scan_coap" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "amplification",
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "version"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1512,6 +1916,15 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-coap-report/"
    },
    "scan_couchdb" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "server_version",
+            "cs4" : "couchdb_version"
+         }
+      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -1543,6 +1956,14 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-couchdb-report/"
    },
    "scan_cwmp" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "server"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1576,6 +1997,17 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-cwmp-report/"
    },
    "scan_db2" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "amplification",
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "db2_hostname",
+            "cs4" : "servername"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1602,6 +2034,14 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-db2-discovery-service-report/"
    },
    "scan_ddos_middlebox" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "method"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1628,6 +2068,15 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-ddos-middlebox-report/"
    },
    "scan_dns" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "min_amplification",
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "dns_version"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1652,6 +2101,16 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/dns-open-resolvers-report/"
    },
    "scan_docker" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "server",
+            "cs4" : "arch",
+            "cs5" : "build_time"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1691,6 +2150,18 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-docker-service-report/"
    },
    "scan_dvr_dhcpdiscover" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "amplification",
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "device_vendor",
+            "cs4" : "device_model",
+            "cs5" : "device_version"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1740,6 +2211,16 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-dvr-dhcpdiscover-report/"
    },
    "scan_elasticsearch" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "name",
+            "cs4" : "cluster_name",
+            "cs5" : "lucene_version"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1772,6 +2253,13 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-elasticsearch-report/"
    },
    "scan_epmd" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag"
+         }
+      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -1795,6 +2283,16 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-erlang-port-mapper-report-daemon/"
    },
    "scan_exchange" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "version",
+            "cs4" : "servername",
+            "cs5" : "url"
+         }
+      },
       "fields" : [
          "timestamp",
          "severity",
@@ -1818,6 +2316,15 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-exchange-server-report/"
    },
    "scan_ftp" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "banner",
+            "cs4" : "handshake"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1893,6 +2400,16 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ftp-report/"
    },
    "scan_hadoop" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "version",
+            "cs4" : "server_type",
+            "cs5" : "clusterid"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1902,6 +2419,7 @@
          "protocol",
          "port",
          "hostname",
+         "tag",
          "version",
          "asn",
          "geo",
@@ -1923,6 +2441,17 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-hadoop-report/"
    },
    "scan_http" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cn2" : "http_code",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "server",
+            "cs4" : "http",
+            "cs5" : "http_reason"
+         }
+      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -1956,6 +2485,17 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-http-report/"
    },
    "scan_http_proxy" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "server",
+            "cs4" : "via",
+            "cs5" : "proxy_authenticate",
+            "cs6" : "connection"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1989,6 +2529,17 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-http-proxy-report/"
    },
    "scan_http_vulnerable" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "server",
+            "cs4" : "version",
+            "cs5" : "build_date",
+            "cs6" : "detail"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2026,6 +2577,16 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-http-report/"
    },
    "scan_ics" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "device_vendor",
+            "cs4" : "device_model",
+            "cs5" : "device_version"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2055,6 +2616,15 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ics-report/"
    },
    "scan_ipmi" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "manufacturername",
+            "cs4" : "productname"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2098,6 +2668,17 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ipmi-report/"
    },
    "scan_ipp" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "printer_name",
+            "cs4" : "printer_info",
+            "cs5" : "printer_make_and_model",
+            "cs6" : "printer_firmware_string_version"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2139,6 +2720,15 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ipp-report/"
    },
    "scan_isakmp" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "initiator_spi",
+            "cs4" : "responder_spi"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2172,6 +2762,16 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-isakmp-report/"
    },
    "scan_kubernetes" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "server",
+            "cs4" : "platform",
+            "cs5" : "build_date"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2257,6 +2857,17 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-kubernetes-api-server-report/"
    },
    "scan_ldap_tcp" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "amplification",
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "configuration_naming_context",
+            "cs4" : "dns_host_name"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2356,6 +2967,17 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ldap-tcp-report/"
    },
    "scan_ldap_udp" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "amplification",
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "configuration_naming_context",
+            "cs4" : "dns_host_name"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2402,6 +3024,16 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ldap-report/"
    },
    "scan_mdns" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "services",
+            "cs4" : "workstation_name",
+            "cs5" : "workstation_info"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2443,6 +3075,15 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-mdns-report/"
    },
    "scan_memcached" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "amplification",
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cs1" : "geo",
+            "cs2" : "tag"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2474,6 +3115,16 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-memcached-report/"
    },
    "scan_mongodb" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "version",
+            "cs4" : "sysinfo",
+            "cs5" : "visible_databases"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2506,6 +3157,14 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-mongodb-report/"
    },
    "scan_mqtt" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "anonymous_access"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2570,6 +3229,13 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-mqtt-report/"
    },
    "scan_mqtt_anon" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2633,6 +3299,17 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-mqtt-report/"
    },
    "scan_mssql" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "amplification",
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "server_name",
+            "cs4" : "instance_name"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2662,6 +3339,14 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ms-sql-server-resolution-service-report/"
    },
    "scan_mysql" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "server_version"
+         }
+      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -2762,6 +3447,16 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-mysql-server-report/"
    },
    "scan_nat_pmp" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "amplification",
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "external_ip"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2790,6 +3485,17 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-nat-pmp-report/"
    },
    "scan_netbios" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "amplification",
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "workgroup",
+            "cs4" : "machine_name"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2818,6 +3524,15 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-netbios-report/"
    },
    "scan_netis_router" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "amplification",
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cs1" : "geo",
+            "cs2" : "tag"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2843,6 +3558,18 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/netcore-netis-router-vulnerability-scan-report/"
    },
    "scan_ntp" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "amplification",
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cn3" : "version",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "refid",
+            "cs4" : "system"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2892,6 +3619,14 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ntp-version-report/"
    },
    "scan_ntpmonitor" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "amplification",
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cs1" : "geo"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2916,6 +3651,17 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ntp-monitor-report/"
    },
    "scan_portmapper" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "amplification",
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "programs",
+            "cs4" : "exports"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2943,6 +3689,14 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-portmapper-report/"
    },
    "scan_postgres" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "supported_protocols"
+         }
+      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -3029,6 +3783,15 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-postgresql-server-report/"
    },
    "scan_qotd" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "amplification",
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cs1" : "geo",
+            "cs2" : "tag"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3054,6 +3817,17 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-qotd-report/"
    },
    "scan_quic" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "version_field_1",
+            "cs4" : "version_field_2",
+            "cs5" : "version_field_3",
+            "cs6" : "version_field_4"
+         }
+      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -3080,6 +3854,14 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-quic-report/"
    },
    "scan_radmin" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "version"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3103,6 +3885,14 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-radmin-report/"
    },
    "scan_rdp" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "rdp_protocol"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3143,6 +3933,15 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-rdp-report/"
    },
    "scan_rdpeudp" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "amplification",
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cs1" : "geo",
+            "cs2" : "tag"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3168,6 +3967,16 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ms-rdpeudp/"
    },
    "scan_redis" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "build_id",
+            "cs4" : "os",
+            "cs5" : "mode"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3203,6 +4012,15 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-redis-report/"
    },
    "scan_rsync" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "module",
+            "cs4" : "motd"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3228,6 +4046,16 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-rsync-report/"
    },
    "scan_sip" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cn2" : "sip_code",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "sip",
+            "cs4" : "sip_reason"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3266,6 +4094,15 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-sip-report/"
    },
    "scan_slp" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cn3" : "version",
+            "cs1" : "geo",
+            "cs2" : "tag"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3300,6 +4137,14 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-slp-service-report/"
    },
    "scan_smb" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "smb_version_string"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3328,6 +4173,14 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-smb-report/"
    },
    "scan_smtp" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "banner"
+         }
+      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -3404,6 +4257,14 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-smtp-report/"
    },
    "scan_smtp_vulnerable" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "banner"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3480,6 +4341,17 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-smtp-report/"
    },
    "scan_snmp" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "amplification",
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "community",
+            "cs4" : "vendor"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3489,7 +4361,7 @@
          "protocol",
          "port",
          "hostname",
-         "sysdesc",
+         "tag",
          "sysname",
          "asn",
          "geo",
@@ -3504,7 +4376,7 @@
          "device_model",
          "device_version",
          "device_sector",
-         "tag",
+         "sysdesc",
          "community",
          "response_size",
          "amplification",
@@ -3517,6 +4389,13 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-snmp-report/"
    },
    "scan_socks" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3539,6 +4418,18 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-socks4-5-proxy-report/"
    },
    "scan_ssdp" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "amplification",
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "server",
+            "cs4" : "instance",
+            "cs5" : "version"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3579,6 +4470,16 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ssdp-report/"
    },
    "scan_ssh" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "serverid_raw",
+            "cs4" : "serverid_software",
+            "cs5" : "server_host_key"
+         }
+      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -3673,6 +4574,14 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ssh-report/"
    },
    "scan_ssl" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "handshake"
+         }
+      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -3757,6 +4666,14 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ssl-report/"
    },
    "scan_ssl_freak" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "handshake"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3847,6 +4764,14 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ssl-freak-report/"
    },
    "scan_ssl_poodle" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "handshake"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3937,6 +4862,16 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ssl-poodle-report/"
    },
    "scan_stun" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "amplification",
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "software"
+         }
+      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -3973,6 +4908,15 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-stun-service-report/"
    },
    "scan_synfulknock" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cn2" : "sequence_number",
+            "cn3" : "ack_number",
+            "cs1" : "geo",
+            "cs2" : "tag"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -4001,6 +4945,14 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/synful-scan-report/"
    },
    "scan_telnet" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "banner"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -4024,6 +4976,15 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-telnet-report/"
    },
    "scan_tftp" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "amplification",
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cs1" : "geo",
+            "cs2" : "tag"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -4052,6 +5013,18 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-accessible-tftp-report/"
    },
    "scan_ubiquiti" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "amplification",
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "mac",
+            "cs4" : "modelfull",
+            "cs5" : "firmware"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -4082,6 +5055,15 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ubiquiti-report/"
    },
    "scan_vnc" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "product",
+            "cs4" : "banner"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -4091,6 +5073,7 @@
          "protocol",
          "port",
          "hostname",
+         "tag",
          "asn",
          "geo",
          "region",
@@ -4105,6 +5088,15 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-vnc-report/"
    },
    "scan_ws_discovery" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "amplification",
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cs1" : "geo",
+            "cs2" : "tag"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -4131,6 +5123,15 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ws-discovery-service-report/"
    },
    "scan_xdmcp" : {
+      "cef" : {
+         "map" : {
+            "cfp1" : "amplification",
+            "cn1" : "asn",
+            "cn2" : "response_size",
+            "cs1" : "geo",
+            "cs2" : "tag"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -4158,6 +5159,16 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-xdmcp-service-report/"
    },
    "spam_url" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "url",
+            "cs4" : "sender",
+            "cs5" : "subject"
+         }
+      },
       "classification.taxonomy" : "abusive-content",
       "classification.type" : "spam",
       "fields" : [
@@ -4189,6 +5200,16 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/spam-url-report/"
    },
    "special" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "status",
+            "cs4" : "detail",
+            "cs5" : "method"
+         }
+      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
