@@ -3688,6 +3688,61 @@
       "name" : "Open-Portmapper",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-portmapper-report/"
    },
+   "scan_post_exploitation_framework" : {
+      "cef" : {
+         "map" : {
+            "cn1" : "asn",
+            "cn2" : "beacon_port",
+            "cs1" : "geo",
+            "cs2" : "tag",
+            "cs3" : "http_url",
+            "cs4" : "beacon_type",
+            "cs5" : "beacon_host"
+         }
+      },
+      "classification.taxonomy" : "malicious-code",
+      "classification.type" : "infected-system",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "http",
+         "http_url",
+         "http_code",
+         "content_type",
+         "content_length",
+         "architecture",
+         "beacon_type",
+         "beacon_host",
+         "beacon_port",
+         "beacon_http_get",
+         "beacon_http_post",
+         "license_id",
+         "config_md5",
+         "config_sha1",
+         "config_sha256",
+         "config_sha512",
+         "binary_md5",
+         "binary_sha1",
+         "binary_sha256",
+         "binary_sha512",
+         "encoded_length",
+         "encoded_data"
+      ],
+      "name" : "Post-Exploitation-Framework",
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/post-exploitation-framework/"
+   },
    "scan_postgres" : {
       "cef" : {
          "map" : {

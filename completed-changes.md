@@ -1,11 +1,19 @@
 ## Completed changes
 
+### The following schema changes were completed on December 17 2023:
+
+IntelMQ  2023-12-17T17:35:41Z
+
+* Added scan_post_exploitation_framework report.
+
+
 ### The following IntelMQ changes were completed on December 12 2023:
 
 IntelMQ  2023-12-12T16:26:32Z
 
 * Corrected 'source.fqdn' from 'destination.fqdn' in sandbox_conn and sandbox_url reports.
 * Added 'tag' to scan_vnc and scan_hadoop reports.
+
 
 ### The following schema changes were completed on November 25 2023:
 

@@ -1521,6 +1521,20 @@
          "tag" : "cs2"
       }
    },
+   "scan_post_exploitation_framework" : {
+      "map" : {
+         "asn" : "cn1",
+         "beacon_host" : "cs5",
+         "beacon_port" : "cn2",
+         "beacon_type" : "cs4",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "http_url" : "cs3",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
    "scan_postgres" : {
       "map" : {
          "asn" : "cn1",
