@@ -1,14 +1,5 @@
 {
    "blocklist" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "source",
-            "cs4" : "reason"
-         }
-      },
       "classification.taxonomy" : "other",
       "classification.type" : "blocklist",
       "fields" : [
@@ -30,14 +21,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/blocklist-report/"
    },
    "compromised_account" : {
-      "cef" : {
-         "map" : {
-            "cs1" : "tag",
-            "cs2" : "status",
-            "cs3" : "username",
-            "cs4" : "detail"
-         }
-      },
       "classification.taxonomy" : "information-content-security",
       "classification.type" : "data-leak",
       "fields" : [
@@ -57,16 +40,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/compromised-account-report/"
    },
    "compromised_website" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "url",
-            "cs4" : "status",
-            "cs5" : "detail"
-         }
-      },
       "classification.taxonomy" : "intrusions",
       "classification.type" : "system-compromise",
       "fields" : [
@@ -103,16 +76,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/compromised-website-report/"
    },
    "compromised_website6" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "url",
-            "cs4" : "status",
-            "cs5" : "detail"
-         }
-      },
       "classification.taxonomy" : "intrusions",
       "classification.type" : "system-compromise",
       "fields" : [
@@ -149,17 +112,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/compromised-website-report/"
    },
    "device_id" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "device_vendor",
-            "cs4" : "device_type",
-            "cs5" : "device_model",
-            "cs6" : "device_version"
-         }
-      },
       "classification.taxonomy" : "other",
       "classification.type" : "undetermined",
       "fields" : [
@@ -186,22 +138,29 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/device-identification-report/"
    },
    "device_id6" : {
-      "alias" : "device_id",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "device_vendor",
+         "device_type",
+         "device_model",
+         "device_version"
+      ],
       "name" : "Device-Identification IPv6"
    },
    "event4_ddos_participant" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "src_asn",
-            "cn2" : "dst_asn",
-            "cs1" : "src_geo",
-            "cs2" : "dst_geo",
-            "cs3" : "tag",
-            "cs4" : "infection",
-            "cs5" : "family",
-            "cs6" : "dst_network"
-         }
-      },
       "classification.taxonomy" : "availability",
       "classification.type" : "ddos",
       "fields" : [
@@ -271,18 +230,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ddos-participant-report/"
    },
    "event4_honeypot_brute_force" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "src_asn",
-            "cn2" : "dst_asn",
-            "cs1" : "src_geo",
-            "cs2" : "dst_geo",
-            "cs3" : "tag",
-            "cs4" : "infection",
-            "cs5" : "family",
-            "cs6" : "application"
-         }
-      },
       "classification.taxonomy" : "intrusion-attempts",
       "classification.type" : "brute-force",
       "fields" : [
@@ -330,17 +277,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-brute-force-events-report/"
    },
    "event4_honeypot_darknet" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "src_asn",
-            "cn2" : "dst_asn",
-            "cs1" : "src_geo",
-            "cs2" : "dst_geo",
-            "cs3" : "tag",
-            "cs4" : "infection",
-            "cs5" : "family"
-         }
-      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -381,18 +317,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-darknet-events-report/"
    },
    "event4_honeypot_ddos" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "src_asn",
-            "cn2" : "dst_asn",
-            "cs1" : "src_geo",
-            "cs2" : "dst_geo",
-            "cs3" : "tag",
-            "cs4" : "infection",
-            "cs5" : "family",
-            "cs6" : "dst_network"
-         }
-      },
       "classification.taxonomy" : "availability",
       "classification.type" : "ddos",
       "fields" : [
@@ -462,19 +386,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-ddos-events/"
    },
    "event4_honeypot_ddos_amp" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "src_asn",
-            "cn2" : "dst_asn",
-            "cn3" : "duration",
-            "cs1" : "src_geo",
-            "cs2" : "dst_geo",
-            "cs3" : "tag",
-            "cs4" : "infection",
-            "cs5" : "family",
-            "cs6" : "request"
-         }
-      },
       "classification.taxonomy" : "availability",
       "classification.type" : "ddos",
       "fields" : [
@@ -521,25 +432,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-amplification-ddos-events-report/"
    },
    "event4_honeypot_ddos_target" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "dst_asn",
-            "cn2" : "src_asn",
-            "cs1" : "dst_geo",
-            "cs2" : "src_geo",
-            "cs3" : "tag",
-            "cs4" : "infection",
-            "cs5" : "family",
-            "cs6" : "attack",
-            "dhost" : "src_hostname",
-            "dn3" : "duration",
-            "dpt" : "src_port",
-            "dst" : "src_ip",
-            "shost" : "dst_hostname",
-            "spt" : "dst_port",
-            "src" : "dst_ip"
-         }
-      },
       "classification.taxonomy" : "availability",
       "classification.type" : "ddos",
       "fields" : [
@@ -608,18 +500,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-ddos-target-events-report/"
    },
    "event4_honeypot_http_scan" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "src_asn",
-            "cn2" : "dst_asn",
-            "cs1" : "src_geo",
-            "cs2" : "dst_geo",
-            "cs3" : "tag",
-            "cs4" : "infection",
-            "cs5" : "family",
-            "cs6" : "http_url"
-         }
-      },
       "classification.taxonomy" : "information-gathering",
       "classification.type" : "scanner",
       "fields" : [
@@ -681,18 +561,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-http-scanner-events/"
    },
    "event4_honeypot_ics_scan" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "src_asn",
-            "cn2" : "dst_asn",
-            "cs1" : "src_geo",
-            "cs2" : "dst_geo",
-            "cs3" : "tag",
-            "cs4" : "infection",
-            "cs5" : "family",
-            "cs6" : "request"
-         }
-      },
       "classification.taxonomy" : "information-gathering",
       "classification.type" : "scanner",
       "fields" : [
@@ -738,19 +606,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-ics-scanner-events-report/"
    },
    "event4_honeypot_rdp_scan" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "vulnerability_score",
-            "cn1" : "src_asn",
-            "cn2" : "dst_asn",
-            "cs1" : "src_geo",
-            "cs2" : "dst_geo",
-            "cs3" : "tag",
-            "cs4" : "infection",
-            "cs5" : "family",
-            "cs6" : "vulnerability_id"
-         }
-      },
       "classification.taxonomy" : "information-gathering",
       "classification.type" : "scanner",
       "fields" : [
@@ -804,19 +659,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-rdp-scanner-events-report/"
    },
    "event4_honeypot_smb_scan" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "vulnerability_score",
-            "cn1" : "src_asn",
-            "cn2" : "dst_asn",
-            "cs1" : "src_geo",
-            "cs2" : "dst_geo",
-            "cs3" : "tag",
-            "cs4" : "infection",
-            "cs5" : "family",
-            "cs6" : "vulnerability_id"
-         }
-      },
       "classification.taxonomy" : "information-gathering",
       "classification.type" : "scanner",
       "fields" : [
@@ -872,18 +714,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-smb-scanner-events-report/"
    },
    "event4_ip_spoofer" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "src_asn",
-            "cn2" : "dst_asn",
-            "cs1" : "src_geo",
-            "cs2" : "dst_geo",
-            "cs3" : "tag",
-            "cs4" : "infection",
-            "cs5" : "family",
-            "cs6" : "network"
-         }
-      },
       "classification.taxonomy" : "fraud",
       "classification.type" : "masquerade",
       "fields" : [
@@ -927,25 +757,87 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ip-spoofer-events-report/"
    },
    "event4_microsoft_sinkhole" : {
-      "alias" : "event_sinkhole",
+      "fields" : [
+         "timestamp",
+         "protocol",
+         "src_ip",
+         "src_port",
+         "src_asn",
+         "src_geo",
+         "src_region",
+         "src_city",
+         "src_hostname",
+         "src_naics",
+         "src_sector",
+         "device_vendor",
+         "device_type",
+         "device_model",
+         "severity",
+         "dst_ip",
+         "dst_port",
+         "dst_asn",
+         "dst_geo",
+         "dst_region",
+         "dst_city",
+         "dst_hostname",
+         "dst_naics",
+         "dst_sector",
+         "public_source",
+         "infection",
+         "family",
+         "tag",
+         "application",
+         "version",
+         "event_id",
+         "ssl_cipher",
+         "ssl_servername"
+      ],
       "name" : "Microsoft-Sinkhole-Events IPv4"
    },
    "event4_microsoft_sinkhole_http" : {
-      "alias" : "event_sinkhole_http",
+      "fields" : [
+         "timestamp",
+         "protocol",
+         "src_ip",
+         "src_port",
+         "src_asn",
+         "src_geo",
+         "src_region",
+         "src_city",
+         "src_hostname",
+         "src_naics",
+         "src_sector",
+         "device_vendor",
+         "device_type",
+         "device_model",
+         "severity",
+         "dst_ip",
+         "dst_port",
+         "dst_asn",
+         "dst_geo",
+         "dst_region",
+         "dst_city",
+         "dst_hostname",
+         "dst_naics",
+         "dst_sector",
+         "public_source",
+         "infection",
+         "family",
+         "tag",
+         "application",
+         "version",
+         "event_id",
+         "http_url",
+         "http_host",
+         "http_agent",
+         "forwarded_by",
+         "ssl_cipher",
+         "http_referer",
+         "ssl_servername"
+      ],
       "name" : "Microsoft-Sinkhole-Events-HTTP IPv4"
    },
    "event4_sinkhole" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "src_asn",
-            "cn2" : "dst_asn",
-            "cs1" : "src_geo",
-            "cs2" : "dst_geo",
-            "cs3" : "tag",
-            "cs4" : "infection",
-            "cs5" : "family"
-         }
-      },
       "classification.taxonomy" : "malicious-code",
       "classification.type" : "infected-system",
       "fields" : [
@@ -987,17 +879,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-events-report/"
    },
    "event4_sinkhole_dns" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "src_asn",
-            "cs1" : "src_geo",
-            "cs2" : "tag",
-            "cs3" : "infection",
-            "cs4" : "family",
-            "cs5" : "query",
-            "cs6" : "query_type"
-         }
-      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -1027,18 +908,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-dns-events-report/"
    },
    "event4_sinkhole_http" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "src_asn",
-            "cn2" : "dst_asn",
-            "cs1" : "src_geo",
-            "cs2" : "dst_geo",
-            "cs3" : "tag",
-            "cs4" : "infection",
-            "cs5" : "family",
-            "cs6" : "http_url"
-         }
-      },
       "classification.taxonomy" : "malicious-code",
       "classification.type" : "infected-system",
       "fields" : [
@@ -1085,21 +954,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-http-events-report/"
    },
    "event4_sinkhole_http_referer" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "http_referer_asn",
-            "cn2" : "dst_asn",
-            "cs1" : "http_referer_geo",
-            "cs2" : "dst_geo",
-            "cs3" : "tag",
-            "cs4" : "infection",
-            "cs5" : "family",
-            "cs6" : "http_url",
-            "shost" : "http_referer_hostname",
-            "spt" : "http_referer_port",
-            "src" : "http_referer_ip"
-         }
-      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -1140,28 +994,124 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-http-referer-events-report/"
    },
    "event6_sinkhole" : {
-      "alias" : "event_sinkhole",
+      "fields" : [
+         "timestamp",
+         "protocol",
+         "src_ip",
+         "src_port",
+         "src_asn",
+         "src_geo",
+         "src_region",
+         "src_city",
+         "src_hostname",
+         "src_naics",
+         "src_sector",
+         "device_vendor",
+         "device_type",
+         "device_model",
+         "severity",
+         "dst_ip",
+         "dst_port",
+         "dst_asn",
+         "dst_geo",
+         "dst_region",
+         "dst_city",
+         "dst_hostname",
+         "dst_naics",
+         "dst_sector",
+         "public_source",
+         "infection",
+         "family",
+         "tag",
+         "application",
+         "version",
+         "event_id",
+         "ssl_cipher",
+         "ssl_servername"
+      ],
       "name" : "Sinkhole-Events IPv6"
    },
    "event6_sinkhole_http" : {
-      "alias" : "event_sinkhole_http",
+      "fields" : [
+         "timestamp",
+         "protocol",
+         "src_ip",
+         "src_port",
+         "src_asn",
+         "src_geo",
+         "src_region",
+         "src_city",
+         "src_hostname",
+         "src_naics",
+         "src_sector",
+         "device_vendor",
+         "device_type",
+         "device_model",
+         "severity",
+         "dst_ip",
+         "dst_port",
+         "dst_asn",
+         "dst_geo",
+         "dst_region",
+         "dst_city",
+         "dst_hostname",
+         "dst_naics",
+         "dst_sector",
+         "public_source",
+         "infection",
+         "family",
+         "tag",
+         "application",
+         "version",
+         "event_id",
+         "http_url",
+         "http_host",
+         "http_agent",
+         "forwarded_by",
+         "ssl_cipher",
+         "http_referer",
+         "ssl_servername"
+      ],
       "name" : "Sinkhole-Events-HTTP IPv6"
    },
    "event6_sinkhole_http_referer" : {
-      "alias" : "event_sinkhole_http_referer",
+      "fields" : [
+         "timestamp",
+         "protocol",
+         "http_referer_ip",
+         "http_referer_port",
+         "http_referer_asn",
+         "http_referer_geo",
+         "http_referer_region",
+         "http_referer_city",
+         "http_referer_hostname",
+         "http_referer_naics",
+         "http_referer_sector",
+         "severity",
+         "dst_ip",
+         "dst_port",
+         "dst_asn",
+         "dst_geo",
+         "dst_region",
+         "dst_city",
+         "dst_hostname",
+         "dst_naics",
+         "dst_sector",
+         "public_source",
+         "infection",
+         "family",
+         "tag",
+         "application",
+         "version",
+         "event_id",
+         "http_url",
+         "http_host",
+         "http_referer",
+         "ssl_servername"
+      ],
       "name" : "Sinkhole-Events-HTTP-Referer IPv6"
    },
    "malware_url" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "url",
-            "cs4" : "sha256",
-            "cs5" : "application"
-         }
-      },
       "classification.taxonomy" : "malicious-code",
       "classification.type" : "malware-distribution",
       "fields" : [
@@ -1186,14 +1136,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/malware-url-report/"
    },
    "phish_url" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "url"
-         }
-      },
       "classification.taxonomy" : "fraud",
       "classification.type" : "phishing",
       "fields" : [
@@ -1215,30 +1157,88 @@
       "name" : "Phish-URL"
    },
    "population6_bgp" : {
-      "alias" : "population_bgp",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "message_length",
+         "message_type",
+         "message_type_int",
+         "bgp_version",
+         "sender_asn",
+         "hold_time",
+         "bgp_identifier",
+         "message2_type",
+         "message2_type_int",
+         "major_error_code",
+         "major_error_code_int",
+         "minor_error_code",
+         "minor_error_code_int"
+      ],
       "name" : "IPv6-Accessible-BGP"
    },
    "population6_http_proxy" : {
-      "alias" : "population_http_proxy",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "sector",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "http",
+         "http_code",
+         "http_reason",
+         "content_type",
+         "connection",
+         "proxy_authenticate",
+         "via",
+         "server",
+         "content_length",
+         "transfer_encoding",
+         "http_date"
+      ],
       "name" : "IPv6-Accessible-HTTP-Proxy"
    },
    "population6_msmq" : {
-      "alias" : "population_msmq",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "response_size"
+      ],
       "name" : "IPv6-Accessible-MSMQ"
    },
    "population_bgp" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cn2" : "bgp_version",
-            "cn3" : "sender_asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "bgp_identifier",
-            "cs4" : "message_type",
-            "cs5" : "message2_type"
-         }
-      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -1274,17 +1274,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-bgp-service-report/"
    },
    "population_http_proxy" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "server",
-            "cs4" : "via",
-            "cs5" : "proxy_authenticate",
-            "cs6" : "connection"
-         }
-      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -1318,14 +1307,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-http-proxy-report/"
    },
    "population_msmq" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cs1" : "geo",
-            "cs2" : "tag"
-         }
-      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -1349,15 +1330,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-msmq-service-report/"
    },
    "sandbox_conn" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "md5",
-            "cs3" : "sha1",
-            "cs4" : "sha256"
-         }
-      },
       "classification.taxonomy" : "malicious-code",
       "classification.type" : "malware-distribution",
       "fields" : [
@@ -1383,15 +1355,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sandbox-connection-report/"
    },
    "sandbox_dns" : {
-      "cef" : {
-         "map" : {
-            "cs1" : "tag",
-            "cs2" : "family",
-            "cs3" : "request_type",
-            "cs4" : "request",
-            "cs5" : "sha256"
-         }
-      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -1410,16 +1373,6 @@
       "name" : "Sandbox-DNS"
    },
    "sandbox_url" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "url",
-            "cs3" : "user_agent",
-            "cs4" : "method",
-            "cs5" : "sha256"
-         }
-      },
       "classification.taxonomy" : "malicious-code",
       "classification.type" : "malware-distribution",
       "fields" : [
@@ -1445,144 +1398,1553 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sandbox-url-report/"
    },
    "scan6_activemq" : {
-      "alias" : "scan_activemq",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "command",
+         "vendor",
+         "version"
+      ],
       "name" : "IPv6-Accessible-ActiveMQ"
    },
    "scan6_bgp" : {
-      "alias" : "scan_bgp",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "message_length",
+         "message_type",
+         "message_type_int",
+         "bgp_version",
+         "sender_asn",
+         "hold_time",
+         "bgp_identifier",
+         "message2_type",
+         "message2_type_int",
+         "major_error_code",
+         "major_error_code_int",
+         "minor_error_code",
+         "minor_error_code_int"
+      ],
       "name" : "IPv6-Open-BGP"
    },
    "scan6_cwmp" : {
-      "alias" : "scan_cwmp",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "http",
+         "http_code",
+         "http_reason",
+         "content_type",
+         "connection",
+         "www_authenticate",
+         "set_cookie",
+         "server",
+         "content_length",
+         "transfer_encoding",
+         "date",
+         "sector"
+      ],
       "name" : "IPv6-Accessible-CWMP"
    },
    "scan6_dns" : {
-      "alias" : "scan_dns",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "dns_version",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "min_amplification",
+         "naics",
+         "hostname_source",
+         "sector"
+      ],
       "name" : "IPv6-DNS-Open-Resolvers"
    },
    "scan6_elasticsearch" : {
-      "alias" : "scan_elasticsearch",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "version",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "ok",
+         "name",
+         "cluster_name",
+         "http_code",
+         "build_hash",
+         "build_timestamp",
+         "build_snapshot",
+         "lucene_version",
+         "tagline",
+         "sector"
+      ],
       "name" : "IPv6-Open-Elasticsearch"
    },
    "scan6_exchange" : {
-      "alias" : "scan_exchange",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "version",
+         "servername",
+         "url"
+      ],
       "name" : "IPv6-Vulnerable-Exchange"
    },
    "scan6_ftp" : {
-      "alias" : "scan_ftp",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "banner",
+         "handshake",
+         "cipher_suite",
+         "cert_length",
+         "subject_common_name",
+         "issuer_common_name",
+         "cert_issue_date",
+         "cert_expiration_date",
+         "sha1_fingerprint",
+         "cert_serial_number",
+         "ssl_version",
+         "signature_algorithm",
+         "key_algorithm",
+         "subject_organization_name",
+         "subject_organization_unit_name",
+         "subject_country",
+         "subject_state_or_province_name",
+         "subject_locality_name",
+         "subject_street_address",
+         "subject_postal_code",
+         "subject_surname",
+         "subject_given_name",
+         "subject_email_address",
+         "subject_business_category",
+         "subject_serial_number",
+         "issuer_organization_name",
+         "issuer_organization_unit_name",
+         "issuer_country",
+         "issuer_state_or_province_name",
+         "issuer_locality_name",
+         "issuer_street_address",
+         "issuer_postal_code",
+         "issuer_surname",
+         "issuer_given_name",
+         "issuer_email_address",
+         "issuer_business_category",
+         "issuer_serial_number",
+         "sha256_fingerprint",
+         "sha512_fingerprint",
+         "md5_fingerprint",
+         "cert_valid",
+         "self_signed",
+         "cert_expired",
+         "validation_level",
+         "auth_tls_response",
+         "auth_ssl_response",
+         "tlsv13_support",
+         "tlsv13_cipher",
+         "jarm",
+         "device_vendor",
+         "device_type",
+         "device_model",
+         "device_version",
+         "device_sector"
+      ],
       "name" : "IPv6-Accessible-FTP"
    },
    "scan6_http" : {
-      "alias" : "scan_http",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "sector",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "http",
+         "http_code",
+         "http_reason",
+         "content_type",
+         "connection",
+         "www_authenticate",
+         "set_cookie",
+         "server",
+         "content_length",
+         "transfer_encoding",
+         "http_date"
+      ],
       "name" : "IPv6-Accessible-HTTP"
    },
    "scan6_http_proxy" : {
-      "alias" : "scan_http_proxy",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "sector",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "http",
+         "http_code",
+         "http_reason",
+         "content_type",
+         "connection",
+         "proxy_authenticate",
+         "via",
+         "server",
+         "content_length",
+         "transfer_encoding",
+         "http_date"
+      ],
       "name" : "IPv6-Open-HTTP-Proxy"
    },
    "scan6_http_vulnerable" : {
-      "alias" : "scan_http_vulnerable",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "sector",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "http",
+         "http_code",
+         "http_reason",
+         "content_type",
+         "connection",
+         "www_authenticate",
+         "set_cookie",
+         "server",
+         "content_length",
+         "transfer_encoding",
+         "http_date",
+         "version",
+         "build_date",
+         "detail",
+         "build_branch"
+      ],
       "name" : "IPv6-Vulnerable-HTTP"
    },
    "scan6_ipp" : {
-      "alias" : "scan_ipp",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "ipp_version",
+         "cups_version",
+         "printer_uris",
+         "printer_name",
+         "printer_info",
+         "printer_more_info",
+         "printer_make_and_model",
+         "printer_firmware_name",
+         "printer_firmware_string_version",
+         "printer_firmware_version",
+         "printer_organization",
+         "printer_organization_unit",
+         "printer_uuid",
+         "printer_wifi_ssid",
+         "device_vendor",
+         "device_type",
+         "device_model",
+         "device_version",
+         "device_sector",
+         "sector"
+      ],
       "name" : "IPv6-Open-IPP"
    },
    "scan6_isakmp" : {
-      "alias" : "scan_isakmp",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "initiator_spi",
+         "responder_spi",
+         "next_payload",
+         "exchange_type",
+         "flags",
+         "message_id",
+         "next_payload2",
+         "domain_of_interpretation",
+         "protocol_id",
+         "spi_size",
+         "notify_message_type",
+         "sector"
+      ],
       "name" : "IPv6-Vulnerable-ISAKMP"
    },
    "scan6_ldap_tcp" : {
-      "alias" : "scan_ldap_tcp",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "response_size",
+         "configuration_naming_context",
+         "current_time",
+         "default_naming_context",
+         "dns_host_name",
+         "domain_controller_functionality",
+         "domain_functionality",
+         "ds_service_name",
+         "forest_functionality",
+         "highest_committed_usn",
+         "is_global_catalog_ready",
+         "is_synchronized",
+         "ldap_service_name",
+         "naming_contexts",
+         "root_domain_naming_context",
+         "schema_naming_context",
+         "server_name",
+         "subschema_subentry",
+         "supported_capabilities",
+         "supported_control",
+         "supported_ldap_policies",
+         "supported_ldap_version",
+         "supported_sasl_mechanisms",
+         "amplification",
+         "handshake",
+         "cipher_suite",
+         "cert_length",
+         "subject_common_name",
+         "issuer_common_name",
+         "cert_issue_date",
+         "cert_expiration_date",
+         "sha1_fingerprint",
+         "cert_serial_number",
+         "ssl_version",
+         "signature_algorithm",
+         "key_algorithm",
+         "subject_organization_name",
+         "subject_organization_unit_name",
+         "subject_country",
+         "subject_state_or_province_name",
+         "subject_locality_name",
+         "subject_street_address",
+         "subject_postal_code",
+         "subject_surname",
+         "subject_given_name",
+         "subject_email_address",
+         "subject_business_category",
+         "subject_serial_number",
+         "issuer_organization_name",
+         "issuer_organization_unit_name",
+         "issuer_country",
+         "issuer_state_or_province_name",
+         "issuer_locality_name",
+         "issuer_street_address",
+         "issuer_postal_code",
+         "issuer_surname",
+         "issuer_given_name",
+         "issuer_email_address",
+         "issuer_business_category",
+         "issuer_serial_number",
+         "sector",
+         "sha256_fingerprint",
+         "sha512_fingerprint",
+         "md5_fingerprint",
+         "cert_valid",
+         "self_signed",
+         "cert_expired",
+         "validation_level",
+         "auth_tls_response",
+         "auth_ssl_response",
+         "tlsv13_support",
+         "tlsv13_cipher",
+         "jarm",
+         "device_vendor",
+         "device_type",
+         "device_model",
+         "device_version",
+         "device_sector"
+      ],
       "name" : "IPv6-Open-LDAP-TCP"
    },
    "scan6_mqtt" : {
-      "alias" : "scan_mqtt",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "anonymous_access",
+         "raw_response",
+         "hex_code",
+         "code",
+         "cipher_suite",
+         "cert_length",
+         "subject_common_name",
+         "issuer_common_name",
+         "cert_issue_date",
+         "cert_expiration_date",
+         "sha1_fingerprint",
+         "sha256_fingerprint",
+         "sha512_fingerprint",
+         "md5_fingerprint",
+         "cert_serial_number",
+         "ssl_version",
+         "signature_algorithm",
+         "key_algorithm",
+         "subject_organization_name",
+         "subject_organization_unit_name",
+         "subject_country",
+         "subject_state_or_province_name",
+         "subject_locality_name",
+         "subject_street_address",
+         "subject_postal_code",
+         "subject_surname",
+         "subject_given_name",
+         "subject_email_address",
+         "subject_business_category",
+         "subject_serial_number",
+         "issuer_organization_name",
+         "issuer_organization_unit_name",
+         "issuer_country",
+         "issuer_state_or_province_name",
+         "issuer_locality_name",
+         "issuer_street_address",
+         "issuer_postal_code",
+         "issuer_surname",
+         "issuer_given_name",
+         "issuer_email_address",
+         "issuer_business_category",
+         "issuer_serial_number",
+         "sector"
+      ],
       "name" : "IPv6-Open-MQTT"
    },
    "scan6_mqtt_anon" : {
-      "alias" : "scan_mqtt_anon",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "raw_response",
+         "hex_code",
+         "code",
+         "cipher_suite",
+         "cert_length",
+         "subject_common_name",
+         "issuer_common_name",
+         "cert_issue_date",
+         "cert_expiration_date",
+         "sha1_fingerprint",
+         "sha256_fingerprint",
+         "sha512_fingerprint",
+         "md5_fingerprint",
+         "cert_serial_number",
+         "ssl_version",
+         "signature_algorithm",
+         "key_algorithm",
+         "subject_organization_name",
+         "subject_organization_unit_name",
+         "subject_country",
+         "subject_state_or_province_name",
+         "subject_locality_name",
+         "subject_street_address",
+         "subject_postal_code",
+         "subject_surname",
+         "subject_given_name",
+         "subject_email_address",
+         "subject_business_category",
+         "subject_serial_number",
+         "issuer_organization_name",
+         "issuer_organization_unit_name",
+         "issuer_country",
+         "issuer_state_or_province_name",
+         "issuer_locality_name",
+         "issuer_street_address",
+         "issuer_postal_code",
+         "issuer_surname",
+         "issuer_given_name",
+         "issuer_email_address",
+         "issuer_business_category",
+         "issuer_serial_number",
+         "sector"
+      ],
       "name" : "IPv6-Open-Anonymous-MQTT"
    },
    "scan6_mysql" : {
-      "alias" : "scan_mysql",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "version",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "mysql_protocol_version",
+         "server_version",
+         "error_code",
+         "error_id",
+         "error_message",
+         "client_can_handle_expired_passwords",
+         "client_compress",
+         "client_connect_attrs",
+         "client_connect_with_db",
+         "client_deprecated_eof",
+         "client_found_rows",
+         "client_ignore_sigpipe",
+         "client_ignore_space",
+         "client_interactive",
+         "client_local_files",
+         "client_long_flag",
+         "client_long_password",
+         "client_multi_results",
+         "client_multi_statements",
+         "client_no_schema",
+         "client_odbc",
+         "client_plugin_auth",
+         "client_plugin_auth_len_enc_client_data",
+         "client_protocol_41",
+         "client_ps_multi_results",
+         "client_reserved",
+         "client_secure_connection",
+         "client_session_track",
+         "client_ssl",
+         "client_transactions",
+         "handshake",
+         "cipher_suite",
+         "cert_length",
+         "subject_common_name",
+         "issuer_common_name",
+         "cert_issue_date",
+         "cert_expiration_date",
+         "sha1_fingerprint",
+         "cert_serial_number",
+         "ssl_version",
+         "signature_algorithm",
+         "key_algorithm",
+         "subject_organization_name",
+         "subject_organization_unit_name",
+         "subject_country",
+         "subject_state_or_province_name",
+         "subject_locality_name",
+         "subject_street_address",
+         "subject_postal_code",
+         "subject_surname",
+         "subject_given_name",
+         "subject_email_address",
+         "subject_business_category",
+         "subject_serial_number",
+         "issuer_organization_name",
+         "issuer_organization_unit_name",
+         "issuer_country",
+         "issuer_state_or_province_name",
+         "issuer_locality_name",
+         "issuer_street_address",
+         "issuer_postal_code",
+         "issuer_surname",
+         "issuer_given_name",
+         "issuer_email_address",
+         "issuer_business_category",
+         "issuer_serial_number",
+         "sha256_fingerprint",
+         "sha512_fingerprint",
+         "md5_fingerprint",
+         "cert_valid",
+         "self_signed",
+         "cert_expired",
+         "validation_level",
+         "browser_trusted",
+         "browser_error",
+         "raw_cert",
+         "raw_cert_chain"
+      ],
       "name" : "IPv6-Accessible-MySQL"
    },
    "scan6_ntp" : {
-      "alias" : "scan_ntp",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "version",
+         "clk_wander",
+         "clock",
+         "error",
+         "frequency",
+         "jitter",
+         "leap",
+         "mintc",
+         "noise",
+         "offset",
+         "peer",
+         "phase",
+         "poll",
+         "precision",
+         "processor",
+         "refid",
+         "reftime",
+         "rootdelay",
+         "rootdispersion",
+         "stability",
+         "state",
+         "stratum",
+         "system",
+         "tai",
+         "tc",
+         "naics",
+         "hostname_source",
+         "sector",
+         "response_size",
+         "amplification"
+      ],
       "name" : "IPv6-NTP-Version"
    },
    "scan6_ntpmonitor" : {
-      "alias" : "scan_ntpmonitor",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "packets",
+         "response_size",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "amplification"
+      ],
       "name" : "IPv6-NTP-Monitor"
    },
    "scan6_postgres" : {
-      "alias" : "scan_postgres",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "version",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "supported_protocols",
+         "protocol_error_code",
+         "protocol_error_file",
+         "protocol_error_line",
+         "protocol_error_message",
+         "protocol_error_routine",
+         "protocol_error_severity",
+         "protocol_error_severity_v",
+         "startup_error_code",
+         "startup_error_file",
+         "startup_error_line",
+         "startup_error_message",
+         "startup_error_routine",
+         "startup_error_severity",
+         "startup_error_severity_v",
+         "client_ssl",
+         "handshake",
+         "cipher_suite",
+         "cert_length",
+         "subject_common_name",
+         "issuer_common_name",
+         "cert_issue_date",
+         "cert_expiration_date",
+         "sha1_fingerprint",
+         "cert_serial_number",
+         "ssl_version",
+         "signature_algorithm",
+         "key_algorithm",
+         "subject_organization_name",
+         "subject_organization_unit_name",
+         "subject_country",
+         "subject_state_or_province_name",
+         "subject_locality_name",
+         "subject_street_address",
+         "subject_postal_code",
+         "subject_surname",
+         "subject_given_name",
+         "subject_email_address",
+         "subject_business_category",
+         "subject_serial_number",
+         "issuer_organization_name",
+         "issuer_organization_unit_name",
+         "issuer_country",
+         "issuer_state_or_province_name",
+         "issuer_locality_name",
+         "issuer_street_address",
+         "issuer_postal_code",
+         "issuer_surname",
+         "issuer_given_name",
+         "issuer_email_address",
+         "issuer_business_category",
+         "issuer_serial_number",
+         "sha256_fingerprint",
+         "sha512_fingerprint",
+         "md5_fingerprint",
+         "cert_valid",
+         "self_signed",
+         "cert_expired",
+         "validation_level",
+         "browser_trusted",
+         "browser_error",
+         "raw_cert",
+         "raw_cert_chain"
+      ],
       "name" : "IPv6-Accessible-PostgreSQL"
    },
    "scan6_rdp" : {
-      "alias" : "scan_rdp",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "handshake",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "rdp_protocol",
+         "cert_length",
+         "subject_common_name",
+         "issuer_common_name",
+         "cert_issue_date",
+         "cert_expiration_date",
+         "sha1_fingerprint",
+         "cert_serial_number",
+         "ssl_version",
+         "signature_algorithm",
+         "key_algorithm",
+         "sha256_fingerprint",
+         "sha512_fingerprint",
+         "md5_fingerprint",
+         "naics",
+         "hostname_source",
+         "sector",
+         "tlsv13_support",
+         "tlsv13_cipher",
+         "jarm"
+      ],
       "name" : "IPv6-Accessible-RDP"
    },
    "scan6_slp" : {
-      "alias" : "scan_slp",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "version",
+         "function",
+         "function_text",
+         "flags",
+         "next_extension_offset",
+         "xid",
+         "language_tag_length",
+         "language_tag",
+         "error_code",
+         "error_code_text",
+         "response_size",
+         "raw_response"
+      ],
       "name" : "IPv6-Accessible-SLP"
    },
    "scan6_smb" : {
-      "alias" : "scan_smb",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "arch",
+         "key",
+         "smb_major_number",
+         "smb_minor_number",
+         "smb_revision",
+         "smb_version_string",
+         "sector"
+      ],
       "name" : "IPv6-Accessible-SMB"
    },
    "scan6_smtp" : {
-      "alias" : "scan_smtp",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "banner",
+         "sector",
+         "auth_ssl_response",
+         "auth_tls_response",
+         "cert_expiration_date",
+         "cert_expired",
+         "cert_issue_date",
+         "cert_length",
+         "cert_serial_number",
+         "cert_valid",
+         "cipher_suite",
+         "freak_cipher_suite",
+         "freak_vulnerable",
+         "handshake",
+         "issuer_business_category",
+         "issuer_common_name",
+         "issuer_country",
+         "issuer_email_address",
+         "issuer_given_name",
+         "issuer_locality_name",
+         "issuer_organization_name",
+         "issuer_organization_unit_name",
+         "issuer_postal_code",
+         "issuer_serial_number",
+         "issuer_state_or_province_name",
+         "issuer_street_address",
+         "issuer_surname",
+         "jarm",
+         "key_algorithm",
+         "md5_fingerprint",
+         "raw_cert",
+         "raw_cert_chain",
+         "self_signed",
+         "sha1_fingerprint",
+         "sha256_fingerprint",
+         "sha512_fingerprint",
+         "signature_algorithm",
+         "ssl_version",
+         "sslv3_supported",
+         "subject_business_category",
+         "subject_common_name",
+         "subject_country",
+         "subject_email_address",
+         "subject_given_name",
+         "subject_locality_name",
+         "subject_organization_name",
+         "subject_organization_unit_name",
+         "subject_postal_code",
+         "subject_serial_number",
+         "subject_state_or_province_name",
+         "subject_street_address",
+         "subject_surname",
+         "tlsv13_cipher",
+         "tlsv13_support",
+         "validation_level"
+      ],
       "name" : "IPv6-Accessible-SMTP"
    },
    "scan6_smtp_vulnerable" : {
-      "alias" : "scan_smtp_vulnerable",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "banner",
+         "sector",
+         "auth_ssl_response",
+         "auth_tls_response",
+         "cert_expiration_date",
+         "cert_expired",
+         "cert_issue_date",
+         "cert_length",
+         "cert_serial_number",
+         "cert_valid",
+         "cipher_suite",
+         "freak_cipher_suite",
+         "freak_vulnerable",
+         "handshake",
+         "issuer_business_category",
+         "issuer_common_name",
+         "issuer_country",
+         "issuer_email_address",
+         "issuer_given_name",
+         "issuer_locality_name",
+         "issuer_organization_name",
+         "issuer_organization_unit_name",
+         "issuer_postal_code",
+         "issuer_serial_number",
+         "issuer_state_or_province_name",
+         "issuer_street_address",
+         "issuer_surname",
+         "jarm",
+         "key_algorithm",
+         "md5_fingerprint",
+         "raw_cert",
+         "raw_cert_chain",
+         "self_signed",
+         "sha1_fingerprint",
+         "sha256_fingerprint",
+         "sha512_fingerprint",
+         "signature_algorithm",
+         "ssl_version",
+         "sslv3_supported",
+         "subject_business_category",
+         "subject_common_name",
+         "subject_country",
+         "subject_email_address",
+         "subject_given_name",
+         "subject_locality_name",
+         "subject_organization_name",
+         "subject_organization_unit_name",
+         "subject_postal_code",
+         "subject_serial_number",
+         "subject_state_or_province_name",
+         "subject_street_address",
+         "subject_surname",
+         "tlsv13_cipher",
+         "tlsv13_support",
+         "validation_level"
+      ],
       "name" : "IPv6-Vulnerable-SMTP"
    },
    "scan6_snmp" : {
-      "alias" : "scan_snmp",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "sysname",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "version",
+         "naics",
+         "hostname_source",
+         "sector",
+         "device_vendor",
+         "device_type",
+         "device_model",
+         "device_version",
+         "device_sector",
+         "sysdesc",
+         "community",
+         "response_size",
+         "amplification",
+         "uptime",
+         "mac_address",
+         "vendor_id",
+         "vendor"
+      ],
       "name" : "IPv6-Open-SNMP"
    },
    "scan6_ssh" : {
-      "alias" : "scan_ssh",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "serverid_raw",
+         "serverid_version",
+         "serverid_software",
+         "serverid_comment",
+         "server_cookie",
+         "available_kex",
+         "available_ciphers",
+         "available_mac",
+         "available_compression",
+         "selected_kex",
+         "algorithm",
+         "selected_cipher",
+         "selected_mac",
+         "selected_compression",
+         "server_signature_value",
+         "server_signature_raw",
+         "server_host_key",
+         "server_host_key_sha256",
+         "rsa_prime",
+         "rsa_prime_length",
+         "rsa_generator",
+         "rsa_generator_length",
+         "rsa_public_key",
+         "rsa_public_key_length",
+         "rsa_exponent",
+         "rsa_modulus",
+         "rsa_length",
+         "dss_prime",
+         "dss_prime_length",
+         "dss_generator",
+         "dss_generator_length",
+         "dss_public_key",
+         "dss_public_key_length",
+         "dss_dsa_public_g",
+         "dss_dsa_public_p",
+         "dss_dsa_public_q",
+         "dss_dsa_public_y",
+         "ecdsa_curve25519",
+         "ecdsa_curve",
+         "ecdsa_public_key_length",
+         "ecdsa_public_key_b",
+         "ecdsa_public_key_gx",
+         "ecdsa_public_key_gy",
+         "ecdsa_public_key_n",
+         "ecdsa_public_key_p",
+         "ecdsa_public_key_x",
+         "ecdsa_public_key_y",
+         "ed25519_curve25519",
+         "ed25519_cert_public_key_nonce",
+         "ed25519_cert_public_key_bytes",
+         "ed25519_cert_public_key_raw",
+         "ed25519_cert_public_key_sha256",
+         "ed25519_cert_public_key_serial",
+         "ed25519_cert_public_key_type_id",
+         "ed25519_cert_public_key_type_name",
+         "ed25519_cert_public_key_keyid",
+         "ed25519_cert_public_key_principles",
+         "ed25519_cert_public_key_valid_after",
+         "ed25519_cert_public_key_valid_before",
+         "ed25519_cert_public_key_duration",
+         "ed25519_cert_public_key_sigkey_bytes",
+         "ed25519_cert_public_key_sigkey_raw",
+         "ed25519_cert_public_key_sigkey_sha256",
+         "ed25519_cert_public_key_sigkey_value",
+         "ed25519_cert_public_key_sig_raw",
+         "banner",
+         "userauth_methods",
+         "device_vendor",
+         "device_type",
+         "device_model",
+         "device_version",
+         "device_sector",
+         "sector"
+      ],
       "name" : "IPv6-Accessible-SSH"
    },
    "scan6_ssl" : {
-      "alias" : "scan_ssl",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "handshake",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "cipher_suite",
+         "ssl_poodle",
+         "cert_length",
+         "subject_common_name",
+         "issuer_common_name",
+         "cert_issue_date",
+         "cert_expiration_date",
+         "sha1_fingerprint",
+         "cert_serial_number",
+         "ssl_version",
+         "signature_algorithm",
+         "key_algorithm",
+         "subject_organization_name",
+         "subject_organization_unit_name",
+         "subject_country",
+         "subject_state_or_province_name",
+         "subject_locality_name",
+         "subject_street_address",
+         "subject_postal_code",
+         "subject_surname",
+         "subject_given_name",
+         "subject_email_address",
+         "subject_business_category",
+         "subject_serial_number",
+         "issuer_organization_name",
+         "issuer_organization_unit_name",
+         "issuer_country",
+         "issuer_state_or_province_name",
+         "issuer_locality_name",
+         "issuer_street_address",
+         "issuer_postal_code",
+         "issuer_surname",
+         "issuer_given_name",
+         "issuer_email_address",
+         "issuer_business_category",
+         "issuer_serial_number",
+         "naics",
+         "hostname_source",
+         "freak_vulnerable",
+         "freak_cipher_suite",
+         "sector",
+         "sha256_fingerprint",
+         "sha512_fingerprint",
+         "md5_fingerprint",
+         "http_response_type",
+         "http_code",
+         "http_reason",
+         "content_type",
+         "http_connection",
+         "www_authenticate",
+         "set_cookie",
+         "server_type",
+         "content_length",
+         "transfer_encoding",
+         "http_date",
+         "cert_valid",
+         "self_signed",
+         "cert_expired",
+         "browser_trusted",
+         "validation_level",
+         "browser_error",
+         "tlsv13_support",
+         "tlsv13_cipher",
+         "jarm"
+      ],
       "name" : "IPv6-Accessible-SSL"
    },
    "scan6_ssl_freak" : {
-      "alias" : "scan_ssl_freak",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "handshake",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "cipher_suite",
+         "cert_length",
+         "subject_common_name",
+         "issuer_common_name",
+         "cert_issue_date",
+         "cert_expiration_date",
+         "sha1_fingerprint",
+         "cert_serial_number",
+         "signature_algorithm",
+         "key_algorithm",
+         "subject_organization_name",
+         "subject_organization_unit_name",
+         "subject_country",
+         "subject_state_or_province_name",
+         "subject_locality_name",
+         "subject_street_address",
+         "subject_postal_code",
+         "subject_surname",
+         "subject_given_name",
+         "subject_email_address",
+         "subject_business_category",
+         "subject_serial_number",
+         "issuer_organization_name",
+         "issuer_organization_unit_name",
+         "issuer_country",
+         "issuer_state_or_province_name",
+         "issuer_locality_name",
+         "issuer_street_address",
+         "issuer_postal_code",
+         "issuer_surname",
+         "issuer_given_name",
+         "issuer_email_address",
+         "issuer_business_category",
+         "issuer_serial_number",
+         "naics",
+         "hostname_source",
+         "freak_vulnerable",
+         "freak_cipher_suite",
+         "sector",
+         "sha256_fingerprint",
+         "sha512_fingerprint",
+         "md5_fingerprint",
+         "http_response_type",
+         "http_code",
+         "http_reason",
+         "content_type",
+         "http_connection",
+         "www_authenticate",
+         "set_cookie",
+         "server_type",
+         "content_length",
+         "transfer_encoding",
+         "http_date",
+         "cert_valid",
+         "self_signed",
+         "cert_expired",
+         "browser_trusted",
+         "validation_level",
+         "browser_error",
+         "tlsv13_support",
+         "tlsv13_cipher",
+         "raw_cert",
+         "raw_cert_chain",
+         "jarm",
+         "device_vendor",
+         "device_type",
+         "device_model",
+         "device_version",
+         "device_sector",
+         "page_sha256fp"
+      ],
       "name" : "SSL-FREAK-Vulnerable-Servers IPv6"
    },
    "scan6_ssl_poodle" : {
-      "alias" : "scan_ssl_poodle",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "handshake",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "cipher_suite",
+         "ssl_poodle",
+         "cert_length",
+         "subject_common_name",
+         "issuer_common_name",
+         "cert_issue_date",
+         "cert_expiration_date",
+         "sha1_fingerprint",
+         "cert_serial_number",
+         "ssl_version",
+         "signature_algorithm",
+         "key_algorithm",
+         "subject_organization_name",
+         "subject_organization_unit_name",
+         "subject_country",
+         "subject_state_or_province_name",
+         "subject_locality_name",
+         "subject_street_address",
+         "subject_postal_code",
+         "subject_surname",
+         "subject_given_name",
+         "subject_email_address",
+         "subject_business_category",
+         "subject_serial_number",
+         "issuer_organization_name",
+         "issuer_organization_unit_name",
+         "issuer_country",
+         "issuer_state_or_province_name",
+         "issuer_locality_name",
+         "issuer_street_address",
+         "issuer_postal_code",
+         "issuer_surname",
+         "issuer_given_name",
+         "issuer_email_address",
+         "issuer_business_category",
+         "issuer_serial_number",
+         "naics",
+         "hostname_source",
+         "sector",
+         "sha256_fingerprint",
+         "sha512_fingerprint",
+         "md5_fingerprint",
+         "http_response_type",
+         "http_code",
+         "http_reason",
+         "content_type",
+         "http_connection",
+         "www_authenticate",
+         "set_cookie",
+         "server_type",
+         "content_length",
+         "transfer_encoding",
+         "http_date",
+         "cert_valid",
+         "self_signed",
+         "cert_expired",
+         "browser_trusted",
+         "validation_level",
+         "browser_error",
+         "tlsv13_support",
+         "tlsv13_cipher",
+         "raw_cert",
+         "raw_cert_chain",
+         "jarm",
+         "device_vendor",
+         "device_type",
+         "device_model",
+         "device_version",
+         "device_sector",
+         "page_sha256fp"
+      ],
       "name" : "SSL-POODLE-Vulnerable-Servers IPv6"
    },
    "scan6_stun" : {
-      "alias" : "scan_stun",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "transaction_id",
+         "magic_cookie",
+         "message_length",
+         "message_type",
+         "mapped_family",
+         "mapped_address",
+         "mapped_port",
+         "xor_mapped_family",
+         "xor_mapped_address",
+         "xor_mapped_port",
+         "software",
+         "fingerprint",
+         "amplification",
+         "response_size"
+      ],
       "name" : "IPv6-Accessible-Session-Traversal-Utilities-for-NAT"
    },
    "scan6_telnet" : {
-      "alias" : "scan_telnet",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "banner",
+         "sector"
+      ],
       "name" : "IPv6-Accessible-Telnet"
    },
    "scan6_vnc" : {
-      "alias" : "scan_vnc",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "product",
+         "banner",
+         "sector"
+      ],
       "name" : "IPv6-Accessible-VNC"
    },
    "scan_activemq" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "command",
-            "cs4" : "vendor",
-            "cs5" : "version"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1608,16 +2970,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-activemq-service-report/"
    },
    "scan_adb" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "name",
-            "cs4" : "model",
-            "cs5" : "device"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1649,17 +3001,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-adb-report/"
    },
    "scan_afp" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "machine_type",
-            "cs4" : "afp_versions",
-            "cs5" : "server_name",
-            "cs6" : "signature"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1691,16 +3032,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-afp-report/"
    },
    "scan_amqp" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "platform",
-            "cs4" : "product",
-            "cs5" : "product_version"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1736,16 +3067,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-amqp-report/"
    },
    "scan_ard" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "amplification",
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "machine_name"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1771,18 +3092,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-apple-remote-desktop-ard-report/"
    },
    "scan_bgp" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cn2" : "bgp_version",
-            "cn3" : "sender_asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "bgp_identifier",
-            "cs4" : "message_type",
-            "cs5" : "message2_type"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1818,15 +3127,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-bgp-service-report/"
    },
    "scan_chargen" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "amplification",
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cs1" : "geo",
-            "cs2" : "tag"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1851,13 +3151,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-chargen-report/"
    },
    "scan_cisco_smart_install" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1880,16 +3173,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-cisco-smart-install-report/"
    },
    "scan_coap" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "amplification",
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "version"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1916,15 +3199,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-coap-report/"
    },
    "scan_couchdb" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "server_version",
-            "cs4" : "couchdb_version"
-         }
-      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -1956,14 +3230,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-couchdb-report/"
    },
    "scan_cwmp" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "server"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -1997,17 +3263,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-cwmp-report/"
    },
    "scan_db2" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "amplification",
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "db2_hostname",
-            "cs4" : "servername"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2034,14 +3289,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-db2-discovery-service-report/"
    },
    "scan_ddos_middlebox" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "method"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2068,15 +3315,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-ddos-middlebox-report/"
    },
    "scan_dns" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "min_amplification",
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "dns_version"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2101,16 +3339,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/dns-open-resolvers-report/"
    },
    "scan_docker" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "server",
-            "cs4" : "arch",
-            "cs5" : "build_time"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2150,18 +3378,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-docker-service-report/"
    },
    "scan_dvr_dhcpdiscover" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "amplification",
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "device_vendor",
-            "cs4" : "device_model",
-            "cs5" : "device_version"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2211,16 +3427,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-dvr-dhcpdiscover-report/"
    },
    "scan_elasticsearch" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "name",
-            "cs4" : "cluster_name",
-            "cs5" : "lucene_version"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2253,13 +3459,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-elasticsearch-report/"
    },
    "scan_epmd" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag"
-         }
-      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -2283,16 +3482,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-erlang-port-mapper-report-daemon/"
    },
    "scan_exchange" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "version",
-            "cs4" : "servername",
-            "cs5" : "url"
-         }
-      },
       "fields" : [
          "timestamp",
          "severity",
@@ -2316,15 +3505,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-exchange-server-report/"
    },
    "scan_ftp" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "banner",
-            "cs4" : "handshake"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2400,16 +3580,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ftp-report/"
    },
    "scan_hadoop" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "version",
-            "cs4" : "server_type",
-            "cs5" : "clusterid"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2441,17 +3611,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-hadoop-report/"
    },
    "scan_http" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cn2" : "http_code",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "server",
-            "cs4" : "http",
-            "cs5" : "http_reason"
-         }
-      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -2485,17 +3644,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-http-report/"
    },
    "scan_http_proxy" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "server",
-            "cs4" : "via",
-            "cs5" : "proxy_authenticate",
-            "cs6" : "connection"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2529,17 +3677,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-http-proxy-report/"
    },
    "scan_http_vulnerable" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "server",
-            "cs4" : "version",
-            "cs5" : "build_date",
-            "cs6" : "detail"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2577,16 +3714,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-http-report/"
    },
    "scan_ics" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "device_vendor",
-            "cs4" : "device_model",
-            "cs5" : "device_version"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2616,15 +3743,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ics-report/"
    },
    "scan_ipmi" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "manufacturername",
-            "cs4" : "productname"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2668,17 +3786,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ipmi-report/"
    },
    "scan_ipp" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "printer_name",
-            "cs4" : "printer_info",
-            "cs5" : "printer_make_and_model",
-            "cs6" : "printer_firmware_string_version"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2720,15 +3827,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ipp-report/"
    },
    "scan_isakmp" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "initiator_spi",
-            "cs4" : "responder_spi"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2762,16 +3860,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-isakmp-report/"
    },
    "scan_kubernetes" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "server",
-            "cs4" : "platform",
-            "cs5" : "build_date"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2857,17 +3945,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-kubernetes-api-server-report/"
    },
    "scan_ldap_tcp" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "amplification",
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "configuration_naming_context",
-            "cs4" : "dns_host_name"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -2967,17 +4044,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ldap-tcp-report/"
    },
    "scan_ldap_udp" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "amplification",
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "configuration_naming_context",
-            "cs4" : "dns_host_name"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3024,16 +4090,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ldap-report/"
    },
    "scan_mdns" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "services",
-            "cs4" : "workstation_name",
-            "cs5" : "workstation_info"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3075,15 +4131,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-mdns-report/"
    },
    "scan_memcached" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "amplification",
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cs1" : "geo",
-            "cs2" : "tag"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3115,16 +4162,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-memcached-report/"
    },
    "scan_mongodb" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "version",
-            "cs4" : "sysinfo",
-            "cs5" : "visible_databases"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3157,14 +4194,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-mongodb-report/"
    },
    "scan_mqtt" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "anonymous_access"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3229,13 +4258,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-mqtt-report/"
    },
    "scan_mqtt_anon" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3299,17 +4321,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-mqtt-report/"
    },
    "scan_mssql" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "amplification",
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "server_name",
-            "cs4" : "instance_name"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3339,14 +4350,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ms-sql-server-resolution-service-report/"
    },
    "scan_mysql" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "server_version"
-         }
-      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -3447,16 +4450,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-mysql-server-report/"
    },
    "scan_nat_pmp" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "amplification",
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "external_ip"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3485,17 +4478,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-nat-pmp-report/"
    },
    "scan_netbios" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "amplification",
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "workgroup",
-            "cs4" : "machine_name"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3524,15 +4506,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-netbios-report/"
    },
    "scan_netis_router" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "amplification",
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cs1" : "geo",
-            "cs2" : "tag"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3558,18 +4531,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/netcore-netis-router-vulnerability-scan-report/"
    },
    "scan_ntp" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "amplification",
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cn3" : "version",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "refid",
-            "cs4" : "system"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3619,14 +4580,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ntp-version-report/"
    },
    "scan_ntpmonitor" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "amplification",
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cs1" : "geo"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3651,17 +4604,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ntp-monitor-report/"
    },
    "scan_portmapper" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "amplification",
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "programs",
-            "cs4" : "exports"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3689,17 +4631,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-portmapper-report/"
    },
    "scan_post_exploitation_framework" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cn2" : "beacon_port",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "http_url",
-            "cs4" : "beacon_type",
-            "cs5" : "beacon_host"
-         }
-      },
       "classification.taxonomy" : "malicious-code",
       "classification.type" : "infected-system",
       "fields" : [
@@ -3744,14 +4675,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/post-exploitation-framework/"
    },
    "scan_postgres" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "supported_protocols"
-         }
-      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -3838,15 +4761,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-postgresql-server-report/"
    },
    "scan_qotd" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "amplification",
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cs1" : "geo",
-            "cs2" : "tag"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3872,17 +4786,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-qotd-report/"
    },
    "scan_quic" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "version_field_1",
-            "cs4" : "version_field_2",
-            "cs5" : "version_field_3",
-            "cs6" : "version_field_4"
-         }
-      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -3909,14 +4812,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-quic-report/"
    },
    "scan_radmin" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "version"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3940,14 +4835,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-radmin-report/"
    },
    "scan_rdp" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "rdp_protocol"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -3988,15 +4875,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-rdp-report/"
    },
    "scan_rdpeudp" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "amplification",
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cs1" : "geo",
-            "cs2" : "tag"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -4022,16 +4900,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ms-rdpeudp/"
    },
    "scan_redis" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "build_id",
-            "cs4" : "os",
-            "cs5" : "mode"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -4067,15 +4935,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-redis-report/"
    },
    "scan_rsync" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "module",
-            "cs4" : "motd"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -4101,16 +4960,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-rsync-report/"
    },
    "scan_sip" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cn2" : "sip_code",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "sip",
-            "cs4" : "sip_reason"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -4149,15 +4998,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-sip-report/"
    },
    "scan_slp" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cn3" : "version",
-            "cs1" : "geo",
-            "cs2" : "tag"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -4192,14 +5032,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-slp-service-report/"
    },
    "scan_smb" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "smb_version_string"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -4228,14 +5060,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-smb-report/"
    },
    "scan_smtp" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "banner"
-         }
-      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -4312,14 +5136,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-smtp-report/"
    },
    "scan_smtp_vulnerable" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "banner"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -4396,17 +5212,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-smtp-report/"
    },
    "scan_snmp" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "amplification",
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "community",
-            "cs4" : "vendor"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -4444,13 +5249,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-snmp-report/"
    },
    "scan_socks" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -4473,18 +5271,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-socks4-5-proxy-report/"
    },
    "scan_ssdp" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "amplification",
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "server",
-            "cs4" : "instance",
-            "cs5" : "version"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -4525,16 +5311,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ssdp-report/"
    },
    "scan_ssh" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "serverid_raw",
-            "cs4" : "serverid_software",
-            "cs5" : "server_host_key"
-         }
-      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -4629,14 +5405,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ssh-report/"
    },
    "scan_ssl" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "handshake"
-         }
-      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -4721,14 +5489,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ssl-report/"
    },
    "scan_ssl_freak" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "handshake"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -4819,14 +5579,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ssl-freak-report/"
    },
    "scan_ssl_poodle" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "handshake"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -4917,16 +5669,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ssl-poodle-report/"
    },
    "scan_stun" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "amplification",
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "software"
-         }
-      },
       "classification.taxonomy" : "other",
       "classification.type" : "other",
       "fields" : [
@@ -4963,15 +5705,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-stun-service-report/"
    },
    "scan_synfulknock" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cn2" : "sequence_number",
-            "cn3" : "ack_number",
-            "cs1" : "geo",
-            "cs2" : "tag"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -5000,14 +5733,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/synful-scan-report/"
    },
    "scan_telnet" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "banner"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -5031,15 +5756,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-telnet-report/"
    },
    "scan_tftp" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "amplification",
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cs1" : "geo",
-            "cs2" : "tag"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -5068,18 +5784,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-accessible-tftp-report/"
    },
    "scan_ubiquiti" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "amplification",
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "mac",
-            "cs4" : "modelfull",
-            "cs5" : "firmware"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -5110,15 +5814,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ubiquiti-report/"
    },
    "scan_vnc" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "product",
-            "cs4" : "banner"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -5143,15 +5838,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-vnc-report/"
    },
    "scan_ws_discovery" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "amplification",
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cs1" : "geo",
-            "cs2" : "tag"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -5178,15 +5864,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ws-discovery-service-report/"
    },
    "scan_xdmcp" : {
-      "cef" : {
-         "map" : {
-            "cfp1" : "amplification",
-            "cn1" : "asn",
-            "cn2" : "response_size",
-            "cs1" : "geo",
-            "cs2" : "tag"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -5214,16 +5891,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-xdmcp-service-report/"
    },
    "spam_url" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "url",
-            "cs4" : "sender",
-            "cs5" : "subject"
-         }
-      },
       "classification.taxonomy" : "abusive-content",
       "classification.type" : "spam",
       "fields" : [
@@ -5255,16 +5922,6 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/spam-url-report/"
    },
    "special" : {
-      "cef" : {
-         "map" : {
-            "cn1" : "asn",
-            "cs1" : "geo",
-            "cs2" : "tag",
-            "cs3" : "status",
-            "cs4" : "detail",
-            "cs5" : "method"
-         }
-      },
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
       "fields" : [
@@ -5285,7 +5942,8 @@
          "detail",
          "method",
          "device_vendor",
-         "severity"
+         "severity",
+         "hostname_source"
       ],
       "name" : "Special"
    }
