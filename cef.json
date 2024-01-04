@@ -256,6 +256,25 @@
          "vulnerability_score" : "cfp1"
       }
    },
+   "event4_honeypot_rocketmq_scan" : {
+      "map" : {
+         "dhost" : "dst_hostname",
+         "dst_asn" : "cn2",
+         "dst_geo" : "cs2",
+         "dst_ip" : "dst",
+         "dst_port" : "dpt",
+         "family" : "cs5",
+         "infection" : "cs4",
+         "src_asn" : "cn1",
+         "src_geo" : "cs1",
+         "src_hostname" : "shost",
+         "src_ip" : "src",
+         "src_port" : "spt",
+         "tag" : "cs3",
+         "vulnerability_id" : "cs6",
+         "vulnerability_score" : "cfp1"
+      }
+   },
    "event4_honeypot_smb_scan" : {
       "map" : {
          "dhost" : "dst_hostname",

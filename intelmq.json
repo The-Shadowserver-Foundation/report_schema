@@ -1,9 +1,9 @@
 {
    "_meta" : {
       "change_log" : [
-         "Added event4_honeypot_adb_scan report."
+         "Added event4_honeypot_rocketmq_scan report."
       ],
-      "date_created" : "2024-01-03T17:47:40Z"
+      "date_created" : "2024-01-04T14:54:37Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -4005,6 +4005,263 @@
          ]
       ],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-rdp-scanner-events-report/"
+   },
+   "event_honeypot_rocketmq_scan" : {
+      "constant_fields" : {
+         "classification.identifier" : "honeypot-rocketmq-scan",
+         "classification.taxonomy" : "information-gathering",
+         "classification.type" : "scanner",
+         "protocol.application" : "rocketmq"
+      },
+      "feed_name" : "Honeypot-RocketMQ-Scanner",
+      "file_name" : "event4_honeypot_rocketmq_scan",
+      "optional_fields" : [
+         [
+            "malware.name",
+            "infection",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "tag",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "family",
+            "validate_to_none"
+         ],
+         [
+            "protocol.transport",
+            "protocol"
+         ],
+         [
+            "source.asn",
+            "src_asn",
+            "invalidate_zero"
+         ],
+         [
+            "source.geolocation.cc",
+            "src_geo"
+         ],
+         [
+            "source.geolocation.region",
+            "src_region"
+         ],
+         [
+            "source.geolocation.city",
+            "src_city"
+         ],
+         [
+            "source.reverse_dns",
+            "src_hostname"
+         ],
+         [
+            "extra.source.naics",
+            "src_naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.source.sector",
+            "src_sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_vendor",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_type",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
+            "destination.ip",
+            "dst_ip",
+            "validate_ip"
+         ],
+         [
+            "destination.port",
+            "dst_port",
+            "convert_int"
+         ],
+         [
+            "destination.asn",
+            "dst_asn",
+            "invalidate_zero"
+         ],
+         [
+            "destination.geolocation.cc",
+            "dst_geo"
+         ],
+         [
+            "destination.geolocation.region",
+            "dst_region"
+         ],
+         [
+            "destination.geolocation.city",
+            "dst_city"
+         ],
+         [
+            "destination.reverse_dns",
+            "dst_hostname",
+            "validate_to_none"
+         ],
+         [
+            "extra.destination.naics",
+            "dst_naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.destination.sector",
+            "dst_sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "public_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "application",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "event_id",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "vulnerability_enum",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "vulnerability_id",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "vulnerability_class",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "vulnerability_score",
+            "convert_float"
+         ],
+         [
+            "extra.",
+            "vulnerability_severity",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "vulnerability_version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "threat_framework",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "threat_tactic_id",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "threat_technique_id",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "target_vendor",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "target_product",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "target_class",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "code",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "flag",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "language",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "opaque",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "serialize_type",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "body",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "body_base64",
+            "validate_to_none"
+         ]
+      ],
+      "required_fields" : [
+         [
+            "time.source",
+            "timestamp",
+            "add_UTC_to_timestamp"
+         ],
+         [
+            "source.ip",
+            "src_ip",
+            "validate_ip"
+         ],
+         [
+            "source.port",
+            "src_port",
+            "convert_int"
+         ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-rocketmq-scanner-events-report/"
    },
    "event_honeypot_smb_scan" : {
       "constant_fields" : {
