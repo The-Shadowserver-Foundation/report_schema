@@ -590,6 +590,16 @@
          "tag" : "cs2"
       }
    },
+   "ransomware_victim" : {
+      "map" : {
+         "entity_name" : "cs1",
+         "geo" : "cs3",
+         "leak_site_url" : "cs6",
+         "ransomware" : "cs5",
+         "sector" : "cs4",
+         "website" : "cs2"
+      }
+   },
    "sandbox_conn" : {
       "map" : {
          "asn" : "cn1",

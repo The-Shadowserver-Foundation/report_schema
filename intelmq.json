@@ -1,9 +1,9 @@
 {
    "_meta" : {
       "change_log" : [
-         "Added event4_honeypot_ikev2_scan report."
+         "Added ransomware_victim report."
       ],
-      "date_created" : "2024-01-05T14:01:34Z"
+      "date_created" : "2024-01-11T14:54:54Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -6464,6 +6464,78 @@
          ]
       ],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-msmq-service-report/"
+   },
+   "ransomware_victim" : {
+      "constant_fields" : {
+         "classification.identifier" : "ransomware-victim",
+         "classification.taxonomy" : "intrusions",
+         "classification.type" : "system-compromise"
+      },
+      "feed_name" : "Ransomware-victim",
+      "file_name" : "ransomware_victim",
+      "optional_fields" : [
+         [
+            "extra.",
+            "entity_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "website",
+            "validate_to_none"
+         ],
+         [
+            "source.geolocation.cc",
+            "geo"
+         ],
+         [
+            "source.geolocation.region",
+            "region"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "date_published",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "ransomware",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "leak_site_url",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "actor_geo_stats_30d",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "actor_total_stats_30d",
+            "validate_to_none"
+         ]
+      ],
+      "required_fields" : [
+         [
+            "time.source",
+            "timestamp",
+            "add_UTC_to_timestamp"
+         ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ransomware-victim-report/"
    },
    "sandbox_conn" : {
       "constant_fields" : {

@@ -1494,6 +1494,26 @@
       "name" : "Accessible-MSMQ",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-msmq-service-report/"
    },
+   "ransomware_victim" : {
+      "classification.taxonomy" : "intrusions",
+      "classification.type" : "system-compromise",
+      "fields" : [
+         "timestamp",
+         "entity_name",
+         "website",
+         "geo",
+         "region",
+         "sector",
+         "date_published",
+         "ransomware",
+         "leak_site_url",
+         "severity",
+         "actor_geo_stats_30d",
+         "actor_total_stats_30d"
+      ],
+      "name" : "Ransomware-victim",
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ransomware-victim-report/"
+   },
    "sandbox_conn" : {
       "classification.taxonomy" : "malicious-code",
       "classification.type" : "malware-distribution",
