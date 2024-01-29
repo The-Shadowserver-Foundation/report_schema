@@ -1119,8 +1119,8 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-http-events-report/"
    },
    "event4_sinkhole_http_referer" : {
-      "classification.taxonomy" : "other",
-      "classification.type" : "other",
+      "classification.taxonomy" : "malicious-code",
+      "classification.type" : "infected-system",
       "fields" : [
          "timestamp",
          "protocol",

@@ -1,5 +1,14 @@
 ## Completed changes
 
+### The following schema changes were completed on January 29 2024:
+
+IntelMQ  2024-01-29T17:25:47Z
+
+* The 'malware.name' is now mapped to 'infection' for the event4_microsoft_sinkhole, event4_microsoft_sinkhole_http, event6_sinkhole, event6_sinkhole_http, event6_sinkhole_http_referer, event_sinkhole, event_sinkole_dns, event_sinkhole_http, and event_sinkhole_http_referer reports.
+* The 'classification.identifier' is now mapped to 'infection' for the event4_microsoft_sinkhole_http, event6_sinkhole_http, event6_sinkhole_http_referer, event_sinkhole_http, and event_sinkhole_http_referer reports.
+* The 'classification.taxonomy', 'classification.type', and 'protocol.application' were changed for the event6_sinkhole_http_referer and event_sinkhole_http_referer reports.
+
+
 ### The following schema changes were completed on December 17 2023:
 
 IntelMQ  2023-12-17T17:35:41Z

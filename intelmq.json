@@ -1,9 +1,11 @@
 {
    "_meta" : {
       "change_log" : [
-         "Added ransomware_victim report."
+         "The 'malware.name' is now mapped to 'infection' for the event4_microsoft_sinkhole, event4_microsoft_sinkhole_http, event6_sinkhole, event6_sinkhole_http, event6_sinkhole_http_referer, event_sinkhole, event_sinkole_dns, event_sinkhole_http, and event_sinkhole_http_referer reports.",
+         "The 'classification.identifier' is now mapped to 'infection' for the event4_microsoft_sinkhole_http, event6_sinkhole_http, event6_sinkhole_http_referer, event_sinkhole_http, and event_sinkhole_http_referer reports.",
+         "The 'classification.taxonomy', 'classification.type', and 'protocol.application' were changed for the event6_sinkhole_http_referer and event_sinkhole_http_referer reports."
       ],
-      "date_created" : "2024-01-11T14:54:54Z"
+      "date_created" : "2024-01-29T17:25:47Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -116,7 +118,8 @@
          ],
          [
             "malware.name",
-            "infection"
+            "infection",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -662,7 +665,7 @@
          ],
          [
             "malware.name",
-            "family",
+            "infection",
             "validate_to_none"
          ],
          [
@@ -672,7 +675,7 @@
          ],
          [
             "extra.",
-            "infection",
+            "family",
             "validate_to_none"
          ],
          [
@@ -832,11 +835,12 @@
       "optional_fields" : [
          [
             "classification.identifier",
-            "tag"
+            "infection",
+            "validate_to_none"
          ],
          [
             "malware.name",
-            "family",
+            "infection",
             "validate_to_none"
          ],
          [
@@ -846,7 +850,7 @@
          ],
          [
             "extra.",
-            "infection",
+            "family",
             "validate_to_none"
          ],
          [
@@ -1036,7 +1040,7 @@
          ],
          [
             "malware.name",
-            "family",
+            "infection",
             "validate_to_none"
          ],
          [
@@ -1046,7 +1050,7 @@
          ],
          [
             "extra.",
-            "infection",
+            "family",
             "validate_to_none"
          ],
          [
@@ -1206,11 +1210,12 @@
       "optional_fields" : [
          [
             "classification.identifier",
-            "tag"
+            "infection",
+            "validate_to_none"
          ],
          [
             "malware.name",
-            "family",
+            "infection",
             "validate_to_none"
          ],
          [
@@ -1220,7 +1225,7 @@
          ],
          [
             "extra.",
-            "infection",
+            "family",
             "validate_to_none"
          ],
          [
@@ -1397,16 +1402,21 @@
    },
    "event6_sinkhole_http_referer" : {
       "constant_fields" : {
-         "classification.identifier" : "event6-sinkhole-http-referer",
-         "classification.taxonomy" : "other",
-         "classification.type" : "other"
+         "classification.taxonomy" : "malicious-code",
+         "classification.type" : "infected-system",
+         "protocol.application" : "http"
       },
       "feed_name" : "Sinkhole-Events-HTTP-Referer IPv6",
       "file_name" : "event6_sinkhole_http_referer",
       "optional_fields" : [
          [
+            "classification.identifier",
+            "infection",
+            "validate_to_none"
+         ],
+         [
             "malware.name",
-            "family",
+            "infection",
             "validate_to_none"
          ],
          [
@@ -1416,7 +1426,7 @@
          ],
          [
             "extra.",
-            "infection",
+            "family",
             "validate_to_none"
          ],
          [
@@ -4928,7 +4938,7 @@
          ],
          [
             "malware.name",
-            "family",
+            "infection",
             "validate_to_none"
          ],
          [
@@ -4938,7 +4948,7 @@
          ],
          [
             "extra.",
-            "infection",
+            "family",
             "validate_to_none"
          ],
          [
@@ -5118,7 +5128,7 @@
          ],
          [
             "malware.name",
-            "family",
+            "infection",
             "validate_to_none"
          ],
          [
@@ -5128,7 +5138,7 @@
          ],
          [
             "extra.",
-            "infection",
+            "family",
             "validate_to_none"
          ],
          [
@@ -5212,11 +5222,12 @@
       "optional_fields" : [
          [
             "classification.identifier",
-            "tag"
+            "infection",
+            "validate_to_none"
          ],
          [
             "malware.name",
-            "family",
+            "infection",
             "validate_to_none"
          ],
          [
@@ -5226,7 +5237,7 @@
          ],
          [
             "extra.",
-            "infection",
+            "family",
             "validate_to_none"
          ],
          [
@@ -5404,16 +5415,21 @@
    },
    "event_sinkhole_http_referer" : {
       "constant_fields" : {
-         "classification.identifier" : "sinkhole-http-referer",
-         "classification.taxonomy" : "other",
-         "classification.type" : "other"
+         "classification.taxonomy" : "malicious-code",
+         "classification.type" : "infected-system",
+         "protocol.application" : "http"
       },
       "feed_name" : "Sinkhole-Events-HTTP-Referer IPv4",
       "file_name" : "event4_sinkhole_http_referer",
       "optional_fields" : [
          [
+            "classification.identifier",
+            "infection",
+            "validate_to_none"
+         ],
+         [
             "malware.name",
-            "family",
+            "infection",
             "validate_to_none"
          ],
          [
@@ -5423,7 +5439,7 @@
          ],
          [
             "extra.",
-            "infection",
+            "family",
             "validate_to_none"
          ],
          [
@@ -6664,7 +6680,8 @@
          ],
          [
             "malware.name",
-            "family"
+            "family",
+            "validate_to_none"
          ],
          [
             "extra.",
