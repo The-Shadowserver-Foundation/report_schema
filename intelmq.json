@@ -1,11 +1,10 @@
 {
    "_meta" : {
       "change_log" : [
-         "The 'malware.name' is now mapped to 'infection' for the event4_microsoft_sinkhole, event4_microsoft_sinkhole_http, event6_sinkhole, event6_sinkhole_http, event6_sinkhole_http_referer, event_sinkhole, event_sinkole_dns, event_sinkhole_http, and event_sinkhole_http_referer reports.",
-         "The 'classification.identifier' is now mapped to 'infection' for the event4_microsoft_sinkhole_http, event6_sinkhole_http, event6_sinkhole_http_referer, event_sinkhole_http, and event_sinkhole_http_referer reports.",
-         "The 'classification.taxonomy', 'classification.type', and 'protocol.application' were changed for the event6_sinkhole_http_referer and event_sinkhole_http_referer reports."
+         "The 'classification.identifier' has been updated to describe the incident for the compromised_website6, population6_bgp, population6_msmq, population_bgp, population_msmq, scan6_activemq, scan6_bgp, scan6_cwmp, scan6_elasticsearch, scan6_ipp, scan6_mqtt, scan6_mqtt_anon, scan6_mysql, scan6_postgres, scan6_rdp, scan6_slp, scan6_smb, scan6_smtp, scan6_smtp_vulnerable, scan6_snmp, scan6_ssh, scan6_ssl, scan6_ssl_freak, scan6_ssl_poodle, scan6_stun, scan6_telnet, scan6_vnc, event_honeypot_ics_scan, and scan_http_vulnerable reports.",
+         "The 'classification.taxonomy' and 'classification.type' have been changed to vulnerable/vulnerable-system for the population6_bgp, population_bgp, population6_msmq, population_msmq, scan6_mysql, scan_mysql, scan6_postgres, scan_postgres, scan_couchdb, scan_epmd reports."
       ],
-      "date_created" : "2024-01-29T17:25:47Z"
+      "date_created" : "2024-02-06T15:00:11Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -306,7 +305,7 @@
    },
    "compromised_website6" : {
       "constant_fields" : {
-         "classification.identifier" : "compromised-website6",
+         "classification.identifier" : "compromised-website",
          "classification.taxonomy" : "intrusions",
          "classification.type" : "system-compromise"
       },
@@ -3595,7 +3594,7 @@
    },
    "event_honeypot_ics_scan" : {
       "constant_fields" : {
-         "classification.identifier" : "ics",
+         "classification.identifier" : "honeypot-ics-scan",
          "classification.taxonomy" : "information-gathering",
          "classification.type" : "scanner"
       },
@@ -5762,9 +5761,9 @@
    },
    "population6_bgp" : {
       "constant_fields" : {
-         "classification.identifier" : "population6-bgp",
-         "classification.taxonomy" : "other",
-         "classification.type" : "other",
+         "classification.identifier" : "accessible-bgp",
+         "classification.taxonomy" : "vulnerable",
+         "classification.type" : "vulnerable-system",
          "protocol.application" : "bgp"
       },
       "feed_name" : "IPv6-Accessible-BGP",
@@ -6038,9 +6037,9 @@
    },
    "population6_msmq" : {
       "constant_fields" : {
-         "classification.identifier" : "population6-msmq",
-         "classification.taxonomy" : "other",
-         "classification.type" : "other",
+         "classification.identifier" : "accessible-msmq",
+         "classification.taxonomy" : "vulnerable",
+         "classification.type" : "vulnerable-system",
          "protocol.application" : "msmq"
       },
       "feed_name" : "IPv6-Accessible-MSMQ",
@@ -6121,9 +6120,9 @@
    },
    "population_bgp" : {
       "constant_fields" : {
-         "classification.identifier" : "population-bgp",
-         "classification.taxonomy" : "other",
-         "classification.type" : "other",
+         "classification.identifier" : "accessible-bgp",
+         "classification.taxonomy" : "vulnerable",
+         "classification.type" : "vulnerable-system",
          "protocol.application" : "bgp"
       },
       "feed_name" : "Accessible-BGP",
@@ -6399,9 +6398,9 @@
    },
    "population_msmq" : {
       "constant_fields" : {
-         "classification.identifier" : "population-msmq",
-         "classification.taxonomy" : "other",
-         "classification.type" : "other",
+         "classification.identifier" : "accessible-msmq",
+         "classification.taxonomy" : "vulnerable",
+         "classification.type" : "vulnerable-system",
          "protocol.application" : "msmq"
       },
       "feed_name" : "Accessible-MSMQ",
@@ -6815,7 +6814,7 @@
    },
    "scan6_activemq" : {
       "constant_fields" : {
-         "classification.identifier" : "scan6-activemq",
+         "classification.identifier" : "open-activemq",
          "classification.taxonomy" : "vulnerable",
          "classification.type" : "vulnerable-system",
          "protocol.application" : "activemq"
@@ -6908,7 +6907,7 @@
    },
    "scan6_bgp" : {
       "constant_fields" : {
-         "classification.identifier" : "scan6-bgp",
+         "classification.identifier" : "open-bgp",
          "classification.taxonomy" : "vulnerable",
          "classification.type" : "vulnerable-system",
          "protocol.application" : "bgp"
@@ -7051,7 +7050,7 @@
    },
    "scan6_cwmp" : {
       "constant_fields" : {
-         "classification.identifier" : "scan6-cwmp",
+         "classification.identifier" : "open-cwmp",
          "classification.taxonomy" : "vulnerable",
          "classification.type" : "vulnerable-system",
          "protocol.application" : "cwmp"
@@ -7272,7 +7271,7 @@
    },
    "scan6_elasticsearch" : {
       "constant_fields" : {
-         "classification.identifier" : "scan6-elasticsearch",
+         "classification.identifier" : "open-elasticsearch",
          "classification.taxonomy" : "vulnerable",
          "classification.type" : "vulnerable-system",
          "protocol.application" : "elasticsearch"
@@ -8120,7 +8119,7 @@
    },
    "scan6_http_vulnerable" : {
       "constant_fields" : {
-         "classification.identifier" : "accessible-http",
+         "classification.identifier" : "vulnerable-http",
          "classification.taxonomy" : "vulnerable",
          "classification.type" : "vulnerable-system",
          "protocol.application" : "http"
@@ -8273,7 +8272,7 @@
    },
    "scan6_ipp" : {
       "constant_fields" : {
-         "classification.identifier" : "scan6-ipp",
+         "classification.identifier" : "open-ipp",
          "classification.taxonomy" : "vulnerable",
          "classification.type" : "vulnerable-system",
          "protocol.application" : "ipp"
@@ -9042,7 +9041,7 @@
    },
    "scan6_mqtt" : {
       "constant_fields" : {
-         "classification.identifier" : "scan6-mqtt",
+         "classification.identifier" : "open-mqtt",
          "classification.taxonomy" : "vulnerable",
          "classification.type" : "vulnerable-system",
          "protocol.application" : "mqtt"
@@ -9330,7 +9329,7 @@
    },
    "scan6_mqtt_anon" : {
       "constant_fields" : {
-         "classification.identifier" : "scan6-mqtt-anon",
+         "classification.identifier" : "open-mqtt-anon",
          "classification.taxonomy" : "vulnerable",
          "classification.type" : "vulnerable-system",
          "protocol.application" : "mqtt"
@@ -9613,9 +9612,9 @@
    },
    "scan6_mysql" : {
       "constant_fields" : {
-         "classification.identifier" : "scan6-mysql",
-         "classification.taxonomy" : "other",
-         "classification.type" : "other",
+         "classification.identifier" : "open-mysql",
+         "classification.taxonomy" : "vulnerable",
+         "classification.type" : "vulnerable-system",
          "protocol.application" : "mysql"
       },
       "feed_name" : "IPv6-Accessible-MySQL",
@@ -10383,9 +10382,9 @@
    },
    "scan6_postgres" : {
       "constant_fields" : {
-         "classification.identifier" : "scan6-postgres",
-         "classification.taxonomy" : "other",
-         "classification.type" : "other",
+         "classification.identifier" : "open-postgres",
+         "classification.taxonomy" : "vulnerable",
+         "classification.type" : "vulnerable-system",
          "protocol.application" : "postgres"
       },
       "feed_name" : "IPv6-Accessible-PostgreSQL",
@@ -10781,7 +10780,7 @@
    },
    "scan6_rdp" : {
       "constant_fields" : {
-         "classification.identifier" : "scan6-rdp",
+         "classification.identifier" : "open-rdp",
          "classification.taxonomy" : "vulnerable",
          "classification.type" : "vulnerable-system",
          "protocol.application" : "rdp",
@@ -10950,7 +10949,7 @@
    },
    "scan6_slp" : {
       "constant_fields" : {
-         "classification.identifier" : "scan6-slp",
+         "classification.identifier" : "open-slp",
          "classification.taxonomy" : "vulnerable",
          "classification.type" : "vulnerable-system",
          "protocol.application" : "slp"
@@ -11088,7 +11087,7 @@
    },
    "scan6_smb" : {
       "constant_fields" : {
-         "classification.identifier" : "scan6-smb",
+         "classification.identifier" : "open-smb",
          "classification.taxonomy" : "vulnerable",
          "classification.type" : "vulnerable-system",
          "protocol.application" : "smb",
@@ -11197,7 +11196,7 @@
    },
    "scan6_smtp" : {
       "constant_fields" : {
-         "classification.identifier" : "scan6-smtp",
+         "classification.identifier" : "open-smtp",
          "classification.taxonomy" : "other",
          "classification.type" : "other",
          "protocol.application" : "smtp"
@@ -11545,7 +11544,7 @@
    },
    "scan6_smtp_vulnerable" : {
       "constant_fields" : {
-         "classification.identifier" : "scan6-smtp-vulnerable",
+         "classification.identifier" : "vulnerable-smtp",
          "classification.taxonomy" : "vulnerable",
          "classification.type" : "vulnerable-system",
          "protocol.application" : "smtp"
@@ -11893,7 +11892,7 @@
    },
    "scan6_snmp" : {
       "constant_fields" : {
-         "classification.identifier" : "scan6-snmp",
+         "classification.identifier" : "open-snmp",
          "classification.taxonomy" : "vulnerable",
          "classification.type" : "vulnerable-system",
          "protocol.application" : "snmp"
@@ -12046,7 +12045,7 @@
    },
    "scan6_ssh" : {
       "constant_fields" : {
-         "classification.identifier" : "scan6-ssh",
+         "classification.identifier" : "open-ssh",
          "classification.taxonomy" : "other",
          "classification.type" : "other"
       },
@@ -12483,7 +12482,7 @@
    },
    "scan6_ssl" : {
       "constant_fields" : {
-         "classification.identifier" : "scan6-ssl",
+         "classification.identifier" : "open-ssl",
          "classification.taxonomy" : "other",
          "classification.type" : "other",
          "protocol.application" : "https"
@@ -12871,7 +12870,7 @@
    },
    "scan6_ssl_freak" : {
       "constant_fields" : {
-         "classification.identifier" : "scan6-ssl-freak",
+         "classification.identifier" : "ssl-freak",
          "classification.taxonomy" : "vulnerable",
          "classification.type" : "vulnerable-system",
          "protocol.application" : "https"
@@ -13289,7 +13288,7 @@
    },
    "scan6_ssl_poodle" : {
       "constant_fields" : {
-         "classification.identifier" : "scan6-ssl-poodle",
+         "classification.identifier" : "ssl-poodle",
          "classification.taxonomy" : "vulnerable",
          "classification.type" : "vulnerable-system",
          "protocol.application" : "https"
@@ -13707,7 +13706,7 @@
    },
    "scan6_stun" : {
       "constant_fields" : {
-         "classification.identifier" : "scan6-stun",
+         "classification.identifier" : "open-stun",
          "classification.taxonomy" : "other",
          "classification.type" : "other",
          "protocol.application" : "Session Traversal Utilities for NAT"
@@ -13855,7 +13854,7 @@
    },
    "scan6_telnet" : {
       "constant_fields" : {
-         "classification.identifier" : "scan6-telnet",
+         "classification.identifier" : "open-telnet",
          "classification.taxonomy" : "vulnerable",
          "classification.type" : "vulnerable-system",
          "protocol.application" : "telnet"
@@ -13938,7 +13937,7 @@
    },
    "scan6_vnc" : {
       "constant_fields" : {
-         "classification.identifier" : "scan6-vnc",
+         "classification.identifier" : "open-vnc",
          "classification.taxonomy" : "vulnerable",
          "classification.type" : "vulnerable-system",
          "protocol.application" : "vnc",
@@ -15027,8 +15026,8 @@
    "scan_couchdb" : {
       "constant_fields" : {
          "classification.identifier" : "open-couchdb",
-         "classification.taxonomy" : "other",
-         "classification.type" : "other",
+         "classification.taxonomy" : "vulnerable",
+         "classification.type" : "vulnerable-system",
          "protocol.application" : "CouchDB"
       },
       "feed_name" : "Accessible-CouchDB",
@@ -16083,8 +16082,8 @@
    "scan_epmd" : {
       "constant_fields" : {
          "classification.identifier" : "open-epmd",
-         "classification.taxonomy" : "other",
-         "classification.type" : "other",
+         "classification.taxonomy" : "vulnerable",
+         "classification.type" : "vulnerable-system",
          "protocol.application" : "Erlang Port Mapper Daemon"
       },
       "feed_name" : "Accessible-Erlang-Port-Mapper-Daemon",
@@ -17021,7 +17020,7 @@
    },
    "scan_http_vulnerable" : {
       "constant_fields" : {
-         "classification.identifier" : "accessible-http",
+         "classification.identifier" : "vulnerable-http",
          "classification.taxonomy" : "vulnerable",
          "classification.type" : "vulnerable-system",
          "protocol.application" : "http"
@@ -19966,8 +19965,8 @@
    "scan_mysql" : {
       "constant_fields" : {
          "classification.identifier" : "open-mysql",
-         "classification.taxonomy" : "other",
-         "classification.type" : "other",
+         "classification.taxonomy" : "vulnerable",
+         "classification.type" : "vulnerable-system",
          "protocol.application" : "mysql"
       },
       "feed_name" : "Accessible-MySQL",
@@ -21350,8 +21349,8 @@
    "scan_postgres" : {
       "constant_fields" : {
          "classification.identifier" : "open-postgres",
-         "classification.taxonomy" : "other",
-         "classification.type" : "other",
+         "classification.taxonomy" : "vulnerable",
+         "classification.type" : "vulnerable-system",
          "protocol.application" : "postgres"
       },
       "feed_name" : "Accessible-PostgreSQL",

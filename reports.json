@@ -1404,8 +1404,8 @@
       "name" : "IPv6-Accessible-MSMQ"
    },
    "population_bgp" : {
-      "classification.taxonomy" : "other",
-      "classification.type" : "other",
+      "classification.taxonomy" : "vulnerable",
+      "classification.type" : "vulnerable-system",
       "fields" : [
          "timestamp",
          "severity",
@@ -1472,8 +1472,8 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-http-proxy-report/"
    },
    "population_msmq" : {
-      "classification.taxonomy" : "other",
-      "classification.type" : "other",
+      "classification.taxonomy" : "vulnerable",
+      "classification.type" : "vulnerable-system",
       "fields" : [
          "timestamp",
          "severity",
@@ -3384,8 +3384,8 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-coap-report/"
    },
    "scan_couchdb" : {
-      "classification.taxonomy" : "other",
-      "classification.type" : "other",
+      "classification.taxonomy" : "vulnerable",
+      "classification.type" : "vulnerable-system",
       "fields" : [
          "timestamp",
          "severity",
@@ -3644,8 +3644,8 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-elasticsearch-report/"
    },
    "scan_epmd" : {
-      "classification.taxonomy" : "other",
-      "classification.type" : "other",
+      "classification.taxonomy" : "vulnerable",
+      "classification.type" : "vulnerable-system",
       "fields" : [
          "timestamp",
          "severity",
@@ -4535,8 +4535,8 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ms-sql-server-resolution-service-report/"
    },
    "scan_mysql" : {
-      "classification.taxonomy" : "other",
-      "classification.type" : "other",
+      "classification.taxonomy" : "vulnerable",
+      "classification.type" : "vulnerable-system",
       "fields" : [
          "timestamp",
          "severity",
@@ -4860,8 +4860,8 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/post-exploitation-framework/"
    },
    "scan_postgres" : {
-      "classification.taxonomy" : "other",
-      "classification.type" : "other",
+      "classification.taxonomy" : "vulnerable",
+      "classification.type" : "vulnerable-system",
       "fields" : [
          "timestamp",
          "severity",

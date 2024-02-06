@@ -1,5 +1,13 @@
 ## Completed changes
 
+### The following schema changes were completed on February 6 2024:
+
+IntelMQ 2024-02-06T15:00:11Z
+
+* The 'classification.identifier' has been updated to describe the incident for the compromised_website6, population6_bgp, population6_msmq, population_bgp, population_msmq, scan6_activemq, scan6_bgp, scan6_cwmp, scan6_elasticsearch, scan6_ipp, scan6_mqtt, scan6_mqtt_anon, scan6_mysql, scan6_postgres, scan6_rdp, scan6_slp, scan6_smb, scan6_smtp, scan6_smtp_vulnerable, scan6_snmp, scan6_ssh, scan6_ssl, scan6_ssl_freak, scan6_ssl_poodle, scan6_stun, scan6_telnet, scan6_vnc, event_honeypot_ics_scan, and scan_http_vulnerable reports.
+* The 'classification.taxonomy' and 'classification.type' have been changed to vulnerable/vulnerable-system for the population6_bgp, population_bgp, population6_msmq, population_msmq, scan6_mysql, scan_mysql, scan6_postgres, scan_postgres, scan_couchdb, scan_epmd reports.
+
+
 ### The following schema changes were completed on January 29 2024:
 
 IntelMQ  2024-01-29T17:25:47Z
