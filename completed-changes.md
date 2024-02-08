@@ -1,5 +1,12 @@
 ## Completed changes
 
+### The following schema changes were completed on February 8 2024:
+
+IntelMQ 2024-02-08T15:10:57Z
+
+* Added the 'extra.cve' field to the scan_http_vulnerable and scan6_http_vulnerable reports.
+
+
 ### The following schema changes were completed on February 6 2024:
 
 IntelMQ 2024-02-06T15:00:11Z
