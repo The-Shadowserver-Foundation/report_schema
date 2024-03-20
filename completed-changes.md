@@ -1,5 +1,12 @@
 ## Completed changes
 
+### The following schema changes were completed on Mar 20 2024:
+
+IntelMQ 2024-03-20T21:53:18Z
+
+* Added the scan_loop_dos report.
+
+
 ### The following schema changes were completed on February 8 2024:
 
 IntelMQ 2024-02-08T15:10:57Z
