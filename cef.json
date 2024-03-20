@@ -1425,6 +1425,17 @@
          "tag" : "cs2"
       }
    },
+   "scan_loop_dos" : {
+      "map" : {
+         "application" : "cs3",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
    "scan_mdns" : {
       "map" : {
          "asn" : "cn1",

@@ -4274,6 +4274,30 @@
       "name" : "Open-LDAP",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ldap-report/"
    },
+   "scan_loop_dos" : {
+      "classification.taxonomy" : "vulnerable",
+      "classification.type" : "vulnerable-system",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "detail",
+         "application"
+      ],
+      "name" : "Loop-DoS",
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/high-loop-dos-report/"
+   },
    "scan_mdns" : {
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
