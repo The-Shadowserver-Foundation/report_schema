@@ -1,5 +1,14 @@
 ## Completed changes
 
+### The following schema changes were completed on June 14 2024:
+
+IntelMQ 2024-06-14T14:44:58Z
+
+* Added machine_name to the event4_microsoft_sinkhole_http, event6_microsoft_sinkhole_http, event4_sinkhole_http, and event6_sinkhole_http reports.
+* Added hassh to the scan_ssh and scan6_ssh reports.
+* Added first_seen_time, last_seen_time, and potential_exposure_time to the special report.
+
+
 ### The following schema changes were completed on Mar 20 2024:
 
 IntelMQ 2024-03-20T21:53:18Z
