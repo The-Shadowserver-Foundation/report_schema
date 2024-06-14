@@ -499,17 +499,6 @@
          "url" : "cs3"
       }
    },
-   "phish_url" : {
-      "map" : {
-         "asn" : "cn1",
-         "geo" : "cs1",
-         "hostname" : "shost",
-         "ip" : "src",
-         "port" : "spt",
-         "tag" : "cs2",
-         "url" : "cs3"
-      }
-   },
    "population6_bgp" : {
       "map" : {
          "asn" : "cn1",

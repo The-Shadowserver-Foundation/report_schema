@@ -998,7 +998,8 @@
          "forwarded_by",
          "ssl_cipher",
          "http_referer",
-         "ssl_servername"
+         "ssl_servername",
+         "machine_name"
       ],
       "name" : "Microsoft-Sinkhole-Events-HTTP IPv4"
    },
@@ -1113,7 +1114,8 @@
          "forwarded_by",
          "ssl_cipher",
          "http_referer",
-         "ssl_servername"
+         "ssl_servername",
+         "machine_name"
       ],
       "name" : "Sinkhole-Events-HTTP IPv4",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-http-events-report/"
@@ -1235,7 +1237,8 @@
          "forwarded_by",
          "ssl_cipher",
          "http_referer",
-         "ssl_servername"
+         "ssl_servername",
+         "machine_name"
       ],
       "name" : "Sinkhole-Events-HTTP IPv6"
    },
@@ -1299,27 +1302,6 @@
       ],
       "name" : "Malware-URL",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/malware-url-report/"
-   },
-   "phish_url" : {
-      "classification.taxonomy" : "fraud",
-      "classification.type" : "phishing",
-      "fields" : [
-         "timestamp",
-         "url",
-         "hostname",
-         "ip",
-         "asn",
-         "geo",
-         "region",
-         "city",
-         "naics",
-         "sector",
-         "severity",
-         "port",
-         "tag",
-         "source"
-      ],
-      "name" : "Phish-URL"
    },
    "population6_bgp" : {
       "fields" : [
@@ -2796,7 +2778,8 @@
          "device_model",
          "device_version",
          "device_sector",
-         "sector"
+         "sector",
+         "hassh"
       ],
       "name" : "IPv6-Accessible-SSH"
    },
@@ -5608,7 +5591,8 @@
          "device_model",
          "device_version",
          "device_sector",
-         "sector"
+         "sector",
+         "hassh"
       ],
       "name" : "Accessible-SSH",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ssh-report/"
@@ -6152,7 +6136,10 @@
          "method",
          "device_vendor",
          "severity",
-         "hostname_source"
+         "hostname_source",
+         "first_seen_time",
+         "last_seen_time",
+         "potential_exposure_time"
       ],
       "name" : "Special"
    }
