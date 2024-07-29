@@ -1,5 +1,11 @@
 ## Completed changes
 
+
+### The following schema change was completed on July 29 2024:
+
+*  Normalized the 'date' field in the scan_cwmp and scan6_cwmp reports to 'http_date'.
+
+
 ### The following schema changes were completed on June 14 2024:
 
 IntelMQ 2024-06-14T14:44:58Z

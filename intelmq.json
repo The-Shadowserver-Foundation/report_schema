@@ -1,11 +1,9 @@
 {
    "_meta" : {
       "change_log" : [
-         "Added machine_name to the event4_microsoft_sinkhole_http, event6_microsoft_sinkhole_http, event4_sinkhole_http, and event6_sinkhole_http reports.",
-         "Added hassh to the scan_ssh and scan6_ssh reports.",
-         "Added first_seen_time, last_seen_time, and potential_exposure_time to the special report."
+         "Normalized the 'date' field in the scan_cwmp and scan6_cwmp reports to 'http_date'."
       ],
-      "date_created" : "2024-06-14T14:44:58Z"
+      "date_created" : "2024-07-29T14:42:55Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -232,6 +230,21 @@
          ],
          [
             "extra.",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "system",
             "validate_to_none"
          ],
@@ -248,21 +261,6 @@
          [
             "extra.",
             "redirect_target",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "hostname_source",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "sector",
             "validate_to_none"
          ],
          [
@@ -380,6 +378,21 @@
             "city"
          ],
          [
+            "extra.source.naics",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "system",
             "validate_to_none"
@@ -397,21 +410,6 @@
          [
             "extra.",
             "redirect_target",
-            "validate_to_none"
-         ],
-         [
-            "extra.source.naics",
-            "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "hostname_source",
-            "validate_to_none"
-         ],
-         [
-            "extra.source.sector",
-            "sector",
             "validate_to_none"
          ],
          [
@@ -5866,11 +5864,6 @@
             "tag"
          ],
          [
-            "extra.source.sector",
-            "sector",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -5895,6 +5888,11 @@
          [
             "extra.",
             "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
             "validate_to_none"
          ],
          [
@@ -6226,11 +6224,6 @@
             "tag"
          ],
          [
-            "extra.source.sector",
-            "sector",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -6255,6 +6248,11 @@
          [
             "extra.",
             "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
             "validate_to_none"
          ],
          [
@@ -7039,6 +7037,11 @@
             "validate_to_none"
          ],
          [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "http",
             "validate_to_none"
@@ -7090,13 +7093,8 @@
          ],
          [
             "extra.",
-            "date",
-            "validate_to_none"
-         ],
-         [
-            "extra.source.sector",
-            "sector",
-            "validate_to_none"
+            "http_date",
+            "convert_date"
          ]
       ],
       "required_fields" : [
@@ -7150,11 +7148,6 @@
             "tag"
          ],
          [
-            "extra.",
-            "dns_version",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -7184,6 +7177,11 @@
          [
             "extra.source.sector",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "dns_version",
             "validate_to_none"
          ]
       ],
@@ -7238,11 +7236,6 @@
             "tag"
          ],
          [
-            "extra.",
-            "version",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -7267,6 +7260,16 @@
          [
             "extra.",
             "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -7307,11 +7310,6 @@
          [
             "extra.",
             "tagline",
-            "validate_to_none"
-         ],
-         [
-            "extra.source.sector",
-            "sector",
             "validate_to_none"
          ]
       ],
@@ -7496,6 +7494,31 @@
          [
             "extra.",
             "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_vendor",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_type",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_sector",
             "validate_to_none"
          ],
          [
@@ -7742,31 +7765,6 @@
             "extra.",
             "jarm",
             "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_vendor",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_type",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_model",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_version",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_sector",
-            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -7815,11 +7813,6 @@
             "tag"
          ],
          [
-            "extra.source.sector",
-            "sector",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -7844,6 +7837,11 @@
          [
             "extra.",
             "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
             "validate_to_none"
          ],
          [
@@ -7900,6 +7898,11 @@
             "extra.",
             "http_date",
             "convert_date"
+         ],
+         [
+            "extra.",
+            "version",
+            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -7948,11 +7951,6 @@
             "tag"
          ],
          [
-            "extra.source.sector",
-            "sector",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -7977,6 +7975,11 @@
          [
             "extra.",
             "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
             "validate_to_none"
          ],
          [
@@ -8081,11 +8084,6 @@
             "tag"
          ],
          [
-            "extra.source.sector",
-            "sector",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -8110,6 +8108,11 @@
          [
             "extra.",
             "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
             "validate_to_none"
          ],
          [
@@ -8266,6 +8269,36 @@
             "validate_to_none"
          ],
          [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_vendor",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_type",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_sector",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "ipp_version",
             "validate_to_none"
@@ -8333,36 +8366,6 @@
          [
             "extra.",
             "printer_wifi_ssid",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_vendor",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_type",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_model",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_version",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_sector",
-            "validate_to_none"
-         ],
-         [
-            "extra.source.sector",
-            "sector",
             "validate_to_none"
          ]
       ],
@@ -8444,6 +8447,11 @@
             "validate_to_none"
          ],
          [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "initiator_spi",
             "validate_to_none"
@@ -8494,9 +8502,14 @@
             "validate_to_none"
          ],
          [
-            "extra.source.sector",
-            "sector",
-            "validate_to_none"
+            "extra.",
+            "response_size",
+            "convert_int"
+         ],
+         [
+            "extra.",
+            "amplification",
+            "convert_float"
          ]
       ],
       "required_fields" : [
@@ -8604,6 +8617,36 @@
          [
             "extra.",
             "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_vendor",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_type",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_sector",
             "validate_to_none"
          ],
          [
@@ -8872,11 +8915,6 @@
             "validate_to_none"
          ],
          [
-            "extra.source.sector",
-            "sector",
-            "validate_to_none"
-         ],
-         [
             "extra.",
             "sha256_fingerprint",
             "validate_to_none"
@@ -8934,31 +8972,6 @@
          [
             "extra.",
             "jarm",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_vendor",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_type",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_model",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_version",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_sector",
             "validate_to_none"
          ]
       ],
@@ -9040,6 +9053,11 @@
             "validate_to_none"
          ],
          [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "raw_response",
             "validate_to_none"
@@ -9242,11 +9260,6 @@
          [
             "extra.",
             "issuer_serial_number",
-            "validate_to_none"
-         ],
-         [
-            "extra.source.sector",
-            "sector",
             "validate_to_none"
          ]
       ],
@@ -9323,6 +9336,11 @@
             "validate_to_none"
          ],
          [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "raw_response",
             "validate_to_none"
@@ -9525,11 +9543,6 @@
          [
             "extra.",
             "issuer_serial_number",
-            "validate_to_none"
-         ],
-         [
-            "extra.source.sector",
-            "sector",
             "validate_to_none"
          ]
       ],
@@ -9704,11 +9717,6 @@
             "tag"
          ],
          [
-            "extra.",
-            "version",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -9738,6 +9746,11 @@
          [
             "extra.source.sector",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -10124,6 +10137,21 @@
             "city"
          ],
          [
+            "extra.source.naics",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "version",
             "validate_to_none"
@@ -10189,21 +10217,6 @@
             "validate_to_none"
          ],
          [
-            "extra.source.naics",
-            "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "hostname_source",
-            "validate_to_none"
-         ],
-         [
-            "extra.source.sector",
-            "sector",
-            "validate_to_none"
-         ],
-         [
             "extra.",
             "response_size",
             "convert_int"
@@ -10257,13 +10270,7 @@
          ],
          [
             "extra.",
-            "packets",
-            "convert_int"
-         ],
-         [
-            "extra.",
-            "response_size",
-            "convert_int"
+            "tag"
          ],
          [
             "source.asn",
@@ -10296,6 +10303,16 @@
             "extra.source.sector",
             "sector",
             "validate_to_none"
+         ],
+         [
+            "extra.",
+            "packets",
+            "convert_int"
+         ],
+         [
+            "extra.",
+            "response_size",
+            "convert_int"
          ],
          [
             "extra.",
@@ -10359,11 +10376,6 @@
             "tag"
          ],
          [
-            "extra.",
-            "version",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -10393,6 +10405,11 @@
          [
             "extra.source.sector",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -10748,11 +10765,6 @@
             "tag"
          ],
          [
-            "extra.",
-            "handshake",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -10768,6 +10780,26 @@
          [
             "source.geolocation.city",
             "city"
+         ],
+         [
+            "extra.source.naics",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "handshake",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -10837,21 +10869,6 @@
          [
             "extra.",
             "md5_fingerprint",
-            "validate_to_none"
-         ],
-         [
-            "extra.source.naics",
-            "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "hostname_source",
-            "validate_to_none"
-         ],
-         [
-            "extra.source.sector",
-            "sector",
             "validate_to_none"
          ],
          [
@@ -11082,6 +11099,11 @@
             "validate_to_none"
          ],
          [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "arch",
             "validate_to_none"
@@ -11109,11 +11131,6 @@
          [
             "extra.",
             "smb_version_string",
-            "validate_to_none"
-         ],
-         [
-            "extra.source.sector",
-            "sector",
             "validate_to_none"
          ]
       ],
@@ -11190,13 +11207,13 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "banner",
+            "extra.source.sector",
+            "sector",
             "validate_to_none"
          ],
          [
-            "extra.source.sector",
-            "sector",
+            "extra.",
+            "banner",
             "validate_to_none"
          ],
          [
@@ -11538,13 +11555,13 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "banner",
+            "extra.source.sector",
+            "sector",
             "validate_to_none"
          ],
          [
-            "extra.source.sector",
-            "sector",
+            "extra.",
+            "banner",
             "validate_to_none"
          ],
          [
@@ -11859,11 +11876,6 @@
             "tag"
          ],
          [
-            "extra.",
-            "sysname",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -11879,11 +11891,6 @@
          [
             "source.geolocation.city",
             "city"
-         ],
-         [
-            "extra.",
-            "version",
-            "validate_to_none"
          ],
          [
             "extra.source.naics",
@@ -11923,6 +11930,16 @@
          [
             "extra.",
             "device_sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sysname",
             "validate_to_none"
          ],
          [
@@ -12035,6 +12052,36 @@
          [
             "extra.",
             "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_vendor",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_type",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_sector",
             "validate_to_none"
          ],
          [
@@ -12374,36 +12421,6 @@
          ],
          [
             "extra.",
-            "device_vendor",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_type",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_model",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_version",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_sector",
-            "validate_to_none"
-         ],
-         [
-            "extra.source.sector",
-            "sector",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
             "hassh",
             "validate_to_none"
          ]
@@ -12454,11 +12471,6 @@
             "tag"
          ],
          [
-            "extra.",
-            "handshake",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -12474,6 +12486,26 @@
          [
             "source.geolocation.city",
             "city"
+         ],
+         [
+            "extra.source.naics",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "handshake",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -12656,16 +12688,6 @@
             "validate_to_none"
          ],
          [
-            "extra.source.naics",
-            "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "hostname_source",
-            "validate_to_none"
-         ],
-         [
             "extra.",
             "freak_vulnerable",
             "convert_bool"
@@ -12673,11 +12695,6 @@
          [
             "extra.",
             "freak_cipher_suite",
-            "validate_to_none"
-         ],
-         [
-            "extra.source.sector",
-            "sector",
             "validate_to_none"
          ],
          [
@@ -12842,11 +12859,6 @@
             "tag"
          ],
          [
-            "extra.",
-            "handshake",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -12862,6 +12874,51 @@
          [
             "source.geolocation.city",
             "city"
+         ],
+         [
+            "extra.source.naics",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_vendor",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_type",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "handshake",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -13034,16 +13091,6 @@
             "validate_to_none"
          ],
          [
-            "extra.source.naics",
-            "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "hostname_source",
-            "validate_to_none"
-         ],
-         [
             "extra.",
             "freak_vulnerable",
             "convert_bool"
@@ -13051,11 +13098,6 @@
          [
             "extra.",
             "freak_cipher_suite",
-            "validate_to_none"
-         ],
-         [
-            "extra.source.sector",
-            "sector",
             "validate_to_none"
          ],
          [
@@ -13185,31 +13227,6 @@
          ],
          [
             "extra.",
-            "device_vendor",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_type",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_model",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_version",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_sector",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
             "page_sha256fp",
             "validate_to_none"
          ]
@@ -13260,11 +13277,6 @@
             "tag"
          ],
          [
-            "extra.",
-            "handshake",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -13280,6 +13292,51 @@
          [
             "source.geolocation.city",
             "city"
+         ],
+         [
+            "extra.source.naics",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_vendor",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_type",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "handshake",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -13462,21 +13519,6 @@
             "validate_to_none"
          ],
          [
-            "extra.source.naics",
-            "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "hostname_source",
-            "validate_to_none"
-         ],
-         [
-            "extra.source.sector",
-            "sector",
-            "validate_to_none"
-         ],
-         [
             "extra.",
             "sha256_fingerprint",
             "validate_to_none"
@@ -13599,31 +13641,6 @@
          [
             "extra.",
             "jarm",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_vendor",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_type",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_model",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_version",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_sector",
             "validate_to_none"
          ],
          [
@@ -13853,13 +13870,13 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "banner",
+            "extra.source.sector",
+            "sector",
             "validate_to_none"
          ],
          [
-            "extra.source.sector",
-            "sector",
+            "extra.",
+            "banner",
             "validate_to_none"
          ]
       ],
@@ -13937,6 +13954,11 @@
             "validate_to_none"
          ],
          [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "product",
             "validate_to_none"
@@ -13944,11 +13966,6 @@
          [
             "extra.",
             "banner",
-            "validate_to_none"
-         ],
-         [
-            "extra.source.sector",
-            "sector",
             "validate_to_none"
          ]
       ],
@@ -14122,22 +14139,7 @@
          ],
          [
             "extra.",
-            "name",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "model",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "features",
+            "sector",
             "validate_to_none"
          ],
          [
@@ -14167,7 +14169,22 @@
          ],
          [
             "extra.",
-            "sector",
+            "name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "features",
             "validate_to_none"
          ]
       ],
@@ -14247,6 +14264,11 @@
          ],
          [
             "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "machine_type",
             "validate_to_none"
          ],
@@ -14288,11 +14310,6 @@
          [
             "extra.",
             "network_address",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "sector",
             "validate_to_none"
          ]
       ],
@@ -14372,6 +14389,11 @@
          ],
          [
             "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "channel",
             "validate_to_none"
          ],
@@ -14433,11 +14455,6 @@
          [
             "extra.",
             "locales",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "sector",
             "validate_to_none"
          ]
       ],
@@ -14516,6 +14533,11 @@
          ],
          [
             "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "machine_name",
             "validate_to_none"
          ],
@@ -14528,11 +14550,6 @@
             "extra.",
             "amplification",
             "convert_float"
-         ],
-         [
-            "extra.",
-            "sector",
-            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -14898,11 +14915,6 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "version",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -14931,6 +14943,16 @@
          ],
          [
             "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "response",
             "validate_to_none"
          ],
@@ -14943,11 +14965,6 @@
             "extra.",
             "amplification",
             "convert_float"
-         ],
-         [
-            "extra.",
-            "sector",
-            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -15151,6 +15168,11 @@
          ],
          [
             "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "http",
             "validate_to_none"
          ],
@@ -15201,13 +15223,8 @@
          ],
          [
             "extra.",
-            "date",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "sector",
-            "validate_to_none"
+            "http_date",
+            "convert_date"
          ]
       ],
       "required_fields" : [
@@ -15286,6 +15303,11 @@
          ],
          [
             "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "db2_hostname",
             "validate_to_none"
          ],
@@ -15303,11 +15325,6 @@
             "extra.",
             "amplification",
             "convert_float"
-         ],
-         [
-            "extra.",
-            "sector",
-            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -15461,11 +15478,6 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "dns_version",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -15495,6 +15507,11 @@
          [
             "extra.",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "dns_version",
             "validate_to_none"
          ]
       ],
@@ -15546,11 +15563,6 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "version",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -15580,6 +15592,11 @@
          [
             "extra.source.sector",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -15797,6 +15814,11 @@
          ],
          [
             "extra.",
+            "device_sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "device_id",
             "validate_to_none"
          ],
@@ -15929,11 +15951,6 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "version",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -15958,6 +15975,16 @@
          [
             "extra.",
             "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -15998,11 +16025,6 @@
          [
             "extra.",
             "tagline",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "sector",
             "validate_to_none"
          ]
       ],
@@ -16280,6 +16302,31 @@
          ],
          [
             "extra.",
+            "device_vendor",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_type",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "banner",
             "validate_to_none"
          ],
@@ -16522,31 +16569,6 @@
             "extra.",
             "jarm",
             "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_vendor",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_type",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_model",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_version",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_sector",
-            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -16613,11 +16635,6 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "version",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -16646,6 +16663,16 @@
          ],
          [
             "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "server_type",
             "validate_to_none"
          ],
@@ -16667,11 +16694,6 @@
          [
             "extra.",
             "volumeinfo",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "sector",
             "validate_to_none"
          ]
       ],
@@ -16723,11 +16745,6 @@
             "validate_to_none"
          ],
          [
-            "extra.source.sector",
-            "sector",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -16752,6 +16769,11 @@
          [
             "extra.",
             "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
             "validate_to_none"
          ],
          [
@@ -16808,6 +16830,11 @@
             "extra.",
             "http_date",
             "convert_date"
+         ],
+         [
+            "extra.",
+            "version",
+            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -16858,11 +16885,6 @@
             "validate_to_none"
          ],
          [
-            "extra.source.sector",
-            "sector",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -16887,6 +16909,11 @@
          [
             "extra.",
             "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
             "validate_to_none"
          ],
          [
@@ -16993,11 +17020,6 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "sector",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -17022,6 +17044,11 @@
          [
             "extra.",
             "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sector",
             "validate_to_none"
          ],
          [
@@ -17204,6 +17231,11 @@
          ],
          [
             "extra.",
+            "device_sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "device_id",
             "validate_to_none"
          ],
@@ -17317,11 +17349,6 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "ipmi_version",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -17337,6 +17364,26 @@
          [
             "source.geolocation.city",
             "city"
+         ],
+         [
+            "extra.source.naics",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "ipmi_version",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -17386,21 +17433,6 @@
          [
             "extra.",
             "productname",
-            "validate_to_none"
-         ],
-         [
-            "extra.source.naics",
-            "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "hostname_source",
-            "validate_to_none"
-         ],
-         [
-            "extra.source.sector",
-            "sector",
             "validate_to_none"
          ]
       ],
@@ -17480,6 +17512,36 @@
          ],
          [
             "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_vendor",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_type",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "ipp_version",
             "validate_to_none"
          ],
@@ -17546,36 +17608,6 @@
          [
             "extra.",
             "printer_wifi_ssid",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_vendor",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_type",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_model",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_version",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_sector",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "sector",
             "validate_to_none"
          ]
       ],
@@ -17660,6 +17692,11 @@
          ],
          [
             "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "initiator_spi",
             "validate_to_none"
          ],
@@ -17710,8 +17747,13 @@
          ],
          [
             "extra.",
-            "sector",
-            "validate_to_none"
+            "response_size",
+            "convert_int"
+         ],
+         [
+            "extra.",
+            "amplification",
+            "convert_float"
          ]
       ],
       "required_fields" : [
@@ -17762,11 +17804,6 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "version",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -17796,6 +17833,11 @@
          [
             "extra.source.sector",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -18220,6 +18262,36 @@
          ],
          [
             "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_vendor",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_type",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "response_size",
             "convert_int"
          ],
@@ -18485,11 +18557,6 @@
          ],
          [
             "extra.",
-            "sector",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
             "sha256_fingerprint",
             "validate_to_none"
          ],
@@ -18546,31 +18613,6 @@
          [
             "extra.",
             "jarm",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_vendor",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_type",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_model",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_version",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_sector",
             "validate_to_none"
          ]
       ],
@@ -18684,6 +18726,11 @@
             "validate_to_none"
          ],
          [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "response_size",
             "convert_int"
@@ -18767,11 +18814,6 @@
             "extra.",
             "amplification",
             "convert_float"
-         ],
-         [
-            "extra.source.sector",
-            "sector",
-            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -18939,6 +18981,11 @@
          ],
          [
             "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "mdns_name",
             "validate_to_none"
          ],
@@ -19031,11 +19078,6 @@
             "extra.",
             "opc_ua_discovery",
             "validate_to_none"
-         ],
-         [
-            "extra.",
-            "sector",
-            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -19111,11 +19153,6 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "version",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -19144,12 +19181,17 @@
          ],
          [
             "extra.",
-            "time",
+            "sector",
             "validate_to_none"
          ],
          [
             "extra.",
-            "sector",
+            "version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "time",
             "validate_to_none"
          ],
          [
@@ -19211,11 +19253,6 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "version",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -19240,6 +19277,16 @@
          [
             "extra.",
             "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -19285,11 +19332,6 @@
          [
             "extra.",
             "visible_databases",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "sector",
             "validate_to_none"
          ]
       ],
@@ -19374,6 +19416,11 @@
          ],
          [
             "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "raw_response",
             "validate_to_none"
          ],
@@ -19575,11 +19622,6 @@
          [
             "extra.",
             "issuer_serial_number",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "sector",
             "validate_to_none"
          ]
       ],
@@ -19658,6 +19700,11 @@
             "validate_to_none"
          ],
          [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "raw_response",
             "validate_to_none"
@@ -19861,11 +19908,6 @@
             "extra.",
             "issuer_serial_number",
             "validate_to_none"
-         ],
-         [
-            "extra.source.sector",
-            "sector",
-            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -19926,11 +19968,6 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "version",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -19959,6 +19996,16 @@
          ],
          [
             "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "instance_name",
             "validate_to_none"
          ],
@@ -19976,11 +20023,6 @@
             "extra.",
             "amplification",
             "convert_float"
-         ],
-         [
-            "extra.",
-            "sector",
-            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -20156,11 +20198,6 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "version",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -20190,6 +20227,11 @@
          [
             "extra.source.sector",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -20501,11 +20543,6 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "version",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -20534,6 +20571,16 @@
          ],
          [
             "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "opcode",
             "validate_to_none"
          ],
@@ -20545,11 +20592,6 @@
          [
             "extra.",
             "external_ip",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "sector",
             "validate_to_none"
          ],
          [
@@ -20615,11 +20657,6 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "mac_address",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -20638,16 +20675,6 @@
          ],
          [
             "extra.",
-            "workgroup",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "machine_name",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
             "naics",
             "invalidate_zero"
          ],
@@ -20659,6 +20686,21 @@
          [
             "extra.",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "mac_address",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "workgroup",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "machine_name",
             "validate_to_none"
          ],
          [
@@ -20720,11 +20762,6 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "response",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -20754,6 +20791,11 @@
          [
             "extra.",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "response",
             "validate_to_none"
          ],
          [
@@ -20893,6 +20935,21 @@
          ],
          [
             "extra.",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "version",
             "validate_to_none"
          ],
@@ -20958,21 +21015,6 @@
          ],
          [
             "extra.",
-            "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "hostname_source",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "sector",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
             "response_size",
             "convert_int"
          ],
@@ -21026,13 +21068,8 @@
          ],
          [
             "extra.",
-            "packets",
-            "convert_int"
-         ],
-         [
-            "extra.",
-            "response_size",
-            "convert_int"
+            "tag",
+            "validate_to_none"
          ],
          [
             "source.asn",
@@ -21065,6 +21102,16 @@
             "extra.",
             "sector",
             "validate_to_none"
+         ],
+         [
+            "extra.",
+            "packets",
+            "convert_int"
+         ],
+         [
+            "extra.",
+            "response_size",
+            "convert_int"
          ],
          [
             "extra.",
@@ -21148,6 +21195,11 @@
          ],
          [
             "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "programs",
             "validate_to_none"
          ],
@@ -21159,11 +21211,6 @@
          [
             "extra.",
             "exports",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "sector",
             "validate_to_none"
          ],
          [
@@ -21425,11 +21472,6 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "version",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -21459,6 +21501,11 @@
          [
             "extra.source.sector",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -21815,11 +21862,6 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "quote",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -21849,6 +21891,11 @@
          [
             "extra.",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "quote",
             "validate_to_none"
          ],
          [
@@ -21936,6 +21983,11 @@
             "validate_to_none"
          ],
          [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "version_field_1",
             "validate_to_none"
@@ -21953,11 +22005,6 @@
          [
             "extra.",
             "version_field_4",
-            "validate_to_none"
-         ],
-         [
-            "extra.source.sector",
-            "sector",
             "validate_to_none"
          ]
       ],
@@ -22008,11 +22055,6 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "version",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -22042,6 +22084,11 @@
          [
             "extra.",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ]
       ],
@@ -22094,11 +22141,6 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "handshake",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -22114,6 +22156,26 @@
          [
             "source.geolocation.city",
             "city"
+         ],
+         [
+            "extra.",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "handshake",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -22183,21 +22245,6 @@
          [
             "extra.",
             "md5_fingerprint",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "hostname_source",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "sector",
             "validate_to_none"
          ],
          [
@@ -22291,6 +22338,11 @@
          ],
          [
             "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "sessionid",
             "validate_to_none"
          ],
@@ -22303,11 +22355,6 @@
             "extra.",
             "amplification",
             "convert_float"
-         ],
-         [
-            "extra.",
-            "sector",
-            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -22358,11 +22405,6 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "version",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -22387,6 +22429,16 @@
          [
             "extra.",
             "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -22447,11 +22499,6 @@
          [
             "extra.",
             "connected_clients",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "sector",
             "validate_to_none"
          ]
       ],
@@ -22531,6 +22578,11 @@
          ],
          [
             "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "module",
             "validate_to_none"
          ],
@@ -22542,11 +22594,6 @@
          [
             "extra.",
             "has_password",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "sector",
             "validate_to_none"
          ]
       ],
@@ -22640,6 +22687,21 @@
             "city"
          ],
          [
+            "extra.source.naics",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "sip",
             "validate_to_none"
@@ -22693,21 +22755,6 @@
             "extra.",
             "response_size",
             "convert_int"
-         ],
-         [
-            "extra.",
-            "hostname_source",
-            "validate_to_none"
-         ],
-         [
-            "extra.source.naics",
-            "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.source.sector",
-            "sector",
-            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -22927,6 +22974,11 @@
          ],
          [
             "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "arch",
             "validate_to_none"
          ],
@@ -22953,11 +23005,6 @@
          [
             "extra.",
             "smb_version_string",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "sector",
             "validate_to_none"
          ]
       ],
@@ -23036,13 +23083,13 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "banner",
+            "extra.source.sector",
+            "sector",
             "validate_to_none"
          ],
          [
-            "extra.source.sector",
-            "sector",
+            "extra.",
+            "banner",
             "validate_to_none"
          ],
          [
@@ -23387,12 +23434,12 @@
          ],
          [
             "extra.",
-            "banner",
+            "sector",
             "validate_to_none"
          ],
          [
             "extra.",
-            "sector",
+            "banner",
             "validate_to_none"
          ],
          [
@@ -23709,11 +23756,6 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "sysname",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -23729,11 +23771,6 @@
          [
             "source.geolocation.city",
             "city"
-         ],
-         [
-            "extra.",
-            "version",
-            "validate_to_none"
          ],
          [
             "extra.",
@@ -23773,6 +23810,16 @@
          [
             "extra.",
             "device_sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sysname",
             "validate_to_none"
          ],
          [
@@ -23942,11 +23989,6 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "header",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -23962,6 +24004,26 @@
          [
             "source.geolocation.city",
             "city"
+         ],
+         [
+            "extra.",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "header",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -24011,21 +24073,6 @@
          [
             "extra.",
             "content_type",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "hostname_source",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "sector",
             "validate_to_none"
          ],
          [
@@ -24135,6 +24182,36 @@
          [
             "extra.",
             "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_vendor",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_type",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_sector",
             "validate_to_none"
          ],
          [
@@ -24474,36 +24551,6 @@
          ],
          [
             "extra.",
-            "device_vendor",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_type",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_model",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_version",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_sector",
-            "validate_to_none"
-         ],
-         [
-            "extra.source.sector",
-            "sector",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
             "hassh",
             "validate_to_none"
          ]
@@ -24556,11 +24603,6 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "handshake",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -24576,6 +24618,26 @@
          [
             "source.geolocation.city",
             "city"
+         ],
+         [
+            "extra.source.naics",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "handshake",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -24758,16 +24820,6 @@
             "validate_to_none"
          ],
          [
-            "extra.source.naics",
-            "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "hostname_source",
-            "validate_to_none"
-         ],
-         [
             "extra.",
             "freak_vulnerable",
             "convert_bool"
@@ -24775,11 +24827,6 @@
          [
             "extra.",
             "freak_cipher_suite",
-            "validate_to_none"
-         ],
-         [
-            "extra.source.sector",
-            "sector",
             "validate_to_none"
          ],
          [
@@ -24946,11 +24993,6 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "handshake",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -24966,6 +25008,51 @@
          [
             "source.geolocation.city",
             "city"
+         ],
+         [
+            "extra.",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_vendor",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_type",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "handshake",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -25139,27 +25226,12 @@
          ],
          [
             "extra.",
-            "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "hostname_source",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
             "freak_vulnerable",
             "convert_bool"
          ],
          [
             "extra.",
             "freak_cipher_suite",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "sector",
             "validate_to_none"
          ],
          [
@@ -25289,31 +25361,6 @@
          ],
          [
             "extra.",
-            "device_vendor",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_type",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_model",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_version",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_sector",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
             "page_sha256fp",
             "validate_to_none"
          ]
@@ -25366,11 +25413,6 @@
             "validate_to_none"
          ],
          [
-            "extra.",
-            "handshake",
-            "validate_to_none"
-         ],
-         [
             "source.asn",
             "asn",
             "invalidate_zero"
@@ -25386,6 +25428,51 @@
          [
             "source.geolocation.city",
             "city"
+         ],
+         [
+            "extra.",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_vendor",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_type",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "handshake",
+            "validate_to_none"
          ],
          [
             "extra.",
@@ -25569,21 +25656,6 @@
          ],
          [
             "extra.",
-            "naics",
-            "invalidate_zero"
-         ],
-         [
-            "extra.",
-            "hostname_source",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "sector",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
             "sha256_fingerprint",
             "validate_to_none"
          ],
@@ -25705,31 +25777,6 @@
          [
             "extra.",
             "jarm",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_vendor",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_type",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_model",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_version",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "device_sector",
             "validate_to_none"
          ],
          [
@@ -25972,6 +26019,11 @@
             "validate_to_none"
          ],
          [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "sequence_number",
             "validate_to_none"
@@ -25989,11 +26041,6 @@
          [
             "extra.",
             "raw_packet",
-            "validate_to_none"
-         ],
-         [
-            "extra.source.sector",
-            "sector",
             "validate_to_none"
          ]
       ],
@@ -26073,12 +26120,12 @@
          ],
          [
             "extra.",
-            "banner",
+            "sector",
             "validate_to_none"
          ],
          [
             "extra.",
-            "sector",
+            "banner",
             "validate_to_none"
          ]
       ],
@@ -26158,6 +26205,11 @@
          ],
          [
             "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "opcode",
             "validate_to_none"
          ],
@@ -26185,11 +26237,6 @@
             "extra.",
             "amplification",
             "convert_float"
-         ],
-         [
-            "extra.",
-            "sector",
-            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -26292,6 +26339,11 @@
          ],
          [
             "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "essid",
             "validate_to_none"
          ],
@@ -26304,11 +26356,6 @@
             "extra.",
             "amplification",
             "convert_float"
-         ],
-         [
-            "extra.",
-            "sector",
-            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -26388,17 +26435,17 @@
          ],
          [
             "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "product",
             "validate_to_none"
          ],
          [
             "extra.",
             "banner",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "sector",
             "validate_to_none"
          ]
       ],
@@ -26578,6 +26625,11 @@
          ],
          [
             "extra.",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "opcode",
             "validate_to_none"
          ],
@@ -26599,11 +26651,6 @@
             "extra.",
             "amplification",
             "convert_float"
-         ],
-         [
-            "extra.",
-            "sector",
-            "validate_to_none"
          ]
       ],
       "required_fields" : [

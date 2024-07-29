@@ -770,6 +770,7 @@
    },
    "scan6_isakmp" : {
       "map" : {
+         "amplification" : "cfp1",
          "asn" : "cn1",
          "geo" : "cs1",
          "hostname" : "shost",
@@ -777,6 +778,7 @@
          "ip" : "src",
          "port" : "spt",
          "responder_spi" : "cs4",
+         "response_size" : "cn2",
          "tag" : "cs2"
       }
    },
@@ -1363,6 +1365,7 @@
    },
    "scan_isakmp" : {
       "map" : {
+         "amplification" : "cfp1",
          "asn" : "cn1",
          "geo" : "cs1",
          "hostname" : "shost",
@@ -1370,6 +1373,7 @@
          "ip" : "src",
          "port" : "spt",
          "responder_spi" : "cs4",
+         "response_size" : "cn2",
          "tag" : "cs2"
       }
    },
