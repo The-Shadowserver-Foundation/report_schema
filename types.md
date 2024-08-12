@@ -85,8 +85,6 @@
 | scan_vnc | [Accessible VNC Service](https://www.shadowserver.org/what-we-do/network-reporting/accessible-vnc-report/) | high |
 | scan_xdmcp | [Accessible XDMCP Service](https://www.shadowserver.org/what-we-do/network-reporting/accessible-xdmcp-service-report/) | high |
 | event4_ip_spoofer | [IP Spoofer Events](https://www.shadowserver.org/what-we-do/network-reporting/ip-spoofer-events-report/) | medium |
-| lea_http_proxy | [LEA Open HTTP Proxy](https://www.shadowserver.org/what-we-do/network-reporting/open-http-proxy-report/) | medium |
-| lea_http_proxy6 | [IPv6 LEA Open HTTP Proxy](https://www.shadowserver.org/what-we-do/network-reporting/open-http-proxy-report/) | medium |
 | population6_bgp | [IPv6 Accessible BGP](https://www.shadowserver.org/what-we-do/network-reporting/accessible-bgp-service-report/) | medium |
 | population6_msmq | [IPv6 Accessible MSMQ Service](https://www.shadowserver.org/what-we-do/network-reporting/accessible-msmq-service-report/) | medium |
 | population_bgp | [Accessible BGP](https://www.shadowserver.org/what-we-do/network-reporting/accessible-bgp-service-report/) | medium |
