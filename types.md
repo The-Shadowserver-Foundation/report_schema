@@ -26,6 +26,7 @@
 | scan_netis_router | [Netcore/Netis Router Vulnerability Scan](https://www.shadowserver.org/what-we-do/network-reporting/netcore-netis-router-vulnerability-scan-report/) | critical |
 | scan_smtp_vulnerable | [Vulnerable SMTP](https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-smtp-report/) | critical |
 | scan_synfulknock | [SYNful Knock](https://www.shadowserver.org/what-we-do/network-reporting/synful-scan-report/) | critical |
+| special | [SystemBC Historical Bot Infections Special](https://www.shadowserver.org/what-we-do/network-reporting/systembc-historical-bot-infections-special-report) | critical |
 | event4_ddos_participant | [DDoS Participant](https://www.shadowserver.org/what-we-do/network-reporting/ddos-participant-report/) | high |
 | event4_honeypot_adb_scan | [Honeypot ADB Scanner Events](https://www.shadowserver.org/what-we-do/network-reporting/honeypot-adb-scanner-events-report/) | high |
 | event4_honeypot_darknet | [Darknet Events](https://www.shadowserver.org/what-we-do/network-reporting/honeypot-darknet-events-report/) | high |
