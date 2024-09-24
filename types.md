@@ -1,6 +1,8 @@
 | Report Type | Subject | Default Severity |
 | ---         | ---     | ---              |
 | compromised_account | [Compromised Account](https://www.shadowserver.org/what-we-do/network-reporting/compromised-account-report/) | critical |
+| compromised_iot | [Compromised IoT Device](https://www.shadowserver.org/what-we-do/network-reporting/compromised-iot-report/) | critical |
+| compromised_iot6 | [IPv6 Compromised IoT Device](https://www.shadowserver.org/what-we-do/network-reporting/compromised-iot-report/) | critical |
 | compromised_website | [Compromised Website](https://www.shadowserver.org/what-we-do/network-reporting/compromised-website-report/) | critical |
 | compromised_website6 | [IPv6 Compromised Website](https://www.shadowserver.org/what-we-do/network-reporting/compromised-website-report/) | critical |
 | event4_honeypot_brute_force | [Honeypot Brute Force Events](https://www.shadowserver.org/what-we-do/network-reporting/honeypot-brute-force-events-report/) | critical |
@@ -26,7 +28,7 @@
 | scan_netis_router | [Netcore/Netis Router Vulnerability Scan](https://www.shadowserver.org/what-we-do/network-reporting/netcore-netis-router-vulnerability-scan-report/) | critical |
 | scan_smtp_vulnerable | [Vulnerable SMTP](https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-smtp-report/) | critical |
 | scan_synfulknock | [SYNful Knock](https://www.shadowserver.org/what-we-do/network-reporting/synful-scan-report/) | critical |
-| special | [SystemBC Historical Bot Infections Special](https://www.shadowserver.org/what-we-do/network-reporting/systembc-historical-bot-infections-special-report) | critical |
+| special | [Special Browser Credential Stealer](https://www.shadowserver.org/what-we-do/network-reporting/critical-browser-credential-stealer-special-report/) | critical |
 | event4_ddos_participant | [DDoS Participant](https://www.shadowserver.org/what-we-do/network-reporting/ddos-participant-report/) | high |
 | event4_honeypot_adb_scan | [Honeypot ADB Scanner Events](https://www.shadowserver.org/what-we-do/network-reporting/honeypot-adb-scanner-events-report/) | high |
 | event4_honeypot_darknet | [Darknet Events](https://www.shadowserver.org/what-we-do/network-reporting/honeypot-darknet-events-report/) | high |
@@ -85,6 +87,8 @@
 | scan_vnc | [Accessible VNC Service](https://www.shadowserver.org/what-we-do/network-reporting/accessible-vnc-report/) | high |
 | scan_xdmcp | [Accessible XDMCP Service](https://www.shadowserver.org/what-we-do/network-reporting/accessible-xdmcp-service-report/) | high |
 | event4_ip_spoofer | [IP Spoofer Events](https://www.shadowserver.org/what-we-do/network-reporting/ip-spoofer-events-report/) | medium |
+| lea_http_proxy | [LEA Open HTTP Proxy](https://www.shadowserver.org/what-we-do/network-reporting/open-http-proxy-report/) | medium |
+| lea_http_proxy6 | [IPv6 LEA Open HTTP Proxy](https://www.shadowserver.org/what-we-do/network-reporting/open-http-proxy-report/) | medium |
 | population6_bgp | [IPv6 Accessible BGP](https://www.shadowserver.org/what-we-do/network-reporting/accessible-bgp-service-report/) | medium |
 | population6_msmq | [IPv6 Accessible MSMQ Service](https://www.shadowserver.org/what-we-do/network-reporting/accessible-msmq-service-report/) | medium |
 | population_bgp | [Accessible BGP](https://www.shadowserver.org/what-we-do/network-reporting/accessible-bgp-service-report/) | medium |
