@@ -19,6 +19,32 @@
          "username" : "cs3"
       }
    },
+   "compromised_iot" : {
+      "map" : {
+         "asn" : "cn1",
+         "detail" : "cs5",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "source_type" : "cs3",
+         "status" : "cs4",
+         "tag" : "cs2"
+      }
+   },
+   "compromised_iot6" : {
+      "map" : {
+         "asn" : "cn1",
+         "detail" : "cs5",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "source_type" : "cs3",
+         "status" : "cs4",
+         "tag" : "cs2"
+      }
+   },
    "compromised_website" : {
       "map" : {
          "asn" : "cn1",

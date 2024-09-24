@@ -1,5 +1,9 @@
 ## Completed changes
 
+### The following schema change was completed on Sep 24 2024:
+
+* Added compromised_iot and compromised_iot6 reports.
+
 
 ### The following schema change was completed on July 29 2024:
 

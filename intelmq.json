@@ -1,9 +1,9 @@
 {
    "_meta" : {
       "change_log" : [
-         "Normalized the 'date' field in the scan_cwmp and scan6_cwmp reports to 'http_date'."
+         "Added compromised_iot and compromised_iot6 reports."
       ],
-      "date_created" : "2024-07-29T14:42:55Z"
+      "date_created" : "2024-09-24T21:46:30Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -152,6 +152,290 @@
          ]
       ],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/compromised-account-report/"
+   },
+   "compromised_iot" : {
+      "constant_fields" : {
+         "classification.identifier" : "compromised-iot",
+         "classification.taxonomy" : "intrusions",
+         "classification.type" : "system-compromise"
+      },
+      "feed_name" : "Compromised-IoT-Device",
+      "file_name" : "compromised_iot",
+      "optional_fields" : [
+         [
+            "malware.name",
+            "family",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
+            "protocol.transport",
+            "protocol"
+         ],
+         [
+            "source.reverse_dns",
+            "hostname"
+         ],
+         [
+            "extra.",
+            "tag"
+         ],
+         [
+            "source.asn",
+            "asn",
+            "invalidate_zero"
+         ],
+         [
+            "source.geolocation.cc",
+            "geo"
+         ],
+         [
+            "source.geolocation.region",
+            "region"
+         ],
+         [
+            "source.geolocation.city",
+            "city"
+         ],
+         [
+            "extra.source.naics",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_vendor",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_type",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "source_type",
+            "validate_to_none"
+         ],
+         [
+            "event_description.text",
+            "category",
+            "validate_to_none"
+         ],
+         [
+            "status",
+            "status"
+         ],
+         [
+            "extra.",
+            "detail",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "public_source",
+            "validate_to_none"
+         ],
+         [
+            "source.account",
+            "account",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "server_host_key",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "malpubkey_sha256",
+            "validate_to_none"
+         ]
+      ],
+      "required_fields" : [
+         [
+            "time.source",
+            "timestamp",
+            "add_UTC_to_timestamp"
+         ],
+         [
+            "source.ip",
+            "ip",
+            "validate_ip"
+         ],
+         [
+            "source.port",
+            "port",
+            "convert_int"
+         ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/compromised-iot-report/"
+   },
+   "compromised_iot6" : {
+      "constant_fields" : {
+         "classification.identifier" : "compromised-iot",
+         "classification.taxonomy" : "intrusions",
+         "classification.type" : "system-compromise"
+      },
+      "feed_name" : "IPv6-Compromised-IoT-Device",
+      "file_name" : "compromised_iot6",
+      "optional_fields" : [
+         [
+            "malware.name",
+            "family",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
+            "protocol.transport",
+            "protocol"
+         ],
+         [
+            "source.reverse_dns",
+            "hostname"
+         ],
+         [
+            "extra.",
+            "tag"
+         ],
+         [
+            "source.asn",
+            "asn",
+            "invalidate_zero"
+         ],
+         [
+            "source.geolocation.cc",
+            "geo"
+         ],
+         [
+            "source.geolocation.region",
+            "region"
+         ],
+         [
+            "source.geolocation.city",
+            "city"
+         ],
+         [
+            "extra.source.naics",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_vendor",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_type",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_model",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "source_type",
+            "validate_to_none"
+         ],
+         [
+            "event_description.text",
+            "category",
+            "validate_to_none"
+         ],
+         [
+            "status",
+            "status"
+         ],
+         [
+            "extra.",
+            "detail",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "public_source",
+            "validate_to_none"
+         ],
+         [
+            "source.account",
+            "account",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "server_host_key",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "malpubkey_sha256",
+            "validate_to_none"
+         ]
+      ],
+      "required_fields" : [
+         [
+            "time.source",
+            "timestamp",
+            "add_UTC_to_timestamp"
+         ],
+         [
+            "source.ip",
+            "ip",
+            "validate_ip"
+         ],
+         [
+            "source.port",
+            "port",
+            "convert_int"
+         ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/compromised-iot-report/"
    },
    "compromised_website" : {
       "constant_fields" : {
@@ -646,7 +930,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/device-identification-report/"
    },
    "event4_microsoft_sinkhole" : {
       "constant_fields" : {
@@ -820,7 +1105,8 @@
             "src_port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-events-report/"
    },
    "event4_microsoft_sinkhole_http" : {
       "constant_fields" : {
@@ -1026,7 +1312,8 @@
             "src_port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-http-events-report/"
    },
    "event6_sinkhole" : {
       "constant_fields" : {
@@ -1200,7 +1487,8 @@
             "src_port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-events-report/"
    },
    "event6_sinkhole_http" : {
       "constant_fields" : {
@@ -1406,7 +1694,8 @@
             "src_port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-http-events-report/"
    },
    "event6_sinkhole_http_referer" : {
       "constant_fields" : {
@@ -1581,7 +1870,8 @@
             "timestamp",
             "add_UTC_to_timestamp"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-http-referer-events-report/"
    },
    "event_ddos_participant" : {
       "constant_fields" : {
@@ -5834,7 +6124,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-bgp-service-report/"
    },
    "population6_http_proxy" : {
       "constant_fields" : {
@@ -5967,7 +6258,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-http-proxy-report/"
    },
    "population6_msmq" : {
       "constant_fields" : {
@@ -6050,7 +6342,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-msmq-service-report/"
    },
    "population_bgp" : {
       "constant_fields" : {
@@ -6837,7 +7130,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-activemq-service-report/"
    },
    "scan6_bgp" : {
       "constant_fields" : {
@@ -6980,7 +7274,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-bgp-service-report/"
    },
    "scan6_cwmp" : {
       "constant_fields" : {
@@ -7113,7 +7408,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-cwmp-report/"
    },
    "scan6_dns" : {
       "constant_fields" : {
@@ -7201,7 +7497,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/dns-open-resolvers-report/"
    },
    "scan6_elasticsearch" : {
       "constant_fields" : {
@@ -7329,7 +7626,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-elasticsearch-report/"
    },
    "scan6_exchange" : {
       "constant_fields" : {
@@ -7440,7 +7738,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-exchange-server-report/"
    },
    "scan6_ftp" : {
       "constant_fields" : {
@@ -7783,7 +8082,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ftp-report/"
    },
    "scan6_http" : {
       "constant_fields" : {
@@ -7921,7 +8221,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-http-report/"
    },
    "scan6_http_proxy" : {
       "constant_fields" : {
@@ -8054,7 +8355,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-http-proxy-report/"
    },
    "scan6_http_vulnerable" : {
       "constant_fields" : {
@@ -8212,7 +8514,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-http-report/"
    },
    "scan6_ipp" : {
       "constant_fields" : {
@@ -8385,7 +8688,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ipp-report/"
    },
    "scan6_isakmp" : {
       "constant_fields" : {
@@ -8528,7 +8832,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-isakmp-report/"
    },
    "scan6_ldap_tcp" : {
       "constant_fields" : {
@@ -8991,7 +9296,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ldap-tcp-report/"
    },
    "scan6_mqtt" : {
       "constant_fields" : {
@@ -9279,7 +9585,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-mqtt-report/"
    },
    "scan6_mqtt_anon" : {
       "constant_fields" : {
@@ -9562,7 +9869,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-mqtt-report/"
    },
    "scan6_mysql" : {
       "constant_fields" : {
@@ -10030,7 +10338,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-mysql-server-report/"
    },
    "scan6_ntp" : {
       "constant_fields" : {
@@ -10243,7 +10552,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ntp-version-report/"
    },
    "scan6_ntpmonitor" : {
       "constant_fields" : {
@@ -10336,7 +10646,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ntp-monitor-report/"
    },
    "scan6_postgres" : {
       "constant_fields" : {
@@ -10734,7 +11045,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-postgresql-server-report/"
    },
    "scan6_rdp" : {
       "constant_fields" : {
@@ -10903,7 +11215,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-rdp-report/"
    },
    "scan6_slp" : {
       "constant_fields" : {
@@ -11041,7 +11354,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-slp-service-report/"
    },
    "scan6_smb" : {
       "constant_fields" : {
@@ -11150,7 +11464,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-smb-report/"
    },
    "scan6_smtp" : {
       "constant_fields" : {
@@ -11498,7 +11813,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-smtp-report/"
    },
    "scan6_smtp_vulnerable" : {
       "constant_fields" : {
@@ -11846,7 +12162,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-smtp-report/"
    },
    "scan6_snmp" : {
       "constant_fields" : {
@@ -11999,7 +12316,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-snmp-report/"
    },
    "scan6_ssh" : {
       "constant_fields" : {
@@ -12441,7 +12759,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ssh-report/"
    },
    "scan6_ssl" : {
       "constant_fields" : {
@@ -12829,7 +13148,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ssl-report/"
    },
    "scan6_ssl_freak" : {
       "constant_fields" : {
@@ -13247,7 +13567,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ssl-freak-report/"
    },
    "scan6_ssl_poodle" : {
       "constant_fields" : {
@@ -13665,7 +13986,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ssl-poodle-report/"
    },
    "scan6_stun" : {
       "constant_fields" : {
@@ -13813,7 +14135,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-stun-service-report/"
    },
    "scan6_telnet" : {
       "constant_fields" : {
@@ -13896,7 +14219,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-telnet-report/"
    },
    "scan6_vnc" : {
       "constant_fields" : {
@@ -13985,7 +14309,8 @@
             "port",
             "convert_int"
          ]
-      ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-vnc-report/"
    },
    "scan_activemq" : {
       "constant_fields" : {
