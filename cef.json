@@ -1514,6 +1514,18 @@
          "tag" : "cs2"
       }
    },
+   "scan_msrpc" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "packet_type" : "cs4",
+         "port" : "spt",
+         "tag" : "cs2",
+         "version" : "cs3"
+      }
+   },
    "scan_mssql" : {
       "map" : {
          "amplification" : "cfp1",

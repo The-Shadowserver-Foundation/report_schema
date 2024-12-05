@@ -1,5 +1,11 @@
 ## Completed changes
 
+### The following schema changes were completed on Dec 5 2024:
+
+* Revised 'http_agent' to be 'extra.http_agent' in the event_honeypot_http_scan, sandbox_url, and scan_sip reports.
+* Added the scan_msrpc report.
+
+
 ### The following schema change was completed on Sep 24 2024:
 
 * Added compromised_iot and compromised_iot6 reports.

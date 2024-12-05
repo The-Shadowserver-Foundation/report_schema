@@ -1,9 +1,10 @@
 {
    "_meta" : {
       "change_log" : [
-         "Added compromised_iot and compromised_iot6 reports."
+         "Revised 'http_agent' to be 'extra.http_agent' in the event_honeypot_http_scan, sandbox_url, and scan_sip reports.",
+         "Added the scan_msrpc report."
       ],
-      "date_created" : "2024-09-24T21:46:30Z"
+      "date_created" : "2024-12-03T16:19:27Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -3629,7 +3630,7 @@
       "file_name" : "event4_honeypot_http_scan",
       "optional_fields" : [
          [
-            "user_agent",
+            "extra.user_agent",
             "http_agent",
             "validate_to_none"
          ],
@@ -6987,7 +6988,7 @@
             true
          ],
          [
-            "user_agent",
+            "extra.",
             "user_agent",
             "validate_to_none"
          ],
@@ -20254,6 +20255,145 @@
       ],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-mqtt-report/"
    },
+   "scan_msrpc" : {
+      "constant_fields" : {
+         "classification.identifier" : "accessible-msrpc",
+         "classification.taxonomy" : "vulnerable",
+         "classification.type" : "potentially-unwanted-accessible"
+      },
+      "feed_name" : "Accessible-MS-RPC-Endpoint-Mapper",
+      "file_name" : "scan_msrpc",
+      "optional_fields" : [
+         [
+            "extra.msrpc_version",
+            "version",
+            "convert_float"
+         ],
+         [
+            "extra.",
+            "packet_type_value",
+            "convert_int"
+         ],
+         [
+            "extra.",
+            "fragment_length",
+            "convert_int"
+         ],
+         [
+            "extra.",
+            "max_transmit",
+            "convert_int"
+         ],
+         [
+            "extra.",
+            "max_receive",
+            "convert_int"
+         ],
+         [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
+            "protocol.transport",
+            "protocol"
+         ],
+         [
+            "source.reverse_dns",
+            "hostname"
+         ],
+         [
+            "extra.",
+            "tag",
+            "validate_to_none"
+         ],
+         [
+            "source.asn",
+            "asn",
+            "invalidate_zero"
+         ],
+         [
+            "source.geolocation.cc",
+            "geo"
+         ],
+         [
+            "source.geolocation.region",
+            "region"
+         ],
+         [
+            "source.geolocation.city",
+            "city"
+         ],
+         [
+            "extra.source.naics",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "packet_type",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "packet_flags",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "data_representation",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "auth_length",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "call_id",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "association_group",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "raw_response",
+            "validate_to_none"
+         ]
+      ],
+      "required_fields" : [
+         [
+            "time.source",
+            "timestamp",
+            "add_UTC_to_timestamp"
+         ],
+         [
+            "source.ip",
+            "ip",
+            "validate_ip"
+         ],
+         [
+            "source.port",
+            "port",
+            "convert_int"
+         ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ms-rpc-endpoint-mapper-report"
+   },
    "scan_mssql" : {
       "constant_fields" : {
          "classification.identifier" : "open-mssql",
@@ -23042,7 +23182,7 @@
             "validate_to_none"
          ],
          [
-            "user_agent",
+            "extra.",
             "user_agent",
             "validate_to_none"
          ],
