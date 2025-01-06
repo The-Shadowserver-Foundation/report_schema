@@ -1,5 +1,10 @@
 ## Completed changes
 
+### The following schema changes were completed on Jan 6 2025:
+
+* "Added scan_imap, scan6_imap, scan_imap_vulnerable, scan6_imap_vulnerable, scan_pop3, scan6_pop3, scan_pop3_vulnerable, and scan6_pop3_vulnerable reports."
+
+
 ### The following schema changes were completed on Dec 5 2024:
 
 * Revised 'http_agent' to be 'extra.http_agent' in the event_honeypot_http_scan, sandbox_url, and scan_sip reports.

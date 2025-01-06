@@ -780,6 +780,28 @@
          "version" : "cs4"
       }
    },
+   "scan6_imap" : {
+      "map" : {
+         "asn" : "cn1",
+         "banner" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_imap_vulnerable" : {
+      "map" : {
+         "asn" : "cn1",
+         "banner" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
    "scan6_ipp" : {
       "map" : {
          "asn" : "cn1",
@@ -878,6 +900,28 @@
          "ip" : "src",
          "port" : "spt",
          "response_size" : "cn2"
+      }
+   },
+   "scan6_pop3" : {
+      "map" : {
+         "asn" : "cn1",
+         "banner" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_pop3_vulnerable" : {
+      "map" : {
+         "asn" : "cn1",
+         "banner" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
       }
    },
    "scan6_postgres" : {
@@ -1363,6 +1407,28 @@
          "tag" : "cs2"
       }
    },
+   "scan_imap" : {
+      "map" : {
+         "asn" : "cn1",
+         "banner" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan_imap_vulnerable" : {
+      "map" : {
+         "asn" : "cn1",
+         "banner" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
    "scan_ipmi" : {
       "map" : {
          "asn" : "cn1",
@@ -1614,6 +1680,28 @@
          "ip" : "src",
          "port" : "spt",
          "response_size" : "cn2"
+      }
+   },
+   "scan_pop3" : {
+      "map" : {
+         "asn" : "cn1",
+         "banner" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan_pop3_vulnerable" : {
+      "map" : {
+         "asn" : "cn1",
+         "banner" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
       }
    },
    "scan_portmapper" : {
