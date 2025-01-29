@@ -2087,6 +2087,26 @@
       ],
       "name" : "IPv6-Vulnerable-IMAP"
    },
+   "scan6_ip_tunnel" : {
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "response"
+      ],
+      "name" : "IPv6-Open-IP-Tunnel"
+   },
    "scan6_ipp" : {
       "fields" : [
          "timestamp",
@@ -2788,6 +2808,28 @@
          "jarm"
       ],
       "name" : "IPv6-Accessible-RDP"
+   },
+   "scan6_rsync" : {
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "module",
+         "motd",
+         "has_password"
+      ],
+      "name" : "IPv6-Accessible-Rsync"
    },
    "scan6_slp" : {
       "fields" : [
@@ -4383,6 +4425,29 @@
       "name" : "Vulnerable-IMAP",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-imap-report/"
    },
+   "scan_ip_tunnel" : {
+      "classification.taxonomy" : "vulnerable",
+      "classification.type" : "vulnerable-system",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "response"
+      ],
+      "name" : "Open-IP-Tunnel",
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ip-tunnel-report"
+   },
    "scan_ipmi" : {
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
@@ -5018,8 +5083,8 @@
          "association_group",
          "raw_response"
       ],
-      "name" : "Accessible-MS-RPC-Endpoint-Mapper",
-      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ms-rpc-endpoint-mapper-report"
+      "name" : "Accessible-MS-RPC",
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ms-rpc-service-report/"
    },
    "scan_mssql" : {
       "classification.taxonomy" : "vulnerable",

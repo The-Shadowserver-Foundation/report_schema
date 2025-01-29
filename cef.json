@@ -802,6 +802,17 @@
          "tag" : "cs2"
       }
    },
+   "scan6_ip_tunnel" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response" : "cs3",
+         "tag" : "cs2"
+      }
+   },
    "scan6_ipp" : {
       "map" : {
          "asn" : "cn1",
@@ -943,6 +954,18 @@
          "ip" : "src",
          "port" : "spt",
          "rdp_protocol" : "cs3",
+         "tag" : "cs2"
+      }
+   },
+   "scan6_rsync" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "module" : "cs3",
+         "motd" : "cs4",
+         "port" : "spt",
          "tag" : "cs2"
       }
    },
@@ -1426,6 +1449,17 @@
          "hostname" : "shost",
          "ip" : "src",
          "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
+   "scan_ip_tunnel" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "response" : "cs3",
          "tag" : "cs2"
       }
    },

@@ -28,7 +28,7 @@
 | scan_netis_router | [Netcore/Netis Router Vulnerability Scan](https://www.shadowserver.org/what-we-do/network-reporting/netcore-netis-router-vulnerability-scan-report/) | critical |
 | scan_smtp_vulnerable | [Vulnerable SMTP](https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-smtp-report/) | critical |
 | scan_synfulknock | [SYNful Knock](https://www.shadowserver.org/what-we-do/network-reporting/synful-scan-report/) | critical |
-| special | [Special Browser Credential Stealer](https://www.shadowserver.org/what-we-do/network-reporting/critical-browser-credential-stealer-special-report/) | critical |
+| special | [Fortinet Fortimanager CVE-2024-47575 Special](https://www.shadowserver.org/what-we-do/network-reporting/fortinet-fortimanager-cve-2024-47575-special-report/) | critical |
 | event4_ddos_participant | [DDoS Participant](https://www.shadowserver.org/what-we-do/network-reporting/ddos-participant-report/) | high |
 | event4_honeypot_adb_scan | [Honeypot ADB Scanner Events](https://www.shadowserver.org/what-we-do/network-reporting/honeypot-adb-scanner-events-report/) | high |
 | event4_honeypot_darknet | [Darknet Events](https://www.shadowserver.org/what-we-do/network-reporting/honeypot-darknet-events-report/) | high |
@@ -68,6 +68,7 @@
 | scan_memcached | [Open Memcached Server](https://www.shadowserver.org/what-we-do/network-reporting/open-memcached-report/) | high |
 | scan_mongodb | [Open MongoDB Service](https://www.shadowserver.org/what-we-do/network-reporting/open-mongodb-report/) | high |
 | scan_mqtt_anon | [Open Anonymous MQTT](https://www.shadowserver.org/what-we-do/network-reporting/open-mqtt-report/) | high |
+| scan_msrpc | [Accessible MS-RPC Service](https://www.shadowserver.org/what-we-do/network-reporting/accessible-ms-rpc-service-report/) | high |
 | scan_mssql | [Open MS-SQL Server Resolution Service](https://www.shadowserver.org/what-we-do/network-reporting/open-ms-sql-server-resolution-service-report/) | high |
 | scan_mysql | [Accessible MySQL Server](https://www.shadowserver.org/what-we-do/network-reporting/accessible-mysql-server-report/) | high |
 | scan_nat_pmp | [Vulnerable NAT-PMP Systems](https://www.shadowserver.org/what-we-do/network-reporting/open-nat-pmp-report/) | high |
@@ -87,8 +88,6 @@
 | scan_vnc | [Accessible VNC Service](https://www.shadowserver.org/what-we-do/network-reporting/accessible-vnc-report/) | high |
 | scan_xdmcp | [Accessible XDMCP Service](https://www.shadowserver.org/what-we-do/network-reporting/accessible-xdmcp-service-report/) | high |
 | event4_ip_spoofer | [IP Spoofer Events](https://www.shadowserver.org/what-we-do/network-reporting/ip-spoofer-events-report/) | medium |
-| lea_http_proxy | [LEA Open HTTP Proxy](https://www.shadowserver.org/what-we-do/network-reporting/open-http-proxy-report/) | medium |
-| lea_http_proxy6 | [IPv6 LEA Open HTTP Proxy](https://www.shadowserver.org/what-we-do/network-reporting/open-http-proxy-report/) | medium |
 | population6_bgp | [IPv6 Accessible BGP](https://www.shadowserver.org/what-we-do/network-reporting/accessible-bgp-service-report/) | medium |
 | population6_msmq | [IPv6 Accessible MSMQ Service](https://www.shadowserver.org/what-we-do/network-reporting/accessible-msmq-service-report/) | medium |
 | population_bgp | [Accessible BGP](https://www.shadowserver.org/what-we-do/network-reporting/accessible-bgp-service-report/) | medium |
@@ -98,9 +97,13 @@
 | scan6_dns | [IPv6 DNS Open Resolvers](https://www.shadowserver.org/what-we-do/network-reporting/dns-open-resolvers-report/) | medium |
 | scan6_ftp | [IPv6 Accessible FTP Service](https://www.shadowserver.org/what-we-do/network-reporting/accessible-ftp-report/) | medium |
 | scan6_http_proxy | [IPv6 Open HTTP Proxy](https://www.shadowserver.org/what-we-do/network-reporting/open-http-proxy-report/) | medium |
+| scan6_imap_vulnerable | [IPv6 Vulnerable IMAP](https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-imap-report/) | medium |
+| scan6_ip_tunnel | [IPv6 Open IP-Tunnel](https://www.shadowserver.org/what-we-do/network-reporting/open-ip-tunnel-report) | medium |
 | scan6_mqtt | [IPv6 Open MQTT](https://www.shadowserver.org/what-we-do/network-reporting/open-mqtt-report/) | medium |
 | scan6_ntp | [IPv6 NTP Version](https://www.shadowserver.org/what-we-do/network-reporting/ntp-version-report/) | medium |
 | scan6_ntpmonitor | [IPv6 NTP Monitor](https://www.shadowserver.org/what-we-do/network-reporting/ntp-monitor-report/) | medium |
+| scan6_pop3_vulnerable | [IPv6 Vulnerable POP3](https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-pop3-report/) | medium |
+| scan6_rsync | [IPv6 Accessible Rsync Service](https://www.shadowserver.org/what-we-do/network-reporting/accessible-rsync-report/) | medium |
 | scan6_stun | [IPv6 Accessible Session Traversal Utilities for NAT](https://www.shadowserver.org/what-we-do/network-reporting/accessible-stun-service-report/) | medium |
 | scan6_telnet | [IPv6 Accessible Telnet Service](https://www.shadowserver.org/what-we-do/network-reporting/accessible-telnet-report/) | medium |
 | scan_activemq | [Accessible ActiveMQ Service](https://www.shadowserver.org/what-we-do/network-reporting/accessible-activemq-service-report/) | medium |
@@ -112,10 +115,13 @@
 | scan_dns | [DNS Open Resolvers](https://www.shadowserver.org/what-we-do/network-reporting/dns-open-resolvers-report/) | medium |
 | scan_ftp | [Accessible FTP Service](https://www.shadowserver.org/what-we-do/network-reporting/accessible-ftp-report/) | medium |
 | scan_http_proxy | [Open HTTP Proxy](https://www.shadowserver.org/what-we-do/network-reporting/open-http-proxy-report/) | medium |
+| scan_imap_vulnerable | [Vulnerable IMAP](https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-imap-report/) | medium |
+| scan_ip_tunnel | [Open IP-Tunnel](https://www.shadowserver.org/what-we-do/network-reporting/open-ip-tunnel-report) | medium |
 | scan_mdns | [Open mDNS Report](https://www.shadowserver.org/what-we-do/network-reporting/open-mdns-report/) | medium |
 | scan_mqtt | [Open MQTT](https://www.shadowserver.org/what-we-do/network-reporting/open-mqtt-report/) | medium |
 | scan_ntp | [NTP Version](https://www.shadowserver.org/what-we-do/network-reporting/ntp-version-report/) | medium |
 | scan_ntpmonitor | [NTP Monitor](https://www.shadowserver.org/what-we-do/network-reporting/ntp-monitor-report/) | medium |
+| scan_pop3_vulnerable | [Vulnerable POP3](https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-pop3-report/) | medium |
 | scan_portmapper | [Open Portmapper Scan](https://www.shadowserver.org/what-we-do/network-reporting/open-portmapper-report/) | medium |
 | scan_qotd | [Open QOTD](https://www.shadowserver.org/what-we-do/network-reporting/open-qotd-report/) | medium |
 | scan_rsync | [Accessible Rsync Service](https://www.shadowserver.org/what-we-do/network-reporting/accessible-rsync-report/) | medium |
@@ -129,10 +135,14 @@
 | population_http_proxy | [Accessible HTTP Proxy](https://www.shadowserver.org/what-we-do/network-reporting/accessible-http-proxy-report/) | low |
 | sandbox_conn | [Sandbox Connections](https://www.shadowserver.org/what-we-do/network-reporting/sandbox-connection-report/) | low |
 | sandbox_url | [Sandbox URL](https://www.shadowserver.org/what-we-do/network-reporting/sandbox-url-report/) | low |
+| scan6_imap | [IPv6 Accessible IMAP](https://www.shadowserver.org/what-we-do/network-reporting/accessible-imap-report/) | low |
 | scan6_isakmp | [IPv6 Vulnerable ISAKMP](https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-isakmp-report/) | low |
+| scan6_pop3 | [IPv6 Accessible POP3](https://www.shadowserver.org/what-we-do/network-reporting/accessible-pop3-report/) | low |
 | scan6_ssl_freak | [IPv6 SSL/Freak Vulnerable Servers](https://www.shadowserver.org/what-we-do/network-reporting/ssl-freak-report/) | low |
 | scan6_ssl_poodle | [IPv6 SSLv3/Poodle Vulnerable Servers](https://www.shadowserver.org/what-we-do/network-reporting/ssl-poodle-report/) | low |
+| scan_imap | [Accessible IMAP](https://www.shadowserver.org/what-we-do/network-reporting/accessible-imap-report/) | low |
 | scan_isakmp | [Vulnerable ISAKMP](https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-isakmp-report/) | low |
+| scan_pop3 | [Accessible POP3](https://www.shadowserver.org/what-we-do/network-reporting/accessible-pop3-report/) | low |
 | scan_ssl_freak | [SSL/Freak Vulnerable Servers](https://www.shadowserver.org/what-we-do/network-reporting/ssl-freak-report/) | low |
 | scan_ssl_poodle | [SSLv3/Poodle Vulnerable Servers](https://www.shadowserver.org/what-we-do/network-reporting/ssl-poodle-report/) | low |
 | spam_url | [Spam URL](https://www.shadowserver.org/what-we-do/network-reporting/spam-url-report/) | low |
