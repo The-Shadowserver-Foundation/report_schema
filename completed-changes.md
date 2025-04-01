@@ -1,5 +1,9 @@
 ## Completed changes
 
+### 2025-04-01
+
+* Mapped http_referer_ip to source.ip for event_sinkhole_http_referer and event6_sinkhole_http_referer.
+
 ### 2025-01-28
 
 IntelMQ IEP010

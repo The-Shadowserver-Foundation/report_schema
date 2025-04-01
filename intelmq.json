@@ -1,11 +1,9 @@
 {
    "_meta" : {
       "change_log" : [
-         "Added scan_ip_tunnel and scan6_ip_tunnel reports.",
-         "Revised the feed_name and url for the scan_msrpc report.",
-         "Added scan6_rsync report."
+         "Mapped http_referer_ip to source.ip for event_sinkhole_http_referer and event6_sinkhole_http_referer."
       ],
-      "date_created" : "2025-01-17T15:01:54Z"
+      "date_created" : "2025-04-01T19:20:40Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -1714,6 +1712,11 @@
             "validate_to_none"
          ],
          [
+            "source.ip",
+            "http_referer_ip",
+            "validate_ip"
+         ],
+         [
             "malware.name",
             "infection",
             "validate_to_none"
@@ -1731,11 +1734,6 @@
          [
             "protocol.transport",
             "protocol"
-         ],
-         [
-            "extra.",
-            "http_referer_ip",
-            "validate_ip"
          ],
          [
             "extra.",
@@ -5733,6 +5731,11 @@
             "validate_to_none"
          ],
          [
+            "source.ip",
+            "http_referer_ip",
+            "validate_ip"
+         ],
+         [
             "malware.name",
             "infection",
             "validate_to_none"
@@ -5750,11 +5753,6 @@
          [
             "protocol.transport",
             "protocol"
-         ],
-         [
-            "extra.",
-            "http_referer_ip",
-            "validate_ip"
          ],
          [
             "extra.",
