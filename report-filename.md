@@ -1,5 +1,7 @@
 ## Report Filename Format
 
+While we recommend using an integration utilizing the [API](https://github.com/The-Shadowserver-Foundation/api_utils/wiki/API:-Reports-Query#reportslist) to obtain reports, we understand that legacy import mechanisms do exist.
+
 Report filenames contain the report date, report type, and a variable number of additional details based on the organization and filters used to generate the report.
 
 ### Examples:
