@@ -12,6 +12,8 @@ Report filenames contain the report date, report type, and a variable number of 
 
 ### Sample regular expression 1:
 
+This regex matches just the report type.
+
 | expression | group | match 
 | --- | --- | --- |
 | `^\d{4}-\d{2}-\d{2}-([^-]+)-.+\.csv$  ` | 1 | report type | 
@@ -26,6 +28,8 @@ Report filenames contain the report date, report type, and a variable number of 
 
 ### Sample regular expression 2:
 
+This regex matches the report date and type.
+
 | expression | group | match |
 | --- | --- | --- | 
 | `^(\d{4}-\d{2}-\d{2})-([^-]+)-.+\.csv$` | 1 | report date | 
@@ -39,3 +43,27 @@ Report filenames contain the report date, report type, and a variable number of 
 | 2 | 2 | `scan_ics` | 
 | 3 | 1 | `2025-07-04` |
 | 3 | 2 | `dns_openresolver` |
+
+---
+
+### Sample regular expression 3:
+
+This regex matches the report date, type, and identifier.
+
+| expression | group | match |
+| --- | --- | --- | 
+| `^(\d{4}-\d{2}-\d{2})-([^-]+)-(.+)\.csv$` | 1 | report date | 
+| | 2 | report type | 
+| | 3 | report identifier |
+
+| example | group | match |
+| --- | --- | --- | 
+| 1 | 1 | `2015-01-01` |
+| 1 | 2 | `dns_openresolver` | 
+| 1 | 3 | `sample-asn` |
+| 2 | 1 | `2022-04-03` |
+| 2 | 2 | `scan_ics` | 
+| 2 | 3 | `sample-asn-delayed` |
+| 3 | 1 | `2025-07-04` |
+| 3 | 2 | `dns_openresolver` |
+| 3 | 3 | `123-sample-asn` |
