@@ -20,9 +20,9 @@ This regex matches just the report type.
 
 | example | group | match |
 | --- | --- | --- | 
-| 1 | 1 | `dns_openresolver` | 
-| 2 | 1 | `scan_ics` | 
-| 3 | 1 | `dns_openresolver` |
+| `2015-01-01-dns_openresolver-sample-asn.csv` | 1 | `dns_openresolver` | 
+| `2020-04-03-scan_ics-sample-asn-delayed.csv` | 1 | `scan_ics` | 
+| `2024-07-04-dns_openresolver-123-sample-asn.csv` | 1 | `dns_openresolver` |
 
 ---
 
@@ -37,12 +37,12 @@ This regex matches the report date and type.
 
 | example | group | match |
 | --- | --- | --- | 
-| 1 | 1 | `2015-01-01`
-| 1 | 2 | `dns_openresolver` | 
-| 2 | 1 | `2022-04-03` |
-| 2 | 2 | `scan_ics` | 
-| 3 | 1 | `2025-07-04` |
-| 3 | 2 | `dns_openresolver` |
+| `2015-01-01-dns_openresolver-sample-asn.csv` | 1 | `2015-01-01`
+|   | 2 | `dns_openresolver` | 
+| `2020-04-03-scan_ics-sample-asn-delayed.csv` | 1 | `2022-04-03` |
+|   | 2 | `scan_ics` | 
+| `2024-07-04-dns_openresolver-123-sample-asn.csv` | 1 | `2025-07-04` |
+|   | 2 | `dns_openresolver` |
 
 ---
 
@@ -58,12 +58,12 @@ This regex matches the report date, type, and identifier.
 
 | example | group | match |
 | --- | --- | --- | 
-| 1 | 1 | `2015-01-01` |
-| 1 | 2 | `dns_openresolver` | 
-| 1 | 3 | `sample-asn` |
-| 2 | 1 | `2022-04-03` |
-| 2 | 2 | `scan_ics` | 
-| 2 | 3 | `sample-asn-delayed` |
-| 3 | 1 | `2025-07-04` |
-| 3 | 2 | `dns_openresolver` |
-| 3 | 3 | `123-sample-asn` |
+| `2015-01-01-dns_openresolver-sample-asn.csv` | 1 | `2015-01-01` |
+|   | 2 | `dns_openresolver` | 
+|   | 3 | `sample-asn` |
+| `2020-04-03-scan_ics-sample-asn-delayed.csv` | 1 | `2022-04-03` |
+|   | 2 | `scan_ics` | 
+|   | 3 | `sample-asn-delayed` |
+| `2024-07-04-dns_openresolver-123-sample-asn.csv` | 1 | `2025-07-04` |
+|   | 2 | `dns_openresolver` |
+|   | 3 | `123-sample-asn` |
