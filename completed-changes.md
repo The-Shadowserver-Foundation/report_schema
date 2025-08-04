@@ -1,5 +1,11 @@
 ## Completed changes
 
+### 2025-08-04 
+
+The mapping of the 'source' field in the blocklist report was changed from 'extra.source' to 'extra.source_name'.
+
+This change was necessary to avoid conflicts with the elasticsearch mapping of the 'extra.source' field where it is commonly an object instead of a string.
+
 ### 2025-04-01
 
 * Mapped http_referer_ip to source.ip for event_sinkhole_http_referer and event6_sinkhole_http_referer.

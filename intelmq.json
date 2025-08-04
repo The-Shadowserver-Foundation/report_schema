@@ -1,9 +1,9 @@
 {
    "_meta" : {
       "change_log" : [
-         "Mapped http_referer_ip to source.ip for event_sinkhole_http_referer and event6_sinkhole_http_referer."
+         "Mapped source to source_name for blocklist."
       ],
-      "date_created" : "2025-04-01T19:20:40Z"
+      "date_created" : "2025-08-04T15:52:57Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -20,6 +20,11 @@
             "validate_network"
          ],
          [
+            "extra.source_name",
+            "source",
+            "validate_to_none"
+         ],
+         [
             "extra.",
             "tag",
             "validate_to_none"
@@ -32,11 +37,6 @@
          [
             "source.reverse_dns",
             "hostname"
-         ],
-         [
-            "extra.",
-            "source",
-            "validate_to_none"
          ],
          [
             "extra.",
