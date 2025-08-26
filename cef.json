@@ -1362,6 +1362,21 @@
          "tag" : "cs2"
       }
    },
+   "scan_gtp" : {
+      "map" : {
+         "asn" : "cn1",
+         "flags" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "message_type" : "cs4",
+         "message_type_text" : "cs5",
+         "port" : "spt",
+         "raw_response" : "cs6",
+         "response_size" : "cn3",
+         "tag" : "cs2"
+      }
+   },
    "scan_hadoop" : {
       "map" : {
          "asn" : "cn1",

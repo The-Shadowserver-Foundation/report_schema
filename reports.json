@@ -4124,6 +4124,37 @@
       "name" : "Accessible-FTP",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ftp-report/"
    },
+   "scan_gtp" : {
+      "classification.taxonomy" : "vulnerable",
+      "classification.type" : "vulnerable-system",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "flags",
+         "message_type",
+         "message_type_text",
+         "message_length",
+         "teid",
+         "sequence",
+         "recovery",
+         "response_size",
+         "raw_response"
+      ],
+      "name" : "Accessible-GPRS-Tunneling-Protocol-GTP",
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-gprs-tunneling-protocol-gtp-report/"
+   },
    "scan_hadoop" : {
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",

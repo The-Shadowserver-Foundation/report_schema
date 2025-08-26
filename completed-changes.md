@@ -1,5 +1,9 @@
 ## Completed changes
 
+### 2025-08-26
+
+* Added the 'Accessible GPRS Tunneling Protocol (GTP)' report.
+
 ### 2025-08-04 
 
 The mapping of the 'source' field in the blocklist report was changed from 'extra.source' to 'extra.source_name'.
