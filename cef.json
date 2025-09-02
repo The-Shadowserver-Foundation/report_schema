@@ -605,6 +605,20 @@
          "tag" : "cs2"
       }
    },
+   "population_ntrip" : {
+      "map" : {
+         "asn" : "cn1",
+         "format" : "cs6",
+         "generator" : "cs5",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "ntrip_version" : "cs4",
+         "port" : "spt",
+         "server" : "cs3",
+         "tag" : "cs2"
+      }
+   },
    "ransomware_victim" : {
       "map" : {
          "entity_name" : "cs1",
