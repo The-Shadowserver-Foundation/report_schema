@@ -1,5 +1,13 @@
 ## Completed changes
 
+### 2025-09-15
+
+* Added the 'Accessible ISAKMP' IPv4/IPv6 reports.
+* Added the 'Badsecrets' IPv4/IPv6 reports.
+* The classification.type was changed from 'vulnerable-system' to 'potentially-unwanted-accessible' for the 'Accessible-GPRS-Tunneling-Protocol-GTP' report.
+* The classification.type was changed from 'vulnerable-system' to 'weak-crypto' for the 'SSL-FREAK-Vulnerable-Servers' IPv4/IPv6 reports.
+* The classification.type was changed from 'vulnerable-system' to 'weak-crypto' for the 'SSL-POODLE-Vulnerable-Servers' IPv4/IPv6 reports.
+
 ### 2025-09-02
 
 * Added the 'Accessible NTRIP' report.
