@@ -1,9 +1,13 @@
 {
    "_meta" : {
       "change_log" : [
-         "Added the 'Accessible NTRIP' report."
+         "Added the 'Accessible ISAKMP' IPv4/IPv6 reports.",
+         "Added the 'Badsecrets' IPv4/IPv6 reports.",
+         "The classification.type was changed from 'vulnerable-system' to 'potentially-unwanted-accessible' for the 'Accessible-GPRS-Tunneling-Protocol-GTP' report.",
+         "The classification.type was changed from 'vulnerable-system' to 'weak-crypto' for the 'SSL-FREAK-Vulnerable-Servers' IPv4/IPv6 reports.",
+         "The classification.type was changed from 'vulnerable-system' to 'weak-crypto' for the 'SSL-POODLE-Vulnerable-Servers' IPv4/IPv6 reports."
       ],
-      "date_created" : "2025-08-26T19:41:15Z"
+      "date_created" : "2025-09-11T18:11:46Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -6261,6 +6265,149 @@
       ],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-http-proxy-report/"
    },
+   "population6_isakmp" : {
+      "constant_fields" : {
+         "classification.identifier" : "accessible-ike",
+         "classification.taxonomy" : "other",
+         "classification.type" : "other",
+         "protocol.application" : "ipsec"
+      },
+      "feed_name" : "IPv6-Accessible-ISAKMP",
+      "file_name" : "population6_isakmp",
+      "optional_fields" : [
+         [
+            "extra.isakmp_exchange_type",
+            "exchange_type"
+         ],
+         [
+            "extra.isakmp_spi_size",
+            "spi_size",
+            "convert_int"
+         ],
+         [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
+            "protocol.transport",
+            "protocol"
+         ],
+         [
+            "source.reverse_dns",
+            "hostname"
+         ],
+         [
+            "extra.",
+            "tag"
+         ],
+         [
+            "source.asn",
+            "asn",
+            "invalidate_zero"
+         ],
+         [
+            "source.geolocation.cc",
+            "geo"
+         ],
+         [
+            "source.geolocation.region",
+            "region"
+         ],
+         [
+            "source.geolocation.city",
+            "city"
+         ],
+         [
+            "extra.source.naics",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "initiator_spi",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "responder_spi",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "next_payload",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "flags",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "message_id",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "next_payload2",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "domain_of_interpretation",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "protocol_id",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "notify_message_type",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "response_size",
+            "convert_int"
+         ],
+         [
+            "extra.",
+            "amplification",
+            "convert_float"
+         ]
+      ],
+      "required_fields" : [
+         [
+            "time.source",
+            "timestamp",
+            "add_UTC_to_timestamp"
+         ],
+         [
+            "source.ip",
+            "ip",
+            "validate_ip"
+         ],
+         [
+            "source.port",
+            "port",
+            "convert_int"
+         ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-isakmp-report/"
+   },
    "population6_msmq" : {
       "constant_fields" : {
          "classification.identifier" : "accessible-msmq",
@@ -6622,6 +6769,149 @@
          ]
       ],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-http-proxy-report/"
+   },
+   "population_isakmp" : {
+      "constant_fields" : {
+         "classification.identifier" : "accessible-ike",
+         "classification.taxonomy" : "other",
+         "classification.type" : "other",
+         "protocol.application" : "ipsec"
+      },
+      "feed_name" : "Accessible-ISAKMP",
+      "file_name" : "population_isakmp",
+      "optional_fields" : [
+         [
+            "extra.isakmp_exchange_type",
+            "exchange_type"
+         ],
+         [
+            "extra.isakmp_spi_size",
+            "spi_size",
+            "convert_int"
+         ],
+         [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
+            "protocol.transport",
+            "protocol"
+         ],
+         [
+            "source.reverse_dns",
+            "hostname"
+         ],
+         [
+            "extra.",
+            "tag"
+         ],
+         [
+            "source.asn",
+            "asn",
+            "invalidate_zero"
+         ],
+         [
+            "source.geolocation.cc",
+            "geo"
+         ],
+         [
+            "source.geolocation.region",
+            "region"
+         ],
+         [
+            "source.geolocation.city",
+            "city"
+         ],
+         [
+            "extra.source.naics",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "initiator_spi",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "responder_spi",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "next_payload",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "flags",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "message_id",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "next_payload2",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "domain_of_interpretation",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "protocol_id",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "notify_message_type",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "response_size",
+            "convert_int"
+         ],
+         [
+            "extra.",
+            "amplification",
+            "convert_float"
+         ]
+      ],
+      "required_fields" : [
+         [
+            "time.source",
+            "timestamp",
+            "add_UTC_to_timestamp"
+         ],
+         [
+            "source.ip",
+            "ip",
+            "validate_ip"
+         ],
+         [
+            "source.port",
+            "port",
+            "convert_int"
+         ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-isakmp-report/"
    },
    "population_msmq" : {
       "constant_fields" : {
@@ -7361,6 +7651,165 @@
          ]
       ],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-activemq-service-report/"
+   },
+   "scan6_badsecrets" : {
+      "constant_fields" : {
+         "classification.identifier" : "badsecret",
+         "classification.taxonomy" : "vulnerable",
+         "classification.type" : "weak-crypto",
+         "protocol.application" : "http"
+      },
+      "feed_name" : "IPv6-Badsecrets",
+      "file_name" : "scan6_badsecrets",
+      "optional_fields" : [
+         [
+            "extra.badsecret_value",
+            "badsecret_product",
+            "validate_to_none"
+         ],
+         [
+            "extra.http_version",
+            "http",
+            "validate_to_none"
+         ],
+         [
+            "extra.http_server",
+            "server",
+            "validate_to_none"
+         ],
+         [
+            "extra.http_path",
+            "request_path",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
+            "protocol.transport",
+            "protocol"
+         ],
+         [
+            "source.reverse_dns",
+            "hostname"
+         ],
+         [
+            "extra.",
+            "tag"
+         ],
+         [
+            "source.asn",
+            "asn",
+            "invalidate_zero"
+         ],
+         [
+            "source.geolocation.cc",
+            "geo"
+         ],
+         [
+            "source.geolocation.region",
+            "region"
+         ],
+         [
+            "source.geolocation.city",
+            "city"
+         ],
+         [
+            "extra.source.naics",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "badsecret_location",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "badsecret_module",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "badsecret_type",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "http_code",
+            "convert_int"
+         ],
+         [
+            "extra.",
+            "cert_serial_number",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_common_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_common_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_organization_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_organization_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sha1_fingerprint",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sha256_fingerprint",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "badsecret_secret",
+            "validate_to_none"
+         ]
+      ],
+      "required_fields" : [
+         [
+            "time.source",
+            "timestamp",
+            "add_UTC_to_timestamp"
+         ],
+         [
+            "source.ip",
+            "ip",
+            "validate_ip"
+         ],
+         [
+            "source.port",
+            "port",
+            "convert_int"
+         ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/badsecrets-report/"
    },
    "scan6_bgp" : {
       "constant_fields" : {
@@ -9632,7 +10081,11 @@
       "file_name" : "scan6_isakmp",
       "optional_fields" : [
          [
-            "extra.",
+            "extra.isakmp_exchange_type",
+            "exchange_type"
+         ],
+         [
+            "extra.isakmp_spi_size",
             "spi_size",
             "convert_int"
          ],
@@ -9698,11 +10151,6 @@
          [
             "extra.",
             "next_payload",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "exchange_type",
             "validate_to_none"
          ],
          [
@@ -14797,7 +15245,7 @@
       "constant_fields" : {
          "classification.identifier" : "ssl-freak",
          "classification.taxonomy" : "vulnerable",
-         "classification.type" : "vulnerable-system",
+         "classification.type" : "weak-crypto",
          "protocol.application" : "https"
       },
       "feed_name" : "SSL-FREAK-Vulnerable-Servers IPv6",
@@ -15216,7 +15664,7 @@
       "constant_fields" : {
          "classification.identifier" : "ssl-poodle",
          "classification.taxonomy" : "vulnerable",
-         "classification.type" : "vulnerable-system",
+         "classification.type" : "weak-crypto",
          "protocol.application" : "https"
       },
       "feed_name" : "SSL-POODLE-Vulnerable-Servers IPv6",
@@ -16537,6 +16985,166 @@
          ]
       ],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-apple-remote-desktop-ard-report/"
+   },
+   "scan_badsecrets" : {
+      "constant_fields" : {
+         "classification.identifier" : "badsecret",
+         "classification.taxonomy" : "vulnerable",
+         "classification.type" : "weak-crypto",
+         "protocol.application" : "http"
+      },
+      "feed_name" : "Badsecrets",
+      "file_name" : "scan_badsecrets",
+      "optional_fields" : [
+         [
+            "extra.badsecret_value",
+            "badsecret_product",
+            "validate_to_none"
+         ],
+         [
+            "extra.http_version",
+            "http",
+            "validate_to_none"
+         ],
+         [
+            "extra.http_server",
+            "server",
+            "validate_to_none"
+         ],
+         [
+            "extra.http_path",
+            "request_path",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "severity",
+            "validate_to_none"
+         ],
+         [
+            "protocol.transport",
+            "protocol"
+         ],
+         [
+            "source.reverse_dns",
+            "hostname"
+         ],
+         [
+            "extra.",
+            "tag",
+            "validate_to_none"
+         ],
+         [
+            "source.asn",
+            "asn",
+            "invalidate_zero"
+         ],
+         [
+            "source.geolocation.cc",
+            "geo"
+         ],
+         [
+            "source.geolocation.region",
+            "region"
+         ],
+         [
+            "source.geolocation.city",
+            "city"
+         ],
+         [
+            "extra.source.naics",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "badsecret_location",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "badsecret_module",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "badsecret_type",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "http_code",
+            "convert_int"
+         ],
+         [
+            "extra.",
+            "cert_serial_number",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_common_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_common_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "subject_organization_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "issuer_organization_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sha1_fingerprint",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "sha256_fingerprint",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "badsecret_secret",
+            "validate_to_none"
+         ]
+      ],
+      "required_fields" : [
+         [
+            "time.source",
+            "timestamp",
+            "add_UTC_to_timestamp"
+         ],
+         [
+            "source.ip",
+            "ip",
+            "validate_ip"
+         ],
+         [
+            "source.port",
+            "port",
+            "convert_int"
+         ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/badsecrets-report/"
    },
    "scan_bgp" : {
       "constant_fields" : {
@@ -18561,7 +19169,7 @@
       "constant_fields" : {
          "classification.identifier" : "accessible-gtp",
          "classification.taxonomy" : "vulnerable",
-         "classification.type" : "vulnerable-system"
+         "classification.type" : "potentially-unwanted-accessible"
       },
       "feed_name" : "Accessible-GPRS-Tunneling-Protocol-GTP",
       "file_name" : "scan_gtp",
@@ -20436,7 +21044,11 @@
       "file_name" : "scan_isakmp",
       "optional_fields" : [
          [
-            "extra.",
+            "extra.isakmp_exchange_type",
+            "exchange_type"
+         ],
+         [
+            "extra.isakmp_spi_size",
             "spi_size",
             "convert_int"
          ],
@@ -20503,11 +21115,6 @@
          [
             "extra.",
             "next_payload",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "exchange_type",
             "validate_to_none"
          ],
          [
@@ -28522,7 +29129,7 @@
       "constant_fields" : {
          "classification.identifier" : "ssl-freak",
          "classification.taxonomy" : "vulnerable",
-         "classification.type" : "vulnerable-system",
+         "classification.type" : "weak-crypto",
          "protocol.application" : "https"
       },
       "feed_name" : "SSL-FREAK-Vulnerable-Servers",
@@ -28942,7 +29549,7 @@
       "constant_fields" : {
          "classification.identifier" : "ssl-poodle",
          "classification.taxonomy" : "vulnerable",
-         "classification.type" : "vulnerable-system",
+         "classification.type" : "weak-crypto",
          "protocol.application" : "https"
       },
       "feed_name" : "SSL-POODLE-Vulnerable-Servers IPv4",

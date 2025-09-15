@@ -554,6 +554,20 @@
          "via" : "cs4"
       }
    },
+   "population6_isakmp" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "initiator_spi" : "cs3",
+         "ip" : "src",
+         "port" : "spt",
+         "responder_spi" : "cs4",
+         "response_size" : "cn2",
+         "tag" : "cs2"
+      }
+   },
    "population6_msmq" : {
       "map" : {
          "asn" : "cn1",
@@ -592,6 +606,20 @@
          "server" : "cs3",
          "tag" : "cs2",
          "via" : "cs4"
+      }
+   },
+   "population_isakmp" : {
+      "map" : {
+         "amplification" : "cfp1",
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "initiator_spi" : "cs3",
+         "ip" : "src",
+         "port" : "spt",
+         "responder_spi" : "cs4",
+         "response_size" : "cn2",
+         "tag" : "cs2"
       }
    },
    "population_msmq" : {
@@ -674,6 +702,20 @@
          "tag" : "cs2",
          "vendor" : "cs4",
          "version" : "cs5"
+      }
+   },
+   "scan6_badsecrets" : {
+      "map" : {
+         "asn" : "cn1",
+         "badsecret_module" : "cs5",
+         "badsecret_product" : "cs6",
+         "badsecret_type" : "cs4",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "server" : "cs3",
+         "tag" : "cs2"
       }
    },
    "scan6_bgp" : {
@@ -1187,6 +1229,20 @@
          "machine_name" : "cs3",
          "port" : "spt",
          "response_size" : "cn2",
+         "tag" : "cs2"
+      }
+   },
+   "scan_badsecrets" : {
+      "map" : {
+         "asn" : "cn1",
+         "badsecret_module" : "cs5",
+         "badsecret_product" : "cs6",
+         "badsecret_type" : "cs4",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "server" : "cs3",
          "tag" : "cs2"
       }
    },

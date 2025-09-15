@@ -36,6 +36,7 @@
 | event4_honeypot_rdp_scan | [Honeypot RDP Scanner Events](https://www.shadowserver.org/what-we-do/network-reporting/honeypot-rdp-scanner-events-report/) | high |
 | event4_honeypot_rocketmq_scan | [Honeypot RocketMQ Scanner Events](https://www.shadowserver.org/what-we-do/network-reporting/honeypot-rocketmq-scanner-events-report/) | high |
 | event4_honeypot_smb_scan | [Honeypot SMB Scanner Events](https://www.shadowserver.org/what-we-do/network-reporting/honeypot-smb-scanner-events-report/) | high |
+| scan6_badsecrets | [IPv6 Badsecrets](https://www.shadowserver.org/what-we-do/network-reporting/badsecrets-report/) | high |
 | scan6_bgp | [IPv6 Open BGP](https://www.shadowserver.org/what-we-do/network-reporting/open-bgp-service-report/) | high |
 | scan6_elasticsearch | [IPv6 Open Elasticsearch Server](https://www.shadowserver.org/what-we-do/network-reporting/open-elasticsearch-report/) | high |
 | scan6_ipp | [IPv6 Open IPP](https://www.shadowserver.org/what-we-do/network-reporting/open-ipp-report/) | high |
@@ -50,6 +51,7 @@
 | scan6_vnc | [IPv6 Accessible VNC Service](https://www.shadowserver.org/what-we-do/network-reporting/accessible-vnc-report/) | high |
 | scan_afp | [Accessible Apple Filing Protocol](https://www.shadowserver.org/what-we-do/network-reporting/accessible-afp-report/) | high |
 | scan_ard | [Accessible Apple Remote Desktop](https://www.shadowserver.org/what-we-do/network-reporting/accessible-apple-remote-desktop-ard-report/) | high |
+| scan_badsecrets | [Badsecrets](https://www.shadowserver.org/what-we-do/network-reporting/badsecrets-report/) | high |
 | scan_bgp | [Open BGP](https://www.shadowserver.org/what-we-do/network-reporting/open-bgp-service-report/) | high |
 | scan_couchdb | [Accessible CouchDB Server](https://www.shadowserver.org/what-we-do/network-reporting/accessible-couchdb-report/) | high |
 | scan_db2 | [Open DB2 Discovery Service](https://www.shadowserver.org/what-we-do/network-reporting/open-db2-discovery-service-report/) | high |
@@ -148,6 +150,8 @@
 | event4_honeypot_ddos_amp | [Honeypot DDoS Amplification Events](https://www.shadowserver.org/what-we-do/network-reporting/honeypot-amplification-ddos-events-report/) | info |
 | event4_honeypot_ddos_target | [Honeypot DDoS Target Events](https://www.shadowserver.org/what-we-do/network-reporting/honeypot-ddos-target-events-report/) | info |
 | event4_sinkhole_dns | [Sinkhole DNS Events](https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-dns-events-report/) | info |
+| population6_isakmp | [IPv6 Accessible ISAKMP](https://www.shadowserver.org/what-we-do/network-reporting/accessible-isakmp-report/) | info |
+| population_isakmp | [Accessible ISAKMP](https://www.shadowserver.org/what-we-do/network-reporting/accessible-isakmp-report/) | info |
 | population_ntrip | [Accessible NTRIP](https://www.shadowserver.org/what-we-do/network-reporting/accessible-ntrip-report) | info |
 | ransomware_victim | [Ransomware victim](https://www.shadowserver.org/what-we-do/network-reporting/ransomware-victim-report/) | info |
 | scan6_ftp | [IPv6 Accessible FTP Service](https://www.shadowserver.org/what-we-do/network-reporting/accessible-ftp-report/) | info |

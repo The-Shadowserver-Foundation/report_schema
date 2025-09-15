@@ -1435,6 +1435,38 @@
       ],
       "name" : "IPv6-Accessible-HTTP-Proxy"
    },
+   "population6_isakmp" : {
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "initiator_spi",
+         "responder_spi",
+         "next_payload",
+         "exchange_type",
+         "flags",
+         "message_id",
+         "next_payload2",
+         "domain_of_interpretation",
+         "protocol_id",
+         "spi_size",
+         "notify_message_type",
+         "response_size",
+         "amplification"
+      ],
+      "name" : "IPv6-Accessible-ISAKMP"
+   },
    "population6_msmq" : {
       "fields" : [
          "timestamp",
@@ -1522,6 +1554,41 @@
       ],
       "name" : "Accessible-HTTP-Proxy",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-http-proxy-report/"
+   },
+   "population_isakmp" : {
+      "classification.taxonomy" : "other",
+      "classification.type" : "other",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "initiator_spi",
+         "responder_spi",
+         "next_payload",
+         "exchange_type",
+         "flags",
+         "message_id",
+         "next_payload2",
+         "domain_of_interpretation",
+         "protocol_id",
+         "spi_size",
+         "notify_message_type",
+         "response_size",
+         "amplification"
+      ],
+      "name" : "Accessible-ISAKMP",
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-isakmp-report/"
    },
    "population_msmq" : {
       "classification.taxonomy" : "vulnerable",
@@ -1707,6 +1774,41 @@
          "version"
       ],
       "name" : "IPv6-Accessible-ActiveMQ"
+   },
+   "scan6_badsecrets" : {
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "badsecret_location",
+         "badsecret_module",
+         "badsecret_type",
+         "badsecret_product",
+         "http",
+         "http_code",
+         "server",
+         "request_path",
+         "cert_serial_number",
+         "subject_common_name",
+         "issuer_common_name",
+         "subject_organization_name",
+         "issuer_organization_name",
+         "sha1_fingerprint",
+         "sha256_fingerprint",
+         "badsecret_secret"
+      ],
+      "name" : "IPv6-Badsecrets"
    },
    "scan6_bgp" : {
       "fields" : [
@@ -3687,6 +3789,44 @@
       "name" : "Accessible-ARD",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-apple-remote-desktop-ard-report/"
    },
+   "scan_badsecrets" : {
+      "classification.taxonomy" : "vulnerable",
+      "classification.type" : "weak-crypto",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "badsecret_location",
+         "badsecret_module",
+         "badsecret_type",
+         "badsecret_product",
+         "http",
+         "http_code",
+         "server",
+         "request_path",
+         "cert_serial_number",
+         "subject_common_name",
+         "issuer_common_name",
+         "subject_organization_name",
+         "issuer_organization_name",
+         "sha1_fingerprint",
+         "sha256_fingerprint",
+         "badsecret_secret"
+      ],
+      "name" : "Badsecrets",
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/badsecrets-report/"
+   },
    "scan_bgp" : {
       "classification.taxonomy" : "vulnerable",
       "classification.type" : "vulnerable-system",
@@ -4178,7 +4318,7 @@
    },
    "scan_gtp" : {
       "classification.taxonomy" : "vulnerable",
-      "classification.type" : "vulnerable-system",
+      "classification.type" : "potentially-unwanted-accessible",
       "fields" : [
          "timestamp",
          "severity",
@@ -6477,7 +6617,7 @@
    },
    "scan_ssl_freak" : {
       "classification.taxonomy" : "vulnerable",
-      "classification.type" : "vulnerable-system",
+      "classification.type" : "weak-crypto",
       "fields" : [
          "timestamp",
          "severity",
@@ -6567,7 +6707,7 @@
    },
    "scan_ssl_poodle" : {
       "classification.taxonomy" : "vulnerable",
-      "classification.type" : "vulnerable-system",
+      "classification.type" : "weak-crypto",
       "fields" : [
          "timestamp",
          "severity",
