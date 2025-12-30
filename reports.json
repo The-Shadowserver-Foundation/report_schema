@@ -2427,6 +2427,35 @@
       ],
       "name" : "IPv6-Open-LDAP-TCP"
    },
+   "scan6_mongodb" : {
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "version",
+         "gitversion",
+         "sysinfo",
+         "opensslversion",
+         "allocator",
+         "javascriptengine",
+         "bits",
+         "maxbsonobjectsize",
+         "ok",
+         "visible_databases"
+      ],
+      "name" : "IPv6-Open-MongoDB"
+   },
    "scan6_mqtt" : {
       "fields" : [
          "timestamp",

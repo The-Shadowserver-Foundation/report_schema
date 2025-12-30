@@ -911,6 +911,19 @@
          "tag" : "cs2"
       }
    },
+   "scan6_mongodb" : {
+      "map" : {
+         "asn" : "cn1",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "sysinfo" : "cs4",
+         "tag" : "cs2",
+         "version" : "cs3",
+         "visible_databases" : "cs5"
+      }
+   },
    "scan6_mqtt" : {
       "map" : {
          "anonymous_access" : "cs3",

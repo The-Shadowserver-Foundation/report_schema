@@ -1,5 +1,9 @@
 ## Completed changes
 
+### 2025-12-30
+
+* Added the 'IPv6-Open-MongoDB' report.
+
 ### 2025-12-01
 
 * Update to use the new 'severity' and 'product.*' data fields added in IntelMQ 3.5.0.
