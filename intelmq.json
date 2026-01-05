@@ -1,9 +1,9 @@
 {
    "_meta" : {
       "change_log" : [
-         "Added scan6_mongodb."
+         "Update for product.vulnerabilities added in 3.5.0."
       ],
-      "date_created" : "2025-12-30T15:40:12Z"
+      "date_created" : "2026-01-05T15:30:31Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -142,6 +142,11 @@
             "extra.",
             "service",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -274,6 +279,11 @@
             "extra.",
             "malpubkey_sha256",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -416,6 +426,11 @@
             "extra.",
             "malpubkey_sha256",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -565,6 +580,11 @@
             "extra.",
             "public_source",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -714,6 +734,11 @@
             "extra.",
             "public_source",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -813,6 +838,11 @@
             "product.version",
             "device_version",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -912,6 +942,11 @@
             "product.version",
             "device_version",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -6106,6 +6141,11 @@
             "extra.",
             "minor_error_code",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -6240,6 +6280,11 @@
             "extra.",
             "http_date",
             "convert_date"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -6383,6 +6428,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -6467,6 +6517,11 @@
             "extra.",
             "response_size",
             "convert_int"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -6611,6 +6666,11 @@
             "extra.",
             "minor_error_code",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -6745,6 +6805,11 @@
             "extra.",
             "http_date",
             "convert_date"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -6888,6 +6953,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -6972,6 +7042,11 @@
             "extra.",
             "response_size",
             "convert_int"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -7201,6 +7276,11 @@
             "extra.",
             "body_base64",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -7627,6 +7707,11 @@
             "extra.",
             "version",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -7786,6 +7871,11 @@
             "extra.",
             "badsecret_secret",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -7930,6 +8020,11 @@
             "extra.",
             "minor_error_code",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -8064,6 +8159,11 @@
             "extra.",
             "http_date",
             "convert_date"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -8153,6 +8253,11 @@
             "extra.",
             "dns_version",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -8282,6 +8387,11 @@
             "extra.",
             "tagline",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -8394,6 +8504,11 @@
             "url",
             "convert_http_host_and_url",
             true
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -8738,6 +8853,11 @@
             "extra.",
             "jarm",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -8877,6 +8997,11 @@
             "extra.",
             "version",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -9011,6 +9136,11 @@
             "extra.",
             "http_date",
             "convert_date"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -9167,7 +9297,7 @@
             "validate_to_none"
          ],
          [
-            "extra.cve",
+            "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
          ]
@@ -9479,6 +9609,11 @@
             "extra.",
             "validation_level",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -9788,6 +9923,11 @@
             "extra.",
             "validation_level",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -9871,6 +10011,11 @@
             "extra.",
             "response",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -10045,6 +10190,11 @@
             "extra.",
             "printer_wifi_ssid",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -10188,6 +10338,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -10652,6 +10807,11 @@
             "extra.",
             "jarm",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -10781,6 +10941,11 @@
             "extra.",
             "visible_databases",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -11070,6 +11235,11 @@
             "extra.",
             "issuer_serial_number",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -11354,6 +11524,11 @@
             "extra.",
             "issuer_serial_number",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -11823,6 +11998,11 @@
             "extra.",
             "raw_cert_chain",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -12037,6 +12217,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -12131,6 +12316,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -12440,6 +12630,11 @@
             "extra.",
             "validation_level",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -12749,6 +12944,11 @@
             "extra.",
             "validation_level",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -13148,6 +13348,11 @@
             "extra.",
             "raw_cert_chain",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -13318,6 +13523,11 @@
             "extra.",
             "jarm",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -13412,6 +13622,11 @@
             "extra.",
             "has_password",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -13551,6 +13766,11 @@
             "extra.",
             "raw_response",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -13661,6 +13881,11 @@
             "extra.",
             "smb_version_string",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -14010,6 +14235,11 @@
             "extra.",
             "validation_level",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -14359,6 +14589,11 @@
             "extra.",
             "validation_level",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -14513,6 +14748,11 @@
             "extra.",
             "vendor",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -14956,6 +15196,11 @@
             "extra.",
             "hassh",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -15345,6 +15590,11 @@
             "extra.",
             "jarm",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -15764,6 +16014,11 @@
             "extra.",
             "page_sha256fp",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -16183,6 +16438,11 @@
             "extra.",
             "page_sha256fp",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -16332,6 +16592,11 @@
             "extra.",
             "response_size",
             "convert_int"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -16416,6 +16681,11 @@
             "extra.",
             "banner",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -16506,6 +16776,11 @@
             "extra.",
             "banner",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -16601,6 +16876,11 @@
             "extra.",
             "version",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -16726,6 +17006,11 @@
             "extra.",
             "features",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -16851,6 +17136,11 @@
             "extra.",
             "network_address",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -16996,6 +17286,11 @@
             "extra.",
             "locales",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -17090,6 +17385,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -17250,6 +17550,11 @@
             "extra.",
             "badsecret_secret",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -17395,6 +17700,11 @@
             "extra.",
             "minor_error_code",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -17485,6 +17795,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -17565,6 +17880,11 @@
             "extra.",
             "sector",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -17665,6 +17985,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -17790,6 +18115,11 @@
             "extra.",
             "error_reason",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -17925,6 +18255,11 @@
             "extra.",
             "http_date",
             "convert_date"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -18025,6 +18360,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -18123,6 +18463,11 @@
             "extra.",
             "method",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -18213,6 +18558,11 @@
             "extra.",
             "dns_version",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -18378,6 +18728,11 @@
             "extra.",
             "pkg_version",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -18596,6 +18951,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -18726,6 +19086,11 @@
             "extra.",
             "tagline",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -18811,6 +19176,11 @@
             "extra.",
             "nodes",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -18924,6 +19294,11 @@
             "url",
             "convert_http_host_and_url",
             true
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -19269,6 +19644,11 @@
             "extra.",
             "jarm",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -19393,6 +19773,11 @@
             "extra.",
             "raw_response",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -19519,6 +19904,11 @@
             "extra.",
             "volumeinfo",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -19659,6 +20049,11 @@
             "extra.",
             "version",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -19794,6 +20189,11 @@
             "extra.",
             "http_date",
             "convert_date"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -19951,7 +20351,7 @@
             "validate_to_none"
          ],
          [
-            "extra.cve",
+            "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
          ]
@@ -20072,6 +20472,11 @@
             "extra.",
             "raw_response",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -20382,6 +20787,11 @@
             "extra.",
             "validation_level",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -20692,6 +21102,11 @@
             "extra.",
             "validation_level",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -20776,6 +21191,11 @@
             "extra.",
             "response",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -20962,6 +21382,11 @@
             "extra.",
             "productid",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -21137,6 +21562,11 @@
             "extra.",
             "printer_wifi_ssid",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -21281,6 +21711,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -21676,6 +22111,11 @@
             "extra.",
             "raw_cert_chain",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -22141,6 +22581,11 @@
             "extra.",
             "jarm",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -22341,6 +22786,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -22430,6 +22880,11 @@
             "extra.",
             "detail",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -22605,6 +23060,11 @@
             "extra.",
             "opc_ua_discovery",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -22730,6 +23190,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -22860,6 +23325,11 @@
             "extra.",
             "visible_databases",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -23150,6 +23620,11 @@
             "extra.",
             "issuer_serial_number",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -23435,6 +23910,11 @@
             "extra.",
             "issuer_serial_number",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -23574,6 +24054,11 @@
             "extra.",
             "raw_response",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -23689,6 +24174,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -24159,6 +24649,11 @@
             "extra.",
             "raw_cert_chain",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -24269,6 +24764,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -24378,6 +24878,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -24473,6 +24978,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -24688,6 +25198,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -24783,6 +25298,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -25093,6 +25613,11 @@
             "extra.",
             "validation_level",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -25403,6 +25928,11 @@
             "extra.",
             "validation_level",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -25508,6 +26038,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -25698,6 +26233,11 @@
             "extra.",
             "encoded_data",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -26098,6 +26638,11 @@
             "extra.",
             "raw_cert_chain",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -26193,6 +26738,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -26292,6 +26842,11 @@
             "extra.",
             "version_field_4",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -26376,6 +26931,11 @@
             "extra.",
             "version",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -26547,6 +27107,11 @@
             "extra.",
             "jarm",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -26641,6 +27206,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -26786,6 +27356,11 @@
             "extra.",
             "connected_clients",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -26881,6 +27456,11 @@
             "extra.",
             "has_password",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -27041,6 +27621,11 @@
             "extra.",
             "response_size",
             "convert_int"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -27181,6 +27766,11 @@
             "extra.",
             "raw_response",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -27292,6 +27882,11 @@
             "extra.",
             "smb_version_string",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -27642,6 +28237,11 @@
             "extra.",
             "validation_level",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -27992,6 +28592,11 @@
             "extra.",
             "validation_level",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -28147,6 +28752,11 @@
             "extra.",
             "vendor",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -28225,6 +28835,11 @@
             "extra.source.sector",
             "sector",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -28395,6 +29010,11 @@
             "extra.",
             "response_size",
             "convert_int"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -28839,6 +29459,11 @@
             "extra.",
             "hassh",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -29229,6 +29854,11 @@
             "extra.",
             "jarm",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -29649,6 +30279,11 @@
             "extra.",
             "page_sha256fp",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -30069,6 +30704,11 @@
             "extra.",
             "page_sha256fp",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -30219,6 +30859,11 @@
             "extra.",
             "response_size",
             "convert_int"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -30328,6 +30973,11 @@
             "extra.",
             "raw_packet",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -30413,6 +31063,11 @@
             "extra.",
             "banner",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -30523,6 +31178,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -30642,6 +31302,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -30733,6 +31398,11 @@
             "extra.",
             "banner",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -30833,6 +31503,11 @@
             "extra.",
             "raw_response",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -30937,6 +31612,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
@@ -31179,6 +31859,11 @@
             "extra.",
             "potential_exposure_time",
             "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
          ]
       ],
       "required_fields" : [
