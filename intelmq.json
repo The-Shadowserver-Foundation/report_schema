@@ -1,9 +1,9 @@
 {
    "_meta" : {
       "change_log" : [
-         "Update for product.vulnerabilities added in 3.5.0."
+         "Additional fields added to event_honeypot_brute_force."
       ],
-      "date_created" : "2026-01-05T15:30:31Z"
+      "date_created" : "2026-01-25T17:31:16Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -2648,6 +2648,51 @@
          [
             "extra.",
             "payload_md5",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "vulnerability_enum",
+            "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "vulnerability_id",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "vulnerability_class",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "vulnerability_score",
+            "convert_float"
+         ],
+         [
+            "extra.",
+            "vulnerability_severity",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "vulnerability_version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "target_vendor",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "target_product",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "target_class",
             "validate_to_none"
          ]
       ],

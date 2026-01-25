@@ -397,7 +397,16 @@
          "username",
          "password",
          "payload_url",
-         "payload_md5"
+         "payload_md5",
+         "vulnerability_enum",
+         "vulnerability_id",
+         "vulnerability_class",
+         "vulnerability_score",
+         "vulnerability_severity",
+         "vulnerability_version",
+         "target_vendor",
+         "target_product",
+         "target_class"
       ],
       "name" : "Honeypot-Brute-Force-Events",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-brute-force-events-report/"
