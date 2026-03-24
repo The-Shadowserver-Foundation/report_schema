@@ -1,9 +1,9 @@
 {
    "_meta" : {
       "change_log" : [
-         "Additional fields added to event_honeypot_brute_force."
+         "Added scan6_msrpc."
       ],
-      "date_created" : "2026-01-25T17:31:16Z"
+      "date_created" : "2026-03-24T15:31:20Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -11594,6 +11594,149 @@
          ]
       ],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-mqtt-report/"
+   },
+   "scan6_msrpc" : {
+      "constant_fields" : {
+         "classification.identifier" : "accessible-msrpc",
+         "classification.taxonomy" : "vulnerable",
+         "classification.type" : "potentially-unwanted-accessible"
+      },
+      "feed_name" : "IPv6-Accessible-MS-RPC",
+      "file_name" : "scan6_msrpc",
+      "optional_fields" : [
+         [
+            "extra.msrpc_version",
+            "version",
+            "convert_float"
+         ],
+         [
+            "extra.",
+            "packet_type_value",
+            "convert_int"
+         ],
+         [
+            "extra.",
+            "fragment_length",
+            "convert_int"
+         ],
+         [
+            "extra.",
+            "max_transmit",
+            "convert_int"
+         ],
+         [
+            "extra.",
+            "max_receive",
+            "convert_int"
+         ],
+         [
+            "severity",
+            "severity",
+            "validate_to_none"
+         ],
+         [
+            "protocol.transport",
+            "protocol"
+         ],
+         [
+            "source.reverse_dns",
+            "hostname"
+         ],
+         [
+            "extra.",
+            "tag"
+         ],
+         [
+            "source.asn",
+            "asn",
+            "invalidate_zero"
+         ],
+         [
+            "source.geolocation.cc",
+            "geo"
+         ],
+         [
+            "source.geolocation.region",
+            "region"
+         ],
+         [
+            "source.geolocation.city",
+            "city"
+         ],
+         [
+            "extra.source.naics",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "packet_type",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "packet_flags",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "data_representation",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "auth_length",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "call_id",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "association_group",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "raw_response",
+            "validate_to_none"
+         ],
+         [
+            "product.vulnerabilities",
+            "tag",
+            "extract_cve_from_tag"
+         ]
+      ],
+      "required_fields" : [
+         [
+            "time.source",
+            "timestamp",
+            "add_UTC_to_timestamp"
+         ],
+         [
+            "source.ip",
+            "ip",
+            "validate_ip"
+         ],
+         [
+            "source.port",
+            "port",
+            "convert_int"
+         ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ms-rpc-service-report/"
    },
    "scan6_mysql" : {
       "constant_fields" : {

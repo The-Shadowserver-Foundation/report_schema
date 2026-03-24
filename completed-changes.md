@@ -1,5 +1,10 @@
 ## Completed changes
 
+## 2026-03-24
+
+* Added the 'IPv6-Accessible-MS-RPC' report.
+
+
 ### 2026-01-25
 
 * Additional fields added to event_honeypot_brute_force.

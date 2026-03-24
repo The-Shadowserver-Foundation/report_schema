@@ -43,6 +43,7 @@
 | scan6_ldap_tcp | [IPv6 Open LDAP (TCP) Services](https://www.shadowserver.org/what-we-do/network-reporting/open-ldap-tcp-report/) | high |
 | scan6_mongodb | [IPv6 Open MongoDB Service](https://www.shadowserver.org/what-we-do/network-reporting/open-mongodb-report/) | high |
 | scan6_mqtt_anon | [IPv6 Open Anonymous MQTT](https://www.shadowserver.org/what-we-do/network-reporting/open-mqtt-report/) | high |
+| scan6_msrpc | [IPv6 Accessible MS-RPC Service](https://www.shadowserver.org/what-we-do/network-reporting/accessible-ms-rpc-service-report/) | high |
 | scan6_mysql | [IPv6 Accessible MySQL Server](https://www.shadowserver.org/what-we-do/network-reporting/accessible-mysql-server-report/) | high |
 | scan6_postgres | [IPv6 Accessible PostgreSQL Server](https://www.shadowserver.org/what-we-do/network-reporting/accessible-postgresql-server-report/) | high |
 | scan6_rdp | [IPv6 Accessible RDP Report](https://www.shadowserver.org/what-we-do/network-reporting/accessible-rdp-report/) | high |

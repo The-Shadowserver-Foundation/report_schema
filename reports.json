@@ -2586,6 +2586,37 @@
       ],
       "name" : "IPv6-Open-Anonymous-MQTT"
    },
+   "scan6_msrpc" : {
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "version",
+         "packet_type",
+         "packet_type_value",
+         "packet_flags",
+         "data_representation",
+         "fragment_length",
+         "auth_length",
+         "call_id",
+         "max_transmit",
+         "max_receive",
+         "association_group",
+         "raw_response"
+      ],
+      "name" : "IPv6-Accessible-MS-RPC"
+   },
    "scan6_mysql" : {
       "fields" : [
          "timestamp",
