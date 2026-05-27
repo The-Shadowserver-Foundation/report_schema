@@ -1,5 +1,10 @@
 ## Completed changes
 
+## 2026-05-27
+
+* Added source_url to the blocklist report.
+
+
 ## 2026-03-24
 
 * Added the 'IPv6-Accessible-MS-RPC' report.

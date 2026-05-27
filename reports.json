@@ -15,7 +15,8 @@
          "city",
          "naics",
          "sector",
-         "tag"
+         "tag",
+         "source_url"
       ],
       "name" : "Blocklist",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/blocklist-report/"

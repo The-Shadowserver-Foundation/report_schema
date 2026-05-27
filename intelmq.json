@@ -1,9 +1,9 @@
 {
    "_meta" : {
       "change_log" : [
-         "Added scan6_msrpc."
+         "Added source_url to the blocklist report."
       ],
-      "date_created" : "2026-03-24T15:31:20Z"
+      "date_created" : "2026-05-27T15:06:09Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -68,6 +68,11 @@
          [
             "extra.",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "source_url",
             "validate_to_none"
          ]
       ],
