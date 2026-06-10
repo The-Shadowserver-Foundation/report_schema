@@ -1,9 +1,10 @@
 {
    "_meta" : {
       "change_log" : [
-         "Added the Initial-Access-Broker report."
+         "Added the Initial-Access-Broker report.",
+         "Added 'version' to the Vulnerable-ISAKMP report."
       ],
-      "date_created" : "2026-06-10T14:05:03Z"
+      "date_created" : "2026-06-10T20:36:55Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -6796,6 +6797,11 @@
          ],
          [
             "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "initiator_spi",
             "validate_to_none"
          ],
@@ -7317,6 +7323,11 @@
          [
             "extra.source.sector",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -10702,6 +10713,11 @@
          [
             "extra.source.sector",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -22218,6 +22234,11 @@
          [
             "extra.",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [

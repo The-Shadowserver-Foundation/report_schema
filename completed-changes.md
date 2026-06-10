@@ -2,7 +2,8 @@
 
 ## 2026-06-10
 
-Added the Initial-Access-Broker report.
+* Added the Initial-Access-Broker report.
+* Added 'version' to the Vulnerable-ISAKMP report.
 
 
 ## 2026-05-27
