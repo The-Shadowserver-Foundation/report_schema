@@ -1,9 +1,9 @@
 {
    "_meta" : {
       "change_log" : [
-         "Added source_url to the blocklist report."
+         "Added the Initial-Access-Broker report."
       ],
-      "date_created" : "2026-05-27T15:06:09Z"
+      "date_created" : "2026-06-10T14:05:03Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -1354,6 +1354,191 @@
          ]
       ],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-http-events-report/"
+   },
+   "event6_initial_access_broker" : {
+      "constant_fields" : {
+         "classification.taxonomy" : "malicious-code",
+         "classification.type" : "infected-system"
+      },
+      "feed_name" : "IPv6-Initial-Access-Broker",
+      "file_name" : "event6_initial_access_broker",
+      "optional_fields" : [
+         [
+            "classification.identifier",
+            "infection",
+            "validate_to_none"
+         ],
+         [
+            "malware.name",
+            "infection",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "tag",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "family",
+            "validate_to_none"
+         ],
+         [
+            "protocol.transport",
+            "protocol"
+         ],
+         [
+            "source.port",
+            "src_port",
+            "convert_int"
+         ],
+         [
+            "source.asn",
+            "src_asn",
+            "invalidate_zero"
+         ],
+         [
+            "source.geolocation.cc",
+            "src_geo"
+         ],
+         [
+            "source.geolocation.region",
+            "src_region"
+         ],
+         [
+            "source.geolocation.city",
+            "src_city"
+         ],
+         [
+            "source.reverse_dns",
+            "src_hostname"
+         ],
+         [
+            "extra.source.naics",
+            "src_naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.source.sector",
+            "src_sector",
+            "validate_to_none"
+         ],
+         [
+            "product.vendor",
+            "device_vendor",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_type",
+            "validate_to_none"
+         ],
+         [
+            "product.name",
+            "device_model",
+            "validate_to_none"
+         ],
+         [
+            "severity",
+            "severity",
+            "validate_to_none"
+         ],
+         [
+            "destination.ip",
+            "dst_ip",
+            "validate_ip"
+         ],
+         [
+            "destination.port",
+            "dst_port",
+            "convert_int"
+         ],
+         [
+            "destination.asn",
+            "dst_asn",
+            "invalidate_zero"
+         ],
+         [
+            "destination.geolocation.cc",
+            "dst_geo"
+         ],
+         [
+            "destination.geolocation.region",
+            "dst_region"
+         ],
+         [
+            "destination.geolocation.city",
+            "dst_city"
+         ],
+         [
+            "destination.reverse_dns",
+            "dst_hostname",
+            "validate_to_none"
+         ],
+         [
+            "extra.destination.naics",
+            "dst_naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.destination.sector",
+            "dst_sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "public_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "application",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "event_id",
+            "validate_to_none"
+         ],
+         [
+            "source.account",
+            "account",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "detail",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "org_domain",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "machine_name",
+            "validate_to_none"
+         ]
+      ],
+      "required_fields" : [
+         [
+            "time.source",
+            "timestamp",
+            "add_UTC_to_timestamp"
+         ],
+         [
+            "source.ip",
+            "src_ip",
+            "validate_ip"
+         ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/initial-access-broker-report/"
    },
    "event6_sinkhole" : {
       "constant_fields" : {
@@ -5119,6 +5304,191 @@
          ]
       ],
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/honeypot-smb-scanner-events-report/"
+   },
+   "event_initial_access_broker" : {
+      "constant_fields" : {
+         "classification.taxonomy" : "malicious-code",
+         "classification.type" : "infected-system"
+      },
+      "feed_name" : "Initial-Access-Broker",
+      "file_name" : "event4_initial_access_broker",
+      "optional_fields" : [
+         [
+            "classification.identifier",
+            "infection",
+            "validate_to_none"
+         ],
+         [
+            "malware.name",
+            "infection",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "tag",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "family",
+            "validate_to_none"
+         ],
+         [
+            "protocol.transport",
+            "protocol"
+         ],
+         [
+            "source.port",
+            "src_port",
+            "convert_int"
+         ],
+         [
+            "source.asn",
+            "src_asn",
+            "invalidate_zero"
+         ],
+         [
+            "source.geolocation.cc",
+            "src_geo"
+         ],
+         [
+            "source.geolocation.region",
+            "src_region"
+         ],
+         [
+            "source.geolocation.city",
+            "src_city"
+         ],
+         [
+            "source.reverse_dns",
+            "src_hostname"
+         ],
+         [
+            "extra.source.naics",
+            "src_naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.source.sector",
+            "src_sector",
+            "validate_to_none"
+         ],
+         [
+            "product.vendor",
+            "device_vendor",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_type",
+            "validate_to_none"
+         ],
+         [
+            "product.name",
+            "device_model",
+            "validate_to_none"
+         ],
+         [
+            "severity",
+            "severity",
+            "validate_to_none"
+         ],
+         [
+            "destination.ip",
+            "dst_ip",
+            "validate_ip"
+         ],
+         [
+            "destination.port",
+            "dst_port",
+            "convert_int"
+         ],
+         [
+            "destination.asn",
+            "dst_asn",
+            "invalidate_zero"
+         ],
+         [
+            "destination.geolocation.cc",
+            "dst_geo"
+         ],
+         [
+            "destination.geolocation.region",
+            "dst_region"
+         ],
+         [
+            "destination.geolocation.city",
+            "dst_city"
+         ],
+         [
+            "destination.reverse_dns",
+            "dst_hostname",
+            "validate_to_none"
+         ],
+         [
+            "extra.destination.naics",
+            "dst_naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.destination.sector",
+            "dst_sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "public_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "application",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "event_id",
+            "validate_to_none"
+         ],
+         [
+            "source.account",
+            "account",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "detail",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "org_domain",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "machine_name",
+            "validate_to_none"
+         ]
+      ],
+      "required_fields" : [
+         [
+            "time.source",
+            "timestamp",
+            "add_UTC_to_timestamp"
+         ],
+         [
+            "source.ip",
+            "src_ip",
+            "validate_ip"
+         ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/initial-access-broker-report/"
    },
    "event_ip_spoofer" : {
       "constant_fields" : {

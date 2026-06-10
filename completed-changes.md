@@ -1,5 +1,10 @@
 ## Completed changes
 
+## 2026-06-10
+
+Added the Initial-Access-Broker report.
+
+
 ## 2026-05-27
 
 * Added source_url to the blocklist report.

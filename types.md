@@ -8,11 +8,13 @@
 | event4_honeypot_brute_force | [Honeypot Brute Force Events](https://www.shadowserver.org/what-we-do/network-reporting/honeypot-brute-force-events-report/) | critical |
 | event4_honeypot_ddos | [Honeypot DDoS Events](https://www.shadowserver.org/what-we-do/network-reporting/honeypot-ddos-events/) | critical |
 | event4_honeypot_ics_scan | [Honeypot ICS Scanner Events](https://www.shadowserver.org/what-we-do/network-reporting/honeypot-ics-scanner-events-report/) | critical |
+| event4_initial_access_broker | [Initial Access Broker](https://www.shadowserver.org/what-we-do/network-reporting/initial-access-broker-report/) | critical |
 | event4_microsoft_sinkhole | [Microsoft Sinkhole events](https://www.shadowserver.org/what-we-do/network-reporting/microsoft-sinkhole-events-report/) | critical |
 | event4_microsoft_sinkhole_http | [Microsoft Sinkhole HTTP Events](https://www.shadowserver.org/what-we-do/network-reporting/microsoft-sinkhole-http-events-report/) | critical |
 | event4_sinkhole | [Sinkhole Events](https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-events-report/) | critical |
 | event4_sinkhole_http | [Sinkhole HTTP Events](https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-http-events-report/) | critical |
 | event4_sinkhole_http_referer | [Sinkhole HTTP Referer Events](https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-http-referer-events-report/) | critical |
+| event6_initial_access_broker | [IPv6 Initial Access Broker](https://www.shadowserver.org/what-we-do/network-reporting/initial-access-broker-report/) | critical |
 | event6_sinkhole | [IPv6 Sinkhole Events](https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-events-report/) | critical |
 | event6_sinkhole_http | [IPv6 Sinkhole HTTP Events](https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-http-events-report/) | critical |
 | event6_sinkhole_http_referer | [IPv6 Sinkhole HTTP Referer Events](https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-http-referer-events-report/) | critical |
