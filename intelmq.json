@@ -1,10 +1,9 @@
 {
    "_meta" : {
       "change_log" : [
-         "Added the Initial-Access-Broker report.",
-         "Added 'version' to the Vulnerable-ISAKMP report."
+         "Added the Targeted-Host report."
       ],
-      "date_created" : "2026-06-10T20:36:55Z"
+      "date_created" : "2026-06-22T22:57:04Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -32467,5 +32466,259 @@
             "convert_int"
          ]
       ]
+   },
+   "targeted_host" : {
+      "constant_fields" : {
+         "classification.identifier" : "targeted-host",
+         "classification.taxonomy" : "other",
+         "classification.type" : "system-compromise"
+      },
+      "feed_name" : "Targeted-Host",
+      "file_name" : "targeted_host",
+      "optional_fields" : [
+         [
+            "malware.name",
+            "family",
+            "validate_to_none"
+         ],
+         [
+            "severity",
+            "severity",
+            "validate_to_none"
+         ],
+         [
+            "protocol.transport",
+            "protocol"
+         ],
+         [
+            "source.port",
+            "port",
+            "convert_int"
+         ],
+         [
+            "source.reverse_dns",
+            "hostname"
+         ],
+         [
+            "extra.",
+            "tag"
+         ],
+         [
+            "source.asn",
+            "asn",
+            "invalidate_zero"
+         ],
+         [
+            "source.geolocation.cc",
+            "geo"
+         ],
+         [
+            "source.geolocation.region",
+            "region"
+         ],
+         [
+            "source.geolocation.city",
+            "city"
+         ],
+         [
+            "extra.source.naics",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "product.vendor",
+            "device_vendor",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_type",
+            "validate_to_none"
+         ],
+         [
+            "product.name",
+            "device_model",
+            "validate_to_none"
+         ],
+         [
+            "product.version",
+            "device_version",
+            "validate_to_none"
+         ],
+         [
+            "event_description.text",
+            "category",
+            "validate_to_none"
+         ],
+         [
+            "status",
+            "status"
+         ],
+         [
+            "extra.",
+            "detail",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "public_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "application",
+            "validate_to_none"
+         ]
+      ],
+      "required_fields" : [
+         [
+            "time.source",
+            "timestamp",
+            "add_UTC_to_timestamp"
+         ],
+         [
+            "source.ip",
+            "ip",
+            "validate_ip"
+         ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/targeted-host-report/"
+   },
+   "targeted_host6" : {
+      "constant_fields" : {
+         "classification.identifier" : "targeted-host",
+         "classification.taxonomy" : "other",
+         "classification.type" : "system-compromise"
+      },
+      "feed_name" : "IPv6-Targeted-Host",
+      "file_name" : "targeted_host6",
+      "optional_fields" : [
+         [
+            "malware.name",
+            "family",
+            "validate_to_none"
+         ],
+         [
+            "severity",
+            "severity",
+            "validate_to_none"
+         ],
+         [
+            "protocol.transport",
+            "protocol"
+         ],
+         [
+            "source.port",
+            "port",
+            "convert_int"
+         ],
+         [
+            "source.reverse_dns",
+            "hostname"
+         ],
+         [
+            "extra.",
+            "tag"
+         ],
+         [
+            "source.asn",
+            "asn",
+            "invalidate_zero"
+         ],
+         [
+            "source.geolocation.cc",
+            "geo"
+         ],
+         [
+            "source.geolocation.region",
+            "region"
+         ],
+         [
+            "source.geolocation.city",
+            "city"
+         ],
+         [
+            "extra.source.naics",
+            "naics",
+            "invalidate_zero"
+         ],
+         [
+            "extra.",
+            "hostname_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.source.sector",
+            "sector",
+            "validate_to_none"
+         ],
+         [
+            "product.vendor",
+            "device_vendor",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "device_type",
+            "validate_to_none"
+         ],
+         [
+            "product.name",
+            "device_model",
+            "validate_to_none"
+         ],
+         [
+            "product.version",
+            "device_version",
+            "validate_to_none"
+         ],
+         [
+            "event_description.text",
+            "category",
+            "validate_to_none"
+         ],
+         [
+            "status",
+            "status"
+         ],
+         [
+            "extra.",
+            "detail",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "public_source",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "application",
+            "validate_to_none"
+         ]
+      ],
+      "required_fields" : [
+         [
+            "time.source",
+            "timestamp",
+            "add_UTC_to_timestamp"
+         ],
+         [
+            "source.ip",
+            "ip",
+            "validate_ip"
+         ]
+      ],
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/targeted-host-report/"
    }
 }

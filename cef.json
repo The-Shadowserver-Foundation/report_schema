@@ -2273,6 +2273,30 @@
          "status" : "cs3",
          "tag" : "cs2"
       }
+   },
+   "targeted_host" : {
+      "map" : {
+         "asn" : "cn1",
+         "detail" : "cs4",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "status" : "cs3",
+         "tag" : "cs2"
+      }
+   },
+   "targeted_host6" : {
+      "map" : {
+         "asn" : "cn1",
+         "detail" : "cs4",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "status" : "cs3",
+         "tag" : "cs2"
+      }
    }
 }
 

@@ -1,5 +1,10 @@
 ## Completed changes
 
+## 2026-06-22
+
+* Added the Targeted-Host report.
+
+
 ## 2026-06-10
 
 * Added the Initial-Access-Broker report.

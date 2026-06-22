@@ -7233,6 +7233,70 @@
          "potential_exposure_time"
       ],
       "name" : "Special"
+   },
+   "targeted_host" : {
+      "classification.taxonomy" : "other",
+      "classification.type" : "system-compromise",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "device_vendor",
+         "device_type",
+         "device_model",
+         "device_version",
+         "category",
+         "family",
+         "status",
+         "detail",
+         "public_source",
+         "application"
+      ],
+      "name" : "Targeted-Host",
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/targeted-host-report/"
+   },
+   "targeted_host6" : {
+      "classification.taxonomy" : "other",
+      "classification.type" : "system-compromise",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "device_vendor",
+         "device_type",
+         "device_model",
+         "device_version",
+         "category",
+         "family",
+         "status",
+         "detail",
+         "public_source",
+         "application"
+      ],
+      "name" : "IPv6-Targeted-Host",
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/targeted-host-report/"
    }
 }
 
