@@ -7235,8 +7235,8 @@
       "name" : "Special"
    },
    "targeted_host" : {
-      "classification.taxonomy" : "other",
-      "classification.type" : "system-compromise",
+      "classification.taxonomy" : "intrusion-attempts",
+      "classification.type" : "exploit",
       "fields" : [
          "timestamp",
          "severity",
@@ -7267,8 +7267,8 @@
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/targeted-host-report/"
    },
    "targeted_host6" : {
-      "classification.taxonomy" : "other",
-      "classification.type" : "system-compromise",
+      "classification.taxonomy" : "intrusion-attempts",
+      "classification.type" : "exploit",
       "fields" : [
          "timestamp",
          "severity",

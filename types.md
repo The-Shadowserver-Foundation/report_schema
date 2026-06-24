@@ -149,6 +149,8 @@
 | scan_ssl_freak | [SSL/Freak Vulnerable Servers](https://www.shadowserver.org/what-we-do/network-reporting/ssl-freak-report/) | low |
 | scan_ssl_poodle | [SSLv3/Poodle Vulnerable Servers](https://www.shadowserver.org/what-we-do/network-reporting/ssl-poodle-report/) | low |
 | spam_url | [Spam URL](https://www.shadowserver.org/what-we-do/network-reporting/spam-url-report/) | low |
+| targeted_host | [Targeted Host](https://www.shadowserver.org/what-we-do/network-reporting/targeted-host-report/) | low |
+| targeted_host6 | [IPv6 Targeted Host](https://www.shadowserver.org/what-we-do/network-reporting/targeted-host-report/) | low |
 | device_id | [Device Identification](https://www.shadowserver.org/what-we-do/network-reporting/device-identification-report/) | info |
 | device_id6 | [IPv6 Device Identification](https://www.shadowserver.org/what-we-do/network-reporting/device-identification-report/) | info |
 | event4_honeypot_ddos_amp | [Honeypot DDoS Amplification Events](https://www.shadowserver.org/what-we-do/network-reporting/honeypot-amplification-ddos-events-report/) | info |

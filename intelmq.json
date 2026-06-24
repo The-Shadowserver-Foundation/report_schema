@@ -1,9 +1,9 @@
 {
    "_meta" : {
       "change_log" : [
-         "Added the Targeted-Host report."
+         "Revised the classification for Targeted-Host report."
       ],
-      "date_created" : "2026-06-22T22:57:04Z"
+      "date_created" : "2026-06-24T15:18:16Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -32470,8 +32470,8 @@
    "targeted_host" : {
       "constant_fields" : {
          "classification.identifier" : "targeted-host",
-         "classification.taxonomy" : "other",
-         "classification.type" : "system-compromise"
+         "classification.taxonomy" : "intrusion-attempts",
+         "classification.type" : "exploit"
       },
       "feed_name" : "Targeted-Host",
       "file_name" : "targeted_host",
@@ -32597,8 +32597,8 @@
    "targeted_host6" : {
       "constant_fields" : {
          "classification.identifier" : "targeted-host",
-         "classification.taxonomy" : "other",
-         "classification.type" : "system-compromise"
+         "classification.taxonomy" : "intrusion-attempts",
+         "classification.type" : "exploit"
       },
       "feed_name" : "IPv6-Targeted-Host",
       "file_name" : "targeted_host6",

@@ -1,5 +1,10 @@
 ## Completed changes
 
+## 2026-06-24
+
+* Revised the classification for Targeted-Host report.
+
+
 ## 2026-06-22
 
 * Added the Targeted-Host report.
