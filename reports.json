@@ -7261,7 +7261,8 @@
          "status",
          "detail",
          "public_source",
-         "application"
+         "application",
+         "url"
       ],
       "name" : "Targeted-Host",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/targeted-host-report/"
@@ -7293,7 +7294,8 @@
          "status",
          "detail",
          "public_source",
-         "application"
+         "application",
+         "url"
       ],
       "name" : "IPv6-Targeted-Host",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/targeted-host-report/"

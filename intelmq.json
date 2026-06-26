@@ -1,9 +1,9 @@
 {
    "_meta" : {
       "change_log" : [
-         "Revised the classification for Targeted-Host report."
+         "Added url to the Targeted-Host report."
       ],
-      "date_created" : "2026-06-24T15:18:16Z"
+      "date_created" : "2026-06-26T16:06:34Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -32578,6 +32578,12 @@
             "extra.",
             "application",
             "validate_to_none"
+         ],
+         [
+            "destination.url",
+            "url",
+            "convert_http_host_and_url",
+            true
          ]
       ],
       "required_fields" : [
@@ -32705,6 +32711,12 @@
             "extra.",
             "application",
             "validate_to_none"
+         ],
+         [
+            "destination.url",
+            "url",
+            "convert_http_host_and_url",
+            true
          ]
       ],
       "required_fields" : [
