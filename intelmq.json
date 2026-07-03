@@ -1,9 +1,10 @@
 {
    "_meta" : {
       "change_log" : [
-         "Added url to the Targeted-Host report."
+         "Added detail to the Sinkhole-Events and Sinkhole-Events-HTTP feeds.",
+         "Added machine_name to the Sinkhole-Events feeds."
       ],
-      "date_created" : "2026-06-26T16:06:34Z"
+      "date_created" : "2026-07-03T15:07:33Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -1127,6 +1128,16 @@
             "extra.",
             "ssl_servername",
             "validate_to_none"
+         ],
+         [
+            "extra.",
+            "machine_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "detail",
+            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -1333,6 +1344,11 @@
          [
             "extra.",
             "machine_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "detail",
             "validate_to_none"
          ]
       ],
@@ -1694,6 +1710,16 @@
             "extra.",
             "ssl_servername",
             "validate_to_none"
+         ],
+         [
+            "extra.",
+            "machine_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "detail",
+            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -1900,6 +1926,11 @@
          [
             "extra.",
             "machine_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "detail",
             "validate_to_none"
          ]
       ],
@@ -5830,6 +5861,16 @@
             "extra.",
             "ssl_servername",
             "validate_to_none"
+         ],
+         [
+            "extra.",
+            "machine_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "detail",
+            "validate_to_none"
          ]
       ],
       "required_fields" : [
@@ -6149,6 +6190,11 @@
          [
             "extra.",
             "machine_name",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "detail",
             "validate_to_none"
          ]
       ],

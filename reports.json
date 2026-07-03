@@ -1078,7 +1078,9 @@
          "version",
          "event_id",
          "ssl_cipher",
-         "ssl_servername"
+         "ssl_servername",
+         "machine_name",
+         "detail"
       ],
       "name" : "Microsoft-Sinkhole-Events IPv4"
    },
@@ -1122,7 +1124,8 @@
          "ssl_cipher",
          "http_referer",
          "ssl_servername",
-         "machine_name"
+         "machine_name",
+         "detail"
       ],
       "name" : "Microsoft-Sinkhole-Events-HTTP IPv4"
    },
@@ -1162,7 +1165,9 @@
          "version",
          "event_id",
          "ssl_cipher",
-         "ssl_servername"
+         "ssl_servername",
+         "machine_name",
+         "detail"
       ],
       "name" : "Sinkhole-Events IPv4",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-events-report/"
@@ -1238,7 +1243,8 @@
          "ssl_cipher",
          "http_referer",
          "ssl_servername",
-         "machine_name"
+         "machine_name",
+         "detail"
       ],
       "name" : "Sinkhole-Events-HTTP IPv4",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/sinkhole-http-events-report/"
@@ -1357,7 +1363,9 @@
          "version",
          "event_id",
          "ssl_cipher",
-         "ssl_servername"
+         "ssl_servername",
+         "machine_name",
+         "detail"
       ],
       "name" : "Sinkhole-Events IPv6"
    },
@@ -1401,7 +1409,8 @@
          "ssl_cipher",
          "http_referer",
          "ssl_servername",
-         "machine_name"
+         "machine_name",
+         "detail"
       ],
       "name" : "Sinkhole-Events-HTTP IPv6"
    },

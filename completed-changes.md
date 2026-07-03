@@ -1,5 +1,11 @@
 ## Completed changes
 
+## 2026-07-03
+
+* Added detail to the Sinkhole-Events and Sinkhole-Events-HTTP feeds.
+* Added machine_name to the Sinkhole-Events feeds.
+
+
 ## 2026-06-26
 
 * Added url to the Targeted-Host report.

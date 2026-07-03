@@ -1,6 +1,5 @@
 | Report Type | Subject | Default Severity |
 | ---         | ---     | ---              |
-| special | Special | critical |
 | compromised_account | [Compromised Account](https://www.shadowserver.org/what-we-do/network-reporting/compromised-account-report/) | critical |
 | compromised_iot | [Compromised IoT Device](https://www.shadowserver.org/what-we-do/network-reporting/compromised-iot-report/) | critical |
 | compromised_iot6 | [IPv6 Compromised IoT Device](https://www.shadowserver.org/what-we-do/network-reporting/compromised-iot-report/) | critical |
