@@ -38,6 +38,7 @@
 | event4_honeypot_rdp_scan | [Honeypot RDP Scanner Events](https://www.shadowserver.org/what-we-do/network-reporting/honeypot-rdp-scanner-events-report/) | high |
 | event4_honeypot_rocketmq_scan | [Honeypot RocketMQ Scanner Events](https://www.shadowserver.org/what-we-do/network-reporting/honeypot-rocketmq-scanner-events-report/) | high |
 | event4_honeypot_smb_scan | [Honeypot SMB Scanner Events](https://www.shadowserver.org/what-we-do/network-reporting/honeypot-smb-scanner-events-report/) | high |
+| event4_honeypot_snmp_scan | [Honeypot SNMP Scanner Events](https://www.shadowserver.org/what-we-do/network-reporting/honeypot-snmp-scanner-events-report/) | high |
 | scan6_badsecrets | [IPv6 Badsecrets](https://www.shadowserver.org/what-we-do/network-reporting/badsecrets-report/) | high |
 | scan6_bgp | [IPv6 Open BGP](https://www.shadowserver.org/what-we-do/network-reporting/open-bgp-service-report/) | high |
 | scan6_elasticsearch | [IPv6 Open Elasticsearch Server](https://www.shadowserver.org/what-we-do/network-reporting/open-elasticsearch-report/) | high |

@@ -1,5 +1,10 @@
 ## Completed changes
 
+## 2026-07-04
+
+* Added Honeypot-SNMP-Scanner feed.
+
+
 ## 2026-07-03
 
 * Added detail to the Sinkhole-Events and Sinkhole-Events-HTTP feeds.
