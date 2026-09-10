@@ -964,6 +964,17 @@
          "tag" : "cs2"
       }
    },
+   "scan6_mikrotik_service" : {
+      "map" : {
+         "asn" : "cn1",
+         "data_2000" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
+         "tag" : "cs2"
+      }
+   },
    "scan6_mongodb" : {
       "map" : {
          "asn" : "cn1",
@@ -1740,6 +1751,17 @@
          "ip" : "src",
          "port" : "spt",
          "response_size" : "cn2",
+         "tag" : "cs2"
+      }
+   },
+   "scan_mikrotik_service" : {
+      "map" : {
+         "asn" : "cn1",
+         "data_2000" : "cs3",
+         "geo" : "cs1",
+         "hostname" : "shost",
+         "ip" : "src",
+         "port" : "spt",
          "tag" : "cs2"
       }
    },

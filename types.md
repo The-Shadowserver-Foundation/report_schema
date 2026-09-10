@@ -105,6 +105,7 @@
 | scan6_imap_vulnerable | [IPv6 Vulnerable IMAP](https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-imap-report/) | medium |
 | scan6_ip_tunnel | [IPv6 Open IP-Tunnel](https://www.shadowserver.org/what-we-do/network-reporting/open-ip-tunnel-report) | medium |
 | scan6_isakmp | [IPv6 Vulnerable ISAKMP](https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-isakmp-report/) | medium |
+| scan6_mikrotik_service | [IPv6 Accessible MikroTik Service](https://www.shadowserver.org/what-we-do/network-reporting/accessible-mikrotik-service-report/) | medium |
 | scan6_mqtt | [IPv6 Open MQTT](https://www.shadowserver.org/what-we-do/network-reporting/open-mqtt-report/) | medium |
 | scan6_ntp | [IPv6 NTP Version](https://www.shadowserver.org/what-we-do/network-reporting/ntp-version-report/) | medium |
 | scan6_ntpmonitor | [IPv6 NTP Monitor](https://www.shadowserver.org/what-we-do/network-reporting/ntp-monitor-report/) | medium |
@@ -124,6 +125,7 @@
 | scan_ip_tunnel | [Open IP-Tunnel](https://www.shadowserver.org/what-we-do/network-reporting/open-ip-tunnel-report) | medium |
 | scan_isakmp | [Vulnerable ISAKMP](https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-isakmp-report/) | medium |
 | scan_mdns | [Open mDNS Report](https://www.shadowserver.org/what-we-do/network-reporting/open-mdns-report/) | medium |
+| scan_mikrotik_service | [Accessible MikroTik Service](https://www.shadowserver.org/what-we-do/network-reporting/accessible-mikrotik-service-report/) | medium |
 | scan_mqtt | [Open MQTT](https://www.shadowserver.org/what-we-do/network-reporting/open-mqtt-report/) | medium |
 | scan_ntp | [NTP Version](https://www.shadowserver.org/what-we-do/network-reporting/ntp-version-report/) | medium |
 | scan_ntpmonitor | [NTP Monitor](https://www.shadowserver.org/what-we-do/network-reporting/ntp-monitor-report/) | medium |

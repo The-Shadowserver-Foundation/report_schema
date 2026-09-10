@@ -2585,6 +2585,28 @@
       ],
       "name" : "IPv6-Open-LDAP-TCP"
    },
+   "scan6_mikrotik_service" : {
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "version",
+         "data_2000",
+         "data_winbox"
+      ],
+      "name" : "IPv6-Accessible-MikroTik"
+   },
    "scan6_mongodb" : {
       "fields" : [
          "timestamp",
@@ -5334,6 +5356,31 @@
       ],
       "name" : "Open-Memcached",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-memcached-report/"
+   },
+   "scan_mikrotik_service" : {
+      "classification.taxonomy" : "other",
+      "classification.type" : "other",
+      "fields" : [
+         "timestamp",
+         "severity",
+         "ip",
+         "protocol",
+         "port",
+         "hostname",
+         "tag",
+         "asn",
+         "geo",
+         "region",
+         "city",
+         "naics",
+         "hostname_source",
+         "sector",
+         "version",
+         "data_2000",
+         "data_winbox"
+      ],
+      "name" : "Accessible-MikroTik",
+      "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-mikrotik-service-report/"
    },
    "scan_mongodb" : {
       "classification.taxonomy" : "vulnerable",
