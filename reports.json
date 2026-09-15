@@ -5359,7 +5359,7 @@
    },
    "scan_mikrotik_service" : {
       "classification.taxonomy" : "other",
-      "classification.type" : "other",
+      "classification.type" : "potentially-unwanted-accessible",
       "fields" : [
          "timestamp",
          "severity",

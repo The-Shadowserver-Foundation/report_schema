@@ -1,9 +1,9 @@
 {
    "_meta" : {
       "change_log" : [
-         "Added Accessible-MikroTik feeds."
+         "Updated Accessible-MikroTik feeds."
       ],
-      "date_created" : "2026-09-10T20:48:27Z"
+      "date_created" : "2026-09-15T13:59:37Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -11549,7 +11549,7 @@
       "constant_fields" : {
          "classification.identifier" : "open-mikrotik-service",
          "classification.taxonomy" : "other",
-         "classification.type" : "other",
+         "classification.type" : "potentially-unwanted-accessible",
          "protocol.application" : "Mikrotik Service"
       },
       "feed_name" : "IPv6-Accessible-MikroTik",
@@ -24179,7 +24179,7 @@
       "constant_fields" : {
          "classification.identifier" : "open-mikrotik-service",
          "classification.taxonomy" : "other",
-         "classification.type" : "other",
+         "classification.type" : "potentially-unwanted-accessible",
          "protocol.application" : "Mikrotik Service"
       },
       "feed_name" : "Accessible-MikroTik",
