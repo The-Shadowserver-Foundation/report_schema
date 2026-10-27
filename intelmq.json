@@ -1,9 +1,9 @@
 {
    "_meta" : {
       "change_log" : [
-         "Updated Accessible-MikroTik feeds."
+         "Mapped http_agent to extra.user_agent in the DDoS-Participant, Honeypot-DDoS, Microsoft-Sinkhole-Events-HTTP, and Sinkhole-Events-HTTP feeds."
       ],
-      "date_created" : "2026-09-15T13:59:37Z"
+      "date_created" : "2026-10-20T15:51:59Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -1173,6 +1173,11 @@
             "validate_to_none"
          ],
          [
+            "extra.user_agent",
+            "http_agent",
+            "validate_to_none"
+         ],
+         [
             "malware.name",
             "infection",
             "validate_to_none"
@@ -1314,11 +1319,6 @@
             "destination.fqdn",
             "http_host",
             "validate_fqdn"
-         ],
-         [
-            "extra.",
-            "http_agent",
-            "validate_to_none"
          ],
          [
             "extra.",
@@ -1755,6 +1755,11 @@
             "validate_to_none"
          ],
          [
+            "extra.user_agent",
+            "http_agent",
+            "validate_to_none"
+         ],
+         [
             "malware.name",
             "infection",
             "validate_to_none"
@@ -1896,11 +1901,6 @@
             "destination.fqdn",
             "http_host",
             "validate_fqdn"
-         ],
-         [
-            "extra.",
-            "http_agent",
-            "validate_to_none"
          ],
          [
             "extra.",
@@ -2178,6 +2178,11 @@
             "convert_bool"
          ],
          [
+            "extra.user_agent",
+            "http_agent",
+            "validate_to_none"
+         ],
+         [
             "malware.name",
             "infection",
             "validate_to_none"
@@ -2412,11 +2417,6 @@
          [
             "extra.",
             "ip_header_urg",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "http_agent",
             "validate_to_none"
          ]
       ],
@@ -3155,6 +3155,11 @@
             "convert_bool"
          ],
          [
+            "extra.user_agent",
+            "http_agent",
+            "validate_to_none"
+         ],
+         [
             "malware.name",
             "infection",
             "validate_to_none"
@@ -3389,11 +3394,6 @@
          [
             "extra.",
             "ip_header_urg",
-            "validate_to_none"
-         ],
-         [
-            "extra.",
-            "http_agent",
             "validate_to_none"
          ]
       ],
@@ -6251,6 +6251,11 @@
             "validate_to_none"
          ],
          [
+            "extra.user_agent",
+            "http_agent",
+            "validate_to_none"
+         ],
+         [
             "malware.name",
             "infection",
             "validate_to_none"
@@ -6392,11 +6397,6 @@
             "destination.fqdn",
             "http_host",
             "validate_fqdn"
-         ],
-         [
-            "extra.",
-            "http_agent",
-            "validate_to_none"
          ],
          [
             "extra.",

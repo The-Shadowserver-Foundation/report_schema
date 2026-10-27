@@ -1,5 +1,9 @@
 ## Completed changes
 
+## 2026-10-27
+
+* Mapped http_agent to extra.user_agent in the DDoS-Participant, Honeypot-DDoS, Microsoft-Sinkhole-Events-HTTP, and Sinkhole-Events-HTTP feeds."
+
 ## 2026-09-15
 
 * Updated Accessible-MikroTik feeds.
