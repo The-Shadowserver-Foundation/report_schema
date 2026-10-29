@@ -70,7 +70,8 @@
          "public_source",
          "account",
          "server_host_key",
-         "malpubkey_sha256"
+         "malpubkey_sha256",
+         "version"
       ],
       "name" : "Compromised-IoT-Device",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/compromised-iot-report/"
@@ -105,7 +106,8 @@
          "public_source",
          "account",
          "server_host_key",
-         "malpubkey_sha256"
+         "malpubkey_sha256",
+         "version"
       ],
       "name" : "IPv6-Compromised-IoT-Device",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/compromised-iot-report/"
@@ -141,7 +143,8 @@
          "status",
          "account",
          "detail",
-         "public_source"
+         "public_source",
+         "version"
       ],
       "name" : "Compromised-Website",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/compromised-website-report/"
@@ -177,7 +180,8 @@
          "status",
          "account",
          "detail",
-         "public_source"
+         "public_source",
+         "version"
       ],
       "name" : "IPv6-Compromised-Website",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/compromised-website-report/"
@@ -203,7 +207,8 @@
          "device_vendor",
          "device_type",
          "device_model",
-         "device_version"
+         "device_version",
+         "version"
       ],
       "name" : "Device-Identification IPv4",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/device-identification-report/"
@@ -227,7 +232,8 @@
          "device_vendor",
          "device_type",
          "device_model",
-         "device_version"
+         "device_version",
+         "version"
       ],
       "name" : "Device-Identification IPv6"
    },
@@ -1586,7 +1592,8 @@
          "server",
          "content_length",
          "transfer_encoding",
-         "http_date"
+         "http_date",
+         "version"
       ],
       "name" : "IPv6-Accessible-HTTP-Proxy"
    },
@@ -1706,7 +1713,8 @@
          "server",
          "content_length",
          "transfer_encoding",
-         "http_date"
+         "http_date",
+         "version"
       ],
       "name" : "Accessible-HTTP-Proxy",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-http-proxy-report/"
@@ -1817,7 +1825,8 @@
          "bit_rate",
          "misc",
          "header_base64",
-         "body_base64"
+         "body_base64",
+         "version"
       ],
       "name" : "Accessible-NTRIP",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ntrip-report"
@@ -1963,7 +1972,8 @@
          "issuer_organization_name",
          "sha1_fingerprint",
          "sha256_fingerprint",
-         "badsecret_secret"
+         "badsecret_secret",
+         "version"
       ],
       "name" : "IPv6-Badsecrets"
    },
@@ -2025,7 +2035,8 @@
          "server",
          "content_length",
          "transfer_encoding",
-         "http_date"
+         "http_date",
+         "version"
       ],
       "name" : "IPv6-Accessible-CWMP"
    },
@@ -2046,7 +2057,8 @@
          "hostname_source",
          "sector",
          "dns_version",
-         "min_amplification"
+         "min_amplification",
+         "version"
       ],
       "name" : "IPv6-DNS-Open-Resolvers"
    },
@@ -2121,6 +2133,7 @@
          "device_model",
          "device_version",
          "device_sector",
+         "version",
          "banner",
          "handshake",
          "cipher_suite",
@@ -2230,7 +2243,8 @@
          "server",
          "content_length",
          "transfer_encoding",
-         "http_date"
+         "http_date",
+         "version"
       ],
       "name" : "IPv6-Open-HTTP-Proxy"
    },
@@ -2284,6 +2298,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "banner",
          "cert_expiration_date",
          "cert_expired",
@@ -2349,6 +2364,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "banner",
          "cert_expiration_date",
          "cert_expired",
@@ -2452,7 +2468,8 @@
          "printer_organization",
          "printer_organization_unit",
          "printer_uuid",
-         "printer_wifi_ssid"
+         "printer_wifi_ssid",
+         "version"
       ],
       "name" : "IPv6-Open-IPP"
    },
@@ -2693,7 +2710,8 @@
          "issuer_given_name",
          "issuer_email_address",
          "issuer_business_category",
-         "issuer_serial_number"
+         "issuer_serial_number",
+         "version"
       ],
       "name" : "IPv6-Open-MQTT"
    },
@@ -2753,7 +2771,8 @@
          "issuer_given_name",
          "issuer_email_address",
          "issuer_business_category",
-         "issuer_serial_number"
+         "issuer_serial_number",
+         "version"
       ],
       "name" : "IPv6-Open-Anonymous-MQTT"
    },
@@ -2949,7 +2968,8 @@
          "sector",
          "packets",
          "response_size",
-         "amplification"
+         "amplification",
+         "version"
       ],
       "name" : "IPv6-NTP-Monitor"
    },
@@ -2969,6 +2989,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "banner",
          "cert_expiration_date",
          "cert_expired",
@@ -3034,6 +3055,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "banner",
          "cert_expiration_date",
          "cert_expired",
@@ -3199,7 +3221,8 @@
          "md5_fingerprint",
          "tlsv13_support",
          "tlsv13_cipher",
-         "jarm"
+         "jarm",
+         "version"
       ],
       "name" : "IPv6-Accessible-RDP"
    },
@@ -3219,6 +3242,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "module",
          "motd",
          "has_password"
@@ -3272,6 +3296,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "arch",
          "key",
          "smb_major_number",
@@ -3297,6 +3322,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "banner",
          "auth_ssl_response",
          "auth_tls_response",
@@ -3370,6 +3396,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "banner",
          "auth_ssl_response",
          "auth_tls_response",
@@ -3482,6 +3509,7 @@
          "device_model",
          "device_version",
          "device_sector",
+         "version",
          "serverid_raw",
          "serverid_version",
          "serverid_software",
@@ -3630,7 +3658,8 @@
          "browser_error",
          "tlsv13_support",
          "tlsv13_cipher",
-         "jarm"
+         "jarm",
+         "version"
       ],
       "name" : "IPv6-Accessible-SSL"
    },
@@ -3717,7 +3746,8 @@
          "raw_cert",
          "raw_cert_chain",
          "jarm",
-         "page_sha256fp"
+         "page_sha256fp",
+         "version"
       ],
       "name" : "SSL-FREAK-Vulnerable-Servers IPv6"
    },
@@ -3804,7 +3834,8 @@
          "raw_cert",
          "raw_cert_chain",
          "jarm",
-         "page_sha256fp"
+         "page_sha256fp",
+         "version"
       ],
       "name" : "SSL-POODLE-Vulnerable-Servers IPv6"
    },
@@ -3857,6 +3888,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "banner"
       ],
       "name" : "IPv6-Accessible-Telnet"
@@ -3877,6 +3909,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "product",
          "banner"
       ],
@@ -3956,6 +3989,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "machine_type",
          "afp_versions",
          "uams",
@@ -3987,6 +4021,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "channel",
          "message_length",
          "class",
@@ -4062,7 +4097,8 @@
          "issuer_organization_name",
          "sha1_fingerprint",
          "sha256_fingerprint",
-         "badsecret_secret"
+         "badsecret_secret",
+         "version"
       ],
       "name" : "Badsecrets",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/badsecrets-report/"
@@ -4192,6 +4228,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "server_version",
          "couchdb_message",
          "couchdb_version",
@@ -4233,7 +4270,8 @@
          "server",
          "content_length",
          "transfer_encoding",
-         "http_date"
+         "http_date",
+         "version"
       ],
       "name" : "Accessible-CWMP",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-cwmp-report/"
@@ -4256,6 +4294,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "db2_hostname",
          "servername",
          "response_size",
@@ -4309,7 +4348,8 @@
          "hostname_source",
          "sector",
          "dns_version",
-         "min_amplification"
+         "min_amplification",
+         "version"
       ],
       "name" : "DNS-Open-Resolvers",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/dns-open-resolvers-report/"
@@ -4378,6 +4418,7 @@
          "device_sector",
          "device_id",
          "device_serial",
+         "version",
          "machine_name",
          "manufacturer",
          "method",
@@ -4503,6 +4544,7 @@
          "device_model",
          "device_version",
          "device_sector",
+         "version",
          "banner",
          "handshake",
          "cipher_suite",
@@ -4680,7 +4722,8 @@
          "server",
          "content_length",
          "transfer_encoding",
-         "http_date"
+         "http_date",
+         "version"
       ],
       "name" : "Open-HTTP-Proxy",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-http-proxy-report/"
@@ -4746,6 +4789,7 @@
          "device_version",
          "device_sector",
          "device_id",
+         "version",
          "response_size",
          "raw_response"
       ],
@@ -4770,6 +4814,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "banner",
          "cert_expiration_date",
          "cert_expired",
@@ -4838,6 +4883,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "banner",
          "cert_expiration_date",
          "cert_expired",
@@ -4990,7 +5036,8 @@
          "printer_organization",
          "printer_organization_unit",
          "printer_uuid",
-         "printer_wifi_ssid"
+         "printer_wifi_ssid",
+         "version"
       ],
       "name" : "Open-IPP",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-ipp-report/"
@@ -5473,7 +5520,8 @@
          "issuer_given_name",
          "issuer_email_address",
          "issuer_business_category",
-         "issuer_serial_number"
+         "issuer_serial_number",
+         "version"
       ],
       "name" : "Open-MQTT",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-mqtt-report/"
@@ -5536,7 +5584,8 @@
          "issuer_given_name",
          "issuer_email_address",
          "issuer_business_category",
-         "issuer_serial_number"
+         "issuer_serial_number",
+         "version"
       ],
       "name" : "Open-Anonymous-MQTT",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/open-mqtt-report/"
@@ -5854,7 +5903,8 @@
          "sector",
          "packets",
          "response_size",
-         "amplification"
+         "amplification",
+         "version"
       ],
       "name" : "NTP-Monitor",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ntp-monitor-report/"
@@ -5877,6 +5927,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "banner",
          "cert_expiration_date",
          "cert_expired",
@@ -5945,6 +5996,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "banner",
          "cert_expiration_date",
          "cert_expired",
@@ -6013,6 +6065,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "programs",
          "mountd_port",
          "exports",
@@ -6040,6 +6093,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "http",
          "http_url",
          "http_code",
@@ -6261,7 +6315,8 @@
          "md5_fingerprint",
          "tlsv13_support",
          "tlsv13_cipher",
-         "jarm"
+         "jarm",
+         "version"
       ],
       "name" : "Accessible-RDP",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-rdp-report/"
@@ -6286,7 +6341,8 @@
          "sector",
          "sessionid",
          "response_size",
-         "amplification"
+         "amplification",
+         "version"
       ],
       "name" : "Accessible-MS-RDPEUDP",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ms-rdpeudp/"
@@ -6344,6 +6400,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "module",
          "motd",
          "has_password"
@@ -6384,7 +6441,8 @@
          "call_id",
          "allow",
          "amplification",
-         "response_size"
+         "response_size",
+         "version"
       ],
       "name" : "Accessible-SIP",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-sip-report/"
@@ -6441,6 +6499,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "arch",
          "key",
          "smb_major_number",
@@ -6469,6 +6528,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "banner",
          "auth_ssl_response",
          "auth_tls_response",
@@ -6545,6 +6605,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "banner",
          "auth_ssl_response",
          "auth_tls_response",
@@ -6657,7 +6718,8 @@
          "city",
          "naics",
          "hostname_source",
-         "sector"
+         "sector",
+         "version"
       ],
       "name" : "Accessible-SOCKS4/5-Proxy",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-socks4-5-proxy-report/"
@@ -6725,6 +6787,7 @@
          "device_model",
          "device_version",
          "device_sector",
+         "version",
          "serverid_raw",
          "serverid_version",
          "serverid_software",
@@ -6876,7 +6939,8 @@
          "browser_error",
          "tlsv13_support",
          "tlsv13_cipher",
-         "jarm"
+         "jarm",
+         "version"
       ],
       "name" : "Accessible-SSL",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ssl-report/"
@@ -6966,7 +7030,8 @@
          "raw_cert",
          "raw_cert_chain",
          "jarm",
-         "page_sha256fp"
+         "page_sha256fp",
+         "version"
       ],
       "name" : "SSL-FREAK-Vulnerable-Servers",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ssl-freak-report/"
@@ -7056,7 +7121,8 @@
          "raw_cert",
          "raw_cert_chain",
          "jarm",
-         "page_sha256fp"
+         "page_sha256fp",
+         "version"
       ],
       "name" : "SSL-POODLE-Vulnerable-Servers IPv4",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ssl-poodle-report/"
@@ -7143,6 +7209,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "banner"
       ],
       "name" : "Accessible-Telnet",
@@ -7194,6 +7261,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "mac",
          "radioname",
          "essid",
@@ -7224,6 +7292,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "product",
          "banner"
       ],
@@ -7251,7 +7320,8 @@
          "response_size",
          "amplification",
          "error",
-         "raw_response"
+         "raw_response",
+         "version"
       ],
       "name" : "Accessible-WS-Discovery-Service",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ws-discovery-service-report/"
@@ -7274,6 +7344,7 @@
          "naics",
          "hostname_source",
          "sector",
+         "version",
          "opcode",
          "reported_hostname",
          "status",

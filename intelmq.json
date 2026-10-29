@@ -1,9 +1,9 @@
 {
    "_meta" : {
       "change_log" : [
-         "Mapped http_agent to extra.user_agent in the DDoS-Participant, Honeypot-DDoS, Microsoft-Sinkhole-Events-HTTP, and Sinkhole-Events-HTTP feeds."
+         "Added version to a number of scan feeds."
       ],
-      "date_created" : "2026-10-20T15:51:59Z"
+      "date_created" : "2026-10-29T17:20:56Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -286,6 +286,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -430,6 +435,11 @@
          [
             "extra.",
             "malpubkey_sha256",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -587,6 +597,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -741,6 +756,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -845,6 +865,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -946,6 +971,11 @@
          [
             "product.version",
             "device_version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -6979,6 +7009,11 @@
             "convert_date"
          ],
          [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -7509,6 +7544,11 @@
             "convert_date"
          ],
          [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -7982,6 +8022,11 @@
          [
             "extra.",
             "body_base64",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -8580,6 +8625,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -8868,6 +8918,11 @@
             "convert_date"
          ],
          [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -8959,6 +9014,11 @@
          [
             "extra.",
             "dns_version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -9314,6 +9374,11 @@
          [
             "extra.",
             "device_sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -9845,6 +9910,11 @@
             "convert_date"
          ],
          [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -10085,6 +10155,11 @@
          [
             "extra.source.sector",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -10399,6 +10474,11 @@
          [
             "extra.source.sector",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -10896,6 +10976,11 @@
          [
             "extra.",
             "printer_wifi_ssid",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -12048,6 +12133,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -12334,6 +12424,11 @@
          [
             "extra.",
             "issuer_serial_number",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -13272,6 +13367,11 @@
             "convert_float"
          ],
          [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -13353,6 +13453,11 @@
          [
             "extra.source.sector",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -13667,6 +13772,11 @@
          [
             "extra.source.sector",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -14479,6 +14589,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -14560,6 +14675,11 @@
          [
             "extra.source.sector",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -14808,6 +14928,11 @@
          ],
          [
             "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "arch",
             "validate_to_none"
          ],
@@ -14918,6 +15043,11 @@
          [
             "extra.source.sector",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -15272,6 +15402,11 @@
          [
             "extra.source.sector",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -15809,6 +15944,11 @@
          [
             "extra.",
             "device_sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -16546,6 +16686,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -16967,6 +17112,11 @@
          [
             "extra.",
             "page_sha256fp",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -17394,6 +17544,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -17633,6 +17788,11 @@
          ],
          [
             "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "banner",
             "validate_to_none"
          ],
@@ -17672,6 +17832,11 @@
       "feed_name" : "IPv6-Accessible-VNC",
       "file_name" : "scan6_vnc",
       "optional_fields" : [
+         [
+            "product.version",
+            "version",
+            "validate_to_none"
+         ],
          [
             "product.name",
             "product",
@@ -18048,6 +18213,11 @@
          ],
          [
             "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "machine_type",
             "validate_to_none"
          ],
@@ -18184,6 +18354,11 @@
          [
             "extra.",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -18503,6 +18678,11 @@
          [
             "extra.",
             "badsecret_secret",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -19027,6 +19207,11 @@
          ],
          [
             "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "server_version",
             "validate_to_none"
          ],
@@ -19211,6 +19396,11 @@
             "convert_date"
          ],
          [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -19293,6 +19483,11 @@
          [
             "extra.",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -19511,6 +19706,11 @@
          [
             "extra.",
             "dns_version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -19834,6 +20034,11 @@
          [
             "extra.",
             "device_serial",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -20352,6 +20557,11 @@
          [
             "extra.",
             "device_sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -21145,6 +21355,11 @@
             "convert_date"
          ],
          [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -21419,6 +21634,11 @@
          ],
          [
             "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "response_size",
             "convert_int"
          ],
@@ -21510,6 +21730,11 @@
          [
             "extra.source.sector",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -21825,6 +22050,11 @@
          [
             "extra.source.sector",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -22515,6 +22745,11 @@
          [
             "extra.",
             "printer_wifi_ssid",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -24681,6 +24916,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -24968,6 +25208,11 @@
          [
             "extra.",
             "issuer_serial_number",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -26359,6 +26604,11 @@
             "convert_float"
          ],
          [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -26441,6 +26691,11 @@
          [
             "extra.source.sector",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -26760,6 +27015,11 @@
          ],
          [
             "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "banner",
             "validate_to_none"
          ],
@@ -27075,6 +27335,11 @@
          ],
          [
             "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "programs",
             "validate_to_none"
          ],
@@ -27180,6 +27445,11 @@
          [
             "extra.source.sector",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -28168,6 +28438,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -28265,6 +28540,11 @@
             "extra.",
             "amplification",
             "convert_float"
+         ],
+         [
+            "extra.",
+            "version",
+            "validate_to_none"
          ],
          [
             "product.vulnerabilities",
@@ -28503,6 +28783,11 @@
          ],
          [
             "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "module",
             "validate_to_none"
          ],
@@ -28680,6 +28965,11 @@
             "extra.",
             "response_size",
             "convert_int"
+         ],
+         [
+            "extra.",
+            "version",
+            "validate_to_none"
          ],
          [
             "product.vulnerabilities",
@@ -28914,6 +29204,11 @@
          ],
          [
             "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "arch",
             "validate_to_none"
          ],
@@ -29025,6 +29320,11 @@
          [
             "extra.source.sector",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -29380,6 +29680,11 @@
          [
             "extra.",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -29896,6 +30201,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -30177,6 +30487,11 @@
          [
             "extra.",
             "device_sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -30915,6 +31230,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -31337,6 +31657,11 @@
          [
             "extra.",
             "page_sha256fp",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
@@ -31765,6 +32090,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -32120,6 +32450,11 @@
          ],
          [
             "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "banner",
             "validate_to_none"
          ],
@@ -32349,6 +32684,11 @@
          ],
          [
             "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
             "essid",
             "validate_to_none"
          ],
@@ -32398,6 +32738,11 @@
       "feed_name" : "Accessible-VNC",
       "file_name" : "scan_vnc",
       "optional_fields" : [
+         [
+            "product.version",
+            "version",
+            "validate_to_none"
+         ],
          [
             "product.name",
             "product",
@@ -32564,6 +32909,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -32646,6 +32996,11 @@
          [
             "extra.",
             "sector",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "version",
             "validate_to_none"
          ],
          [
