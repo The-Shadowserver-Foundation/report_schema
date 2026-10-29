@@ -4,6 +4,10 @@
 
 * Added version to a number of scan feeds.
 
+Please note that in most cases the version field will be different from the device_version/product.version.
+
+The version field will list technologies identified by a version present in the product stack. This may reflect the device_version but have multiple technologies identified in addition. For example, Apache and PHP versions as "apache:1.3.41;php:4.4.9".
+
 ## 2026-10-27
 
 * Mapped http_agent to extra.user_agent in the DDoS-Participant, Honeypot-DDoS, Microsoft-Sinkhole-Events-HTTP, and Sinkhole-Events-HTTP feeds."
