@@ -144,7 +144,8 @@
          "account",
          "detail",
          "public_source",
-         "version"
+         "version",
+         "component_version"
       ],
       "name" : "Compromised-Website",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/compromised-website-report/"
@@ -181,7 +182,8 @@
          "account",
          "detail",
          "public_source",
-         "version"
+         "version",
+         "component_version"
       ],
       "name" : "IPv6-Compromised-Website",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/compromised-website-report/"
@@ -208,7 +210,8 @@
          "device_type",
          "device_model",
          "device_version",
-         "version"
+         "version",
+         "component_version"
       ],
       "name" : "Device-Identification IPv4",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/device-identification-report/"
@@ -233,7 +236,8 @@
          "device_type",
          "device_model",
          "device_version",
-         "version"
+         "version",
+         "component_version"
       ],
       "name" : "Device-Identification IPv6"
    },
@@ -2213,7 +2217,8 @@
          "content_length",
          "transfer_encoding",
          "http_date",
-         "version"
+         "version",
+         "component_version"
       ],
       "name" : "IPv6-Accessible-HTTP"
    },
@@ -2278,7 +2283,8 @@
          "version",
          "build_date",
          "detail",
-         "build_branch"
+         "build_branch",
+         "component_version"
       ],
       "name" : "IPv6-Vulnerable-HTTP"
    },
@@ -3659,7 +3665,8 @@
          "tlsv13_support",
          "tlsv13_cipher",
          "jarm",
-         "version"
+         "version",
+         "component_version"
       ],
       "name" : "IPv6-Accessible-SSL"
    },
@@ -3747,7 +3754,8 @@
          "raw_cert_chain",
          "jarm",
          "page_sha256fp",
-         "version"
+         "version",
+         "component_version"
       ],
       "name" : "SSL-FREAK-Vulnerable-Servers IPv6"
    },
@@ -3835,7 +3843,8 @@
          "raw_cert_chain",
          "jarm",
          "page_sha256fp",
-         "version"
+         "version",
+         "component_version"
       ],
       "name" : "SSL-POODLE-Vulnerable-Servers IPv6"
    },
@@ -4689,7 +4698,8 @@
          "content_length",
          "transfer_encoding",
          "http_date",
-         "version"
+         "version",
+         "component_version"
       ],
       "name" : "Accessible-HTTP",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-http-report/"
@@ -4760,7 +4770,8 @@
          "version",
          "build_date",
          "detail",
-         "build_branch"
+         "build_branch",
+         "component_version"
       ],
       "name" : "Vulnerable-HTTP",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/vulnerable-http-report/"
@@ -6940,7 +6951,8 @@
          "tlsv13_support",
          "tlsv13_cipher",
          "jarm",
-         "version"
+         "version",
+         "component_version"
       ],
       "name" : "Accessible-SSL",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/accessible-ssl-report/"
@@ -7031,7 +7043,8 @@
          "raw_cert_chain",
          "jarm",
          "page_sha256fp",
-         "version"
+         "version",
+         "component_version"
       ],
       "name" : "SSL-FREAK-Vulnerable-Servers",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ssl-freak-report/"
@@ -7122,7 +7135,8 @@
          "raw_cert_chain",
          "jarm",
          "page_sha256fp",
-         "version"
+         "version",
+         "component_version"
       ],
       "name" : "SSL-POODLE-Vulnerable-Servers IPv4",
       "url" : "https://www.shadowserver.org/what-we-do/network-reporting/ssl-poodle-report/"

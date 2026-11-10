@@ -1,9 +1,9 @@
 {
    "_meta" : {
       "change_log" : [
-         "Added version to a number of scan feeds."
+         "Added component_version to the Compromised-Website, Device-Identification, Accessible-HTTP, Vulnerable-HTTP, Accessible-SSL, SSL-FREAK-Vulnerable-Servers, and SSL-POODLE-Vulnerable-Servers feeds."
       ],
-      "date_created" : "2026-10-29T17:20:56Z"
+      "date_created" : "2026-11-10T15:13:52Z"
    },
    "blocklist" : {
       "constant_fields" : {
@@ -602,6 +602,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "component_version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -761,6 +766,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "component_version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -870,6 +880,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "component_version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -976,6 +991,11 @@
          [
             "extra.",
             "version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "component_version",
             "validate_to_none"
          ],
          [
@@ -9771,6 +9791,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "component_version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -10071,6 +10096,11 @@
          [
             "extra.",
             "build_branch",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "component_version",
             "validate_to_none"
          ],
          [
@@ -16691,6 +16721,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "component_version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -17120,6 +17155,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "component_version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -17546,6 +17586,11 @@
          [
             "extra.",
             "version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "component_version",
             "validate_to_none"
          ],
          [
@@ -21215,6 +21260,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "component_version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -21517,6 +21567,11 @@
          [
             "extra.",
             "build_branch",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "component_version",
             "validate_to_none"
          ],
          [
@@ -31235,6 +31290,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "component_version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -31665,6 +31725,11 @@
             "validate_to_none"
          ],
          [
+            "extra.",
+            "component_version",
+            "validate_to_none"
+         ],
+         [
             "product.vulnerabilities",
             "tag",
             "extract_cve_from_tag"
@@ -32092,6 +32157,11 @@
          [
             "extra.",
             "version",
+            "validate_to_none"
+         ],
+         [
+            "extra.",
+            "component_version",
             "validate_to_none"
          ],
          [
